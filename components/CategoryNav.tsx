@@ -14,19 +14,25 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
   useEffect(() => {
     const handleScroll = () => {
       const pillarsSection = document.getElementById('pillars');
-      const firstCategory = document.getElementById(CATEGORIES[0].id);
       
-      if (pillarsSection && firstCategory) {
+      if (pillarsSection) {
         const pillarsBottom = pillarsSection.offsetTop + pillarsSection.offsetHeight;
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        const scrollPosition = window.scrollY;
         
         // Show nav when scrolling past pillars section
-        setIsVisible(scrollPosition > pillarsBottom);
+        setIsVisible(scrollPosition > pillarsBottom - 300);
+      } else {
+        // Fallback: show after scrolling 1200px
+        setIsVisible(window.scrollY > 1200);
       }
     };
 
+    // Add small delay to ensure DOM is ready
+    setTimeout(() => {
+      handleScroll();
+    }, 100);
+    
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
