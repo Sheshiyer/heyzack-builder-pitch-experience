@@ -1,14 +1,101 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useReducedMotion, useSpring, useInView, useTransform } from 'framer-motion';
 import { CATEGORIES } from '../constants';
 import Icon from './Icon';
+import { rotate360, scaleIn } from '../utils/animations';
+import { springConfigs, brandColors } from '../utils/designTokens';
 
 interface CategoryNavProps {
   activeCategoryId: string | null;
   onNavigate: (categoryId: string) => void;
 }
 
+interface NavItemProps {
+  item: { id: string; label: string; icon: string };
+  isActive: boolean;
+  shouldReduceMotion: boolean;
+  onClick: () => void;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ item, isActive, shouldReduceMotion, onClick }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: '-50px' });
+
+  return (
+    <motion.button
+      ref={ref}
+      onClick={onClick}
+      className={`
+        group relative transition-all duration-300
+        flex items-center justify-center overflow-hidden shrink-0
+        /* Mobile Size */
+        w-10 h-10 rounded-xl
+        /* Desktop Size */
+        md:w-12 md:h-12 md:rounded-2xl
+        /* Focus styles */
+        focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950
+        ${isActive
+          ? 'bg-gradient-to-br from-[#243984] to-[#E82F89] shadow-lg md:scale-110'
+          : 'bg-white/5 hover:bg-white/10 md:hover:scale-105'
+        }
+      `}
+      aria-label={item.label}
+      aria-current={isActive ? 'page' : undefined}
+      variants={shouldReduceMotion ? undefined : scaleIn}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
+      whileTap={shouldReduceMotion ? undefined : { scale: 0.95 }}
+    >
+      {/* Glow effect on hover/active */}
+      <div className={`
+        absolute inset-0 bg-gradient-to-br from-[#243984] to-[#E82F89] opacity-0
+        group-hover:opacity-20 transition-opacity duration-300
+        ${isActive ? 'opacity-100' : ''}
+      `} />
+
+      {/* Icon with micro-interactions */}
+      <motion.div
+        className={`relative z-10 ${
+          isActive ? 'text-white' : 'text-slate-400 group-hover:text-white'
+        }`}
+        variants={shouldReduceMotion ? undefined : rotate360}
+        animate={isActive && !shouldReduceMotion ? "animate" : "initial"}
+      >
+        <Icon name={item.icon} size={20} />
+      </motion.div>
+
+      {/* Tooltip (Desktop Only) */}
+      <div className={`
+        hidden md:block
+        absolute right-full mr-4 px-4 py-2 rounded-xl
+        bg-slate-900 text-white text-sm font-semibold whitespace-nowrap
+        opacity-0 group-hover:opacity-100 transition-opacity duration-200
+        pointer-events-none shadow-xl
+        z-50
+      `}>
+        {item.label}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full">
+          <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-slate-900" />
+        </div>
+      </div>
+
+      {/* Active indicator dot (Mobile only) */}
+      {isActive && (
+        <motion.div
+          className="md:hidden absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full bg-opacity-50"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={shouldReduceMotion ? { duration: 0 } : springConfigs.bouncy}
+        />
+      )}
+    </motion.button>
+  );
+};
+
 const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const shouldReduceMotion = useReducedMotion();
 
   // Combine static and dynamic items
   const navItems = [
@@ -21,11 +108,23 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
     }))
   ];
 
+  // Spring animations for smooth glow follower
+  const glowY = useSpring(12, shouldReduceMotion ? { stiffness: 1000, damping: 100 } : springConfigs.snappy);
+
+  // Calculate scroll progress through categories (0 to 100 for percentage)
+  const scrollProgressRaw = useSpring(0, shouldReduceMotion ? { stiffness: 1000, damping: 100 } : springConfigs.snappy);
+  const scrollProgress = useTransform(scrollProgressRaw, (value) => `${value}%`);
+
   useEffect(() => {
     // Determine active index
     const index = navItems.findIndex(item => item.id === activeCategoryId);
-    setActiveIndex(index >= 0 ? index : 0);
-  }, [activeCategoryId]);
+    const newIndex = index >= 0 ? index : 0;
+    setActiveIndex(newIndex);
+
+    // Update spring animations
+    glowY.set(12 + newIndex * 60); // 12px padding + index * (48px height + 12px gap)
+    scrollProgressRaw.set(navItems.length > 1 ? (newIndex / (navItems.length - 1)) * 100 : 0);
+  }, [activeCategoryId, navItems.length]);
 
   const handleClick = (categoryId: string) => {
     onNavigate(categoryId);
@@ -56,77 +155,84 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
           WebkitBackdropFilter: 'blur(10px)'
         }}
       >
-        {/* Animated gradient glow follower - Desktop Only for simplicity & clean alignment */}
+        {/* Animated gradient glow follower with spring animation - Desktop Only */}
         {activeIndex >= 0 && (
-          <div
-            className="absolute transition-all duration-500 ease-out pointer-events-none rounded-xl md:rounded-2xl hidden md:block"
-            style={{
-              background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.4) 0%, rgba(232, 47, 137, 0.4) 100%)',
-              boxShadow: '0 0 20px rgba(232, 47, 137, 0.5), 0 0 40px rgba(36, 57, 132, 0.3)',
-              filter: 'blur(8px)',
-              left: '12px',
-              top: `${12 + activeIndex * 60}px`, // 12px padding + index * (48px height + 12px gap)
-              width: '48px',
-              height: '48px',
-              transform: 'scale(1.3)',
-            }}
-          />
+          <>
+            {/* Main glow with spring animation */}
+            <motion.div
+              className="absolute pointer-events-none rounded-xl md:rounded-2xl hidden md:block"
+              style={{
+                background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.4) 0%, rgba(232, 47, 137, 0.4) 100%)',
+                boxShadow: '0 0 20px rgba(232, 47, 137, 0.5), 0 0 40px rgba(36, 57, 132, 0.3)',
+                filter: 'blur(8px)',
+                left: '12px',
+                y: glowY,
+                width: '48px',
+                height: '48px',
+                transform: 'scale(1.3)',
+              }}
+            />
+            {/* Trailing blur effect */}
+            {!shouldReduceMotion && (
+              <motion.div
+                className="absolute pointer-events-none rounded-xl md:rounded-2xl hidden md:block"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.2) 0%, rgba(232, 47, 137, 0.2) 100%)',
+                  boxShadow: '0 0 15px rgba(232, 47, 137, 0.3), 0 0 30px rgba(36, 57, 132, 0.2)',
+                  filter: 'blur(12px)',
+                  left: '12px',
+                  y: glowY,
+                  width: '48px',
+                  height: '48px',
+                  transform: 'scale(1.5)',
+                  opacity: 0.4,
+                }}
+                transition={{ delay: 0.05, ...springConfigs.snappy }}
+              />
+            )}
+          </>
+        )}
+
+        {/* Progress bar showing completion through categories */}
+        {!shouldReduceMotion && (
+          <motion.div
+            className="absolute left-2 top-2 bottom-2 w-1 rounded-full overflow-hidden bg-white/10 hidden md:block"
+          >
+            <motion.div
+              className="absolute inset-x-0 top-0 rounded-full"
+              style={{
+                background: `linear-gradient(180deg, ${brandColors.primary.blue} 0%, ${brandColors.primary.pink} 100%)`,
+                height: scrollProgress,
+              }}
+            >
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background: `linear-gradient(180deg, ${brandColors.primary.blue} 0%, ${brandColors.primary.pink} 100%)`,
+                }}
+                animate={{
+                  opacity: [0.5, 1, 0.5],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+            </motion.div>
+          </motion.div>
         )}
 
         {navItems.map((item, index) => {
           const isActive = activeIndex === index;
           return (
-            <button
+            <NavItem
               key={item.id}
+              item={item}
+              isActive={isActive}
+              shouldReduceMotion={shouldReduceMotion}
               onClick={() => handleClick(item.id)}
-              className={`
-                group relative transition-all duration-300
-                flex items-center justify-center overflow-hidden shrink-0
-                /* Mobile Size */
-                w-10 h-10 rounded-xl
-                /* Desktop Size */
-                md:w-12 md:h-12 md:rounded-2xl
-                ${isActive 
-                  ? 'bg-gradient-to-br from-[#243984] to-[#E82F89] shadow-lg md:scale-110' 
-                  : 'bg-white/5 hover:bg-white/10 md:hover:scale-105'
-                }
-              `}
-              aria-label={item.label}
-            >
-              {/* Glow effect on hover/active */}
-              <div className={`
-                absolute inset-0 bg-gradient-to-br from-[#243984] to-[#E82F89] opacity-0 
-                group-hover:opacity-20 transition-opacity duration-300
-                ${isActive ? 'opacity-100' : ''}
-              `} />
-              
-              {/* Icon */}
-              <div className={`relative z-10 transition-transform duration-300 ${
-                isActive ? 'text-white' : 'text-slate-400 group-hover:text-white'
-              }`}>
-                <Icon name={item.icon} size={20} />
-              </div>
-
-              {/* Tooltip (Desktop Only) */}
-              <div className={`
-                hidden md:block
-                absolute right-full mr-4 px-4 py-2 rounded-xl
-                bg-slate-900 text-white text-sm font-semibold whitespace-nowrap
-                opacity-0 group-hover:opacity-100 transition-opacity duration-200
-                pointer-events-none shadow-xl
-                z-50
-              `}>
-                {item.label}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-slate-900" />
-                </div>
-              </div>
-
-              {/* Active indicator dot (Mobile only) */}
-              {isActive && (
-                <div className="md:hidden absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full bg-opacity-50" />
-              )}
-            </button>
+            />
           );
         })}
       </div>

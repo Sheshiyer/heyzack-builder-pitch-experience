@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useReducedMotion } from 'framer-motion';
 import { SCENES } from '../constants';
 import { Language, Scene } from '../types';
 import Icon from './Icon';
@@ -7,6 +8,7 @@ import Icon from './Icon';
 interface SceneTimelineProps { lang: Language; }
 
 const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
+  const shouldReduceMotion = useReducedMotion();
   const [activeScene, setActiveScene] = useState<Scene>(SCENES[0]);
   const [executingStep, setExecutingStep] = useState<number | null>(null);
   const [isDone, setIsDone] = useState(false);
@@ -31,7 +33,7 @@ const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
   }, [activeScene]);
 
   return (
-    <div className="h-screen py-24 px-6 flex items-center bg-[#F1F3F6] relative overflow-hidden">
+    <div className="h-screen py-24 px-6 flex items-center bg-slate-950 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'linear-gradient(90deg, #243984 1px, transparent 1px), linear-gradient(#243984 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
       
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
@@ -47,7 +49,7 @@ const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
             </span>
           </div>
 
-          <h2 className="text-5xl font-black text-slate-900 mb-10 tracking-tight leading-none">
+          <h2 className="text-5xl font-black text-white mb-10 tracking-tight leading-none">
             {lang === 'en' ? 'System Orchestration' : 'Orchestration Système'}
           </h2>
 
@@ -56,21 +58,23 @@ const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
               <button
                 key={s.id}
                 onClick={() => setActiveScene(s)}
-                className={`w-full text-left p-6 rounded-3xl transition-all border-2 flex items-center justify-between group ${
-                  activeScene.id === s.id 
-                  ? 'bg-white border-[#243984] shadow-2xl scale-[1.02]' 
-                  : 'bg-white/50 border-transparent hover:bg-white hover:border-slate-200'
+                className={`w-full text-left p-6 rounded-3xl transition-all border-2 flex items-center justify-between group focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+                  activeScene.id === s.id
+                  ? 'bg-slate-900 border-[#243984] shadow-2xl scale-[1.02]'
+                  : 'bg-white/5 border-transparent hover:bg-white/10 hover:border-white/20'
                 }`}
+                aria-label={`${lang === 'en' ? 'Select automation scenario' : 'Sélectionner le scénario d\'automatisation'}: ${s.name[lang]}`}
+                aria-pressed={activeScene.id === s.id}
               >
                 <div className="flex flex-col gap-1">
-                  <span className={`text-[9px] font-black uppercase tracking-widest ${activeScene.id === s.id ? 'text-[#E82F89]' : 'text-slate-400'}`}>
+                  <span className={`text-[9px] font-black uppercase tracking-widest ${activeScene.id === s.id ? 'text-[#E82F89]' : 'text-slate-500'}`}>
                     {s.category}
                   </span>
-                  <span className={`font-bold ${activeScene.id === s.id ? 'text-[#243984]' : 'text-slate-600'}`}>
+                  <span className={`font-bold ${activeScene.id === s.id ? 'text-white' : 'text-slate-400'}`}>
                     {s.name[lang]}
                   </span>
                 </div>
-                <Icon name="ChevronRight" size={16} className={`${activeScene.id === s.id ? 'text-[#243984]' : 'text-slate-300'}`} />
+                <Icon name="ChevronRight" size={16} className={`${activeScene.id === s.id ? 'text-[#243984]' : 'text-slate-500'}`} />
               </button>
             ))}
           </div>
@@ -93,12 +97,15 @@ const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
                 <h3 className="text-2xl font-black text-[#243984] tracking-tight">{activeScene.name[lang]}</h3>
                 <p className="text-sm text-slate-500 font-medium">{activeScene.description[lang]}</p>
              </div>
-             <button 
+             <button
                onClick={executeSequence}
                disabled={executingStep !== null}
-               className="bg-[#243984] text-white px-8 py-4 rounded-2xl font-black text-xs tracking-widest hover:opacity-90 transition-all flex items-center gap-3 disabled:opacity-30 shadow-xl shadow-blue-900/20"
+               className="bg-[#243984] text-white px-8 py-4 rounded-2xl font-black text-xs tracking-widest hover:opacity-90 transition-all flex items-center gap-3 disabled:opacity-30 shadow-xl shadow-blue-900/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+               aria-label={lang === 'en' ? 'Execute automation sequence' : 'Exécuter la séquence d\'automatisation'}
+               aria-live="polite"
+               aria-busy={executingStep !== null}
              >
-               <Icon name="Play" size={14} fill="currentColor" />
+               <Icon name="Play" size={14} fill="currentColor" aria-hidden="true" />
                {lang === 'en' ? 'EXECUTE SEQUENCE' : 'EXÉCUTER SÉQUENCE'}
              </button>
           </div>
@@ -113,9 +120,11 @@ const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
             </div>
 
             {activeScene.steps.map((step, i) => (
-              <div 
-                key={i} 
-                className={`flex items-center gap-10 transition-all duration-500 ${
+              <div
+                key={i}
+                className={`flex items-center gap-10 ${
+                  shouldReduceMotion ? '' : 'transition-all duration-500'
+                } ${
                   executingStep === i ? 'translate-x-4 opacity-100' : 'opacity-40'
                 } ${executingStep !== null && executingStep > i ? 'opacity-80' : ''}`}
               >
@@ -157,9 +166,10 @@ const SceneTimeline: React.FC<SceneTimelineProps> = ({ lang }) => {
                     <p className="text-slate-500 font-medium">
                       {lang === 'en' ? 'Operational value logged to portfolio dashboard.' : 'Valeur opérationnelle enregistrée dans le tableau de bord.'}
                     </p>
-                    <button 
+                    <button
                       onClick={() => setIsDone(false)}
-                      className="mt-8 text-xs font-black uppercase tracking-widest text-[#243984] hover:text-[#E82F89] transition-colors"
+                      className="mt-8 text-xs font-black uppercase tracking-widest text-[#243984] hover:text-[#E82F89] transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded px-4 py-2"
+                      aria-label={lang === 'en' ? 'Reset automation simulator' : 'Réinitialiser le simulateur d\'automatisation'}
                     >
                       Reset Simulator
                     </button>
