@@ -15,6 +15,172 @@ import { Language } from './types';
 // - Utility (2): accessories (includes door-lock-body products), pet-accessories
 // ============================================================================
 
+// ============================================================================
+// TYPE DEFINITIONS - Interactive Element Configs
+// ============================================================================
+
+type DialConfig = {
+  value: number;
+  min: number;
+  max: number;
+  step: number;
+  unit: string;
+  mode: string;
+  zones: string[];
+};
+
+type CounterConfig = {
+  value: number;
+  label: string;
+  animationDuration: number;
+  countUp: boolean;
+  prefix?: string;
+  suffix?: string;
+  color: string;
+};
+
+type GaugeConfig = {
+  value: number;
+  max: number;
+  min: number;
+  unit: string;
+  label: string;
+  thresholds?: Array<{ value: number; color: string; label: string }>;
+  showMarkers?: number[];
+  needleColor: string;
+};
+
+type AccessLogConfig = {
+  entries: Array<{
+    time: string;
+    type: string;
+    name: string;
+    unit?: string;
+    status?: string;
+    sponsor?: string;
+  }>;
+  scrollSpeed: number;
+  maxVisible: number;
+};
+
+type FlowMeterConfig = {
+  flow: {
+    current: number;
+    peak: number;
+    baseline: number;
+    unit: string;
+  };
+  visualType: string;
+  updateInterval: number;
+  showThresholds: boolean;
+};
+
+type ToggleGridConfig = {
+  zones: Array<{
+    id: string;
+    label: string;
+    state: boolean;
+    icon?: string;
+  }>;
+  layout: string;
+  showLabels?: boolean;
+  showIcons?: boolean;
+  quickToggle?: boolean;
+};
+
+type AudioWaveConfig = {
+  bars: number;
+  frequency: number[];
+  color: string;
+  animated: boolean;
+  smoothing: number;
+};
+
+type LockSequenceConfig = {
+  steps: Array<{
+    stage: string;
+    duration: number;
+    icon: string;
+    label: string;
+  }>;
+  loopDelay: number;
+  showProgress: boolean;
+};
+
+type SensorPulseConfig = {
+  zones: Array<{
+    id: string;
+    active: boolean;
+    position: { x: number; y: number };
+  }>;
+  pulseInterval: number;
+  showConnections?: boolean;
+};
+
+type InteractiveElementConfig =
+  | { type: 'dial'; config: DialConfig }
+  | { type: 'counter'; config: CounterConfig }
+  | { type: 'gauge'; config: GaugeConfig }
+  | { type: 'access-log'; config: AccessLogConfig }
+  | { type: 'flow-meter'; config: FlowMeterConfig }
+  | { type: 'toggle-grid'; config: ToggleGridConfig }
+  | { type: 'audio-wave'; config: AudioWaveConfig }
+  | { type: 'lock-sequence'; config: LockSequenceConfig }
+  | { type: 'sensor-pulse'; config: SensorPulseConfig };
+
+// ============================================================================
+// TYPE DEFINITIONS - Radical Element Content
+// ============================================================================
+
+type FloatingBadgeContent = {
+  text: string;
+  icon: string;
+  color: string;
+  pulse?: boolean;
+  count?: number;
+  subtext?: string;
+};
+
+type MetricRingContent = {
+  value: number;
+  label: string;
+  color: string;
+  thickness: number;
+  max?: number;
+};
+
+type ParticleFieldContent = {
+  count: number;
+  spread: string;
+  color?: string;
+  glow?: boolean;
+  animated?: boolean;
+};
+
+type LightBeamContent = {
+  direction: string;
+  intensity: number;
+  color: string;
+};
+
+type ConnectionPulseContent = {
+  nodes: number;
+  pulseSpeed: number;
+  color: string;
+  radial?: boolean;
+};
+
+type RadicalElementContent =
+  | { type: 'floating-badge'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: FloatingBadgeContent }
+  | { type: 'metric-ring'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: MetricRingContent }
+  | { type: 'particle-field'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: ParticleFieldContent }
+  | { type: 'light-beam'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: LightBeamContent }
+  | { type: 'connection-pulse'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: ConnectionPulseContent };
+
+// ============================================================================
+// CATEGORY ENHANCEMENT INTERFACE
+// ============================================================================
+
 export interface CategoryEnhancement {
   // Visual Theme
   accentGradient: { from: string; to: string };
@@ -33,10 +199,7 @@ export interface CategoryEnhancement {
   }>;
 
   // Interactive Element (unique per category)
-  interactiveElement: {
-    type: 'dial' | 'counter' | 'gauge' | 'access-log' | 'flow-meter' | 'toggle-grid' | 'audio-wave' | 'lock-sequence' | 'sensor-pulse';
-    config: any;
-  };
+  interactiveElement: InteractiveElementConfig;
 
   // Orbital Elements (icons circling product)
   orbitalElements: Array<{
@@ -48,11 +211,7 @@ export interface CategoryEnhancement {
   }>;
 
   // Radically Placed Elements
-  radicalElements: Array<{
-    type: 'floating-badge' | 'metric-ring' | 'particle-field' | 'light-beam' | 'connection-pulse';
-    position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting';
-    content: any;
-  }>;
+  radicalElements: Array<RadicalElementContent>;
 
   // Pillar Association
   pillar: 'savings' | 'security' | 'comfort';
