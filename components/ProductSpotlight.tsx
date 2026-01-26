@@ -6,6 +6,11 @@ import { HERO_PRODUCTS, CATEGORIES, ALL_PRODUCTS } from '../constants';
 import Icon from './Icon';
 import { fadeInUp, breathingPulse, staggerContainer } from '../utils/animations';
 import { createGlassEffect, depthShadows } from '../utils/designTokens';
+import { CATEGORY_ENHANCEMENTS, CategoryId } from '../categoryEnhancements';
+import { renderInteractiveElement } from '../utils/interactiveElements';
+import { createIconAnimation } from '../utils/categoryAnimations';
+import RadicalElements from './RadicalElements';
+import OrbitingPartners from './OrbitingPartners';
 
 interface CategorySpotlightProps {
   lang: Language;
@@ -17,6 +22,9 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
   const [activePartnerId, setActivePartnerId] = useState<string | null>(null);
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const prefersReducedMotion = useReducedMotion();
+
+  // Get enhancement configuration for this category
+  const enhancement = CATEGORY_ENHANCEMENTS[category.id as CategoryId];
 
   // Get showcase products or fallback to hero
   const showcaseProducts = ALL_PRODUCTS.filter(p => category.showcaseProductIds?.includes(p.id));
@@ -108,109 +116,309 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
     return `M ${startX},${startY} C ${cp1X},${cp1Y} ${cp2X},${cp2Y} ${endX},${endY}`;
   };
 
+  const getCardStyle = (index: number) => {
+    const diff = (index - currentProductIndex + activeProducts.length) % activeProducts.length;
+    
+    // Show current card and next 2 cards in the stack
+    if (diff === 0) {
+      // Current active card
+      return {
+        zIndex: 30,
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        rotateX: 0
+      };
+    } else if (diff === 1) {
+      // First card behind
+      return {
+        zIndex: 20,
+        opacity: 0.6,
+        scale: 0.9,
+        y: -40,
+        rotateX: -5
+      };
+    } else if (diff === 2) {
+      // Second card behind
+      return {
+        zIndex: 10,
+        opacity: 0.3,
+        scale: 0.8,
+        y: -80,
+        rotateX: -10
+      };
+    } else {
+      // Others hidden
+      return {
+        zIndex: 0,
+        opacity: 0,
+        scale: 0.7,
+        y: -100,
+        rotateX: -15
+      };
+    }
+  };
+
   return (
-    <div className="h-screen bg-slate-950 py-24 px-6 flex items-center overflow-hidden border-b border-white/5 relative group/section">
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+    <div className="min-h-screen bg-slate-950 py-12 md:py-24 px-6 flex items-center overflow-hidden border-b border-white/5 relative group/section">
+      <div className="max-w-[90rem] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        {/* Left Col: Interactive Category Hub */}
+        {/* Left Col: Interactive Product Deck */}
         <motion.div
-          className="lg:col-span-5 relative flex flex-col items-center"
+          className="relative flex flex-col items-center"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
         >
           {/* Animated gradient glow with breathing pulse */}
           <motion.div
-            className="absolute -inset-20 bg-gradient-to-tr from-[#243984]/20 to-[#E82F89]/20 rounded-[5rem] blur-3xl"
+            className="absolute -inset-40 rounded-[5rem] blur-3xl z-0"
+            style={{
+              background: enhancement
+                ? `linear-gradient(to top right, ${enhancement.accentGradient.from}33, ${enhancement.accentGradient.to}33)`
+                : 'linear-gradient(to top right, #24398433, #E82F8933)'
+            }}
             variants={breathingPulse}
             initial="initial"
             animate="animate"
           />
 
-          {/* Central Node: Hero Product */}
-          <motion.div
-            className="relative bg-slate-900 rounded-[4rem] p-8 shadow-2xl border border-white/10 overflow-hidden aspect-square flex flex-col items-center justify-center w-full max-w-md"
-            style={{
-              perspective: 1000,
-              boxShadow: depthShadows.deep
-            }}
-            variants={rotation3D}
-            initial="initial"
-            whileHover="hover"
-          >
-            {/* Indicators */}
+          {/* Card Deck Container with Radical Elements and Orbital Partners */}
+          <div className="relative w-full max-w-xl aspect-[3/4] lg:aspect-square flex items-center justify-center perspective-1000 z-10">
+            {/* Radical Elements Overlay */}
+            {enhancement && (
+              <RadicalElements
+                elements={enhancement.radicalElements}
+                categoryId={category.id as CategoryId}
+                accentGradient={enhancement.accentGradient}
+                particleShape={enhancement.particleShape}
+                language={lang}
+              />
+            )}
+
+            {/* Product glow effect */}
+            {enhancement && (
+              <motion.div
+                className="absolute inset-0 -z-10 blur-3xl opacity-30 pointer-events-none"
+                animate={{
+                  opacity: [0.2, 0.4, 0.2],
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+                style={{
+                  background: `radial-gradient(circle, ${enhancement.glowColor}60, transparent)`
+                }}
+              />
+            )}
+
+            {/* Orbiting Partners wrapped around product deck */}
+            {enhancement && enhancement.orbitalElements ? (
+              <OrbitingPartners
+                orbitalElements={enhancement.orbitalElements}
+                centerElement={
+                  <div className="relative w-full h-full">
+                    {activeProducts.map((product, index) => {
+                      const style = getCardStyle(index);
+
+                      return (
+                        <motion.div
+                          key={product.id}
+                          className="absolute inset-0 bg-slate-900 rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
+                          style={{
+                             ...style,
+                             boxShadow: depthShadows.deep,
+                             transformOrigin: "bottom center"
+                          }}
+                        >
+                          {/* Product Image */}
+                          <div className="w-full h-full flex items-center justify-center p-6 relative">
+                             {/* Subtle grid background for tech feel */}
+                             <div className="absolute inset-0 opacity-10"
+                                style={{ backgroundImage: 'radial-gradient(circle at center, #ffffff 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+                             />
+
+                            <motion.img
+                              src={product.imageUrl}
+                              alt={product.name[lang]}
+                              className="w-full h-full object-contain mix-blend-screen relative z-10"
+                              initial={{ scale: 0.9 }}
+                              animate={{
+                                scale: style.opacity === 1 ? 1.05 : 0.9,
+                                y: style.opacity === 1 ? [0, -10, 0] : 0
+                              }}
+                               transition={{
+                                scale: { duration: 0.5 },
+                                y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                              }}
+                            />
+                          </div>
+
+                          {/* Card Title/Badge (Only visible on active card) */}
+                           <div className="absolute top-8 left-0 right-0 flex justify-center">
+                             <div className={`px-4 py-1 rounded-full border border-white/10 ${style.opacity === 1 ? 'bg-white/10' : 'bg-transparent'} transition-colors duration-500`}>
+                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{product.name[lang]}</span>
+                             </div>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                }
+                language={lang}
+              />
+            ) : (
+              <div className="relative w-full h-full">
+                {activeProducts.map((product, index) => {
+                  const style = getCardStyle(index);
+
+                  return (
+                    <motion.div
+                      key={product.id}
+                      className="absolute inset-0 bg-slate-900 rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
+                      style={{
+                         ...style,
+                         boxShadow: depthShadows.deep,
+                         transformOrigin: "bottom center"
+                      }}
+                    >
+                      {/* Product Image */}
+                      <div className="w-full h-full flex items-center justify-center p-6 relative">
+                         {/* Subtle grid background for tech feel */}
+                         <div className="absolute inset-0 opacity-10"
+                            style={{ backgroundImage: 'radial-gradient(circle at center, #ffffff 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+                         />
+
+                        <motion.img
+                          src={product.imageUrl}
+                          alt={product.name[lang]}
+                          className="w-full h-full object-contain mix-blend-screen relative z-10"
+                          initial={{ scale: 0.9 }}
+                          animate={{
+                            scale: style.opacity === 1 ? 1.05 : 0.9,
+                            y: style.opacity === 1 ? [0, -10, 0] : 0
+                          }}
+                           transition={{
+                            scale: { duration: 0.5 },
+                            y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                          }}
+                        />
+                      </div>
+
+                      {/* Card Title/Badge (Only visible on active card) */}
+                       <div className="absolute top-8 left-0 right-0 flex justify-center">
+                         <div className={`px-4 py-1 rounded-full border border-white/10 ${style.opacity === 1 ? 'bg-white/10' : 'bg-transparent'} transition-colors duration-500`}>
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{product.name[lang]}</span>
+                         </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
+
+             {/* Indicators outside the cards */}
             {activeProducts.length > 1 && (
-              <div className="absolute top-6 right-6 flex gap-1.5 z-20">
+              <div className="absolute -bottom-16 flex gap-3 z-20">
                 {activeProducts.map((_, idx) => (
-                  <button 
+                  <button
                     key={idx}
-                    onClick={(e) => { e.stopPropagation(); setCurrentProductIndex(idx); }}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentProductIndex ? 'w-4 bg-[#E82F89]' : 'w-1.5 bg-white/20 hover:bg-white/40'}`}
+                    onClick={() => setCurrentProductIndex(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentProductIndex ? 'w-12 bg-[#E82F89] shadow-[0_0_10px_#E82F89]' : 'w-3 bg-slate-700 hover:bg-slate-500'}`}
                     aria-label={`Show product ${idx + 1}`}
                   />
                 ))}
               </div>
             )}
+          </div>
 
-            {/* Floating product with animation */}
+          {/* Micro Stats - Category-specific metrics */}
+          {enhancement && enhancement.microStats && (
             <motion.div
-              variants={floatingProduct}
-              initial="initial"
-              animate="animate"
-              className="w-4/5"
-              key={currentProduct?.id} // Trigger re-render for animation
+              className="mt-16 flex items-center justify-center gap-4 flex-wrap z-10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
             >
-              {currentProduct ? (
-                <motion.img
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 0.9, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  src={currentProduct.imageUrl}
-                  alt={currentProduct.name[lang]}
-                  className="w-full h-auto object-contain mix-blend-screen"
-                />
-              ) : (
-                <Icon name="Layers" size={120} className="text-slate-700 mx-auto" />
-              )}
+              {enhancement.microStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.3 }}
+                  className="flex flex-col items-center gap-1 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <Icon name={stat.icon} size={16} className="opacity-70" style={{ color: stat.color }} />
+                    <span className="text-2xl font-bold" style={{ color: stat.color }}>
+                      {stat.value}
+                    </span>
+                  </div>
+                  <span className="text-xs text-gray-400 text-center">
+                    {stat.label[lang]}
+                  </span>
+                </motion.div>
+              ))}
             </motion.div>
+          )}
 
-            {/* Bottom Specs Bar */}
-            <div className="absolute bottom-6 left-6 right-6 flex gap-2">
-               {currentProduct?.specs.slice(0, 3).map((s, i) => (
-                 <motion.div
-                   key={i}
-                   className="flex-1 bg-white/60 backdrop-blur-md p-2 rounded-xl border border-white text-[8px] font-black text-slate-500 uppercase tracking-widest text-center"
-                   initial={{ opacity: 0, y: 10 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ delay: i * 0.1 + 0.5 }}
-                 >
-                    {s}
-                 </motion.div>
-               ))}
-            </div>
-          </motion.div>
-
+          {/* Stats & Specs Row (New Location) */}
           <motion.div
-            className="mt-8 bg-slate-100 p-4 rounded-3xl flex gap-6 items-center border border-slate-200 shadow-sm"
+            className="mt-20 w-full max-w-xl bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-between border border-white/5 shadow-lg z-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.4 }}
           >
-             <div className="flex flex-col items-center">
-                <span className="text-xl font-black text-[#243984]">{category.productCount}</span>
-                <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">SKUs</span>
+             {/* Product Count */}
+             <div className="flex items-center gap-4">
+                <div className="bg-gradient-to-br from-[#243984] to-[#1a2b6d] w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
+                   <span className="text-xl font-black text-white">{category.productCount}</span>
+                </div>
+                <div className="flex flex-col">
+                   <span className="text-sm font-bold text-white leading-tight">Total SKUs</span>
+                   <span className="text-[10px] text-slate-400 font-medium">Available Now</span>
+                </div>
              </div>
-             <div className="w-[1px] h-8 bg-slate-200" />
-             <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-slate-700">{currentProduct?.sku || 'HEYZACK SERIES'}</span>
-                <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Enterprise Ready</span>
+
+             <div className="hidden md:block w-[1px] h-10 bg-white/10" />
+
+             {/* Dynamic Specs of Current Product */}
+             <div className="flex gap-2 flex-wrap justify-center md:justify-end max-w-[50%] md:max-w-none">
+                {currentProduct?.specs.slice(0, 3).map((spec, i) => (
+                   <motion.div
+                     key={`${currentProduct?.id}-${i}`}
+                     initial={{ opacity: 0, scale: 0.9 }}
+                     animate={{ opacity: 1, scale: 1 }}
+                     transition={{ delay: i * 0.1 }}
+                     className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-white/10 hover:border-[#E82F89]/50 transition-colors max-w-[140px] group/tooltip relative"
+                   >
+                      <span className="block text-[10px] font-bold text-slate-300 uppercase leading-none truncate w-full">
+                        {spec}
+                      </span>
+
+                      {/* Tooltip for full text */}
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black/90 text-[10px] text-white rounded opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity whitespace-normal w-max max-w-[200px] z-50 invisible group-hover/tooltip:visible">
+                        {spec}
+                      </div>
+                   </motion.div>
+                ))}
              </div>
           </motion.div>
+
+          {/* Interactive Element - Category-specific interactive feature */}
+          {enhancement && enhancement.interactiveElement && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="mt-8 w-full max-w-xl z-10"
+            >
+              {renderInteractiveElement(enhancement.interactiveElement, lang)}
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Right Col: Narrative & Integration Hub */}
         <motion.div
-          className="lg:col-span-7 flex flex-col gap-10"
+          className="lg:col-span-1 flex flex-col gap-10"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
@@ -222,6 +430,22 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                 {lang === 'en' ? 'CATEGORY ECOSYSTEM' : 'ÉCOSYSTÈME CATÉGORIE'}
               </span>
             </div>
+
+            {/* Category Icon with Animation */}
+            {enhancement && category.icon && (
+              <motion.div className="mb-6 flex items-center gap-4">
+                <motion.img
+                  src={category.icon}
+                  alt={category.name[lang]}
+                  className="w-16 h-16 object-contain"
+                  variants={createIconAnimation(category.id as CategoryId)}
+                  animate="animate"
+                  style={{
+                    filter: `drop-shadow(0 0 20px ${enhancement.glowColor}80)`
+                  }}
+                />
+              </motion.div>
+            )}
 
             <h3 className="text-6xl md:text-7xl font-black text-[#243984] mb-6 tracking-tight leading-[0.95]">
               {category.name[lang]}
