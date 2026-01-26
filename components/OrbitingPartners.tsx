@@ -184,6 +184,11 @@ export default function OrbitingPartners({
   const prefersReducedMotion = useReducedMotion() || false;
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  // Guard against empty array
+  if (orbitalElements.length === 0) {
+    return <div className="relative">{centerElement}</div>;
+  }
+
   return (
     <div className="relative" style={{ transformStyle: 'preserve-3d' }}>
       {/* Center element (product) */}
@@ -195,7 +200,7 @@ export default function OrbitingPartners({
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {orbitalElements.map((element, index) => (
           <OrbitalIcon
-            key={`orbital-${index}-${element.icon}`}
+            key={`orbital-${index}`}
             element={element}
             index={index}
             total={orbitalElements.length}
