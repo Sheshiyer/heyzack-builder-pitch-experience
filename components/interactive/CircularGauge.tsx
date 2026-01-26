@@ -43,7 +43,8 @@ export default function CircularGauge({ config, language = 'en' }: Props) {
   }, [config.value, config.min]);
 
   // Calculate arc and needle positions (180° semi-circle)
-  const percentage = ((config.value - config.min) / (config.max - config.min)) * 100;
+  const range = config.max - config.min;
+  const percentage = range === 0 ? 0 : ((config.value - config.min) / range) * 100;
   const rotation = -90 + (percentage / 100) * 180; // -90° to 90°
 
   const getArcColor = () => {

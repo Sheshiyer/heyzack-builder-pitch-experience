@@ -23,7 +23,7 @@ export default function AnimatedCounter({ config, language = 'en' }: Props) {
   useEffect(() => {
     if (!config.countUp) {
       setDisplayValue(config.value);
-      return;
+      return () => {}; // Explicit no-op cleanup
     }
 
     const duration = prefersReducedMotion ? 0 : config.animationDuration;

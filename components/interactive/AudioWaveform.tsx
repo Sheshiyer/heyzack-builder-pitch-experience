@@ -18,8 +18,22 @@ export default function AudioWaveform({ config, language = 'en' }: Props) {
   const prefersReducedMotion = useReducedMotion();
   const [barHeights, setBarHeights] = useState(config.frequency);
 
+  // Initialize from config.frequency on mount or when it changes
   useEffect(() => {
-    if (!config.animated || prefersReducedMotion) return;
+    if (config.frequency && config.frequency.length > 0) {
+      setBarHeights(config.frequency);
+    }
+  }, [config.frequency]);
+
+  // Separate effect for animation
+  useEffect(() => {
+    if (!config.animated || prefersReducedMotion) {
+      // When animation stops, reset to initial frequency
+      if (config.frequency && config.frequency.length > 0) {
+        setBarHeights(config.frequency);
+      }
+      return () => {}; // Explicit no-op cleanup
+    }
 
     // Simulate audio frequencies with random variation
     const interval = setInterval(() => {
@@ -33,7 +47,7 @@ export default function AudioWaveform({ config, language = 'en' }: Props) {
     }, 150);
 
     return () => clearInterval(interval);
-  }, [config.animated, prefersReducedMotion]);
+  }, [config.animated, config.frequency, prefersReducedMotion]);
 
   const maxHeight = 100;
 

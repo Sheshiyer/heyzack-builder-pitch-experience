@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import * as Icons from 'lucide-react';
 import { Check } from 'lucide-react';
 
@@ -27,9 +27,12 @@ export default function LockSequenceAnimation({ config, language = 'en' }: Props
     config.steps.map(() => 'pending')
   );
   const [currentStep, setCurrentStep] = useState(-1);
+  const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
 
   useEffect(() => {
-    let timeouts: NodeJS.Timeout[] = [];
+    // Clear any existing timeouts from previous runs
+    timeoutsRef.current.forEach(timeout => clearTimeout(timeout));
+    timeoutsRef.current = [];
 
     const runSequence = () => {
       // Reset
@@ -48,7 +51,7 @@ export default function LockSequenceAnimation({ config, language = 'en' }: Props
             return newStatuses;
           });
         }, cumulativeDelay);
-        timeouts.push(activeTimeout);
+        timeoutsRef.current.push(activeTimeout);
 
         // Set to complete
         const completeTimeout = setTimeout(() => {
@@ -58,7 +61,7 @@ export default function LockSequenceAnimation({ config, language = 'en' }: Props
             return newStatuses;
           });
         }, cumulativeDelay + step.duration);
-        timeouts.push(completeTimeout);
+        timeoutsRef.current.push(completeTimeout);
 
         cumulativeDelay += step.duration;
       });
@@ -67,7 +70,7 @@ export default function LockSequenceAnimation({ config, language = 'en' }: Props
       const loopTimeout = setTimeout(() => {
         runSequence();
       }, cumulativeDelay + config.loopDelay);
-      timeouts.push(loopTimeout);
+      timeoutsRef.current.push(loopTimeout);
     };
 
     if (!prefersReducedMotion) {
@@ -75,10 +78,12 @@ export default function LockSequenceAnimation({ config, language = 'en' }: Props
     } else {
       // Show completed state for reduced motion
       setStepStatuses(config.steps.map(() => 'complete'));
+      setCurrentStep(config.steps.length);
     }
 
     return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout));
+      timeoutsRef.current.forEach(timeout => clearTimeout(timeout));
+      timeoutsRef.current = [];
     };
   }, [config.steps, config.loopDelay, prefersReducedMotion]);
 
