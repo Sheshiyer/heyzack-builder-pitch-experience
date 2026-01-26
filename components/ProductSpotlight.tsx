@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
 import { Category, Product, Language } from '../types';
-import { HERO_PRODUCTS, CATEGORIES } from '../constants';
+import { HERO_PRODUCTS, CATEGORIES, ALL_PRODUCTS } from '../constants';
 import Icon from './Icon';
 import { fadeInUp, breathingPulse, staggerContainer } from '../utils/animations';
 import { createGlassEffect, depthShadows } from '../utils/designTokens';
@@ -15,9 +15,22 @@ interface CategorySpotlightProps {
 
 const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, onViewAll }) => {
   const [activePartnerId, setActivePartnerId] = useState<string | null>(null);
+  const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const prefersReducedMotion = useReducedMotion();
 
-  const heroProduct: Product | undefined = HERO_PRODUCTS[category.heroProductId];
+  // Get showcase products or fallback to hero
+  const showcaseProducts = ALL_PRODUCTS.filter(p => category.showcaseProductIds?.includes(p.id));
+  const activeProducts = showcaseProducts.length > 0 ? showcaseProducts : (category.heroProductId && HERO_PRODUCTS[category.heroProductId] ? [HERO_PRODUCTS[category.heroProductId]] : []);
+  const currentProduct = activeProducts[currentProductIndex] || activeProducts[0];
+
+  // Auto-cycle through products
+  React.useEffect(() => {
+    if (activeProducts.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentProductIndex(prev => (prev + 1) % activeProducts.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeProducts.length]);
 
   // Animation variants
   const floatingProduct: Variants = {
@@ -125,18 +138,36 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             initial="initial"
             whileHover="hover"
           >
+            {/* Indicators */}
+            {activeProducts.length > 1 && (
+              <div className="absolute top-6 right-6 flex gap-1.5 z-20">
+                {activeProducts.map((_, idx) => (
+                  <button 
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setCurrentProductIndex(idx); }}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentProductIndex ? 'w-4 bg-[#E82F89]' : 'w-1.5 bg-white/20 hover:bg-white/40'}`}
+                    aria-label={`Show product ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+
             {/* Floating product with animation */}
             <motion.div
               variants={floatingProduct}
               initial="initial"
               animate="animate"
               className="w-4/5"
+              key={currentProduct?.id} // Trigger re-render for animation
             >
-              {heroProduct ? (
-                <img
-                  src={heroProduct.imageUrl}
-                  alt={category.name[lang]}
-                  className="w-full h-auto object-contain transition-all duration-700 mix-blend-screen opacity-90"
+              {currentProduct ? (
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 0.9, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  src={currentProduct.imageUrl}
+                  alt={currentProduct.name[lang]}
+                  className="w-full h-auto object-contain mix-blend-screen"
                 />
               ) : (
                 <Icon name="Layers" size={120} className="text-slate-700 mx-auto" />
@@ -145,7 +176,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
 
             {/* Bottom Specs Bar */}
             <div className="absolute bottom-6 left-6 right-6 flex gap-2">
-               {heroProduct?.specs.slice(0, 3).map((s, i) => (
+               {currentProduct?.specs.slice(0, 3).map((s, i) => (
                  <motion.div
                    key={i}
                    className="flex-1 bg-white/60 backdrop-blur-md p-2 rounded-xl border border-white text-[8px] font-black text-slate-500 uppercase tracking-widest text-center"
@@ -171,7 +202,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
              </div>
              <div className="w-[1px] h-8 bg-slate-200" />
              <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-slate-700">{heroProduct?.sku || 'HEYZACK SERIES'}</span>
+                <span className="text-[10px] font-bold text-slate-700">{currentProduct?.sku || 'HEYZACK SERIES'}</span>
                 <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Enterprise Ready</span>
              </div>
           </motion.div>
@@ -386,11 +417,11 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             <motion.button
               onClick={onViewAll}
               className="bg-[#243984] text-white px-10 py-6 rounded-3xl font-black text-xs hover:opacity-90 transition-all flex items-center gap-4 group shadow-xl shadow-blue-900/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-              aria-label={lang === 'en' ? 'View project references for this category' : 'Voir les références de projet pour cette catégorie'}
+              aria-label={lang === 'en' ? 'View product catalog for this category' : 'Voir le catalogue produits pour cette catégorie'}
               whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
               whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
             >
-              <span>{lang === 'en' ? 'VIEW PROJECT REFS' : 'RÉFÉRENCES PROJET'}</span>
+              <span>{lang === 'en' ? 'PRODUCT CATALOG' : 'CATALOGUE PRODUITS'}</span>
               <Icon name="ChevronRight" size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </motion.button>
           </motion.div>

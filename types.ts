@@ -25,6 +25,7 @@ export interface Category {
   name: Record<Language, string>;
   productCount: number;
   heroProductId: string;
+  showcaseProductIds: string[];
   description: Record<Language, string>;
   connections: Connection[]; // New: Links to other categories
 }

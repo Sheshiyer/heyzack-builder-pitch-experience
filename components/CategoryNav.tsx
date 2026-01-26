@@ -68,15 +68,15 @@ const NavItem: React.FC<NavItemProps> = ({ item, isActive, shouldReduceMotion, o
       {/* Tooltip (Desktop Only) */}
       <div className={`
         hidden md:block
-        absolute right-full mr-4 px-4 py-2 rounded-xl
+        absolute left-full ml-4 px-4 py-2 rounded-xl
         bg-slate-900 text-white text-sm font-semibold whitespace-nowrap
         opacity-0 group-hover:opacity-100 transition-opacity duration-200
         pointer-events-none shadow-xl
         z-50
       `}>
         {item.label}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full">
-          <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-slate-900" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full">
+          <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-slate-900" />
         </div>
       </div>
 
@@ -147,10 +147,10 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
   return (
     <div className={`
       fixed z-50 transition-all duration-500
-      /* Mobile: Bottom center, Horizontal, scaled down */
-      bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[400px]
-      /* Desktop: Right side, Vertical, auto width */
-      md:bottom-auto md:left-auto md:right-8 md:top-1/2 md:-translate-y-1/2 md:w-auto md:max-w-none
+      /* Mobile: Bottom center, Horizontal, scaled down, consistent 1em margin */
+      bottom-6 left-4 right-4 mx-auto max-w-[400px]
+      /* Desktop: Left side, Vertical, auto width, 1em margin */
+      md:bottom-auto md:right-auto md:left-4 md:top-1/2 md:-translate-y-1/2 md:w-auto md:max-w-none md:mx-0
     `}>
       <div 
         className={`

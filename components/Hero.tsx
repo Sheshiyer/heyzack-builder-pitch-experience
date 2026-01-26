@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { Language } from '../types';
 import Icon from './Icon';
+import DarkVeil from './DarkVeil';
 import {
   staggerContainer,
   scaleIn,
@@ -104,32 +105,12 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
 
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-950">
-      {/* Layer 1: Gradient mesh background with slow drift */}
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: 'radial-gradient(circle at 30% 50%, rgba(36, 57, 132, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(232, 47, 137, 0.3) 0%, transparent 50%)',
-        }}
-        animate={shouldReduceMotion ? {} : {
-          backgroundPosition: ['0% 0%', '100% 100%', '0% 0%']
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'linear'
-        }}
-      />
-
-      {/* Layer 2: Background image with parallax */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center will-change-transform"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop)',
-          y: shouldReduceMotion ? 0 : backgroundY
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/20 to-slate-950" />
-      </motion.div>
+      {/* Layer 1: DarkVeil Background */}
+      <div className="absolute inset-0 z-0 opacity-80">
+        <DarkVeil />
+      </div>
+      
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/20 to-slate-950 pointer-events-none z-0" />
 
       {/* Layer 3: Floating glass orbs */}
       {!shouldReduceMotion && (

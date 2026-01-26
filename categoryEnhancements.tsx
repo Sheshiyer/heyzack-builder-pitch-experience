@@ -170,7 +170,7 @@ type ConnectionPulseContent = {
   radial?: boolean;
 };
 
-type RadicalElementContent =
+export type RadicalElementContent =
   | { type: 'floating-badge'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: FloatingBadgeContent }
   | { type: 'metric-ring'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: MetricRingContent }
   | { type: 'particle-field'; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'orbiting'; content: ParticleFieldContent }

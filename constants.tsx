@@ -136,6 +136,7 @@ productCatalog.categories.forEach((catInfo: any) => {
     name: toBilingual(catInfo.name),
     productCount: catInfo.product_count,
     heroProductId: '', // will set below
+    showcaseProductIds: [], // will set below
     description: toBilingual('Smart automation solutions for ' + catInfo.name), // generic description if missing
     connections: EXISTING_CONNECTIONS[catId] || []
   };
@@ -161,6 +162,9 @@ productCatalog.categories.forEach((catInfo: any) => {
     const hero = catProducts[0];
     category.heroProductId = hero.id;
     heroProductsMap[hero.id] = hero;
+
+    // Assign Showcase Products (up to 3)
+    category.showcaseProductIds = catProducts.slice(0, 3).map(p => p.id);
   }
   
   processedProducts.push(...catProducts);
