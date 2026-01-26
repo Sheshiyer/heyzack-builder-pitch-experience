@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useReducedMotion, AnimatePresence } from 'framer-motion';
 import { Category, Language } from '../types';
+import { ALL_PRODUCTS } from '../constants';
 import Icon from './Icon';
 import { gridWave, elasticEntrance, fadeInUp } from '../utils/animations';
 import { createGlassEffect, depthShadows } from '../utils/designTokens';
@@ -80,7 +81,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
 
         <div className="flex-1 overflow-y-auto p-16 bg-gradient-to-br from-slate-950 to-slate-900">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Array.from({ length: category.productCount }).map((_, i) => {
+            {ALL_PRODUCTS.filter(p => p.category === category.id).map((product, i) => {
               const row = Math.floor(i / 4);
               const col = i % 4;
               const isHovered = hoveredCard === i;
@@ -155,8 +156,8 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
 
                   <div className="w-full aspect-square bg-slate-900/50 rounded-[2.5rem] mb-8 flex items-center justify-center overflow-hidden border border-white/5 relative">
                     <motion.img
-                      src={`https://picsum.photos/seed/${category.id}-${i}/600/600`}
-                      alt="Product"
+                      src={product.imageUrl}
+                      alt={product.name[lang]}
                       className="w-3/4 h-auto mix-blend-screen opacity-90"
                       animate={isHovered && !shouldReduceMotion ? {
                         scale: 1.1,
@@ -169,10 +170,10 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                   </div>
 
                   <div className="text-[10px] font-black text-[#243984] uppercase tracking-widest mb-3 opacity-70">HEYZACK SERIES 2026</div>
-                  <h4 className="text-xl font-black text-slate-200 mb-2 tracking-tight group-hover:text-white transition-colors relative z-10">
-                    {lang === 'en' ? `Model ${i+100}` : `Modèle ${i+100}`}
+                  <h4 className="text-xl font-black text-slate-200 mb-2 tracking-tight group-hover:text-white transition-colors relative z-10 line-clamp-2 min-h-[3.5rem]" title={product.name[lang]}>
+                    {product.name[lang]}
                   </h4>
-                  <p className="text-[10px] text-slate-500 font-mono mb-4 font-bold">SKU-ZACK-{i+1000}</p>
+                  <p className="text-[10px] text-slate-500 font-mono mb-4 font-bold">{product.sku}</p>
 
                   {/* Ecosystem compatibility badges - animated reveal on hover */}
                   <AnimatePresence>
@@ -231,7 +232,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                   <div className="mt-auto w-full pt-6 border-t border-white/5 flex justify-between items-center relative z-10">
                      <button
                        className="text-[#E82F89] font-black text-[10px] uppercase tracking-[0.2em] flex items-center gap-2 hover:text-[#ff4fa7] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E82F89]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded px-2 py-1"
-                       aria-label={lang === 'en' ? `View specifications for Model ${i+100}` : `Voir les spécifications pour le modèle ${i+100}`}
+                       aria-label={lang === 'en' ? `View specifications for ${product.name[lang]}` : `Voir les spécifications pour ${product.name[lang]}`}
                      >
                         SPECS
                         <Icon name="ArrowUpRight" size={12} aria-hidden="true" />
@@ -247,7 +248,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                            damping: 30
                          }
                        }}
-                       aria-label={lang === 'en' ? `Add Model ${i+100} to selection` : `Ajouter le modèle ${i+100} à la sélection`}
+                       aria-label={lang === 'en' ? `Add ${product.name[lang]} to selection` : `Ajouter ${product.name[lang]} à la sélection`}
                      >
                         <Icon name="Plus" size={14} aria-hidden="true" />
                      </motion.button>

@@ -3,12 +3,14 @@ export type Language = 'en' | 'fr';
 
 export interface Product {
   id: string;
-  name: string;
+  name: Record<Language, string>;
   category: string;
   sku: string;
   specs: string[];
   benefits: string[];
   imageUrl: string;
+  description: Record<Language, string>;
+  slug: string;
 }
 
 export interface Connection {

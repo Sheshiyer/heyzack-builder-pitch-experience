@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useReducedMotion, useSpring, useInView, useTransform } from 'framer-motion';
+import { motion, useReducedMotion, useSpring, useInView } from 'framer-motion';
 import { CATEGORIES } from '../constants';
 import Icon from './Icon';
 import { rotate360, scaleIn } from '../utils/animations';
-import { springConfigs, brandColors } from '../utils/designTokens';
+import { springConfigs } from '../utils/designTokens';
 
 interface CategoryNavProps {
   activeCategoryId: string | null;
@@ -111,9 +111,9 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
   // Spring animations for smooth glow follower
   const glowY = useSpring(12, shouldReduceMotion ? { stiffness: 1000, damping: 100 } : springConfigs.snappy);
 
-  // Calculate scroll progress through categories (0 to 100 for percentage)
-  const scrollProgressRaw = useSpring(0, shouldReduceMotion ? { stiffness: 1000, damping: 100 } : springConfigs.snappy);
-  const scrollProgress = useTransform(scrollProgressRaw, (value) => `${value}%`);
+  // NEW: Springs for next and previous glows
+  const glowNextY = useSpring(72, shouldReduceMotion ? { stiffness: 1000, damping: 100 } : springConfigs.snappy);
+  const glowPrevY = useSpring(-48, shouldReduceMotion ? { stiffness: 1000, damping: 100 } : springConfigs.snappy);
 
   useEffect(() => {
     // Determine active index
@@ -121,9 +121,19 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
     const newIndex = index >= 0 ? index : 0;
     setActiveIndex(newIndex);
 
-    // Update spring animations
-    glowY.set(12 + newIndex * 60); // 12px padding + index * (48px height + 12px gap)
-    scrollProgressRaw.set(navItems.length > 1 ? (newIndex / (navItems.length - 1)) * 100 : 0);
+    // Calculate Y position (12px padding + index * 60px spacing)
+    const baseY = 12 + newIndex * 60;
+    glowY.set(baseY);
+
+    // Set next glow position (only if not last item)
+    if (newIndex < navItems.length - 1) {
+      glowNextY.set(baseY + 60);
+    }
+
+    // Set previous glow position (only if not first item)
+    if (newIndex > 0) {
+      glowPrevY.set(baseY - 60);
+    }
   }, [activeCategoryId, navItems.length]);
 
   const handleClick = (categoryId: string) => {
@@ -155,72 +165,86 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
           WebkitBackdropFilter: 'blur(10px)'
         }}
       >
-        {/* Animated gradient glow follower with spring animation - Desktop Only */}
-        {activeIndex >= 0 && (
+        {/* Three-tier glow system (desktop only) */}
+        {!shouldReduceMotion && (
           <>
-            {/* Main glow with spring animation */}
+            {/* PREVIOUS GLOW (15% intensity) - Fading trail */}
+            {activeIndex > 0 && (
+              <motion.div
+                className="absolute pointer-events-none rounded-2xl hidden md:block"
+                style={{
+                  left: '12px',
+                  y: glowPrevY,
+                  width: '48px',
+                  height: '48px',
+                  background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.06) 0%, rgba(232, 47, 137, 0.06) 100%)',
+                  boxShadow: '0 0 20px rgba(232, 47, 137, 0.075), 0 0 40px rgba(36, 57, 132, 0.045)',
+                  filter: 'blur(8px)',
+                  transform: 'scale(1.1)',
+                  willChange: 'transform'
+                }}
+              />
+            )}
+
+            {/* ACTIVE GLOW (100% intensity) - Main glow with trailing blur */}
             <motion.div
-              className="absolute pointer-events-none rounded-xl md:rounded-2xl hidden md:block"
+              className="absolute pointer-events-none rounded-2xl hidden md:block"
               style={{
-                background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.4) 0%, rgba(232, 47, 137, 0.4) 100%)',
-                boxShadow: '0 0 20px rgba(232, 47, 137, 0.5), 0 0 40px rgba(36, 57, 132, 0.3)',
-                filter: 'blur(8px)',
                 left: '12px',
                 y: glowY,
                 width: '48px',
                 height: '48px',
+                background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.4) 0%, rgba(232, 47, 137, 0.4) 100%)',
+                boxShadow: '0 0 20px rgba(232, 47, 137, 0.5), 0 0 40px rgba(36, 57, 132, 0.3)',
+                filter: 'blur(8px)',
                 transform: 'scale(1.3)',
+                willChange: 'transform'
               }}
             />
-            {/* Trailing blur effect */}
-            {!shouldReduceMotion && (
+
+            {/* Trailing blur on active glow */}
+            <motion.div
+              className="absolute pointer-events-none rounded-2xl hidden md:block"
+              style={{
+                left: '12px',
+                y: glowY,
+                width: '48px',
+                height: '48px',
+                background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.2) 0%, rgba(232, 47, 137, 0.2) 100%)',
+                boxShadow: '0 0 20px rgba(232, 47, 137, 0.25), 0 0 40px rgba(36, 57, 132, 0.15)',
+                filter: 'blur(12px)',
+                transform: 'scale(1.5)',
+                willChange: 'transform',
+                transition: 'all 0.05s'
+              }}
+              animate={{
+                opacity: [0.4, 0.8, 0.4]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            />
+
+            {/* NEXT GLOW (35% intensity) - Preview "where you're going" */}
+            {activeIndex < navItems.length - 1 && (
               <motion.div
-                className="absolute pointer-events-none rounded-xl md:rounded-2xl hidden md:block"
+                className="absolute pointer-events-none rounded-2xl hidden md:block"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.2) 0%, rgba(232, 47, 137, 0.2) 100%)',
-                  boxShadow: '0 0 15px rgba(232, 47, 137, 0.3), 0 0 30px rgba(36, 57, 132, 0.2)',
-                  filter: 'blur(12px)',
                   left: '12px',
-                  y: glowY,
+                  y: glowNextY,
                   width: '48px',
                   height: '48px',
-                  transform: 'scale(1.5)',
-                  opacity: 0.4,
+                  background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.14) 0%, rgba(232, 47, 137, 0.14) 100%)',
+                  boxShadow: '0 0 20px rgba(232, 47, 137, 0.175), 0 0 40px rgba(36, 57, 132, 0.105)',
+                  filter: 'blur(8px)',
+                  transform: 'scale(1.15)',
+                  willChange: 'transform'
                 }}
-                transition={{ delay: 0.05, ...springConfigs.snappy }}
               />
             )}
           </>
-        )}
-
-        {/* Progress bar showing completion through categories */}
-        {!shouldReduceMotion && (
-          <motion.div
-            className="absolute left-2 top-2 bottom-2 w-1 rounded-full overflow-hidden bg-white/10 hidden md:block"
-          >
-            <motion.div
-              className="absolute inset-x-0 top-0 rounded-full"
-              style={{
-                background: `linear-gradient(180deg, ${brandColors.primary.blue} 0%, ${brandColors.primary.pink} 100%)`,
-                height: scrollProgress,
-              }}
-            >
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background: `linear-gradient(180deg, ${brandColors.primary.blue} 0%, ${brandColors.primary.pink} 100%)`,
-                }}
-                animate={{
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-            </motion.div>
-          </motion.div>
         )}
 
         {navItems.map((item, index) => {
