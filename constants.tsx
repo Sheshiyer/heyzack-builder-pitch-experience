@@ -80,16 +80,90 @@ export const CATEGORIES: Category[] = [
       { partnerId: 'climatisation', label: { en: 'Thermal-Lock', fr: 'Verrou-Thermique' }, description: { en: 'Auto-closes to trap heat in winter nights.', fr: 'Fermeture auto pour garder la chaleur l\'hiver.' }, impactMetric: { en: 'Heat Retention', fr: 'Rétention Chaleur' } }
     ]
   },
-  { id: 'circuit-breaker', name: { en: 'Circuit Breaker', fr: 'Disjoncteur' }, productCount: 2, heroProductId: 'breaker-hero', description: { en: 'Portfolio energy analytics.', fr: 'Analyses énergétiques.' }, connections: [] },
-  { id: 'door-lock', name: { en: 'Smart Door Lock', fr: 'Serrure' }, productCount: 10, heroProductId: 'lock-hero', description: { en: 'Keyless turnover efficiency.', fr: 'Efficacité turnover sans clé.' }, connections: [] },
-  { id: 'control-panel', name: { en: 'Control Panel', fr: 'Panneau de Contrôle' }, productCount: 6, heroProductId: 'panel-hero', description: { en: 'Unit command hub.', fr: 'Hub de commande.' }, connections: [] },
-  { id: 'gateway', name: { en: 'Smart Gateway', fr: 'Passerelle' }, productCount: 4, heroProductId: 'gateway-hero', description: { en: 'System connectivity hub.', fr: 'Hub de connectivité.' }, connections: [] },
-  { id: 'diy-breaker', name: { en: 'DIY Breaker', fr: 'Micro-Disjoncteur' }, productCount: 5, heroProductId: 'diy-hero', description: { en: 'Legacy integration tools.', fr: 'Outils d\'intégration.' }, connections: [] },
-  { id: 'music-control', name: { en: 'Music Control', fr: 'Musique' }, productCount: 3, heroProductId: 'music-hero', description: { en: 'Amenity audio systems.', fr: 'Systèmes audio d\'agrément.' }, connections: [] },
-  { id: 'switch', name: { en: 'Smart Switch', fr: 'Interrupteur' }, productCount: 5, heroProductId: 'switch-hero', description: { en: 'Tactile scene controls.', fr: 'Commandes de scènes.' }, connections: [] },
-  { id: 'lock-body', name: { en: 'Lock Body', fr: 'Corps de Serrure' }, productCount: 3, heroProductId: 'mortise-hero', description: { en: 'Commercial hardware.', fr: 'Matériel commercial.' }, connections: [] },
-  { id: 'accessories', name: { en: 'Accessories', fr: 'Accessoires' }, productCount: 5, heroProductId: 'strip-hero', description: { en: 'Power management tools.', fr: 'Outils de gestion d\'énergie.' }, connections: [] },
-  { id: 'pet-accessories', name: { en: 'Pet Accessories', fr: 'Accesoires Animaux' }, productCount: 2, heroProductId: 'pet-hero', description: { en: 'Pet-friendly amenities.', fr: 'Agréments animaux.' }, connections: [] }
+  { 
+    id: 'circuit-breaker', 
+    name: { en: 'Circuit Breaker', fr: 'Disjoncteur' }, 
+    productCount: 2, 
+    heroProductId: 'breaker-hero', 
+    description: { en: 'Real-time energy monitoring and remote shutoff for portfolio-wide cost control.', fr: 'Surveillance énergétique en temps réel et arrêt à distance pour contrôle des coûts.' }, 
+    connections: [
+      { partnerId: 'gateway', label: { en: 'Energy-Pulse', fr: 'Pouls-Énergie' }, description: { en: 'Dashboard aggregates all building energy consumption for instant insights.', fr: 'Tableau de bord agrège toute la consommation pour des insights instantanés.' }, impactMetric: { en: 'ROI Visibility', fr: 'Visibilité ROI' } },
+      { partnerId: 'climatisation', label: { en: 'Load-Shed', fr: 'Délestage' }, description: { en: 'Auto-throttles HVAC during peak pricing to avoid demand charges.', fr: 'Réduit automatiquement le CVC pendant les pics tarifaires.' }, impactMetric: { en: '22% Utility Savings', fr: '22% Économies' } }
+    ] 
+  },
+  { 
+    id: 'door-lock', 
+    name: { en: 'Smart Door Lock', fr: 'Serrure' }, 
+    productCount: 10, 
+    heroProductId: 'lock-hero', 
+    description: { en: 'Keyless entry with remote access codes eliminates lockout calls and turnover delays.', fr: 'Entrée sans clé avec codes à distance élimine les appels de verrouillage et les retards.' }, 
+    connections: [
+      { partnerId: 'gateway', label: { en: 'Remote-Access', fr: 'Accès-Distant' }, description: { en: 'Property manager grants temporary codes from anywhere, no physical keys.', fr: 'Le gestionnaire accorde des codes temporaires de n\'importe où, sans clés physiques.' }, impactMetric: { en: '$850/Turnover Saved', fr: '850$/Rotation Économisé' } },
+      { partnerId: 'camera-doorbell', label: { en: 'Verified-Entry', fr: 'Entrée-Vérifiée' }, description: { en: 'Video verification ensures only authorized access, reduces tenant disputes.', fr: 'Vérification vidéo garantit l\'accès autorisé uniquement, réduit les litiges.' }, impactMetric: { en: '95% Security', fr: '95% Sécurité' } }
+    ] 
+  },
+  { 
+    id: 'control-panel', 
+    name: { en: 'Control Panel', fr: 'Panneau de Contrôle' }, 
+    productCount: 6, 
+    heroProductId: 'panel-hero', 
+    description: { en: 'Central touchscreen hub for tenant-friendly control of entire unit ecosystem.', fr: 'Hub tactile central pour contrôle convivial de tout l\'écosystème de l\'unité.' }, 
+    connections: [
+      { partnerId: 'lighting', label: { en: 'Touch-Ambiance', fr: 'Ambiance-Tactile' }, description: { en: 'Visual scene builder lets tenants customize lighting moods effortlessly.', fr: 'Constructeur de scènes visuel permet de personnaliser l\'éclairage facilement.' }, impactMetric: { en: 'Premium Perception', fr: 'Perception Premium' } },
+      { partnerId: 'climatisation', label: { en: 'Comfort-Dial', fr: 'Cadran-Confort' }, description: { en: 'Intuitive temperature control reduces support calls by 60%.', fr: 'Contrôle de température intuitif réduit les appels de 60%.' }, impactMetric: { en: 'Support Reduction', fr: 'Réduction Support' } }
+    ] 
+  },
+  { 
+    id: 'gateway', 
+    name: { en: 'Smart Gateway', fr: 'Passerelle' }, 
+    productCount: 4, 
+    heroProductId: 'gateway-hero', 
+    description: { en: 'Portfolio command center enabling remote management of unlimited properties.', fr: 'Centre de commande de portefeuille permettant la gestion à distance de propriétés illimitées.' }, 
+    connections: [
+      { partnerId: 'door-lock', label: { en: 'Virtual-Keys', fr: 'Clés-Virtuelles' }, description: { en: 'Centralized access control across all units eliminates physical key logistics.', fr: 'Contrôle d\'accès centralisé élimine la logistique des clés physiques.' }, impactMetric: { en: 'Zero Lockouts', fr: 'Zéro Verrouillage' } },
+      { partnerId: 'circuit-breaker', label: { en: 'Energy-Dashboard', fr: 'Tableau-Énergie' }, description: { en: 'Real-time portfolio-wide energy visibility identifies cost savings opportunities.', fr: 'Visibilité énergétique en temps réel identifie les opportunités d\'économies.' }, impactMetric: { en: '$12K/Building/Year', fr: '12K$/Bâtiment/An' } }
+    ] 
+  },
+  { 
+    id: 'diy-breaker', 
+    name: { en: 'DIY Breaker', fr: 'Micro-Disjoncteur' }, 
+    productCount: 5, 
+    heroProductId: 'diy-hero', 
+    description: { en: 'Retrofit-friendly smart relays that upgrade existing systems without rewiring.', fr: 'Relais intelligents de rénovation qui améliorent les systèmes existants sans recâblage.' }, 
+    connections: [
+      { partnerId: 'sensors', label: { en: 'Leak-Shutoff', fr: 'Arrêt-Fuite' }, description: { en: 'Water sensor triggers instant valve closure preventing $50K+ flood damage.', fr: 'Capteur d\'eau déclenche la fermeture instantanée pour éviter 50K$+ de dégâts.' }, impactMetric: { en: 'Insurance Premium Cut', fr: 'Réduction Prime Assurance' } },
+      { partnerId: 'climatisation', label: { en: 'HVAC-Upgrade', fr: 'Mise-à-Niveau-CVC' }, description: { en: 'Adds smart control to legacy HVAC without replacing units.', fr: 'Ajoute contrôle intelligent au CVC existant sans remplacement.' }, impactMetric: { en: '18% Energy Savings', fr: '18% Économies' } }
+    ] 
+  },
+  { 
+    id: 'music-control', 
+    name: { en: 'Music Control', fr: 'Musique' }, 
+    productCount: 3, 
+    heroProductId: 'music-hero', 
+    description: { en: 'Multi-zone audio for amenity spaces that differentiates luxury properties.', fr: 'Audio multi-zones pour espaces d\'agrément qui différencie les propriétés de luxe.' }, 
+    connections: [
+      { partnerId: 'control-panel', label: { en: 'Amenity-Scheduler', fr: 'Planificateur-Agrément' }, description: { en: 'Automated gym and lounge audio creates premium tenant experience.', fr: 'Audio automatisé pour gym et salon crée une expérience premium.' }, impactMetric: { en: '12% Rent Premium', fr: '12% Prime Location' } },
+      { partnerId: 'sensors', label: { en: 'Presence-Audio', fr: 'Audio-Présence' }, description: { en: 'Music activates when tenants enter amenity spaces, pauses when empty.', fr: 'La musique s\'active quand les locataires entrent, se met en pause si vide.' }, impactMetric: { en: 'Luxury Feel', fr: 'Sensation Luxe' } }
+    ] 
+  },
+  { id: 'switch', name: { en: 'Smart Switch', fr: 'Interrupteur' }, productCount: 5, heroProductId: 'switch-hero', description: { en: 'One-touch scene control for tenant convenience and energy savings.', fr: 'Contrôle de scènes en un seul toucher pour le confort et l\'économie d\'énergie.' }, connections: [
+    { partnerId: 'lighting', label: { en: 'Scene-Master', fr: 'Maître-Scène' }, description: { en: 'Single button activates multi-room lighting scenes instantly.', fr: 'Un bouton active instantanément les scènes d\'éclairage multi-pièces.' }, impactMetric: { en: 'Tenant Delight', fr: 'Satisfaction Locataire' } },
+    { partnerId: 'climatisation', label: { en: 'Quick-Comfort', fr: 'Confort-Rapide' }, description: { en: 'Away mode adjusts all HVAC zones with one touch.', fr: 'Le mode absent ajuste toutes les zones CVC en un seul toucher.' }, impactMetric: { en: '15% Energy Cut', fr: '15% Économie' } }
+  ] },
+  { id: 'accessories', name: { en: 'Accessories', fr: 'Accessoires' }, productCount: 8, heroProductId: 'strip-hero', description: { en: 'Smart power strips and hardware for complete ecosystem integration.', fr: 'Prises intelligentes et matériel pour intégration complète de l\'écosystème.' }, connections: [
+    { partnerId: 'gateway', label: { en: 'Power-Hub', fr: 'Hub-Énergie' }, description: { en: 'Centralized control of all unit outlets for maintenance shutoffs.', fr: 'Contrôle centralisé de toutes les prises pour arrêts de maintenance.' }, impactMetric: { en: 'Zero Site Visits', fr: 'Zéro Visite' } }
+  ] },
+  { 
+    id: 'pet-accessories', 
+    name: { en: 'Pet Accessories', fr: 'Accessoires Animaux' }, 
+    productCount: 2, 
+    heroProductId: 'pet-hero', 
+    description: { en: 'Smart pet care amenities that capture the growing pet-owner market segment.', fr: 'Agréments intelligents pour animaux qui capturent le segment croissant des propriétaires.' }, 
+    connections: [
+      { partnerId: 'sensors', label: { en: 'Auto-Feed', fr: 'Alimentation-Auto' }, description: { en: 'Presence-based feeding ensures pets are cared for even when tenants travel.', fr: 'Alimentation basée sur la présence garantit les soins même en voyage.' }, impactMetric: { en: '40% Higher Demand', fr: '40% Demande Plus' } },
+      { partnerId: 'camera-doorbell', label: { en: 'Pet-Cam', fr: 'Caméra-Animal' }, description: { en: 'Remote pet monitoring reduces anxiety and tenant turnover.', fr: 'Surveillance à distance réduit l\'anxiété et le roulement des locataires.' }, impactMetric: { en: 'Retention Boost', fr: 'Boost Rétention' } }
+    ] 
+  }
 ];
 
 export const HERO_PRODUCTS: Record<string, Product> = {
@@ -105,7 +179,6 @@ export const HERO_PRODUCTS: Record<string, Product> = {
   'diy-hero': { id: 'dy-1', name: 'HZ-SN-CONACC06', category: 'Smart DIY Breaker', sku: 'HZ-SN-CONACC06', imageUrl: 'https://images.unsplash.com/photo-1558486012-817176f84c6d?q=80&w=800&auto=format&fit=crop', specs: ['Dry Contact', '16A Relay', 'WiFi/Zigbee'], benefits: ['Retrofit Capable', 'HVAC Control', 'Low-cost Smart'] },
   'music-hero': { id: 'mc-1', name: 'HZ-SM-DOMCAM01', category: 'Smart Music Control', sku: 'HZ-SM-DOMCAM01', imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop', specs: ['5.25" Silk Dome', '80W Rated', 'Bluetooth Master'], benefits: ['Luxury Lifestyle', 'Multi-room Audio', 'Hidden Sound'] },
   'switch-hero': { id: 'sw-1', name: 'HZ-LT-SPOTLT04', category: 'Smart Switch', sku: 'HZ-LT-SPOTLT04', imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop', specs: ['4 Gang Display', 'UK/EU Standard', 'Flame Retardant'], benefits: ['Visual Interface', 'Intuitive Scenes', 'Modern Aesthetic'] },
-  'mortise-hero': { id: 'mh-1', name: 'HZ-SD-SQU50501', category: 'Lock Body', sku: 'HZ-SD-SQU50501', imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop', specs: ['304 Stainless', '96hr Salt Spray', 'IP65 Rated'], benefits: ['Durability', 'Security Standard', 'Bulk Reliability'] },
   'strip-hero': { id: 'st-1', name: 'HZ-SA-CONACC01', category: 'Accessories', sku: 'HZ-SA-CONACC01', imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop', specs: ['Zigbee 3.0', 'Dual 100W Ch', 'Voltage 100-240V'], benefits: ['Device Orchestration', 'Remote Power Cycle', 'Surge Protect'] },
   'pet-hero': { id: 'pt-1', name: 'HZ-PA-CONACC02', category: 'Pet Accessories', sku: 'HZ-PA-CONACC02', imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop', specs: ['4L Capacity', '304 Stainless', 'WiFi 2.4/5G'], benefits: ['Pet-Friendly Portfolios', 'Automated Care', 'Premium Amenity'] }
 };

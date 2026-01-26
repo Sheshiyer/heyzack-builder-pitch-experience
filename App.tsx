@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Language } from './types';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,20 +9,42 @@ import SceneTimeline from './components/SceneTimeline';
 import ROICalculator from './components/ROICalculator';
 import GeminiAssistant from './components/GeminiAssistant';
 import CategoryModal from './components/CategoryModal';
+import CategoryNav from './components/CategoryNav';
 import { CATEGORIES } from './constants';
 import Icon from './components/Icon';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('en');
   const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null);
+  const [currentSection, setCurrentSection] = useState<string | null>(null);
 
   const toggleLang = () => setLang(prev => prev === 'en' ? 'fr' : 'en');
 
   const activeCategory = CATEGORIES.find(c => c.id === activeCategoryId);
 
+  // Track scroll position to highlight active category in nav
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = CATEGORIES.map(cat => document.getElementById(cat.id));
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setCurrentSection(CATEGORIES[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar lang={lang} toggleLang={toggleLang} />
+      <CategoryNav activeCategoryId={currentSection} onNavigate={(id) => setCurrentSection(id)} />
       
       <main className="snap-y snap-mandatory overflow-y-auto h-screen">
         <section className="snap-start" id="home">
