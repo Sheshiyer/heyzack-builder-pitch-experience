@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CATEGORIES } from '../constants';
 import Icon from './Icon';
 
@@ -8,6 +8,34 @@ interface CategoryNavProps {
 }
 
 const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const pillarsSection = document.getElementById('pillars');
+      const firstCategory = document.getElementById(CATEGORIES[0].id);
+      
+      if (pillarsSection && firstCategory) {
+        const pillarsBottom = pillarsSection.offsetTop + pillarsSection.offsetHeight;
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        
+        // Show nav when scrolling past pillars section
+        setIsVisible(scrollPosition > pillarsBottom);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const index = CATEGORIES.findIndex(cat => cat.id === activeCategoryId);
+    setActiveIndex(index);
+  }, [activeCategoryId]);
+
   const handleClick = (categoryId: string) => {
     onNavigate(categoryId);
     const element = document.getElementById(categoryId);
@@ -17,14 +45,31 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
   };
 
   return (
-    <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+    <div 
+      className={`fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block transition-all duration-500 ${
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
+      }`}
+    >
       <div 
-        className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-3 shadow-[0_8px_32px_rgba(31,38,135,0.15)]"
+        className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-3 shadow-[0_8px_32px_rgba(31,38,135,0.15)] relative"
         style={{ 
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)'
         }}
       >
+        {/* Animated gradient glow follower */}
+        {activeIndex >= 0 && (
+          <div
+            className="absolute left-3 w-12 h-12 rounded-2xl transition-all duration-500 ease-out pointer-events-none"
+            style={{
+              top: `${12 + activeIndex * 60}px`, // 12px padding + index * (48px height + 12px gap)
+              background: 'linear-gradient(135deg, rgba(36, 57, 132, 0.4) 0%, rgba(232, 47, 137, 0.4) 100%)',
+              boxShadow: '0 0 30px rgba(232, 47, 137, 0.6), 0 0 60px rgba(36, 57, 132, 0.4)',
+              filter: 'blur(8px)',
+              transform: 'scale(1.3)',
+            }}
+          />
+        )}
         <div className="flex flex-col gap-3">
           {CATEGORIES.map((category, index) => {
             const isActive = activeCategoryId === category.id;
