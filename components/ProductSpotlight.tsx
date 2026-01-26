@@ -473,81 +473,32 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                      )}
 
                      <div className="flex items-center justify-between relative z-10">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-white/60">
+                        <span className="text-xs font-black uppercase tracking-widest text-white/70">
                           {partner?.name[lang] || 'System Node'}
                         </span>
                         <motion.div
-                          className="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#E82F89] text-white"
+                          className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors bg-[#E82F89] text-white"
                           animate={
                              !prefersReducedMotion
                               ? { rotate: [0, 360], transition: { duration: 4, repeat: Infinity, ease: 'linear' } }
                               : { rotate: 0 }
                           }
                         >
-                           <Icon name="Zap" size={14} />
+                           <Icon name="Zap" size={16} />
                         </motion.div>
                      </div>
-                     <p className="text-sm font-bold leading-tight relative z-10 text-white">
+                     <p className="text-lg font-bold leading-snug relative z-10 text-white">
                        {link.label[lang]}
                      </p>
 
                      <motion.div
-                       className="text-[10px] font-medium leading-relaxed mt-1 relative z-10 text-white/80"
+                       className="text-sm font-medium leading-relaxed mt-2 relative z-10 text-white/90"
                        style={{ height: 'auto', opacity: 1 }}
                      >
                        {link.description[lang]}
-
-                       {/* Pillar Meters */}
-                       {link.scores && (
-                          <div className="mt-3 flex gap-2">
-                            {/* Security Meter */}
-                            <div className="flex-1 flex flex-col gap-1">
-                               <div className="flex justify-between items-center text-[8px] uppercase font-black text-[#243984] bg-white/10 px-1 rounded">
-                                  <span>Sec</span>
-                               </div>
-                               <div className="h-1 bg-white/10 rounded-full overflow-hidden">
-                                  <motion.div 
-                                    className="h-full bg-[#243984]" 
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: `${link.scores.security}%` }}
-                                    transition={{ duration: 1, delay: 0.2 }}
-                                  />
-                               </div>
-                            </div>
-                            {/* Savings Meter */}
-                            <div className="flex-1 flex flex-col gap-1">
-                               <div className="flex justify-between items-center text-[8px] uppercase font-black text-[#10B981] bg-white/10 px-1 rounded">
-                                  <span>Sav</span>
-                               </div>
-                               <div className="h-1 bg-white/10 rounded-full overflow-hidden">
-                                  <motion.div 
-                                    className="h-full bg-[#10B981]" 
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: `${link.scores.savings}%` }}
-                                    transition={{ duration: 1, delay: 0.3 }}
-                                  />
-                               </div>
-                            </div>
-                            {/* Comfort Meter */}
-                            <div className="flex-1 flex flex-col gap-1">
-                               <div className="flex justify-between items-center text-[8px] uppercase font-black text-[#E82F89] bg-white/10 px-1 rounded">
-                                  <span>Com</span>
-                               </div>
-                               <div className="h-1 bg-white/10 rounded-full overflow-hidden">
-                                  <motion.div 
-                                    className="h-full bg-[#E82F89]" 
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: `${link.scores.comfort}%` }}
-                                    transition={{ duration: 1, delay: 0.4 }}
-                                  />
-                               </div>
-                            </div>
-                          </div>
-                       )}
-
-                       <div className="mt-3 pt-3 border-t border-white/10 flex justify-between items-center">
-                          <span className="text-white font-black">{link.impactMetric[lang]}</span>
-                          <Icon name="ArrowRight" size={10} />
+                       <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                          <span className="text-sm text-white font-black">{link.impactMetric[lang]}</span>
+                          <Icon name="ArrowRight" size={12} />
                        </div>
                      </motion.div>
                    </motion.div>
