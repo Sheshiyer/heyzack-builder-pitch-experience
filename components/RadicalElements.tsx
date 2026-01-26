@@ -134,10 +134,11 @@ interface MetricRingProps {
 const MetricRing: React.FC<MetricRingProps> = ({ element, prefersReducedMotion }) => {
   const { position, content } = element;
   const { value, label, color, thickness, max = 100 } = content;
+  const safeMax = Math.max(max, 1); // Prevent division by zero
 
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (value / max) * circumference;
+  const strokeDashoffset = circumference - (value / safeMax) * circumference;
 
   return (
     <motion.div
@@ -403,13 +404,17 @@ const LightBeam: React.FC<LightBeamProps> = ({ element, prefersReducedMotion }) 
     }
   }, [direction]);
 
+  // Clamp intensity to valid range [0, 1] and convert to hex alpha
+  const clampedIntensity = Math.min(Math.max(intensity, 0), 1);
+  const alphaHex = Math.round(clampedIntensity * 255).toString(16).padStart(2, '0');
+
   return (
     <motion.div
       className={`absolute ${getPositionClasses(position)} z-10`}
       style={{
         width: '200px',
         height: '600px',
-        background: `linear-gradient(to bottom, transparent, ${color}${Math.round(intensity * 255).toString(16).padStart(2, '0')}, transparent)`,
+        background: `linear-gradient(to bottom, transparent, ${color}${alphaHex}, transparent)`,
         filter: 'blur(40px)',
         transform: `rotate(${angle}deg)`,
         pointerEvents: 'none',
@@ -444,7 +449,7 @@ interface ConnectionPulseProps {
 
 const ConnectionPulse: React.FC<ConnectionPulseProps> = ({ element, prefersReducedMotion }) => {
   const { position, content } = element;
-  const { nodes, pulseSpeed, color, radial } = content;
+  const { pulseSpeed, color } = content;
 
   // Create staggered pulses
   const pulses = Array.from({ length: 3 }, (_, i) => ({
@@ -510,7 +515,6 @@ export default function RadicalElements({
   categoryId,
   accentGradient,
   particleShape,
-  language = 'en',
 }: Props) {
   const prefersReducedMotion = useReducedMotion() || false;
 
