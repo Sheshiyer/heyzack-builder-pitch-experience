@@ -4,13 +4,12 @@
 Transform existing HeyZack builder pitch experience into a production-ready repository using Bun package manager with autonomous development workflow.
 
 ## In Progress
-- [ ] Document deployment options
+<!-- No tasks currently in progress -->
 
 ## Pending
-- [ ] Add production deployment configuration
 - [ ] Create GitHub Actions workflow (optional)
-- [ ] Add contribution guidelines
-- [ ] Create issue templates
+- [ ] Add issue templates
+- [ ] Set up remote repository (GitHub/GitLab)
 
 ## Completed (move to memory.md)
 - [DONE] ~~Initialize project structure with Bun~~
@@ -25,3 +24,6 @@ Transform existing HeyZack builder pitch experience into a production-ready repo
 - [DONE] ~~Test build process with Bun~~
 - [DONE] ~~Add autonomous workflow documentation~~
 - [DONE] ~~Commit initial repository structure~~
+- [DONE] ~~Document deployment options~~
+- [DONE] ~~Add production deployment configuration~~
+- [DONE] ~~Add contribution guidelines~~

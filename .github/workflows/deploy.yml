@@ -1,0 +1,49 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      
+      - name: Build project
+        run: bun run build
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+      
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./
+
+# Alternative: Deploy to Netlify
+# Uncomment the following section and comment out Vercel deployment above
+
+# - name: Deploy to Netlify
+#   uses: nwtgck/actions-netlify@v2.1
+#   with:
+#     publish-dir: './dist'
+#     production-deploy: true
+#     github-token: ${{ secrets.GITHUB_TOKEN }}
+#     deploy-message: "Deploy from GitHub Actions"
+#   env:
+#     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
