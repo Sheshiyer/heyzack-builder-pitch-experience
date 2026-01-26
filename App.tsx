@@ -26,25 +26,40 @@ const App: React.FC = () => {
   useEffect(() => {
     const container = document.getElementById('main-scroll-container');
     const handleScroll = () => {
-      const sections = CATEGORIES.map(cat => document.getElementById(cat.id));
+      // Include Home and Pillars in the sections to track
+      const allSections = [
+        { id: 'home' },
+        { id: 'pillars' },
+        ...CATEGORIES
+      ];
+      
+      const sections = allSections.map(item => document.getElementById(item.id));
       // Use container.scrollTop if available, otherwise window.scrollY
       const scrollY = container ? container.scrollTop : window.scrollY;
       const viewportHeight = container ? container.clientHeight : window.innerHeight;
-      const scrollPosition = scrollY + viewportHeight / 2;
+      const scrollPosition = scrollY + viewportHeight / 3; // Trigger slightly earlier (1/3 down screen)
+
+      // Default to home if nothing else matches
+      let newActiveSection = 'home';
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
-          setCurrentSection(CATEGORIES[i].id);
+          newActiveSection = allSections[i].id;
           break;
         }
       }
+      
+      setCurrentSection(newActiveSection);
     };
 
     if (container) {
       container.addEventListener('scroll', handleScroll);
+      // Run once on mount to set initial state
+      handleScroll();
     } else {
       window.addEventListener('scroll', handleScroll);
+      handleScroll();
     }
     
     return () => {
@@ -58,7 +73,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar lang={lang} toggleLang={toggleLang} />
+      {/* Navbar removed as requested, consolidated into CategoryNav */}
       <CategoryNav activeCategoryId={currentSection} onNavigate={(id) => setCurrentSection(id)} />
       
       <main id="main-scroll-container" className="snap-y snap-mandatory overflow-y-auto h-screen">
