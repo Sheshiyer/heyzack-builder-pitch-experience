@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useSpring, useTransform, useMotionValue } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 type DialConfig = {
@@ -20,34 +20,54 @@ export default function TemperatureDial({ config, language = 'en' }: Props) {
   const prefersReducedMotion = useReducedMotion();
   const [displayValue, setDisplayValue] = useState(config.min);
 
+  // Physics setup
+  const valueMotion = useMotionValue(config.min);
+  const valueSpring = useSpring(valueMotion, {
+    stiffness: 50,
+    damping: 12,
+    mass: 0.8
+  });
+
   useEffect(() => {
-    // Animate the value counting up
-    const duration = 1500;
-    const steps = 30;
-    const stepValue = (config.value - config.min) / steps;
-    const stepDuration = duration / steps;
+    // Set spring target
+    valueMotion.set(config.value);
 
-    let currentStep = 0;
-    const interval = setInterval(() => {
-      currentStep++;
-      if (currentStep >= steps) {
-        setDisplayValue(config.value);
-        clearInterval(interval);
-      } else {
-        setDisplayValue(config.min + stepValue * currentStep);
-      }
-    }, stepDuration);
+    // Update display number
+    const unsubscribe = valueSpring.on("change", (latest) => {
+      setDisplayValue(Math.round(latest * 10) / 10);
+    });
 
-    return () => clearInterval(interval);
-  }, [config.value, config.min]);
+    return () => unsubscribe();
+  }, [config.value, valueMotion, valueSpring]);
 
-  // Calculate arc fill percentage
-  const percentage = ((config.value - config.min) / (config.max - config.min)) * 100;
-  const arcLength = 2 * Math.PI * 120; // circumference at radius 120
-  const dashOffset = arcLength - (arcLength * percentage) / 100;
+  // Dimensions
+  const radius = 120;
+  const arcLength = 2 * Math.PI * radius; // circumference
 
-  // Temperature gradient color based on value
+  // Transform spring value to percentage (0 to 1)
+  const progress = useTransform(
+    valueSpring,
+    [config.min, config.max],
+    [0, 1]
+  );
+  
+  // Transform percentage to dash offset (full circle)
+  const dashOffset = useTransform(
+    progress,
+    [0, 1],
+    [arcLength, 0]
+  );
+
+  // Calculate Marker Position
+  // We need to sync this with framer motion. 
+  // Standard SVG rotation is easier than calculating x/y with useTransform multiple times,
+  // so we'll rotate a group container for the marker.
+  // -90deg is top. We want to rotate from 0 to 360 based on progress.
+  const rotation = useTransform(progress, [0, 1], [0, 360]);
+
+  // Temperature gradient color based on value (helper)
   const getTemperatureColor = (temp: number) => {
+    // simple normalization for color logic
     const normalized = (temp - config.min) / (config.max - config.min);
     if (normalized < 0.33) return '#3B82F6'; // Blue
     if (normalized < 0.66) return '#10B981'; // Green
@@ -58,8 +78,23 @@ export default function TemperatureDial({ config, language = 'en' }: Props) {
     ? `${config.zones.length} ZONES ACTIVE`
     : `${config.zones.length} ZONES ACTIVES`;
 
+  const currentColor = getTemperatureColor(config.value);
+
   return (
-    <div className="flex flex-col items-center justify-center" role="img" aria-label={`Temperature dial showing ${config.value}${config.unit}`}>
+    <motion.div 
+      className="flex flex-col items-center justify-center p-6 bg-slate-900/50 rounded-3xl border border-white/5 shadow-inner backdrop-blur-md" 
+      role="img" 
+      aria-label={`Temperature dial showing ${config.value}${config.unit}`}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ 
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        delay: 0.3
+      }}
+      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+    >
       <svg width="300" height="300" viewBox="0 0 300 300" className="overflow-visible">
         <defs>
           <linearGradient id="tempGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -67,90 +102,110 @@ export default function TemperatureDial({ config, language = 'en' }: Props) {
             <stop offset="50%" stopColor="#10B981" />
             <stop offset="100%" stopColor="#F97316" />
           </linearGradient>
+          {/* Glow filter */}
+          <filter id="glow">
+             <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+             <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+             </feMerge>
+          </filter>
         </defs>
 
-        {/* Background arc */}
+        {/* Background arc track */}
         <circle
           cx="150"
           cy="150"
-          r="120"
+          r={radius}
           fill="none"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="20"
-          strokeLinecap="round"
+          stroke="rgba(255,255,255,0.05)"
+          strokeWidth="24"
         />
 
         {/* Animated gradient arc */}
         <motion.circle
           cx="150"
           cy="150"
-          r="120"
+          r={radius}
           fill="none"
           stroke="url(#tempGradient)"
-          strokeWidth="20"
+          strokeWidth="24"
           strokeLinecap="round"
           strokeDasharray={arcLength}
-          strokeDashoffset={arcLength}
+          style={{ strokeDashoffset: dashOffset }}
           transform="rotate(-90 150 150)"
-          initial={{ strokeDashoffset: arcLength }}
-          animate={{ strokeDashoffset: dashOffset }}
-          transition={{
-            duration: prefersReducedMotion ? 0 : 1.5,
-            ease: 'easeOut'
-          }}
         />
 
-        {/* Temperature marker dot */}
-        <motion.circle
-          cx={150 + 120 * Math.cos((percentage / 100) * 2 * Math.PI - Math.PI / 2)}
-          cy={150 + 120 * Math.sin((percentage / 100) * 2 * Math.PI - Math.PI / 2)}
-          r="8"
-          fill={getTemperatureColor(config.value)}
-          initial={{ scale: 0 }}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{
-            duration: prefersReducedMotion ? 0 : 2,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
+        {/* Marker Knob Group */}
+        {/* Rotates based on spring value */}
+        <motion.g 
+          style={{ rotate: rotation, originX: "150px", originY: "150px" }}
+          // Initial rotation needs to offset the SVG standard orientation if needed.
+          // Since our arc starts at -90deg, we want 0 progress to be at -90deg.
+          // Wait, 'progress' 0->1 maps to 0->360 rotation.
+          // If we rotate the group containing the marker (which sits at top/0deg relative to group),
+          // we should be good if we align start positions.
+        >
+             {/* We place the marker at the "top" of the circle (150, 30) assuming 0deg is top.
+                 Actually SVG 0deg is right (3 o'clock). 
+                 So we need to correct the phase.
+             */}
+             <motion.g transform="rotate(-90 150 150)">
+                <circle
+                  cx={150 + radius} 
+                  cy={150}
+                  r="12"
+                  fill="#fff"
+                  filter="url(#glow)"
+                  className="cursor-pointer"
+                />
+                <circle
+                  cx={150 + radius} 
+                  cy={150}
+                  r="4"
+                  fill={currentColor}
+                />
+             </motion.g>
+        </motion.g>
 
         {/* Center temperature value */}
         <text
           x="150"
-          y="145"
+          y="155"
           textAnchor="middle"
-          className="text-5xl font-bold fill-white"
-          style={{ fontSize: '48px' }}
+          className="text-6xl font-black fill-white tracking-tighter"
+          style={{ 
+             filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))',
+             fontFamily: 'Inter, sans-serif'
+          }}
         >
-          {Math.round(displayValue * 10) / 10}
+          {displayValue}
         </text>
 
         {/* Unit */}
         <text
           x="150"
-          y="175"
+          y="190"
           textAnchor="middle"
-          className="text-2xl fill-white/70"
-          style={{ fontSize: '24px' }}
+          className="text-2xl fill-white/50 font-bold"
         >
           {config.unit}
         </text>
       </svg>
 
       {/* Mode and zone status */}
-      <div className="mt-4 text-center">
+      <div className="mt-8 text-center flex flex-col gap-2">
         <motion.div
-          className="text-sm font-semibold tracking-wider"
-          style={{ color: getTemperatureColor(config.value) }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-black tracking-widest uppercase"
+          style={{ color: currentColor, borderColor: `${currentColor}33` }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          {config.mode.toUpperCase()}
+          {config.mode}
         </motion.div>
         <motion.div
-          className="text-xs text-white/60 mt-1"
+          className="text-[10px] text-white/40 font-medium uppercase tracking-wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
@@ -158,6 +213,6 @@ export default function TemperatureDial({ config, language = 'en' }: Props) {
           {statusText}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

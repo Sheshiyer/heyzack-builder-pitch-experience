@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import { motion, useReducedMotion, Variants } from 'framer-motion';
+import React, { useState, useRef, useMemo, useCallback } from 'react';
+import { motion, useReducedMotion, Variants, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Category, Product, Language } from '../types';
 import { HERO_PRODUCTS, CATEGORIES, ALL_PRODUCTS } from '../constants';
 import Icon from './Icon';
@@ -21,10 +21,46 @@ interface CategorySpotlightProps {
 const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, onViewAll }) => {
   const [activePartnerId, setActivePartnerId] = useState<string | null>(null);
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
+  const [expandedStat, setExpandedStat] = useState<number | null>(null);
+  const [hoveredPartner, setHoveredPartner] = useState<string | null>(null);
   const prefersReducedMotion = useReducedMotion();
+
+  // Refs for scroll and intersection observers
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const productRef = useRef<HTMLDivElement>(null);
+  const narrativeRef = useRef<HTMLDivElement>(null);
+
+  // Scroll animations - use layoutEffect to ensure ref is attached
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0.5]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.9, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.2], [50, 0]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
   // Get enhancement configuration for this category
   const enhancement = CATEGORY_ENHANCEMENTS[category.id as CategoryId];
+
+  // Performance optimization: Determine particle count based on device
+  const getOptimalParticleCount = useCallback(() => {
+    if (prefersReducedMotion) return 0;
+    if (typeof window === 'undefined') return 20;
+
+    const isLowEnd = navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4;
+    const isMobile = window.innerWidth < 768;
+
+    if (isLowEnd) return 10;
+    if (isMobile) return 15;
+    return 40;
+  }, [prefersReducedMotion]);
+
+  // Debounced hover handler
+  const debouncedSetHoveredPartner = useCallback((partnerId: string | null) => {
+    setHoveredPartner(partnerId);
+  }, []);
 
   // Get showcase products or fallback to hero
   const showcaseProducts = ALL_PRODUCTS.filter(p => category.showcaseProductIds?.includes(p.id));
@@ -127,7 +163,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
         opacity: 1,
         scale: 1,
         y: 0,
-        rotateX: 0
       };
     } else if (diff === 1) {
       // First card behind
@@ -136,7 +171,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
         opacity: 0.6,
         scale: 0.9,
         y: -40,
-        rotateX: -5
       };
     } else if (diff === 2) {
       // Second card behind
@@ -145,7 +179,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
         opacity: 0.3,
         scale: 0.8,
         y: -80,
-        rotateX: -10
       };
     } else {
       // Others hidden
@@ -154,13 +187,12 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
         opacity: 0,
         scale: 0.7,
         y: -100,
-        rotateX: -15
       };
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 py-12 md:py-24 px-6 flex items-center overflow-hidden border-b border-white/5 relative group/section">
+    <div ref={sectionRef} className="min-h-screen bg-slate-950 py-12 md:py-24 px-6 flex items-center overflow-hidden border-b border-white/5 relative group/section">
       <div className="max-w-[90rem] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Left Col: Interactive Product Deck */}
@@ -183,18 +215,8 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             animate="animate"
           />
 
-          {/* Card Deck Container with Radical Elements and Orbital Partners */}
-          <div className="relative w-full max-w-xl aspect-[3/4] lg:aspect-square flex items-center justify-center perspective-1000 z-10">
-            {/* Radical Elements Overlay */}
-            {enhancement && (
-              <RadicalElements
-                elements={enhancement.radicalElements}
-                categoryId={category.id as CategoryId}
-                accentGradient={enhancement.accentGradient}
-                particleShape={enhancement.particleShape}
-                language={lang}
-              />
-            )}
+          {/* Card Deck Container */}
+          <div className="relative w-full max-w-xl aspect-square h-[500px] flex items-center justify-center z-30 mb-16">
 
             {/* Product glow effect */}
             {enhancement && (
@@ -210,70 +232,15 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
               />
             )}
 
-            {/* Orbiting Partners wrapped around product deck */}
-            {enhancement && enhancement.orbitalElements ? (
-              <OrbitingPartners
-                orbitalElements={enhancement.orbitalElements}
-                centerElement={
-                  <div className="relative w-full h-full">
-                    {activeProducts.map((product, index) => {
-                      const style = getCardStyle(index);
-
-                      return (
-                        <motion.div
-                          key={product.id}
-                          className="absolute inset-0 bg-slate-900 rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
-                          style={{
-                             ...style,
-                             boxShadow: depthShadows.deep,
-                             transformOrigin: "bottom center"
-                          }}
-                        >
-                          {/* Product Image */}
-                          <div className="w-full h-full flex items-center justify-center p-6 relative">
-                             {/* Subtle grid background for tech feel */}
-                             <div className="absolute inset-0 opacity-10"
-                                style={{ backgroundImage: 'radial-gradient(circle at center, #ffffff 1px, transparent 1px)', backgroundSize: '16px 16px' }}
-                             />
-
-                            <motion.img
-                              src={product.imageUrl}
-                              alt={product.name[lang]}
-                              className="w-full h-full object-contain mix-blend-screen relative z-10"
-                              initial={{ scale: 0.9 }}
-                              animate={{
-                                scale: style.opacity === 1 ? 1.05 : 0.9,
-                                y: style.opacity === 1 ? [0, -10, 0] : 0
-                              }}
-                               transition={{
-                                scale: { duration: 0.5 },
-                                y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                              }}
-                            />
-                          </div>
-
-                          {/* Card Title/Badge (Only visible on active card) */}
-                           <div className="absolute top-8 left-0 right-0 flex justify-center">
-                             <div className={`px-4 py-1 rounded-full border border-white/10 ${style.opacity === 1 ? 'bg-white/10' : 'bg-transparent'} transition-colors duration-500`}>
-                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{product.name[lang]}</span>
-                             </div>
-                          </div>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                }
-                language={lang}
-              />
-            ) : (
-              <div className="relative w-full h-full">
+            {/* Standard Product Deck */}
+            <div className="relative w-full h-full">
                 {activeProducts.map((product, index) => {
                   const style = getCardStyle(index);
 
                   return (
                     <motion.div
                       key={product.id}
-                      className="absolute inset-0 bg-slate-900 rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
+                      className="absolute inset-0 bg-slate-900/50 backdrop-blur-xl rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
                       style={{
                          ...style,
                          boxShadow: depthShadows.deep,
@@ -312,8 +279,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                     </motion.div>
                   );
                 })}
-              </div>
-            )}
+             </div>
 
              {/* Indicators outside the cards */}
             {activeProducts.length > 1 && (
@@ -330,90 +296,65 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             )}
           </div>
 
-          {/* Micro Stats - Category-specific metrics */}
-          {enhancement && enhancement.microStats && (
-            <motion.div
-              className="mt-16 flex items-center justify-center gap-4 flex-wrap z-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              {enhancement.microStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                  className="flex flex-col items-center gap-1 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 transition-colors"
-                >
-                  <div className="flex items-center gap-2">
-                    <Icon name={stat.icon} size={16} className="opacity-70" style={{ color: stat.color }} />
-                    <span className="text-2xl font-bold" style={{ color: stat.color }}>
-                      {stat.value}
-                    </span>
-                  </div>
-                  <span className="text-xs text-gray-400 text-center">
-                    {stat.label[lang]}
-                  </span>
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
-
-          {/* Stats & Specs Row (New Location) */}
+          {/* Unified Product Dashboard */}
           <motion.div
-            className="mt-20 w-full max-w-xl bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-between border border-white/5 shadow-lg z-10"
+            className="mt-6 w-full max-w-xl z-10 flex flex-col gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
           >
-             {/* Product Count */}
-             <div className="flex items-center gap-4">
-                <div className="bg-gradient-to-br from-[#243984] to-[#1a2b6d] w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
-                   <span className="text-xl font-black text-white">{category.productCount}</span>
-                </div>
-                <div className="flex flex-col">
-                   <span className="text-sm font-bold text-white leading-tight">Total SKUs</span>
-                   <span className="text-[10px] text-slate-400 font-medium">Available Now</span>
-                </div>
-             </div>
-
-             <div className="hidden md:block w-[1px] h-10 bg-white/10" />
-
-             {/* Dynamic Specs of Current Product */}
-             <div className="flex gap-2 flex-wrap justify-center md:justify-end max-w-[50%] md:max-w-none">
-                {currentProduct?.specs.slice(0, 3).map((spec, i) => (
-                   <motion.div
-                     key={`${currentProduct?.id}-${i}`}
-                     initial={{ opacity: 0, scale: 0.9 }}
-                     animate={{ opacity: 1, scale: 1 }}
-                     transition={{ delay: i * 0.1 }}
-                     className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-white/10 hover:border-[#E82F89]/50 transition-colors max-w-[140px] group/tooltip relative"
-                   >
-                      <span className="block text-[10px] font-bold text-slate-300 uppercase leading-none truncate w-full">
-                        {spec}
-                      </span>
-
-                      {/* Tooltip for full text */}
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black/90 text-[10px] text-white rounded opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity whitespace-normal w-max max-w-[200px] z-50 invisible group-hover/tooltip:visible">
-                        {spec}
-                      </div>
-                   </motion.div>
+            {/* Row 1: Micro Stats */}
+            {enhancement && enhancement.microStats && (
+              <div className="bg-slate-900/40 backdrop-blur-md p-4 rounded-2xl border border-white/5 flex items-center justify-between gap-4">
+                {enhancement.microStats.map((stat, index) => (
+                  <div key={index} className="flex flex-col items-center gap-1 flex-1">
+                    <div className="flex items-center gap-2">
+                       <Icon name={stat.icon} size={14} className="opacity-70" style={{ color: stat.color }} />
+                       <span className="text-xl font-bold" style={{ color: stat.color }}>{stat.value}</span>
+                    </div>
+                    <span className="text-[10px] text-gray-400 text-center uppercase tracking-wide">{stat.label[lang]}</span>
+                  </div>
                 ))}
-             </div>
+              </div>
+            )}
+
+            {/* Row 2: Specs & SKU Count */}
+            <div className="bg-slate-900/40 backdrop-blur-md p-4 rounded-2xl border border-white/5 flex flex-col md:flex-row gap-6 items-center justify-between">
+               {/* Product Count */}
+               <div className="flex items-center gap-4">
+                  <div className="bg-gradient-to-br from-[#243984] to-[#1a2b6d] w-10 h-10 rounded-xl flex items-center justify-center shadow-lg">
+                     <span className="text-lg font-black text-white">{category.productCount}</span>
+                  </div>
+                  <div className="flex flex-col">
+                     <span className="text-xs font-bold text-white leading-tight">Total SKUs</span>
+                     <span className="text-[9px] text-slate-400 font-medium">Available Now</span>
+                  </div>
+               </div>
+
+               <div className="hidden md:block w-[1px] h-8 bg-white/10" />
+
+               {/* Dynamic Specs */}
+               <div className="flex gap-2 flex-wrap justify-center md:justify-end">
+                  {currentProduct?.specs.slice(0, 3).map((spec, i) => (
+                     <div key={`${currentProduct?.id}-${i}`} className="px-3 py-1 bg-slate-800/80 border border-white/10 rounded-md">
+                        <span className="text-[9px] font-bold text-slate-300 uppercase">{spec}</span>
+                     </div>
+                  ))}
+               </div>
+            </div>
           </motion.div>
 
-          {/* Interactive Element - Category-specific interactive feature */}
-          {enhancement && enhancement.interactiveElement && (
+          {/* Interactive Element - Moved to right column per user request */}
+          {/* {enhancement && enhancement.interactiveElement && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="mt-8 w-full max-w-xl z-10"
+              className="mt-4 w-full max-w-xl z-20"
             >
               {renderInteractiveElement(enhancement.interactiveElement, lang)}
             </motion.div>
-          )}
+          )} */}
         </motion.div>
 
         {/* Right Col: Narrative & Integration Hub */}
@@ -496,7 +437,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                         fill="none"
                         stroke={isActive ? '#E82F89' : '#243984'}
                         strokeWidth={isActive ? 3 : 1.5}
-                        strokeOpacity={isActive ? 0.6 : 0.2}
+                        strokeOpacity={isActive ? 0.6 : 0.1}
                         strokeDasharray={isActive ? '0' : '5,5'}
                         filter={isActive ? 'url(#glow)' : 'none'}
                         initial={{ pathLength: 0 }}
@@ -649,6 +590,28 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
               <Icon name="ChevronRight" size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </motion.button>
           </motion.div>
+
+          {/* Interactive Element - Moved to right side with isometric visual treatment */}
+          {enhancement && enhancement.interactiveElement && (
+            <motion.div
+               initial={{ opacity: 0, scale: 0.9, rotateX: 20, rotateY: -10 }}
+               animate={{ opacity: 1, scale: 1, rotateX: 10, rotateY: -10 }}
+               transition={{ delay: 0.6, duration: 0.8 }}
+               className="mt-8 w-full max-w-lg relative perspective-1000 origin-top-left"
+               style={{ 
+                 perspective: '1000px',
+                 transformStyle: 'preserve-3d',
+                 transform: 'rotateX(10deg) rotateY(-10deg) rotateZ(-2deg) translateX(40px)'
+               }}
+            >
+               <div className="rounded-3xl overflow-visible shadow-[20px_20px_60px_rgba(0,0,0,0.5)] bg-slate-800/20 backdrop-blur-sm border border-white/5 p-6 origin-top-left transition-transform hover:rotate-0 hover:scale-[1.02] duration-500 ease-out">
+                 {renderInteractiveElement(enhancement.interactiveElement, lang)}
+               </div>
+               
+               {/* Isometric shadow/platform effect */}
+               <div className="absolute inset-0 bg-[#243984]/5 -z-10 rounded-3xl transform translate-x-4 translate-y-6 blur-md"></div>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </div>

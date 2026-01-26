@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useSpring, useTransform, useMotionValue } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 type GaugeConfig = {
@@ -20,32 +20,38 @@ interface Props {
 export default function CircularGauge({ config, language = 'en' }: Props) {
   const prefersReducedMotion = useReducedMotion();
   const [displayValue, setDisplayValue] = useState(config.min);
+  
+  // Physics setup
+  const valueMotion = useMotionValue(config.min);
+  const valueSpring = useSpring(valueMotion, {
+    stiffness: 60,
+    damping: 10,
+    restDelta: 0.001
+  });
 
   useEffect(() => {
-    // Animate value counting up
-    const duration = 1000;
-    const steps = 30;
-    const stepValue = (config.value - config.min) / steps;
-    const stepDuration = duration / steps;
+    // Determine target value
+    const target = config.value;
+    
+    // Animate spring
+    valueMotion.set(target);
 
-    let currentStep = 0;
-    const interval = setInterval(() => {
-      currentStep++;
-      if (currentStep >= steps) {
-        setDisplayValue(config.value);
-        clearInterval(interval);
-      } else {
-        setDisplayValue(config.min + stepValue * currentStep);
-      }
-    }, stepDuration);
+    // Update display number alongside spring
+    const unsubscribe = valueSpring.on("change", (latest) => {
+      setDisplayValue(Math.round(latest));
+    });
 
-    return () => clearInterval(interval);
-  }, [config.value, config.min]);
+    return () => unsubscribe();
+  }, [config.value, config.min, valueMotion, valueSpring]);
 
   // Calculate arc and needle positions (180° semi-circle)
   const range = config.max - config.min;
-  const percentage = range === 0 ? 0 : ((config.value - config.min) / range) * 100;
-  const rotation = -90 + (percentage / 100) * 180; // -90° to 90°
+  
+  // Transform spring value to percentage for gradient
+  const percentage = useTransform(valueSpring, [config.min, config.max], [0, 100]);
+  
+  // Transform spring value to rotation (-90 to 90 degrees)
+  const rotation = useTransform(valueSpring, [config.min, config.max], [-90, 90]);
 
   const getArcColor = () => {
     if (!config.thresholds) return config.needleColor;
@@ -63,23 +69,29 @@ export default function CircularGauge({ config, language = 'en' }: Props) {
   const strokeWidth = 12;
   const centerX = 150;
   const centerY = 150;
+  
+  // Dynamic gradient ID
+  const gradientId = `gaugeGradient-${config.label.replace(/\s+/g, '-')}`;
 
   return (
-    <div
-      className="flex flex-col items-center justify-center"
+    <motion.div
+      className="flex flex-col items-center justify-center p-4"
       role="meter"
       aria-label={`${config.label}: ${config.value}${config.unit}`}
       aria-valuenow={config.value}
       aria-valuemin={config.min}
       aria-valuemax={config.max}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring", duration: 0.8 }}
     >
       <svg width="300" height="180" viewBox="0 0 300 180" className="overflow-visible">
         <defs>
-          <linearGradient id={`gaugeGradient-${config.label}`} x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#374151" />
-            <stop offset={`${percentage}%`} stopColor={arcColor} />
-            <stop offset={`${percentage}%`} stopColor="#374151" />
-            <stop offset="100%" stopColor="#374151" />
+            {/* We can't easily animate gradient stops with spring value in simple SVG, 
+                so we'll keep the static endpoint color but rely on the mask motion */}
+            <stop offset="100%" stopColor={arcColor} />
           </linearGradient>
         </defs>
 
@@ -93,19 +105,19 @@ export default function CircularGauge({ config, language = 'en' }: Props) {
         />
 
         {/* Animated arc fill */}
+        {/* We use strokeDasharray to reveal the arc based on spring value */}
         <motion.path
           d={`M 50 150 A ${radius} ${radius} 0 0 1 250 150`}
           fill="none"
-          stroke={`url(#gaugeGradient-${config.label})`}
+          stroke={`url(#${gradientId})`}
           strokeWidth={strokeWidth}
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{
-            duration: prefersReducedMotion ? 0 : 1.5,
-            ease: 'easeOut'
+          pathLength={1}
+          style={{ 
+            pathLength: useTransform(valueSpring, [config.min, config.max], [0, 1]) 
           }}
         />
+
 
         {/* Markers */}
         {config.showMarkers?.map((markerValue) => {
@@ -226,6 +238,6 @@ export default function CircularGauge({ config, language = 'en' }: Props) {
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

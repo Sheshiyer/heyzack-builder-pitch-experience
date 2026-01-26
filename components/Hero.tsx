@@ -227,8 +227,8 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
           variants={subheadlineVariants}
         >
           {lang === 'en'
-            ? '128 devices. 15 categories. One seamless AI ecosystem for residential builders.'
-            : '128 appareils. 15 catégories. Un écosystème IA fluide pour les promoteurs.'}
+            ? '128 devices. 14 categories. One seamless AI ecosystem for residential builders.'
+            : '128 appareils. 14 catégories. Un écosystème IA fluide pour les promoteurs.'}
         </motion.p>
 
         {/* CTA Buttons */}

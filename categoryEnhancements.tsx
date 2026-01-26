@@ -117,7 +117,7 @@ type SensorPulseConfig = {
   showConnections?: boolean;
 };
 
-type InteractiveElementConfig =
+export type InteractiveElementConfig =
   | { type: 'dial'; config: DialConfig }
   | { type: 'counter'; config: CounterConfig }
   | { type: 'gauge'; config: GaugeConfig }

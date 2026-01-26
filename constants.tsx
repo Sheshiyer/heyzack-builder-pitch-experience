@@ -99,7 +99,7 @@ const EXISTING_CONNECTIONS: Record<string, Connection[]> = {
   ],
   "gateway": [
       { partnerId: 'door-lock', label: { en: 'Virtual-Keys', fr: 'Clés-Virtuelles' }, description: { en: 'Centralized access control across all units eliminates physical key logistics.', fr: 'Contrôle d\'accès centralisé élimine la logistique des clés physiques.' }, impactMetric: { en: 'Zero Lockouts', fr: 'Zéro Verrouillage' } },
-      { partnerId: 'circuit-breaker', label: { en: 'Energy-Dashboard', fr: 'Tableau-Énergie' }, description: { en: 'Real-time portfolio-wide energy visibility identifies cost savings opportunities.', fr: 'Visibilité énergétique en temps réel identifie les opportunités d\'économies.' }, impactMetric: { en: '12K$/Bâtiment/An' } }
+      { partnerId: 'circuit-breaker', label: { en: 'Energy-Dashboard', fr: 'Tableau-Énergie' }, description: { en: 'Real-time portfolio-wide energy visibility identifies cost savings opportunities.', fr: 'Visibilité énergétique en temps réel identifie les opportunités d\'économies.' }, impactMetric: { en: '12K$/Bâtiment/An', fr: '12K$/Bâtiment/An' } }
   ],
   "diy-breaker": [
       { partnerId: 'sensors', label: { en: 'Leak-Shutoff', fr: 'Arrêt-Fuite' }, description: { en: 'Water sensor triggers instant valve closure preventing $50K+ flood damage.', fr: 'Capteur d\'eau déclenche la fermeture instantanée pour éviter 50K$+ de dégâts.' }, impactMetric: { en: 'Insurance Premium Cut', fr: 'Réduction Prime Assurance' } },
@@ -152,7 +152,9 @@ productCatalog.categories.forEach((catInfo: any) => {
       benefits: [], // Extract from description? Or leave empty for now
       imageUrl: getImageForProduct(p.sku),
       description: toBilingual(p.description || ''),
-      slug: p.slug
+      slug: p.slug,
+      automations: p.automations || [],
+      connectedScenes: p.connected_scenes || []
     };
     return product;
   });

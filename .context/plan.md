@@ -11,7 +11,7 @@
 
 This plan outlines the development of an immersive, scrollytelling product showcase pitch deck for HeyZack's smart building automation platform, specifically targeting multifamily residential developers and builders. The pitch deck will synthesize data from:
 
-- **128 products** across **15 categories** from `product_catalog.json`
+- **128 products** across **14 categories** from `product_catalog.json`
 - **57 wiki markdown files** containing messaging frameworks, personas, campaign content
 - **3 benefit pillars** extracted from existing content (to be identified during research phase)
 - **Connected scenes and automations** demonstrating ecosystem value

@@ -11,6 +11,8 @@ export interface Product {
   imageUrl: string;
   description: Record<Language, string>;
   slug: string;
+  automations?: string[];
+  connectedScenes?: string[];
 }
 
 export interface Connection {

@@ -92,7 +92,7 @@ interface OrbitalIconProps {
   language: Language;
 }
 
-function OrbitalIcon({
+const OrbitalIcon: React.FC<OrbitalIconProps> = ({
   element,
   index,
   total,
@@ -101,7 +101,7 @@ function OrbitalIcon({
   onMouseLeave,
   prefersReducedMotion,
   language
-}: OrbitalIconProps) {
+}) => {
   // Calculate starting position (distribute evenly around circle)
   const angleStep = (2 * Math.PI) / total;
   const startAngle = (index * angleStep * 180) / Math.PI; // Convert to degrees

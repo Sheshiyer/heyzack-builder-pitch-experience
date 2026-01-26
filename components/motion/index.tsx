@@ -35,7 +35,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
   children,
   className = ''
 }) => {
-  const glassStyles = createGlassEffect(intensity);
+  const glassStyles = createGlassEffect(intensity as "light" | "medium" | "strong");
   const shouldReduceMotion = useReducedMotion();
 
   return (

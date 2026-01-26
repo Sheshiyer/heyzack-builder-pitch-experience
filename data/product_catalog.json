@@ -385,7 +385,7 @@
     },
     {
       "name": "Smart Accessorries",
-      "product_count": 5,
+      "product_count": 8,
       "products": [
         {
           "name": "Smart PD Power Strip",
@@ -426,6 +426,30 @@
           "description": "Life gets cleaner while you're living it. Your floors stay spotless without you lifting a finger.\n\n• Automated cleaning sweeps every corner while you work, rest, or play.\n• Built-in dustbag captures weeks of debris for effortless disposal.\n• Smart navigation maps your home for thorough, efficient coverage.\n• Schedule cleanings remotely via mobile devices for always-fresh floors.\n\nWelcome to the future of effortless home cleanliness.",
           "slug": "robot-vacuum-dustbag-600ml-gyroscope-wifi",
           "keywords": "robot vacuum, dustbag vacuum, smart vacuum, gyroscope navigation, wifi vacuum, 600ml dustbin, 2600mah battery, auto vacuum, quiet vacuum, slim vacuum"
+        },
+        {
+          "name": "Square 5050 mortise (304 Stainless Steel)",
+          "sku": "HZ-SD-SQU50501",
+          "specs": "Storage capacity: 100 pcs (not included) | Materials: Aluminum alloy | Surface treatment: Spray painting process | Battery life: 12 months(AAA)/24 months(CR123A) | Operating temperature: -20°C~55°C | Working environment humidity: 40%RH~85%RH | Salt spray test: 96 hours | Installation: Hooks, self-tapping screws, expansion screws | Supported gateways: Bluetooth Gateway | Certification: CE, FCC, RoHS, IP65",
+          "description": "Your door becomes the guardian of your home.\n\n• 304 stainless steel resists corrosion for decades of reliable protection.\n• 5050 mortise design integrates flush with your door for clean aesthetics.\n• Precision-engineered mechanism operates smoothly millions of cycles.\n• Universal compatibility works with existing smart lock systems.\n\nSquare makes your door the smartest part of your home.",
+          "slug": "square-5050-mortise-lock-304-stainless",
+          "keywords": "mortise lock, 304 stainless steel, smart door lock, square lock, ANSI Grade 1, door hardware, stainless lock, smart home, keyless entry, security lock"
+        },
+        {
+          "name": "Single deadbolt 24*240mm size (Full 304 Stainless Steel)",
+          "sku": "HZ-SL-SINDEA01",
+          "specs": "Shape: Square | Type: 5050 mortise | Material: (304 Stainless Steel)",
+          "description": "Transform your front door into a fortress of modern security. This single deadbolt delivers unbreakable protection wrapped in timeless elegance.\n\n• Full 304 stainless steel construction resists corrosion and forced entry attempts.\n• 24x240mm precision sizing ensures seamless installation in standard door preparations.\n• Single deadbolt mechanism provides reliable one-point locking security.\n• Surgical-grade steel maintains flawless appearance through years of weather exposure.\n\nWorks beautifully with any smart lock system you choose. The universal design pairs perfectly with voice assistants, smart displays, and mobile devices for complete home integration.\n\nSecure your home with the strength that lasts a lifetime.",
+          "slug": "single-deadbolt-24x240mm-304-stainless-steel",
+          "keywords": "deadbolt, smart lock, stainless steel, 304 steel, door lock, security lock, single cylinder, 24mm deadbolt, 240mm lock, smart home"
+        },
+        {
+          "name": "Cylindrical 40*388 Mortise (Full 304 Stainless Steel)",
+          "sku": "HZ-SD-CYL4001",
+          "specs": "Single deadbolt | 24*240mm size | (Full 304 Stainless Steel) | Hole spacing 3585",
+          "description": "Transform your door into an impenetrable fortress of modern security. The Cylindrical 40388 Mortise delivers uncompromising protection with timeless elegance.\n\n• Full 304 stainless steel construction resists corrosion and forced entry attempts.\n• Precision-engineered cylindrical design ensures smooth, reliable operation every time.\n• 40388mm dimensions fit standard door preparations perfectly.\n• Heavy-duty mortise mechanism provides superior strength over standard deadbolts.\n\nSeamlessly integrates with your existing smart home ecosystem through compatible smart locks and voice assistants. Control access from anywhere using your mobile devices and smart displays.\n\nSecurity meets sophistication in every turn of the handle.",
+          "slug": "40x388-304-stainless-mortise-lock-body",
+          "keywords": "mortise lock, smart lock body, 304 stainless steel, deadbolt, 6068 hole spacing, cylindrical lock, security hardware, door lock mechanism, premium lock body, stainless steel mortise"
         }
       ]
     },
@@ -755,36 +779,7 @@
         }
       ]
     },
-    {
-      "name": "Smart Door Lock Body",
-      "product_count": 3,
-      "products": [
-        {
-          "name": "Square 5050 mortise (304 Stainless Steel)",
-          "sku": "HZ-SD-SQU50501",
-          "specs": "Storage capacity: 100 pcs (not included) | Materials: Aluminum alloy | Surface treatment: Spray painting process | Battery life: 12 months(AAA)/24 months(CR123A) | Operating temperature: -20°C~55°C | Working environment humidity: 40%RH~85%RH | Salt spray test: 96 hours | Installation: Hooks, self-tapping screws, expansion screws | Supported gateways: Bluetooth Gateway | Certification: CE, FCC, RoHS, IP65",
-          "description": "Your door becomes the guardian of your home.\n\n• 304 stainless steel resists corrosion for decades of reliable protection.\n• 5050 mortise design integrates flush with your door for clean aesthetics.\n• Precision-engineered mechanism operates smoothly millions of cycles.\n• Universal compatibility works with existing smart lock systems.\n\nSquare makes your door the smartest part of your home.",
-          "slug": "square-5050-mortise-lock-304-stainless",
-          "keywords": "mortise lock, 304 stainless steel, smart door lock, square lock, ANSI Grade 1, door hardware, stainless lock, smart home, keyless entry, security lock"
-        },
-        {
-          "name": "Single deadbolt 24*240mm size (Full 304 Stainless Steel)",
-          "sku": "HZ-SL-SINDEA01",
-          "specs": "Shape: Square | Type: 5050 mortise | Material: (304 Stainless Steel)",
-          "description": "Transform your front door into a fortress of modern security. This single deadbolt delivers unbreakable protection wrapped in timeless elegance.\n\n• Full 304 stainless steel construction resists corrosion and forced entry attempts.\n• 24x240mm precision sizing ensures seamless installation in standard door preparations.\n• Single deadbolt mechanism provides reliable one-point locking security.\n• Surgical-grade steel maintains flawless appearance through years of weather exposure.\n\nWorks beautifully with any smart lock system you choose. The universal design pairs perfectly with voice assistants, smart displays, and mobile devices for complete home integration.\n\nSecure your home with the strength that lasts a lifetime.",
-          "slug": "single-deadbolt-24x240mm-304-stainless-steel",
-          "keywords": "deadbolt, smart lock, stainless steel, 304 steel, door lock, security lock, single cylinder, 24mm deadbolt, 240mm lock, smart home"
-        },
-        {
-          "name": "Cylindrical 40*388 Mortise (Full 304 Stainless Steel)",
-          "sku": "HZ-SD-CYL4001",
-          "specs": "Single deadbolt | 24*240mm size | (Full 304 Stainless Steel) | Hole spacing 3585",
-          "description": "Transform your door into an impenetrable fortress of modern security. The Cylindrical 40388 Mortise delivers uncompromising protection with timeless elegance.\n\n• Full 304 stainless steel construction resists corrosion and forced entry attempts.\n• Precision-engineered cylindrical design ensures smooth, reliable operation every time.\n• 40388mm dimensions fit standard door preparations perfectly.\n• Heavy-duty mortise mechanism provides superior strength over standard deadbolts.\n\nSeamlessly integrates with your existing smart home ecosystem through compatible smart locks and voice assistants. Control access from anywhere using your mobile devices and smart displays.\n\nSecurity meets sophistication in every turn of the handle.",
-          "slug": "40x388-304-stainless-mortise-lock-body",
-          "keywords": "mortise lock, smart lock body, 304 stainless steel, deadbolt, 6068 hole spacing, cylindrical lock, security hardware, door lock mechanism, premium lock body, stainless steel mortise"
-        }
-      ]
-    },
+
     {
       "name": "Smart Gateway",
       "product_count": 4,

@@ -65,14 +65,16 @@ void main(){
     float lum = dot(col.rgb, vec3(0.299, 0.587, 0.114));
     
     // Increase contrast for sharper transitions
-    float mixed = smoothstep(0.3, 0.7, lum);
+    float mixed = smoothstep(0.1, 0.9, lum);
     
     col.rgb = mix(blue, pink, mixed);
 
     // Scanlines & Noise
     float scanline_val = sin(gl_FragCoord.y * uScanFreq) * 0.5 + 0.5;
     col.rgb *= 1.0 - (scanline_val * scanline_val) * uScan;
-    col.rgb += (rand(gl_FragCoord.xy + uTime) - 0.5) * uNoise;
+    
+    // Softer noise
+    col.rgb += (rand(gl_FragCoord.xy + uTime) - 0.5) * uNoise * 0.1;
     
     gl_FragColor = vec4(clamp(col.rgb, 0.0, 1.0), 1.0);
 }
@@ -90,8 +92,8 @@ type Props = {
 
 export default function DarkVeil({
   hueShift = 0,
-  noiseIntensity = 0.5,
-  scanlineIntensity = 0.5,
+  noiseIntensity = 0.05,
+  scanlineIntensity = 0.05,
   speed = 0.2,
   scanlineFrequency = 200,
   warpAmount = 0.5,

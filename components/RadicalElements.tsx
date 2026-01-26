@@ -330,8 +330,6 @@ const ParticleField: React.FC<ParticleFieldProps> = ({
     }
   };
 
-  if (particleCount === 0) return null;
-
   return (
     <div
       ref={containerRef}
@@ -518,9 +516,27 @@ export default function RadicalElements({
 }: Props) {
   const prefersReducedMotion = useReducedMotion() || false;
 
+  // Filter and organize elements to prevent clutter
+  // 1. Separate "widgets" (data/text) from "effects"
+  const widgets = elements.filter(e => e.type === 'floating-badge' || e.type === 'metric-ring');
+  const effects = elements.filter(e => e.type !== 'floating-badge' && e.type !== 'metric-ring');
+
+  // 2. Limit widgets to max 2 and force them to the right side (empty area)
+  // This addresses user feedback about sporadic placement and overlaying on product
+  const organizedWidgets = widgets.slice(0, 2).map((widget, index) => {
+    // Force position to right side relative to container
+    // index 0 -> top-right
+    // index 1 -> bottom-right
+    const newPosition = index === 0 ? 'top-right' : 'bottom-right';
+    return { ...widget, position: newPosition } as typeof widget;
+  });
+
+  // 3. Combine for render
+  const displayElements = [...effects, ...organizedWidgets];
+
   return (
     <div className="absolute inset-0 pointer-events-none overflow-visible">
-      {elements.map((element, index) => {
+      {displayElements.map((element, index) => {
         // Render based on element.type
         switch (element.type) {
           case 'floating-badge':

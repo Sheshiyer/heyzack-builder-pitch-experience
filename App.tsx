@@ -1,14 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Language } from './types';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
 import CategorySpotlight from './components/ProductSpotlight';
 import SceneTimeline from './components/SceneTimeline';
 import ROICalculator from './components/ROICalculator';
 import GeminiAssistant from './components/GeminiAssistant';
-import CategoryModal from './components/CategoryModal';
+import CategoryDrawer from './components/CategoryDrawer';
 import CategoryNav from './components/CategoryNav';
 import { CATEGORIES } from './constants';
 import Icon from './components/Icon';
@@ -72,11 +71,23 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Global Language Switcher */}
+      <div className="fixed top-6 right-6 z-50">
+        <button
+          onClick={toggleLang}
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 backdrop-blur-md border border-white/10 shadow-lg text-white text-xs font-bold tracking-wider hover:bg-black/40 transition-all uppercase hover:scale-105 active:scale-95"
+          aria-label={lang === 'en' ? "Switch to French" : "Switch to English"}
+        >
+          <Icon name="Globe" size={14} />
+          <span>{lang === 'en' ? 'FR' : 'EN'}</span>
+        </button>
+      </div>
+
       {/* Navbar removed as requested, consolidated into CategoryNav */}
       <CategoryNav activeCategoryId={currentSection} onNavigate={(id) => setCurrentSection(id)} />
       
-      <main id="main-scroll-container" className="snap-y snap-mandatory overflow-y-auto h-screen">
+      <main id="main-scroll-container" className="snap-y snap-mandatory overflow-y-auto h-screen w-full">
         <section className="snap-start" id="home">
           <Hero lang={lang} />
         </section>
@@ -85,7 +96,7 @@ const App: React.FC = () => {
           <Pillars lang={lang} />
         </section>
 
-        {/* Iterate through all 15 categories for a full ecosystem tour */}
+        {/* Iterate through all 14 categories for a full ecosystem tour */}
         {CATEGORIES.map(cat => (
           <section key={cat.id} className="snap-start" id={cat.id}>
             <CategorySpotlight 
@@ -167,13 +178,12 @@ const App: React.FC = () => {
         </footer>
       </main>
 
-      {activeCategory && (
-        <CategoryModal 
-          lang={lang} 
-          category={activeCategory} 
-          onClose={() => setActiveCategoryId(null)} 
-        />
-      )}
+      <CategoryDrawer 
+        lang={lang}
+        category={activeCategory || CATEGORIES[0]} // Fallback to avoid null errors during close animation
+        isOpen={!!activeCategory}
+        onClose={() => setActiveCategoryId(null)}
+      />
     </div>
   );
 };
