@@ -12,18 +12,24 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
   const [activeIndex, setActiveIndex] = useState<number>(-1);
 
   useEffect(() => {
+    const container = document.getElementById('main-scroll-container');
+    
     const handleScroll = () => {
       const pillarsSection = document.getElementById('pillars');
+      // Use container scrollTop if available, else window scrollY
+      const currentScroll = container ? container.scrollTop : window.scrollY;
       
       if (pillarsSection) {
+        // We need to compare specific offsets relative to the scroll container
+        // If sticky container, pillarsSection.offsetTop is relative to the document/offsetParent
+        // Assuming offsetParent is the scrolling container or body.
         const pillarsBottom = pillarsSection.offsetTop + pillarsSection.offsetHeight;
-        const scrollPosition = window.scrollY;
         
         // Show nav when scrolling past pillars section
-        setIsVisible(scrollPosition > pillarsBottom - 300);
+        setIsVisible(currentScroll > pillarsBottom - 300);
       } else {
         // Fallback: show after scrolling 1200px
-        setIsVisible(window.scrollY > 1200);
+        setIsVisible(currentScroll > 1200);
       }
     };
 
@@ -32,9 +38,19 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
       handleScroll();
     }, 100);
     
-    window.addEventListener('scroll', handleScroll);
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    } else {
+      window.addEventListener('scroll', handleScroll);
+    }
     
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      } else {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -52,7 +68,7 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
 
   return (
     <div 
-      className={`fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block transition-all duration-500 ${
+      className={`fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block transition-all duration-500 ${
         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
       }`}
     >

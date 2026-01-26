@@ -24,9 +24,13 @@ const App: React.FC = () => {
 
   // Track scroll position to highlight active category in nav
   useEffect(() => {
+    const container = document.getElementById('main-scroll-container');
     const handleScroll = () => {
       const sections = CATEGORIES.map(cat => document.getElementById(cat.id));
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      // Use container.scrollTop if available, otherwise window.scrollY
+      const scrollY = container ? container.scrollTop : window.scrollY;
+      const viewportHeight = container ? container.clientHeight : window.innerHeight;
+      const scrollPosition = scrollY + viewportHeight / 2;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -37,8 +41,19 @@ const App: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    } else {
+      window.addEventListener('scroll', handleScroll);
+    }
+    
+    return () => {
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      } else {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, []);
 
   return (
@@ -46,7 +61,7 @@ const App: React.FC = () => {
       <Navbar lang={lang} toggleLang={toggleLang} />
       <CategoryNav activeCategoryId={currentSection} onNavigate={(id) => setCurrentSection(id)} />
       
-      <main className="snap-y snap-mandatory overflow-y-auto h-screen">
+      <main id="main-scroll-container" className="snap-y snap-mandatory overflow-y-auto h-screen">
         <section className="snap-start" id="home">
           <Hero lang={lang} />
         </section>
