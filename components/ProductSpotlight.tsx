@@ -15,15 +15,9 @@ interface CategorySpotlightProps {
 
 const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, onViewAll }) => {
   const [activePartnerId, setActivePartnerId] = useState<string | null>(null);
-  const [isSimulating, setIsSimulating] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   const heroProduct: Product | undefined = HERO_PRODUCTS[category.heroProductId];
-
-  const runSimulation = () => {
-    setIsSimulating(true);
-    setTimeout(() => setIsSimulating(false), 3000);
-  };
 
   // Animation variants
   const floatingProduct: Variants = {
@@ -131,13 +125,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             initial="initial"
             whileHover="hover"
           >
-            {isSimulating && (
-              <div className="absolute inset-0 z-20 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-[2px] border-[#E82F89]/50 rounded-full animate-ping" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 border-[2px] border-[#243984]/40 rounded-full animate-ping [animation-delay:0.5s]" />
-              </div>
-            )}
-
             {/* Floating product with animation */}
             <motion.div
               variants={floatingProduct}
@@ -149,7 +136,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                 <img
                   src={heroProduct.imageUrl}
                   alt={category.name[lang]}
-                  className={`w-full h-auto object-contain transition-all duration-700 mix-blend-screen opacity-90 ${isSimulating ? 'scale-105 rotate-1' : ''}`}
+                  className="w-full h-auto object-contain transition-all duration-700 mix-blend-screen opacity-90"
                 />
               ) : (
                 <Icon name="Layers" size={120} className="text-slate-700 mx-auto" />
@@ -405,19 +392,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             >
               <span>{lang === 'en' ? 'VIEW PROJECT REFS' : 'RÉFÉRENCES PROJET'}</span>
               <Icon name="ChevronRight" size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </motion.button>
-            <motion.button
-              onClick={runSimulation}
-              disabled={isSimulating}
-              className="bg-white text-[#243984] border border-slate-200 px-8 py-6 rounded-3xl font-black text-xs hover:bg-slate-50 transition-all flex items-center gap-3 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-              aria-label={lang === 'en' ? 'Test automation logic simulation' : 'Tester la simulation de logique d\'automatisation'}
-              aria-live="polite"
-              aria-busy={isSimulating}
-              whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-              whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
-            >
-              <Icon name="Activity" size={18} className={isSimulating ? 'animate-spin' : ''} aria-hidden="true" />
-              {isSimulating ? 'SIMULATING...' : 'TEST LOGIC'}
             </motion.button>
           </motion.div>
         </motion.div>
