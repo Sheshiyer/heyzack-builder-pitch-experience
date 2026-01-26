@@ -122,6 +122,51 @@ const EXISTING_CONNECTIONS: Record<string, Connection[]> = {
   ]
 };
 
+// Keyword mapping for auto-categorization of connection strings
+const KEYWORD_TO_CATEGORY: Record<string, string> = {
+  'light': 'lighting', 'bulb': 'lighting', 'dim': 'lighting', 'led': 'lighting',
+  'lock': 'door-lock', 'door': 'door-lock', 'entry': 'door-lock', 'access': 'door-lock',
+  'heat': 'climatisation', 'cool': 'climatisation', 'temp': 'climatisation', 'hvac': 'climatisation', 'climate': 'climatisation',
+  'camera': 'camera-doorbell', 'record': 'camera-doorbell', 'video': 'camera-doorbell', 'watch': 'camera-doorbell',
+  'sensor': 'sensors', 'motion': 'sensors', 'leak': 'sensors', 'flood': 'sensors', 'detect': 'sensors',
+  'music': 'music-control', 'audio': 'music-control', 'sound': 'music-control', 'speaker': 'music-control',
+  'blind': 'curtain-shutter', 'curtain': 'curtain-shutter', 'shutter': 'curtain-shutter', 'shade': 'curtain-shutter',
+  'gateway': 'gateway', 'hub': 'gateway', 'bridge': 'gateway',
+  'switch': 'switch', 'button': 'switch',
+  'energy': 'circuit-breaker', 'power': 'circuit-breaker', 'consumption': 'circuit-breaker',
+  'panel': 'control-panel', 'display': 'control-panel', 'screen': 'control-panel'
+};
+
+// Helper to determine pillar scores based on text context
+const getPillarScores = (text: string, categoryId: string, partnerId: string) => {
+  const t = text.toLowerCase();
+  const c = categoryId || '';
+  const p = partnerId || '';
+  
+  let security = 10;
+  let savings = 10;
+  let comfort = 10;
+
+  // Security Boosters
+  if (/camera|lock|door|motion|detect|alert|siren|monitor|safe|secur/i.test(t + c + p)) security += 60;
+  if (/entry|access|verify|protect/i.test(t)) security += 20;
+
+  // Savings Boosters
+  if (/energy|consum|power|bill|save|efficien|off|cut|leak|flood/i.test(t + c + p)) savings += 60;
+  if (/schedul|auto|smart/i.test(t)) savings += 20;
+
+  // Comfort Boosters
+  if (/light|music|audio|temp|cool|heat|warm|scene|mood|voice|remote|easy/i.test(t + c + p)) comfort += 60;
+  if (/auto|follow|convenien/i.test(t)) comfort += 20;
+
+  // Normalization to 100 max
+  return {
+    security: Math.min(100, security),
+    savings: Math.min(100, savings),
+    comfort: Math.min(100, comfort)
+  };
+};
+
 // Process Data
 const processedCategories: Category[] = [];
 const processedProducts: Product[] = [];
@@ -130,6 +175,68 @@ const heroProductsMap: Record<string, Product> = {};
 productCatalog.categories.forEach((catInfo: any) => {
   const catId = CAT_ID_MAP[catInfo.name] || catInfo.name.toLowerCase().replace(/\s+/g, '-');
   
+  // Start with existing hardcoded connections
+  const combinedConnections: Connection[] = (EXISTING_CONNECTIONS[catId] || []).map(c => ({
+    ...c,
+    scores: getPillarScores(c.description.en, catId, c.partnerId)
+  }));
+  
+  // Extract dynamic connections from products
+  if (catInfo.products && Array.isArray(catInfo.products)) {
+    catInfo.products.forEach((p: any) => {
+      if (p.connected_scenes && Array.isArray(p.connected_scenes)) {
+        p.connected_scenes.forEach((sceneText: string) => {
+          // Normalize text
+          const lowerText = sceneText.toLowerCase();
+          
+          // 1. Identify Partner
+          let partnerId = 'gateway'; // Default fallback
+          for (const [key, id] of Object.entries(KEYWORD_TO_CATEGORY)) {
+            if (lowerText.includes(key) && id !== catId) {
+              partnerId = id;
+              break;
+            }
+          }
+
+          // 2. Generate Smart Label
+          // Extract first two meaningful words relative to the partner? Or just first 2 words of sentence.
+          // Let's try to make it look like "Action-Object"
+          const words = sceneText.split(' ').map(w => w.replace(/[^a-zA-Z]/g, ''));
+          const labelCandidate = words.slice(0, 2).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('-');
+
+          // 3. Generate Impact Metric
+          const metrics = [
+            'Enhanced Efficiency', 'Improved Safety', 'Better Comfort', 
+            'Automated Control', 'Instant Response', 'Seamless Sync',
+            'Energy Optimized', 'User Verified'
+          ];
+          // Use a simple hash of the string to pick a consistent metric for the same string
+          const hash = sceneText.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+          const metricEn = metrics[hash % metrics.length];
+
+          // 4. Add if unique and under limit
+          // We limit strictly to 4 total connections per category
+          const isDuplicate = combinedConnections.some(c => 
+            c.description.en === sceneText || 
+            (c.partnerId === partnerId && c.label.en === labelCandidate)
+          );
+
+          if (!isDuplicate && combinedConnections.length < 4) {
+             const scores = getPillarScores(sceneText, catId, partnerId);
+             
+             combinedConnections.push({
+              partnerId,
+              label: { en: labelCandidate, fr: labelCandidate },
+              description: toBilingual(sceneText),
+              impactMetric: { en: metricEn, fr: metricEn },
+              scores
+            });
+          }
+        });
+      }
+    });
+  }
+
   // Create Category
   const category: Category = {
     id: catId,
@@ -138,7 +245,7 @@ productCatalog.categories.forEach((catInfo: any) => {
     heroProductId: '', // will set below
     showcaseProductIds: [], // will set below
     description: toBilingual('Smart automation solutions for ' + catInfo.name), // generic description if missing
-    connections: EXISTING_CONNECTIONS[catId] || []
+    connections: combinedConnections
   };
 
   // Process Products in this Category

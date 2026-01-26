@@ -20,6 +20,11 @@ export interface Connection {
   label: Record<Language, string>;
   description: Record<Language, string>;
   impactMetric: Record<Language, string>;
+  scores?: {
+    security: number; // 0-100
+    savings: number;  // 0-100
+    comfort: number;  // 0-100
+  };
 }
 
 export interface Category {

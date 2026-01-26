@@ -133,13 +133,40 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                       />
                    </div>
 
-                   {/* Specs Grid */}
-                   <div className="grid grid-cols-2 gap-3 mb-12">
-                      {selectedProduct.specs.map((spec, i) => (
-                        <div key={i} className="px-4 py-3 bg-slate-50 rounded-xl border border-slate-100 text-xs font-semibold text-slate-600">
-                           <span className="line-clamp-3" title={spec}>{spec}</span>
-                        </div>
-                      ))}
+                   {/* Three Pillars Analysis */}
+                   <div className="mb-12 space-y-6">
+                      {/* Security Pillar */}
+                      <div className="p-6 rounded-2xl bg-[#243984]/5 border-l-4 border-[#243984]">
+                        <h4 className="text-xl font-black text-[#243984] mb-2 uppercase flex items-center gap-2">
+                           <Icon name="Shield" size={24} />
+                           {lang === 'en' ? 'Security' : 'Sécurité'}
+                        </h4>
+                        <p className="text-slate-700 font-medium">
+                           {(selectedProduct.automations.find(a => /secur|detect|safe|alert|camera|lock|alarm|siren/i.test(a)) || (lang === 'en' ? "Continuous monitoring and protection for your property throughout the day and night." : "Surveillance et protection continues de votre propriété jour et nuit."))}
+                        </p>
+                      </div>
+
+                      {/* Savings Pillar */}
+                      <div className="p-6 rounded-2xl bg-[#10B981]/5 border-l-4 border-[#10B981]">
+                        <h4 className="text-xl font-black text-[#10B981] mb-2 uppercase flex items-center gap-2">
+                           <Icon name="TrendingDown" size={24} />
+                           {lang === 'en' ? 'Savings' : 'Économies'}
+                        </h4>
+                         <p className="text-slate-700 font-medium">
+                           {(selectedProduct.automations.find(a => /sav|energy|cost|cut|efficien|consumption|bill/i.test(a)) || (lang === 'en' ? "Optimizes operational efficiency to reduce waste and lower utility costs." : "Optimise l'efficacité opérationnelle pour réduire le gaspillage et les coûts."))}
+                        </p>
+                      </div>
+
+                      {/* Comfort Pillar */}
+                      <div className="p-6 rounded-2xl bg-[#E82F89]/5 border-l-4 border-[#E82F89]">
+                        <h4 className="text-xl font-black text-[#E82F89] mb-2 uppercase flex items-center gap-2">
+                           <Icon name="Sparkles" size={24} />
+                           {lang === 'en' ? 'Comfort' : 'Confort'}
+                        </h4>
+                        <p className="text-slate-700 font-medium">
+                           {(selectedProduct.automations.find(a => /comfort|auto|ease|scene|voice|remot|schedul/i.test(a)) || (lang === 'en' ? "Simplifies daily interactions through intuitive automation and controls." : "Simplifie les interactions grâce à une automatisation et des commandes intuitives."))}
+                        </p>
+                      </div>
                    </div>
 
                    {/* Product Specific Automations */}

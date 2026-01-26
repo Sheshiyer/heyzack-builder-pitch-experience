@@ -215,8 +215,26 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             animate="animate"
           />
 
+
           {/* Card Deck Container */}
-          <div className="relative w-full max-w-xl aspect-square h-[500px] flex items-center justify-center z-30 mb-16">
+          <div className="relative w-full max-w-xl aspect-square h-[500px] flex flex-col items-center justify-center z-30 mb-16">
+            
+            {/* CURRENT PRODUCT NAME - Moved above the deck */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                 key={currentProduct?.id}
+                 initial={{ opacity: 0, y: 10 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 exit={{ opacity: 0, y: -10 }}
+                 className="mb-8 z-40 text-center px-4"
+              >
+                 <div className="px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md inline-block shadow-lg">
+                    <span className="text-sm font-black text-white/80 uppercase tracking-widest leading-none">
+                       {currentProduct?.name[lang]}
+                    </span>
+                 </div>
+              </motion.div>
+            </AnimatePresence>
 
             {/* Product glow effect */}
             {enhancement && (
@@ -269,13 +287,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                           }}
                         />
                       </div>
-
-                      {/* Card Title/Badge (Only visible on active card) */}
-                       <div className="absolute top-8 left-0 right-0 flex justify-center">
-                         <div className={`px-4 py-1 rounded-full border border-white/10 ${style.opacity === 1 ? 'bg-white/10' : 'bg-transparent'} transition-colors duration-500`}>
-                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{product.name[lang]}</span>
-                         </div>
-                      </div>
                     </motion.div>
                   );
                 })}
@@ -295,54 +306,6 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
               </div>
             )}
           </div>
-
-          {/* Unified Product Dashboard */}
-          <motion.div
-            className="mt-6 w-full max-w-xl z-10 flex flex-col gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            {/* Row 1: Micro Stats */}
-            {enhancement && enhancement.microStats && (
-              <div className="bg-slate-900/40 backdrop-blur-md p-4 rounded-2xl border border-white/5 flex items-center justify-between gap-4">
-                {enhancement.microStats.map((stat, index) => (
-                  <div key={index} className="flex flex-col items-center gap-1 flex-1">
-                    <div className="flex items-center gap-2">
-                       <Icon name={stat.icon} size={14} className="opacity-70" style={{ color: stat.color }} />
-                       <span className="text-xl font-bold" style={{ color: stat.color }}>{stat.value}</span>
-                    </div>
-                    <span className="text-[10px] text-gray-400 text-center uppercase tracking-wide">{stat.label[lang]}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Row 2: Specs & SKU Count */}
-            <div className="bg-slate-900/40 backdrop-blur-md p-4 rounded-2xl border border-white/5 flex flex-col md:flex-row gap-6 items-center justify-between">
-               {/* Product Count */}
-               <div className="flex items-center gap-4">
-                  <div className="bg-gradient-to-br from-[#243984] to-[#1a2b6d] w-10 h-10 rounded-xl flex items-center justify-center shadow-lg">
-                     <span className="text-lg font-black text-white">{category.productCount}</span>
-                  </div>
-                  <div className="flex flex-col">
-                     <span className="text-xs font-bold text-white leading-tight">Total SKUs</span>
-                     <span className="text-[9px] text-slate-400 font-medium">Available Now</span>
-                  </div>
-               </div>
-
-               <div className="hidden md:block w-[1px] h-8 bg-white/10" />
-
-               {/* Dynamic Specs */}
-               <div className="flex gap-2 flex-wrap justify-center md:justify-end">
-                  {currentProduct?.specs.slice(0, 3).map((spec, i) => (
-                     <div key={`${currentProduct?.id}-${i}`} className="px-3 py-1 bg-slate-800/80 border border-white/10 rounded-md">
-                        <span className="text-[9px] font-bold text-slate-300 uppercase">{spec}</span>
-                     </div>
-                  ))}
-               </div>
-            </div>
-          </motion.div>
 
           {/* Interactive Element - Moved to right column per user request */}
           {/* {enhancement && enhancement.interactiveElement && (
@@ -489,23 +452,11 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                      variants={cardReveal}
                      role="button"
                      tabIndex={0}
-                     onMouseEnter={() => setActivePartnerId(link.partnerId)}
-                     onMouseLeave={() => setActivePartnerId(null)}
-                     onFocus={() => setActivePartnerId(link.partnerId)}
-                     onBlur={() => setActivePartnerId(null)}
-                     onKeyDown={(e) => {
-                       if (e.key === 'Enter' || e.key === ' ') {
-                         e.preventDefault();
-                         setActivePartnerId(isActive ? null : link.partnerId);
-                       }
-                     }}
-                     className={`p-6 rounded-[2.5rem] transition-all border-2 flex flex-col gap-3 relative overflow-hidden group/card cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 ${
-                       isActive
-                       ? 'bg-[#243984] border-[#243984] shadow-2xl -translate-y-1'
-                       : 'bg-white/5 border-white/5 hover:border-white/20 hover:bg-white/10 backdrop-blur-sm'
-                     }`}
+                     onMouseEnter={() => setHoveredPartner(link.partnerId)}
+                     onMouseLeave={() => setHoveredPartner(null)}
+                     className={`p-6 rounded-[2.5rem] transition-all border-2 flex flex-col gap-3 relative overflow-hidden group/card cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 bg-[#243984] border-[#243984] shadow-2xl`}
                      style={{
-                       boxShadow: isActive ? depthShadows.brandBlue : 'none'
+                       boxShadow: depthShadows.brandBlue
                      }}
                      whileHover={
                        prefersReducedMotion
@@ -513,50 +464,87 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                          : { scale: 1.02, transition: { duration: 0.2 } }
                      }
                      aria-label={`${partner?.name[lang] || 'System Node'}: ${link.label[lang]}`}
-                     aria-expanded={isActive}
                    >
-                     {/* Animated background gradient on hover */}
-                     {isActive && !prefersReducedMotion && (
+                     {/* Always showing the active gradient background */}
+                     {!prefersReducedMotion && (
                        <motion.div
                          className="absolute inset-0 bg-gradient-to-br from-[#243984] via-[#243984] to-[#E82F89]/40 rounded-[2.5rem]"
-                         initial={{ opacity: 0 }}
-                         animate={{ opacity: 1 }}
-                         transition={{ duration: 0.3 }}
                        />
                      )}
 
                      <div className="flex items-center justify-between relative z-10">
-                        <span className={`text-[10px] font-black uppercase tracking-widest ${isActive ? 'text-white/60' : 'text-slate-400 opacity-70'}`}>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-white/60">
                           {partner?.name[lang] || 'System Node'}
                         </span>
                         <motion.div
-                          className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
-                            isActive ? 'bg-[#E82F89] text-white' : 'bg-white/10 text-slate-400 border border-white/5'
-                          }`}
+                          className="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#E82F89] text-white"
                           animate={
-                            isActive && !prefersReducedMotion
-                              ? { rotate: [0, 360], transition: { duration: 0.6 } }
+                             !prefersReducedMotion
+                              ? { rotate: [0, 360], transition: { duration: 4, repeat: Infinity, ease: 'linear' } }
                               : { rotate: 0 }
                           }
                         >
                            <Icon name="Zap" size={14} />
                         </motion.div>
                      </div>
-                     <p className={`text-sm font-bold leading-tight relative z-10 ${isActive ? 'text-white' : 'text-white'}`}>
+                     <p className="text-sm font-bold leading-tight relative z-10 text-white">
                        {link.label[lang]}
                      </p>
 
                      <motion.div
-                       className={`text-[10px] font-medium leading-relaxed mt-1 relative z-10 ${isActive ? 'text-white/80' : 'text-slate-400'}`}
-                       initial={{ opacity: 0, height: 0 }}
-                       animate={
-                         isActive
-                           ? { opacity: 1, height: 'auto' }
-                           : { opacity: 0, height: 0 }
-                       }
-                       transition={{ duration: 0.3 }}
+                       className="text-[10px] font-medium leading-relaxed mt-1 relative z-10 text-white/80"
+                       style={{ height: 'auto', opacity: 1 }}
                      >
                        {link.description[lang]}
+
+                       {/* Pillar Meters */}
+                       {link.scores && (
+                          <div className="mt-3 flex gap-2">
+                            {/* Security Meter */}
+                            <div className="flex-1 flex flex-col gap-1">
+                               <div className="flex justify-between items-center text-[8px] uppercase font-black text-[#243984] bg-white/10 px-1 rounded">
+                                  <span>Sec</span>
+                               </div>
+                               <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                  <motion.div 
+                                    className="h-full bg-[#243984]" 
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${link.scores.security}%` }}
+                                    transition={{ duration: 1, delay: 0.2 }}
+                                  />
+                               </div>
+                            </div>
+                            {/* Savings Meter */}
+                            <div className="flex-1 flex flex-col gap-1">
+                               <div className="flex justify-between items-center text-[8px] uppercase font-black text-[#10B981] bg-white/10 px-1 rounded">
+                                  <span>Sav</span>
+                               </div>
+                               <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                  <motion.div 
+                                    className="h-full bg-[#10B981]" 
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${link.scores.savings}%` }}
+                                    transition={{ duration: 1, delay: 0.3 }}
+                                  />
+                               </div>
+                            </div>
+                            {/* Comfort Meter */}
+                            <div className="flex-1 flex flex-col gap-1">
+                               <div className="flex justify-between items-center text-[8px] uppercase font-black text-[#E82F89] bg-white/10 px-1 rounded">
+                                  <span>Com</span>
+                               </div>
+                               <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                  <motion.div 
+                                    className="h-full bg-[#E82F89]" 
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${link.scores.comfort}%` }}
+                                    transition={{ duration: 1, delay: 0.4 }}
+                                  />
+                               </div>
+                            </div>
+                          </div>
+                       )}
+
                        <div className="mt-3 pt-3 border-t border-white/10 flex justify-between items-center">
                           <span className="text-white font-black">{link.impactMetric[lang]}</span>
                           <Icon name="ArrowRight" size={10} />
@@ -591,27 +579,8 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             </motion.button>
           </motion.div>
 
-          {/* Interactive Element - Moved to right side with isometric visual treatment */}
-          {enhancement && enhancement.interactiveElement && (
-            <motion.div
-               initial={{ opacity: 0, scale: 0.9, rotateX: 20, rotateY: -10 }}
-               animate={{ opacity: 1, scale: 1, rotateX: 10, rotateY: -10 }}
-               transition={{ delay: 0.6, duration: 0.8 }}
-               className="mt-8 w-full max-w-lg relative perspective-1000 origin-top-left"
-               style={{ 
-                 perspective: '1000px',
-                 transformStyle: 'preserve-3d',
-                 transform: 'rotateX(10deg) rotateY(-10deg) rotateZ(-2deg) translateX(40px)'
-               }}
-            >
-               <div className="rounded-3xl overflow-visible shadow-[20px_20px_60px_rgba(0,0,0,0.5)] bg-slate-800/20 backdrop-blur-sm border border-white/5 p-6 origin-top-left transition-transform hover:rotate-0 hover:scale-[1.02] duration-500 ease-out">
-                 {renderInteractiveElement(enhancement.interactiveElement, lang)}
-               </div>
-               
-               {/* Isometric shadow/platform effect */}
-               <div className="absolute inset-0 bg-[#243984]/5 -z-10 rounded-3xl transform translate-x-4 translate-y-6 blur-md"></div>
-            </motion.div>
-          )}
+
+          {/* Interactive Element - Removed per user request */}
         </motion.div>
       </div>
     </div>
