@@ -58,3 +58,22 @@ $RECYCLE.BIN/
 
 # Vite
 .vite/
+
+# Vendor Image Sources (PRIVATE - Do not commit)
+# Contains vendor folder structure - keep local only
+data/HD IMAGES 2/
+
+# Image Migration Scripts Output (PRIVATE - Contains vendor mapping)
+scripts/image-mapping.json
+scripts/vendor-mapping.json
+scripts/image-source-mapping.json
+scripts/migration-backup/
+scripts/migration-logs/
+
+# Catalog Backups
+data/product_catalog.backup.json
+
+# Note: The following ARE committed (vendor-neutral):
+# - public/images/products/  (cleaned images with HZ-SKU naming)
+# - data/product_catalog.json (references only HZ-SKU paths)
+.env

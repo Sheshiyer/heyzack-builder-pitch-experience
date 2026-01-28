@@ -1,0 +1,18 @@
+{
+  "sku": "HZ-SS-VIDDOR06",
+  "images": {
+    "main": null,
+    "mainFallback": null,
+    "thumbnail": null,
+    "gallery": [
+      "detail-01.png",
+      "detail-02.png"
+    ],
+    "lifestyle": [],
+    "specs": [],
+    "package": []
+  },
+  "imageCount": 2,
+  "migrated": "2026-01-28T01:17:19.779Z",
+  "sourceImageCount": 2
+}

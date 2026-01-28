@@ -1,0 +1,9 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#E9EDEF"/>
+  <g transform="translate(200, 200)">
+    <circle cx="0" cy="-40" r="50" fill="#243984" opacity="0.2"/>
+    <rect x="-30" y="-10" width="60" height="60" rx="8" fill="#243984" opacity="0.3"/>
+    <text x="0" y="120" font-family="Arial, sans-serif" font-size="16" fill="#243984" text-anchor="middle" font-weight="bold">Product Image</text>
+    <text x="0" y="145" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Coming Soon</text>
+  </g>
+</svg>

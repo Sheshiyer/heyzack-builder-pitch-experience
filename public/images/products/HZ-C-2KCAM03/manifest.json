@@ -1,0 +1,22 @@
+{
+  "sku": "HZ-C-2KCAM03",
+  "images": {
+    "main": "main.jpg",
+    "mainFallback": null,
+    "thumbnail": null,
+    "gallery": [
+      "detail-01.png",
+      "detail-02.png",
+      "detail-03.png",
+      "detail-04.png",
+      "detail-05.png",
+      "detail-06.png"
+    ],
+    "lifestyle": [],
+    "specs": [],
+    "package": []
+  },
+  "imageCount": 7,
+  "migrated": "2026-01-28T01:17:19.821Z",
+  "sourceImageCount": 7
+}

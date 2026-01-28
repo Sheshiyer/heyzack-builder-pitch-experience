@@ -7,19 +7,22 @@ const toBilingual = (en: string): Record<Language, string> => ({
   fr: en.trim() + " (FR)" // Visual indicator or just duplicate? User said "support biloginual". I'll just duplicate or basic prefix.
 });
 
-// Re-use existing image assets for now
-const UNSPLASH_POOL = [
-  'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop', 
-  'https://images.unsplash.com/photo-1585338107529-13afc5f02586?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1558486012-817176f84c6d?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'
-];
-
-const getImageForProduct = (sku: string) => {
-  const index = sku.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % UNSPLASH_POOL.length;
-  return UNSPLASH_POOL[index];
+// Get image for product from migrated images in product_catalog.json
+const getImageForProduct = (sku: string, productData?: any) => {
+  // First check if product data has images from migration
+  if (productData && productData.images) {
+    // Return main image if available
+    if (productData.images.main) {
+      return productData.images.main;
+    }
+    // Fallback to first gallery image
+    if (productData.images.gallery && productData.images.gallery.length > 0) {
+      return productData.images.gallery[0];
+    }
+  }
+  
+  // Fallback to placeholder for products without images
+  return `/images/placeholder-product.svg`;
 };
 
 export const PILLARS: Pillar[] = [
@@ -257,7 +260,7 @@ productCatalog.categories.forEach((catInfo: any) => {
       name: toBilingual(p.name),
       specs: p.specs ? p.specs.split('|').map((s: string) => s.trim()) : [],
       benefits: [], // Extract from description? Or leave empty for now
-      imageUrl: getImageForProduct(p.sku),
+      imageUrl: getImageForProduct(p.sku, p), // Pass product data to get migrated images
       description: toBilingual(p.description || ''),
       slug: p.slug,
       automations: p.automations || [],

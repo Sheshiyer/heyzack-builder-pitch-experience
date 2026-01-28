@@ -1,0 +1,19 @@
+{
+  "sku": "HZ-SM-DOMCAM01",
+  "images": {
+    "main": "main.png",
+    "mainFallback": null,
+    "thumbnail": null,
+    "gallery": [
+      "detail-01.png",
+      "detail-02.png",
+      "detail-03.png"
+    ],
+    "lifestyle": [],
+    "specs": [],
+    "package": []
+  },
+  "imageCount": 4,
+  "migrated": "2026-01-28T01:17:19.806Z",
+  "sourceImageCount": 4
+}
