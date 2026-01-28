@@ -24,24 +24,24 @@
     }
   },
   "product_stats": {
-    "total_products": 128,
+    "total_products": 109,
     "total_categories": 15,
     "categories_summary": {
       "Camera and Doorbell": 9,
-      "Smart Sensors": 13,
-      "Smart Control Panel": 6,
-      "Smart Switch": 5,
-      "Smart DIY Breaker": 5,
+      "Curtain, Shutter and Garage Door Controllers": 13,
+      "Pet Accesories": 2,
+      "Smart Accessorries": 4,
+      "Smart Circuit Breaker": 2,
       "Smart Climatisation": 14,
-      "Smart Music Control System": 3,
+      "Smart Control Panel": 6,
+      "Smart DIY Breaker": 5,
       "Smart Door Lock": 10,
       "Smart Door Lock Body": 3,
-      "Smart Circuit Breaker": 2,
       "Smart Gateway": 4,
-      "Curtain, Shutter and Garage Door Controllers": 29,
-      "Smart lighting System and Dimming Controller": 18,
-      "Smart Accessorries": 5,
-      "Pet Accesories": 2
+      "Smart Music Control System": 3,
+      "Smart Sensors": 13,
+      "Smart Switch": 5,
+      "Smart lighting System and Dimming Controller": 16
     }
   },
   "categories": [
@@ -67,12 +67,18 @@
             "Records and saves footage to cloud storage services"
           ],
           "images": {
-            "main": "/images/products/HZ-SS-VIDDOR04/detail-01.jpg",
+            "main": "/images/products/HZ-SS-VIDDOR04/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SS-VIDDOR04/detail-01.jpg",
+            "thumbnail": "/images/products/HZ-SS-VIDDOR04/1.png",
             "gallery": [
-              "/images/products/HZ-SS-VIDDOR04/detail-01.jpg",
-              "/images/products/HZ-SS-VIDDOR04/detail-02.png"
+              "/images/products/HZ-SS-VIDDOR04/1.png",
+              "/images/products/HZ-SS-VIDDOR04/2.png",
+              "/images/products/HZ-SS-VIDDOR04/3.png",
+              "/images/products/HZ-SS-VIDDOR04/4.png",
+              "/images/products/HZ-SS-VIDDOR04/5.png",
+              "/images/products/HZ-SS-VIDDOR04/6.png",
+              "/images/products/HZ-SS-VIDDOR04/7.png",
+              "/images/products/HZ-SS-VIDDOR04/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -95,7 +101,25 @@
             "Sends alerts to smart speakers when someone rings the doorbell",
             "Turns on indoor cameras when motion is detected outside",
             "Automatically records video when the doorbell is pressed"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SS-VIDDOR05/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SS-VIDDOR05/1.png",
+            "gallery": [
+              "/images/products/HZ-SS-VIDDOR05/1.png",
+              "/images/products/HZ-SS-VIDDOR05/2.png",
+              "/images/products/HZ-SS-VIDDOR05/3.png",
+              "/images/products/HZ-SS-VIDDOR05/4.png",
+              "/images/products/HZ-SS-VIDDOR05/5.png",
+              "/images/products/HZ-SS-VIDDOR05/6.png",
+              "/images/products/HZ-SS-VIDDOR05/7.png",
+              "/images/products/HZ-SS-VIDDOR05/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Video Door Bell USB powered (USB-C)",
@@ -115,12 +139,18 @@
             "Automatically unlocks garage door for trusted visitors"
           ],
           "images": {
-            "main": "/images/products/HZ-SS-VIDDOR06/detail-01.png",
+            "main": "/images/products/HZ-SS-VIDDOR06/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SS-VIDDOR06/detail-01.png",
+            "thumbnail": "/images/products/HZ-SS-VIDDOR06/1.png",
             "gallery": [
-              "/images/products/HZ-SS-VIDDOR06/detail-01.png",
-              "/images/products/HZ-SS-VIDDOR06/detail-02.png"
+              "/images/products/HZ-SS-VIDDOR06/1.png",
+              "/images/products/HZ-SS-VIDDOR06/2.png",
+              "/images/products/HZ-SS-VIDDOR06/3.png",
+              "/images/products/HZ-SS-VIDDOR06/4.png",
+              "/images/products/HZ-SS-VIDDOR06/5.png",
+              "/images/products/HZ-SS-VIDDOR06/6.png",
+              "/images/products/HZ-SS-VIDDOR06/7.png",
+              "/images/products/HZ-SS-VIDDOR06/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -145,10 +175,19 @@
             "Syncs with thermostat to adjust temperature when room is unoccupied"
           ],
           "images": {
-            "main": "/images/products/HZ-C-2KCAM01/main.png",
+            "main": "/images/products/HZ-C-2KCAM01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-C-2KCAM01/main.png",
-            "gallery": [],
+            "thumbnail": "/images/products/HZ-C-2KCAM01/1.png",
+            "gallery": [
+              "/images/products/HZ-C-2KCAM01/1.png",
+              "/images/products/HZ-C-2KCAM01/2.png",
+              "/images/products/HZ-C-2KCAM01/3.png",
+              "/images/products/HZ-C-2KCAM01/4.png",
+              "/images/products/HZ-C-2KCAM01/5.png",
+              "/images/products/HZ-C-2KCAM01/6.png",
+              "/images/products/HZ-C-2KCAM01/7.png",
+              "/images/products/HZ-C-2KCAM01/8.png"
+            ],
             "lifestyle": [],
             "specs": [],
             "package": []
@@ -172,12 +211,18 @@
             "Alerts smart speaker when unusual activity is detected"
           ],
           "images": {
-            "main": "/images/products/HZ-C-WIRWIF01/detail-01.png",
+            "main": "/images/products/HZ-C-WIRWIF01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-C-WIRWIF01/detail-01.png",
+            "thumbnail": "/images/products/HZ-C-WIRWIF01/1.png",
             "gallery": [
-              "/images/products/HZ-C-WIRWIF01/detail-01.png",
-              "/images/products/HZ-C-WIRWIF01/detail-02.png"
+              "/images/products/HZ-C-WIRWIF01/1.png",
+              "/images/products/HZ-C-WIRWIF01/2.png",
+              "/images/products/HZ-C-WIRWIF01/3.png",
+              "/images/products/HZ-C-WIRWIF01/4.png",
+              "/images/products/HZ-C-WIRWIF01/5.png",
+              "/images/products/HZ-C-WIRWIF01/6.png",
+              "/images/products/HZ-C-WIRWIF01/7.png",
+              "/images/products/HZ-C-WIRWIF01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -200,7 +245,25 @@
             "Activates smart lights when motion detected to deter intruders.",
             "Syncs with doorbell to record and notify of visitors.",
             "Integrates with security system for comprehensive home monitoring."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-C-2KCAM02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-C-2KCAM02/1.png",
+            "gallery": [
+              "/images/products/HZ-C-2KCAM02/1.png",
+              "/images/products/HZ-C-2KCAM02/2.png",
+              "/images/products/HZ-C-2KCAM02/3.png",
+              "/images/products/HZ-C-2KCAM02/4.png",
+              "/images/products/HZ-C-2KCAM02/5.png",
+              "/images/products/HZ-C-2KCAM02/6.png",
+              "/images/products/HZ-C-2KCAM02/7.png",
+              "/images/products/HZ-C-2KCAM02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Outdoor Camera with solar in pro kit",
@@ -218,7 +281,25 @@
             "Outdoor Camera solar starts Indoor Camera recording when its AI spots a person, giving full-room coverage before break-in.",
             "When Outdoor Camera solar detects motion at night, it signals Video Doorbell Battery to turn on porch light, deterring intruders.",
             "Outdoor Camera solar alerts Video Doorbell USB to begin two-way talk if visitor lingers by driveway gate, preventing package theft."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-C-BATSOL02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-C-BATSOL02/1.png",
+            "gallery": [
+              "/images/products/HZ-C-BATSOL02/1.png",
+              "/images/products/HZ-C-BATSOL02/2.png",
+              "/images/products/HZ-C-BATSOL02/3.png",
+              "/images/products/HZ-C-BATSOL02/4.png",
+              "/images/products/HZ-C-BATSOL02/5.png",
+              "/images/products/HZ-C-BATSOL02/6.png",
+              "/images/products/HZ-C-BATSOL02/7.png",
+              "/images/products/HZ-C-BATSOL02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Camera outdoor with Battery, solar and light (not include 6w solar $6) in pro kit",
@@ -236,7 +317,25 @@
             "Detects motion and turns on indoor smart lights for security",
             "Sends live footage to your phone when doorbell is pressed",
             "Works with smart locks to auto-lock doors when motion detected"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-C-BATSOL02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-C-BATSOL02/1.png",
+            "gallery": [
+              "/images/products/HZ-C-BATSOL02/1.png",
+              "/images/products/HZ-C-BATSOL02/2.png",
+              "/images/products/HZ-C-BATSOL02/3.png",
+              "/images/products/HZ-C-BATSOL02/4.png",
+              "/images/products/HZ-C-BATSOL02/5.png",
+              "/images/products/HZ-C-BATSOL02/6.png",
+              "/images/products/HZ-C-BATSOL02/7.png",
+              "/images/products/HZ-C-BATSOL02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Baby Monitor with display",
@@ -256,11 +355,18 @@
             "Connects to smart thermostat for optimal nursery temperature"
           ],
           "images": {
-            "main": "/images/products/HZ-C-BABMON01/detail-01.png",
+            "main": "/images/products/HZ-C-BABMON01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-C-BABMON01/detail-01.png",
+            "thumbnail": "/images/products/HZ-C-BABMON01/1.png",
             "gallery": [
-              "/images/products/HZ-C-BABMON01/detail-01.png"
+              "/images/products/HZ-C-BABMON01/1.png",
+              "/images/products/HZ-C-BABMON01/2.png",
+              "/images/products/HZ-C-BABMON01/3.png",
+              "/images/products/HZ-C-BABMON01/4.png",
+              "/images/products/HZ-C-BABMON01/5.png",
+              "/images/products/HZ-C-BABMON01/6.png",
+              "/images/products/HZ-C-BABMON01/7.png",
+              "/images/products/HZ-C-BABMON01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -271,7 +377,7 @@
     },
     {
       "name": "Curtain, Shutter and Garage Door Controllers",
-      "product_count": 29,
+      "product_count": 13,
       "products": [
         {
           "name": "Smart Shutter Motor (25 Zigbee tubular motor, DC motor with built-in lithium battery)",
@@ -289,43 +395,25 @@
             "Automatically opens shutters when doorbell rings.",
             "Closes shutters when alarm system is armed.",
             "Adjusts shutters based on weather forecast."
-          ]
-        },
-        {
-          "name": "Smart Shutter Motor (25 Zigbee tubular motor, DC motor with built-in lithium battery)",
-          "sku": "HZ-CS-BATSOL02",
-          "specs": "Model: 25 ZIGBEE tubular motor | Motor Type: DC motor, built-in lithium battery | Diameter: 25 mm (Suitable for 38mm diameter tube) | Torque: 1.2 N | RPM: 30",
-          "description": "Transform your shutters into intelligent window guardians that respond to your daily rhythm. Open to sunrise, close for privacy, all without lifting a finger.\n\n• Control every shutter from bed with whisper-quiet precision.\n• Built-in battery eliminates messy wires and complex installations.\n• Zigbee mesh network ensures reliable control throughout your home.\n• Schedule automatic adjustments that match your lifestyle perfectly.\n\nYour windows just got smarter than your phone.",
-          "slug": "zigbee-25mm-smart-shutter-motor-battery",
-          "keywords": "zigbee motor, smart shutter, tubular motor, roller blind motor, dc motor, battery motor, home automation, curtain controller",
-          "automations": [
-            "Here are three practical automations for the Smart Shutter Motor (25 Zigbee tubular motor):",
-            "Automated Day/Night Shutter Control",
-            "Trigger:* Time of day (sunrise/sunset)"
           ],
-          "connected_scenes": [
-            "Automatically closes shutters when doorbell rings for privacy",
-            "Opens shutters when video doorbell detects a delivery person",
-            "Syncs with thermostat to adjust shutters for energy efficiency"
-          ]
-        },
-        {
-          "name": "35S-10N/17-Zigbee (Zigbee tubular shutter motor, 230V)",
-          "sku": "HZ-CS-35S10N01",
-          "specs": "35 tubular electronic limit motor (built-in module) Tuya ZIGBEE module (direct power supply) | Top and bottom limits plus 4 favorite stop positions | Bi-directional feedback | Soft start and stop | Stroke memory function | A reversal of the circuit's polarity will change the direction of the motor's force clockwise or counterclockwise | Jog and continuous rolling adjustment",
-          "description": "Transform any window into an instant sanctuary of perfect light and privacy. This silent 230V tubular motor disappears inside your shutter tube, bringing cinema-quiet automation to everyday living.\n\n• Whisper-quiet operation lets you adjust shutters without disturbing sleeping children.\n• Zigbee mesh networking keeps commands responsive even at home's furthest corners.\n• 230V direct power eliminates battery replacements for decades of worry-free service.\n• Sunlight fades gradually as shutters glide to your exact preferred position every time.\n\nConnect through smart speakers, voice assistants, smart displays, or mobile devices to command your shutters with a word or tap. Schedule sunrise welcomes and sunset privacy that happen automatically while you're still in bed.\n\nExperience the luxury of perfectly orchestrated daylight that arrives on your schedule, not the sun's.",
-          "slug": "zigbee-tubular-shutter-motor-35mm-10nm-230v",
-          "keywords": "zigbee shutter motor, tubular motor, 230v shutter, smart blinds, 10Nm torque, 35mm motor, zigbee 3.0, IP44 motor, roller shutter, home automation",
-          "automations": [
-            "Trigger*: Motion detected in a specific area (e.g., living room or bedroom).",
-            "Use Case*: Ideal for maintaining privacy when someone walks by a window, especially in bedrooms or home offices.",
-            "Scheduled Sunlight Control for Energy Efficiency"
-          ],
-          "connected_scenes": [
-            "Automates shutter control via smart speaker voice commands",
-            "Syncs with doorbell for automatic window opening on arrival",
-            "Integrates with security system for programmed shutters at night"
-          ]
+          "images": {
+            "main": "/images/products/HZ-CS-BATSOL01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-BATSOL01/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-BATSOL01/1.png",
+              "/images/products/HZ-CS-BATSOL01/2.png",
+              "/images/products/HZ-CS-BATSOL01/3.png",
+              "/images/products/HZ-CS-BATSOL01/4.png",
+              "/images/products/HZ-CS-BATSOL01/5.png",
+              "/images/products/HZ-CS-BATSOL01/6.png",
+              "/images/products/HZ-CS-BATSOL01/7.png",
+              "/images/products/HZ-CS-BATSOL01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "25S-1.1N/17-Zigbee (Zigbee tubular shutter motor, 230V)",
@@ -343,7 +431,25 @@
             "Automatically opens blinds when security camera detects motion",
             "Syncs with smart doorbell to adjust blinds during deliveries",
             "Closes shutters when video doorbell detects motion at night"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-25S101/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-25S101/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-25S101/1.png",
+              "/images/products/HZ-CS-25S101/2.png",
+              "/images/products/HZ-CS-25S101/3.png",
+              "/images/products/HZ-CS-25S101/4.png",
+              "/images/products/HZ-CS-25S101/5.png",
+              "/images/products/HZ-CS-25S101/6.png",
+              "/images/products/HZ-CS-25S101/7.png",
+              "/images/products/HZ-CS-25S101/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "1668-6 (3-in-1 universal smart curtain robot, available in Zigbee)",
@@ -361,7 +467,25 @@
             "Automatically opens curtains when sunrise detected by an outdoor sensor",
             "Closes curtains when security camera detects motion at night",
             "Syncs with smart thermostat to adjust based on sunlight exposure"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-CONACC01/1.png",
+              "/images/products/HZ-CS-CONACC01/2.png",
+              "/images/products/HZ-CS-CONACC01/3.png",
+              "/images/products/HZ-CS-CONACC01/4.png",
+              "/images/products/HZ-CS-CONACC01/5.png",
+              "/images/products/HZ-CS-CONACC01/6.png",
+              "/images/products/HZ-CS-CONACC01/7.png",
+              "/images/products/HZ-CS-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Zigbee-DJ02 (Smart Curtain Kit with Zigbee motor, retractable rail, and remote)",
@@ -379,7 +503,25 @@
             "Automatically closes curtains when motion detected at the doorbell",
             "Opens curtains when you arrive home using geofencing",
             "Syncs with smart lights to adjust brightness when curtains move"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-CONACC02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-CONACC02/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-CONACC02/1.png",
+              "/images/products/HZ-CS-CONACC02/2.png",
+              "/images/products/HZ-CS-CONACC02/3.png",
+              "/images/products/HZ-CS-CONACC02/4.png",
+              "/images/products/HZ-CS-CONACC02/5.png",
+              "/images/products/HZ-CS-CONACC02/6.png",
+              "/images/products/HZ-CS-CONACC02/7.png",
+              "/images/products/HZ-CS-CONACC02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Zigbee-DJ01 (Zigbee curtain motor)",
@@ -397,7 +539,25 @@
             "Opens curtains when doorbell rings for security",
             "Closes curtains at sunset for privacy",
             "Syncs with thermostat to adjust natural light"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-ZIGDJ001/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-ZIGDJ001/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-ZIGDJ001/1.png",
+              "/images/products/HZ-CS-ZIGDJ001/2.png",
+              "/images/products/HZ-CS-ZIGDJ001/3.png",
+              "/images/products/HZ-CS-ZIGDJ001/4.png",
+              "/images/products/HZ-CS-ZIGDJ001/5.png",
+              "/images/products/HZ-CS-ZIGDJ001/6.png",
+              "/images/products/HZ-CS-ZIGDJ001/7.png",
+              "/images/products/HZ-CS-ZIGDJ001/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Curtain Kit (C-shape)",
@@ -415,132 +575,25 @@
             "Automatically closes curtains when security camera detects motion",
             "Opens curtains at sunrise using smart light sensor data",
             "Syncs with smart thermostat to adjust room temperature as needed"
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT02",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Open your curtains with a whisper. Watch morning light flood in without leaving your bed.\n\n• Glide curtains open silently at sunrise for natural awakening.\n• Schedule privacy to close automatically at dusk each evening.\n• Control from anywhere using your existing smart home setup.\n• Transform any room ambiance instantly with gentle motor movement.\n\nExperience the luxury of automated curtains that respond to your voice, your schedule, and your life.",
-          "slug": "c-shape-smart-curtain-kit-2-14m-track",
-          "keywords": "smart curtain, curtain motor, c-track, zigbee curtain, wifi curtain, motorized track, bay window kit, 2.14m rail, silent opener, home automation",
-          "automations": [
-            "Automation: Morning Sunlight Control",
-            "Trigger:* Time of day (e.g., 7:00 AM)",
-            "Action:* Curtains automatically open to let in natural light."
           ],
-          "connected_scenes": [
-            "Automatically closes curtains when video doorbell detects motion at night",
-            "Opens curtains when sunrise is detected via smart thermostat"
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT03",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into silent, automated wonders that greet every sunrise on your schedule.\n\n• Open curtains gently each morning without leaving your bed.\n• Close them automatically at dusk for instant privacy.\n• Set custom schedules that adjust to your daily rhythm.\n• Whisper-quiet motor moves curtains smoothly every time.\n\nThe C-shape design installs in minutes and works with your existing curtains. Bring effortless elegance to every window in your home.",
-          "slug": "c-shape-smart-curtain-kit-3-14m-track",
-          "keywords": "smart curtain, curtain motor, zigbee curtain, wifi curtain track, motorized curtain, home automation, curtain controller, silent curtain motor",
-          "automations": [
-            "Auto-Open at Sunrise for Natural Light",
-            "Trigger:* Scheduled time (sunrise)",
-            "Action:* Curtains open automatically"
-          ],
-          "connected_scenes": [
-            "Automates curtains to open when the smart doorbell detects a visitor",
-            "Syncs with smart lights to adjust brightness based on curtain position",
-            "Links with security cameras for synchronized home monitoring"
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT04",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into intelligent window dressings that move with your life. The Curtain Kit (C-shape) brings effortless automation to any room.\n\n• Wake to gentle morning light as curtains glide open automatically.\n• Schedule evening privacy without leaving your comfortable seat.\n• Control natural light and temperature with precision timing.\n• Enjoy whisper-quiet operation that won't disturb peaceful moments.\n\nLet your curtains think for themselves while you simply enjoy the view.",
-          "slug": "c-shape-smart-curtain-kit-4-14m-track",
-          "keywords": "smart curtain, curtain motor, zigbee curtain, wifi curtain track, automated curtains, electric curtain kit, c-track system, smart home curtains, curtain automation",
-          "automations": [
-            "Automatically close curtains at sunset for privacy and energy savings",
-            "Trigger*: Time of day (sunset)",
-            "Action*: Curtains close"
-          ],
-          "connected_scenes": [
-            "Automatically closes curtains when motion is detected at the doorbell.",
-            "Opens curtains based on your smart home schedule or routines.",
-            "Syncs with smart thermostats to adjust privacy and light control for efficiency."
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT05",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform any window instantly. Your curtains now open and close with whisper-quiet precision.\n\n• Control natural light without leaving your seat throughout the day.\n• Schedule curtains to rise with sunrise and close automatically at sunset.\n• Enjoy gentle morning wake-ups as curtains open gradually each day.\n• Protect furniture from sun damage with automated positioning.\n\nExperience the luxury of automated window treatments that adapt to your life.",
-          "slug": "c-shape-smart-curtain-kit-5-14m-track",
-          "keywords": "smart curtain, curtain motor, zigbee curtain, wifi curtain, electric curtain, curtain track, home automation, curtain controller, c-track, motorized curtain",
-          "automations": [
-            "Automation 1: Morning Sunlight Control",
-            "Trigger: Time of day (e.g., 7:00 AM)",
-            "Action: Curtains automatically open to let in natural light."
-          ],
-          "connected_scenes": [
-            "Automatically opens curtains when security cameras detect motion at the door",
-            "Closes curtains when smart lights turn off at night for privacy",
-            "Syncs with smart locks to adjust curtains when someone enters or leaves"
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT06",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into intelligent window coverings that respond to your daily rhythm. Wake naturally as daylight gradually fills your bedroom.\n\n• Gentle morning light replaces harsh alarms with smooth curtain automation.\n• Schedule privacy at dusk without lifting a finger from sofa or bed.\n• Motor operates whisper-quietly so sleeping family members stay undisturbed.\n• Fits existing C-track curtains so no costly window hardware replacements needed.\n\nControl everything through smart speakers, voice assistants, smart displays, and mobile devices. Create scenes that synchronize your curtains with lighting and temperature for perfect ambiance.\n\nExperience the luxury of automated curtains that anticipate your needs before you do.",
-          "slug": "c-shape-smart-curtain-kit-6-14m-track",
-          "keywords": "smart curtain, curtain motor, zigbee curtain, wifi curtain track, automated curtains, c-shape track, 6.14m curtain, smart home curtains, motorized blinds, curtain automation",
-          "automations": [
-            "Here are three practical automations for the Curtain Kit (C-shape) based on its actual features:",
-            "Open curtains automatically in the morning for natural light",
-            "Trigger:* Time of day (e.g., 7:00 AM)"
-          ],
-          "connected_scenes": [
-            "Automatically closes curtains when the video doorbell detects motion at night.",
-            "Syncs with smart lights to adjust brightness based on curtain position.",
-            "Links to voice assistants for hands-free curtain control."
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT07",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into silent, automated art. Wake to gentle morning light without lifting a finger.\n\n• Slide heavy curtains open at sunrise, close at sunset, every single day.\n• Install in minutes with the C-shape rail that hugs your existing window frame.\n• Control from bed, across the room, or anywhere your day takes you.\n• Whisper-quiet motor moves even thick blackout curtains without waking anyone.\n\nYour curtains finally work as beautifully as they look.",
-          "slug": "c-shape-smart-curtain-kit-1-14m-track",
-          "keywords": "smart curtain, curtain kit, c-shape track, zigbee motor, wifi curtain, home automation, curtain controller, motorized curtains",
-          "automations": [
-            "• Automated Morning Opening: The curtain kit opens at a set time (e",
-            ", 7:00 AM) using the built-in scheduling feature",
-            "This is useful for convenience and energy savings"
-          ],
-          "connected_scenes": [
-            "Automatically opens curtains when the doorbell rings",
-            "Syncs with smart thermostat for energy-efficient sun control",
-            "Closes curtains at night for privacy when motion is detected"
-          ]
-        },
-        {
-          "name": "Curtain Kit (C-shape)",
-          "sku": "HZ-CS-CURKIT08",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 1.14 Meter track+ 1x one-way remote control | C-shape Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into intelligent window dressings that move with your rhythm. The C-shape Curtain Kit brings effortless automation to every sunrise and sunset.\n\n• Wake gently as curtains glide open with natural morning light.\n• Create privacy instantly without leaving your comfortable seat.\n• Schedule movements that protect furniture from harsh UV rays.\n• Enjoy whisper-quiet operation that won't disturb sleeping family members.\n\nLet your curtains anticipate your needs before you even reach for the cord.",
-          "slug": "c-shape-smart-curtain-kit-1-14m-track",
-          "keywords": "smart curtain, curtain motor, zigbee curtain, wifi curtain, track kit, home automation, motorized blinds, remote control, c-track, curtain controller",
-          "automations": [
-            "Automate Curtains to Open/Close Based on Sunrise/Sunset",
-            "Trigger:* Time of day (sunrise for open, sunset for close)",
-            "Action:* Curtains automatically open at sunrise and close at sunset."
-          ],
-          "connected_scenes": [
-            "Automatically adjusts curtains when doorbell rings",
-            "Syncs with smart lights for daylight automation",
-            "Closes curtains at sunset for privacy and energy savings"
-          ]
+          "images": {
+            "main": "/images/products/HZ-CS-CURKIT01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-CURKIT01/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-CURKIT01/1.png",
+              "/images/products/HZ-CS-CURKIT01/2.png",
+              "/images/products/HZ-CS-CURKIT01/3.png",
+              "/images/products/HZ-CS-CURKIT01/4.png",
+              "/images/products/HZ-CS-CURKIT01/5.png",
+              "/images/products/HZ-CS-CURKIT01/6.png",
+              "/images/products/HZ-CS-CURKIT01/7.png",
+              "/images/products/HZ-CS-CURKIT01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Curtain Kit (Garris)",
@@ -558,133 +611,25 @@
             "Opens curtains at sunrise for natural light",
             "Closes curtains when motion detected for privacy",
             "Syncs with smart thermostat to adjust lighting for energy savings"
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT10",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform any room in seconds with effortless curtain control. Wake to gentle morning light, then create instant privacy at night.\n\n• Open or close curtains from anywhere in your home.\n• Schedule curtains to follow sunrise and sunset automatically.\n• Control multiple rooms with one simple touch.\n• Enjoy whisper-quiet operation that never disturbs your peace.\n\nExperience the luxury of curtains that move at your command.",
-          "slug": "garris-smart-curtain-kit-2-14m-track-zigbee-wifi",
-          "keywords": "smart curtain, curtain motor, automated curtains, curtain track, smart home, zigbee curtains, wifi curtain motor, electric drapes, 2.14m track",
-          "automations": [
-            "One-way remote opens curtains at 7 AM and closes them at sunset daily for natural lighting control.",
-            "Zigbee motor closes bedroom curtains automatically when you press remote button before sleeping.",
-            "WIFI motor opens living room curtains remotely when away to simulate presence and deter intruders."
           ],
-          "connected_scenes": [
-            "Automates curtains to open when doorbell rings for convenience",
-            "Adjusts blinds based on weather data from smart home hub",
-            "Closes curtains at sunset using schedule mode for privacy"
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT11",
-          "specs": "Product Description: Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your windows with effortless elegance. Garris brings intelligent curtain control to every room.\n\n• Open curtains gently each morning with automated scheduling.\n• Control multiple curtains simultaneously from anywhere in your home.\n• Adjust privacy levels instantly without leaving your seat.\n• Set custom positions for perfect lighting throughout your day.\n\nExperience the perfect blend of convenience and sophistication with Garris Curtain Kit.",
-          "slug": "garris-curtain-kit-smart-motor-track",
-          "keywords": "smart curtains, curtain motor, automated blinds, zigbee controller, wifi curtain track, home automation, motorized curtains, smart home",
-          "automations": [
-            "Morning routine opens bedroom curtains at 7 AM using remote control for gentle natural wake-up",
-            "Evening routine closes living room curtains at sunset using Zigbee/WIFI motor via smartphone app",
-            "One-way remote closes all curtains when leaving home to enhance privacy and security"
-          ],
-          "connected_scenes": [
-            "Automatically closes curtains when security camera detects motion",
-            "Opens curtains at sunset to let in natural light",
-            "Closes curtains when doorbell camera detects someone at the door"
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT12",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Wake up to gentle morning light. Your curtains glide open automatically at sunrise.\n\n• Control curtains from anywhere with your phone or tablet.\n• Set custom schedules that adjust to sunrise and sunset times.\n• Whisper-quiet motor opens and closes curtains smoothly every time.\n• Works with any standard curtain track up to 3 meters wide.\n\nSimply connect to your existing smart speakers and voice assistants. Control everything through smart displays and mobile devices with ease.\n\nTransform your bedroom into a sanctuary where mornings begin effortlessly.",
-          "slug": "garris-smart-curtain-kit-zigbee-wifi-motor-214m-tr",
-          "keywords": "smart curtain, curtain motor, automated curtains, zigbee curtain, wifi curtain track, electric drapes, curtain controller, home automation, smart home curtains, motorized curtain",
-          "automations": [
-            "Sunrise/Sunset Automation (Convenience, Energy Saving)",
-            "Trigger: Sunrise or sunset (time of day)",
-            "Action: Curtains automatically open at sunrise and close at sunset"
-          ],
-          "connected_scenes": [
-            "Adjusts curtains automatically when video doorbell detects motion at the front door.",
-            "Opens curtains in the morning based on your smart home’s schedule.",
-            "Closes curtains at night to enhance privacy and energy efficiency."
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT13",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into intelligent window coverings that respond to your daily rhythm. Experience effortless light control that adapts to your lifestyle automatically.\n\n• Open curtains gently each morning with automated scheduling.\n• Close them remotely for instant privacy and security.\n• Set precise positioning to filter natural light perfectly.\n• Control multiple rooms simultaneously from anywhere.\n\nThe system responds to voice commands through smart speakers and integrates seamlessly with your existing smart home setup. Manage everything through mobile devices and smart displays throughout your home.\n\nWake up to natural sunlight and return to complete privacy without touching a single cord.",
-          "slug": "garris-smart-curtain-kit-2-14m-track",
-          "keywords": "smart curtain, curtain motor, zigbee curtain, wifi curtain, track kit, home automation, motorized blinds, remote control",
-          "automations": [
-            "One-way remote opens curtains at 7 AM and closes them at sunset daily",
-            "Zigbee hub schedules curtain motor to open gradually at sunrise for natural wake-up",
-            "Remote control closes all curtains simultaneously when leaving home for privacy"
-          ],
-          "connected_scenes": [
-            "Automatically closes curtains when doorbell rings for privacy",
-            "Syncs with smart lights to set mood lighting",
-            "Opens curtains with sunrise for natural lighting"
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT14",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform every window into a responsive portal to natural light and privacy.\n\n• Open curtains gently at dawn for a natural wake-up experience.\n• Close automatically at dusk for instant privacy and security.\n• Schedule scenes that adjust with seasons and your daily rhythm.\n• Control every curtain from bed, sofa, or anywhere in your home.\n\nThe Curtain Kit (Garris) brings intelligent elegance to your windows.",
-          "slug": "garris-smart-curtain-kit-2-14m-track-zigbee-wifi",
-          "keywords": "smart curtain, curtain motor, zigbee controller, wifi curtain, track kit, home automation, motorized blinds, remote curtain, bedroom privacy, sunrise wake-up",
-          "automations": [
-            "Here are three practical automations for the Curtain Kit (Garris) based on its actual capabilities:",
-            "Automated Day/Night Curtain Control",
-            "Trigger: Time of day (sunrise/sunset)"
-          ],
-          "connected_scenes": [
-            "Automatically closes curtains when doorbell rings for privacy",
-            "Opens curtains at sunrise to let in natural light",
-            "Syncs with smart thermostat to optimize sunlight for heating"
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT15",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform your curtains into intelligent light managers. Garris Curtain Kit brings effortless automation to every window.\n\n• Wake naturally as curtains glide open with sunrise.\n• Schedule privacy with sunset closing for instant ambiance.\n• Control multiple windows simultaneously from anywhere.\n• Save energy by blocking heat or maximizing daylight.\n\nExperience the luxury of curtains that anticipate your needs.",
-          "slug": "garris-smart-curtain-kit-zigbee-wifi-track-214m",
-          "keywords": "smart curtain, curtain motor, curtain track, home automation, zigbee curtain, wifi curtain, motorized curtain, smart blinds",
-          "automations": [
-            ", sunrise) using a time-based trigger",
-            "Useful for energy savings and convenience",
-            "This enhances privacy and security by preventing unwanted visibility into the home"
-          ],
-          "connected_scenes": [
-            "Automates curtains to open when the doorbell detects a visitor.",
-            "Closes curtains at sunset using a smart lighting schedule.",
-            "Syncs with smart thermostat to adjust based on natural light."
-          ]
-        },
-        {
-          "name": "Curtain Kit (Garris)",
-          "sku": "HZ-CS-CURKIT16",
-          "specs": "Smart curtain kit with 1x Zigbee/WIFI motor+1x 2.14 Meter track+ 1x one-way remote control | Garris Track dimension: 1x50CM, 2x20CM, 1x10CM, rotating box 14CM, extension piece 3CM",
-          "description": "Transform any window into an automated sanctuary. Garris Curtain Kit brings effortless control to your daily rhythm.\n\n• Wake to gentle daylight with programmable opening schedules.\n• Close curtains instantly for privacy without leaving your seat.\n• Save energy by blocking harsh sun during peak hours.\n• Enjoy whisper-quiet operation that won't disturb peaceful moments.\n\nExperience the luxury of perfectly timed natural light every single day.",
-          "slug": "garris-smart-curtain-kit-zigbee-wifi-motor-2-14m-t",
-          "keywords": "smart curtain, curtain motor, motorized curtains, zigbee curtain, wifi curtain track, home automation, electric drapes, curtain controller, smart home, automated blinds",
-          "automations": [
-            "Trigger:* Sunrise (Time of Day)",
-            "Action:* Automatically opens the curtains to let in natural light.",
-            "When Useful:* Reduces reliance on artificial lighting, saving energy, and provides a natural wake-up experience."
-          ],
-          "connected_scenes": [
-            "Opens curtains at sunrise to let in natural light",
-            "Closes curtains at sunset for privacy and energy savings",
-            "Syncs with smart lights for automated day/night lighting control"
-          ]
+          "images": {
+            "main": "/images/products/HZ-CS-CURKIT09/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-CURKIT09/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-CURKIT09/1.png",
+              "/images/products/HZ-CS-CURKIT09/2.png",
+              "/images/products/HZ-CS-CURKIT09/3.png",
+              "/images/products/HZ-CS-CURKIT09/4.png",
+              "/images/products/HZ-CS-CURKIT09/5.png",
+              "/images/products/HZ-CS-CURKIT09/6.png",
+              "/images/products/HZ-CS-CURKIT09/7.png",
+              "/images/products/HZ-CS-CURKIT09/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Zigbee Mini Garage Door Controller",
@@ -704,15 +649,18 @@
             "Integrates with voice assistants for hands-free control"
           ],
           "images": {
-            "main": "/images/products/HZ-CS-VIDDOR01/main.jpg",
+            "main": "/images/products/HZ-CS-VIDDOR01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-CS-VIDDOR01/main.jpg",
+            "thumbnail": "/images/products/HZ-CS-VIDDOR01/1.png",
             "gallery": [
-              "/images/products/HZ-CS-VIDDOR01/detail-01.jpg",
-              "/images/products/HZ-CS-VIDDOR01/detail-02.jpg",
-              "/images/products/HZ-CS-VIDDOR01/detail-03.jpg",
-              "/images/products/HZ-CS-VIDDOR01/detail-04.jpg",
-              "/images/products/HZ-CS-VIDDOR01/detail-05.jpg"
+              "/images/products/HZ-CS-VIDDOR01/1.png",
+              "/images/products/HZ-CS-VIDDOR01/2.png",
+              "/images/products/HZ-CS-VIDDOR01/3.png",
+              "/images/products/HZ-CS-VIDDOR01/4.png",
+              "/images/products/HZ-CS-VIDDOR01/5.png",
+              "/images/products/HZ-CS-VIDDOR01/6.png",
+              "/images/products/HZ-CS-VIDDOR01/7.png",
+              "/images/products/HZ-CS-VIDDOR01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -735,7 +683,25 @@
             "Automates curtains when doorbell detects motion",
             "Links with smart lights for synchronized morning routines",
             "Uses voice commands via smart speakers for control"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-BATWIF01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-BATWIF01/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-BATWIF01/1.png",
+              "/images/products/HZ-CS-BATWIF01/2.png",
+              "/images/products/HZ-CS-BATWIF01/3.png",
+              "/images/products/HZ-CS-BATWIF01/4.png",
+              "/images/products/HZ-CS-BATWIF01/5.png",
+              "/images/products/HZ-CS-BATWIF01/6.png",
+              "/images/products/HZ-CS-BATWIF01/7.png",
+              "/images/products/HZ-CS-BATWIF01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Rope pull Blinds motor",
@@ -753,7 +719,25 @@
             "Automatically closes blinds when the video doorbell detects motion at night",
             "Syncs with smart thermostat to adjust light and temperature based on blind position",
             "Integrates with smart lights to dim when blinds open or close"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-CONACC03/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-CONACC03/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-CONACC03/1.png",
+              "/images/products/HZ-CS-CONACC03/2.png",
+              "/images/products/HZ-CS-CONACC03/3.png",
+              "/images/products/HZ-CS-CONACC03/4.png",
+              "/images/products/HZ-CS-CONACC03/5.png",
+              "/images/products/HZ-CS-CONACC03/6.png",
+              "/images/products/HZ-CS-CONACC03/7.png",
+              "/images/products/HZ-CS-CONACC03/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Curtain Switch Module Zigbee",
@@ -771,7 +755,25 @@
             "Automates curtains to open/close with smart thermostats for energy efficiency",
             "Syncs with smart lights for automated morning/evening routines",
             "Works with smart speakers for voice-controlled curtain adjustments"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-CONACC04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-CONACC04/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-CONACC04/1.png",
+              "/images/products/HZ-CS-CONACC04/2.png",
+              "/images/products/HZ-CS-CONACC04/3.png",
+              "/images/products/HZ-CS-CONACC04/4.png",
+              "/images/products/HZ-CS-CONACC04/5.png",
+              "/images/products/HZ-CS-CONACC04/6.png",
+              "/images/products/HZ-CS-CONACC04/7.png",
+              "/images/products/HZ-CS-CONACC04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Blind motor",
@@ -789,7 +791,25 @@
             "Automatically opens blinds when doorbell rings for better visibility",
             "Closes blinds at sunrise and opens at sunset for privacy",
             "Syncs with smart thermostat to adjust light for energy savings"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-CS-BLIMOT01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-CS-BLIMOT01/1.png",
+            "gallery": [
+              "/images/products/HZ-CS-BLIMOT01/1.png",
+              "/images/products/HZ-CS-BLIMOT01/2.png",
+              "/images/products/HZ-CS-BLIMOT01/3.png",
+              "/images/products/HZ-CS-BLIMOT01/4.png",
+              "/images/products/HZ-CS-BLIMOT01/5.png",
+              "/images/products/HZ-CS-BLIMOT01/6.png",
+              "/images/products/HZ-CS-BLIMOT01/7.png",
+              "/images/products/HZ-CS-BLIMOT01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "WIFI Smart Garage Controller(dry contact motor controlled garage doors)",
@@ -807,7 +827,25 @@
             "Automatically closes garage when doorbell detects no motion for 5 minutes.",
             "Opens garage door when smart lock detects you leaving home.",
             "Notifies you when garage door is left open for too long."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-BATWIF04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-BATWIF04/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-BATWIF04/1.png",
+              "/images/products/HZ-SN-BATWIF04/2.png",
+              "/images/products/HZ-SN-BATWIF04/3.png",
+              "/images/products/HZ-SN-BATWIF04/4.png",
+              "/images/products/HZ-SN-BATWIF04/5.png",
+              "/images/products/HZ-SN-BATWIF04/6.png",
+              "/images/products/HZ-SN-BATWIF04/7.png",
+              "/images/products/HZ-SN-BATWIF04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
@@ -831,7 +869,24 @@
             "Sends feeding alerts to smart displays so owners can monitor pets remotely via indoor cameras",
             "Triggers smart lights to turn on during scheduled feeding times for better visibility in dark rooms",
             "Links with smart speakers to announce feeding schedule reminders and low food level warnings"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-PA-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-PA-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-PA-CONACC01/1.png",
+              "/images/products/HZ-PA-CONACC01/2.png",
+              "/images/products/HZ-PA-CONACC01/3.png",
+              "/images/products/HZ-PA-CONACC01/4.png",
+              "/images/products/HZ-PA-CONACC01/5.png",
+              "/images/products/HZ-PA-CONACC01/6.png",
+              "/images/products/HZ-PA-CONACC01/7.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart bird feeder",
@@ -849,13 +904,31 @@
             "Notifies smart speakers when birds arrive so you can watch through indoor cameras while away",
             "Triggers outdoor cameras to record feeding sessions for later viewing on smart displays",
             "Sends alerts to your phone that activate smart lights when bird feeder needs refilling"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-PA-CONACC02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-PA-CONACC02/1.png",
+            "gallery": [
+              "/images/products/HZ-PA-CONACC02/1.png",
+              "/images/products/HZ-PA-CONACC02/2.png",
+              "/images/products/HZ-PA-CONACC02/3.png",
+              "/images/products/HZ-PA-CONACC02/4.png",
+              "/images/products/HZ-PA-CONACC02/5.png",
+              "/images/products/HZ-PA-CONACC02/6.png",
+              "/images/products/HZ-PA-CONACC02/7.png",
+              "/images/products/HZ-PA-CONACC02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
     {
       "name": "Smart Accessorries",
-      "product_count": 5,
+      "product_count": 4,
       "products": [
         {
           "name": "Smart PD Power Strip",
@@ -873,25 +946,25 @@
             "Powers smart cameras and doorbells while providing surge protection and individual outlet control through smart home app",
             "Coordinates with smart lights to turn on lamps when motion sensors detect movement in connected rooms",
             "Integrates with voice assistants to remotely switch connected devices like coffee makers or air purifiers on schedule"
-          ]
-        },
-        {
-          "name": "Smart PD Power Strip",
-          "sku": "HZ-SA-CONACC02",
-          "specs": "Material: anti-fire ABS Material | Rated power: 30W Type-C Input: 110-240V ~ 60Hz 15A 1875W; USB-C Output: 5V ⎓ 3A/9V ⎓ 3A/15V ⎓ 2A/20V ⎓ 1.5A; USB-A Output: 5V ⎓ 2.4A Max (2.4A Max Per Port) | Working current: 10A AC220-240V 50Hz 2000W | Versatile protection on all outlets | Compact design, lightweight and portable | Neatly arranged plug and ports | Includes built-in 5Ft. power cord | 12 months Warranty and lifetime technical support",
-          "description": "Power up your entire life from a single elegant strip. Transform any space into a charging command center.\n\n• Fast-charge laptops, tablets, and phones simultaneously with 65W USB-C PD.\n• Control six outlets independently from anywhere using your voice or phone.\n• Schedule devices to turn off automatically and cut standby power waste.\n• Monitor real-time energy usage to lower electricity bills every month.\n\nThe Smart PD Power Strip turns ordinary outlets into an intelligent power ecosystem you'll wonder how you lived without.\n\nWorks seamlessly with smart speakers, voice assistants, and mobile devices for hands-free control.",
-          "slug": "smart-pd-power-strip-30w-usb-c",
-          "keywords": "power strip, USB-C charger, smart outlet, surge protector, 30W PD, travel adapter, multi-port, compact strip, home automation, fireproof",
-          "automations": [
-            "Overload protection cuts power when total draw exceeds 2000W, prevents overheating and damage to connected electronics",
-            "Power strip automatically shuts off USB-C port if device draws more than 30W, protecting both devices from damage",
-            "Built-in surge protection activates during voltage spikes, safeguarding all connected devices from electrical damage"
           ],
-          "connected_scenes": [
-            "Works with smart thermostats to cut power to HVAC units when rooms reach target temperature automatically",
-            "Integrates with smart cameras to enable remote power cycling for troubleshooting connection issues without unplugging",
-            "Coordinates with smart lights to turn off decorative lamps when motion sensors detect empty rooms saving energy"
-          ]
+          "images": {
+            "main": "/images/products/HZ-SA-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SA-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-SA-CONACC01/1.png",
+              "/images/products/HZ-SA-CONACC01/2.png",
+              "/images/products/HZ-SA-CONACC01/3.png",
+              "/images/products/HZ-SA-CONACC01/4.png",
+              "/images/products/HZ-SA-CONACC01/5.png",
+              "/images/products/HZ-SA-CONACC01/6.png",
+              "/images/products/HZ-SA-CONACC01/7.png",
+              "/images/products/HZ-SA-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "WIFI EU standard outlet",
@@ -909,7 +982,26 @@
             "Powers smart lights that activate when video door bell detects visitors after sunset for enhanced visibility",
             "Controls outdoor cameras through scheduled outlet timers ensuring continuous operation during vacation periods",
             "Manages indoor camera power cycles via smart speakers voice commands for privacy when homeowners return"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SA-BATWIF01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SA-BATWIF01/1.png",
+            "gallery": [
+              "/images/products/HZ-SA-BATWIF01/1.png",
+              "/images/products/HZ-SA-BATWIF01/2.png",
+              "/images/products/HZ-SA-BATWIF01/3.png",
+              "/images/products/HZ-SA-BATWIF01/4.png",
+              "/images/products/HZ-SA-BATWIF01/5.png",
+              "/images/products/HZ-SA-BATWIF01/6.png",
+              "/images/products/HZ-SA-BATWIF01/7.png",
+              "/images/products/HZ-SA-BATWIF01/8.png",
+              "/images/products/HZ-SA-BATWIF01/9.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Robot Vaccum cleaner with dustbag",
@@ -929,22 +1021,18 @@
             "Sends notification to smart displays when dustbag reaches 80% capacity"
           ],
           "images": {
-            "main": "/images/products/HZ-SA-ROBVAC01/detail-01.jpg",
+            "main": "/images/products/HZ-SA-ROBVAC01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SA-ROBVAC01/detail-01.jpg",
+            "thumbnail": "/images/products/HZ-SA-ROBVAC01/1.png",
             "gallery": [
-              "/images/products/HZ-SA-ROBVAC01/detail-01.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-02.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-03.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-04.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-05.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-06.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-07.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-08.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-09.png",
-              "/images/products/HZ-SA-ROBVAC01/detail-10.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-11.jpg",
-              "/images/products/HZ-SA-ROBVAC01/detail-12.jpg"
+              "/images/products/HZ-SA-ROBVAC01/1.png",
+              "/images/products/HZ-SA-ROBVAC01/2.png",
+              "/images/products/HZ-SA-ROBVAC01/3.png",
+              "/images/products/HZ-SA-ROBVAC01/4.png",
+              "/images/products/HZ-SA-ROBVAC01/5.png",
+              "/images/products/HZ-SA-ROBVAC01/6.png",
+              "/images/products/HZ-SA-ROBVAC01/7.png",
+              "/images/products/HZ-SA-ROBVAC01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -969,15 +1057,18 @@
             "Sends notifications to smart displays when dustbag reaches capacity for timely maintenance reminders."
           ],
           "images": {
-            "main": "/images/products/HZ-SA-ROBVAC02/detail-01.jpg",
+            "main": "/images/products/HZ-SA-ROBVAC02/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SA-ROBVAC02/detail-01.jpg",
+            "thumbnail": "/images/products/HZ-SA-ROBVAC02/1.png",
             "gallery": [
-              "/images/products/HZ-SA-ROBVAC02/detail-01.jpg",
-              "/images/products/HZ-SA-ROBVAC02/detail-02.png",
-              "/images/products/HZ-SA-ROBVAC02/detail-03.png",
-              "/images/products/HZ-SA-ROBVAC02/detail-04.png",
-              "/images/products/HZ-SA-ROBVAC02/detail-05.png"
+              "/images/products/HZ-SA-ROBVAC02/1.png",
+              "/images/products/HZ-SA-ROBVAC02/2.png",
+              "/images/products/HZ-SA-ROBVAC02/3.png",
+              "/images/products/HZ-SA-ROBVAC02/4.png",
+              "/images/products/HZ-SA-ROBVAC02/5.png",
+              "/images/products/HZ-SA-ROBVAC02/6.png",
+              "/images/products/HZ-SA-ROBVAC02/7.png",
+              "/images/products/HZ-SA-ROBVAC02/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1006,7 +1097,25 @@
             "Automatically turns off appliances when power exceeds set limits",
             "Syncs with smart plugs to monitor and control energy usage",
             "Integrates with thermostats to optimize HVAC based on power data"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-2PBRE01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-2PBRE01/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-2PBRE01/1.png",
+              "/images/products/HZ-SC-2PBRE01/2.png",
+              "/images/products/HZ-SC-2PBRE01/3.png",
+              "/images/products/HZ-SC-2PBRE01/4.png",
+              "/images/products/HZ-SC-2PBRE01/5.png",
+              "/images/products/HZ-SC-2PBRE01/6.png",
+              "/images/products/HZ-SC-2PBRE01/7.png",
+              "/images/products/HZ-SC-2PBRE01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "3P Breaker Zigbee with power monit",
@@ -1024,7 +1133,25 @@
             "Monitors energy usage of smart plugs and lights for efficiency tracking",
             "Automates garage door opener when power usage drops to zero",
             "Alerts when high-power devices like AC units exceed energy thresholds"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-3PBRE01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-3PBRE01/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-3PBRE01/1.png",
+              "/images/products/HZ-SC-3PBRE01/2.png",
+              "/images/products/HZ-SC-3PBRE01/3.png",
+              "/images/products/HZ-SC-3PBRE01/4.png",
+              "/images/products/HZ-SC-3PBRE01/5.png",
+              "/images/products/HZ-SC-3PBRE01/6.png",
+              "/images/products/HZ-SC-3PBRE01/7.png",
+              "/images/products/HZ-SC-3PBRE01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
@@ -1048,7 +1175,25 @@
             "Monitors energy usage to optimize smart thermostat settings",
             "Alerts when appliances exceed power limits for safety",
             "Integrates with home automation for cost-saving scheduling"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-CONACC02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-CONACC02/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-CONACC02/1.png",
+              "/images/products/HZ-SC-CONACC02/2.png",
+              "/images/products/HZ-SC-CONACC02/3.png",
+              "/images/products/HZ-SC-CONACC02/4.png",
+              "/images/products/HZ-SC-CONACC02/5.png",
+              "/images/products/HZ-SC-CONACC02/6.png",
+              "/images/products/HZ-SC-CONACC02/7.png",
+              "/images/products/HZ-SC-CONACC02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Radiator Valve Zigbee",
@@ -1068,19 +1213,18 @@
             "Turns off when windows are opened via contact sensors."
           ],
           "images": {
-            "main": "/images/products/HZ-SC-CONACC03/main.jpg",
+            "main": "/images/products/HZ-SC-CONACC03/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SC-CONACC03/main.jpg",
+            "thumbnail": "/images/products/HZ-SC-CONACC03/1.png",
             "gallery": [
-              "/images/products/HZ-SC-CONACC03/detail-01.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-02.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-03.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-04.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-05.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-06.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-07.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-08.jpg",
-              "/images/products/HZ-SC-CONACC03/detail-09.jpg"
+              "/images/products/HZ-SC-CONACC03/1.png",
+              "/images/products/HZ-SC-CONACC03/2.png",
+              "/images/products/HZ-SC-CONACC03/3.png",
+              "/images/products/HZ-SC-CONACC03/4.png",
+              "/images/products/HZ-SC-CONACC03/5.png",
+              "/images/products/HZ-SC-CONACC03/6.png",
+              "/images/products/HZ-SC-CONACC03/7.png",
+              "/images/products/HZ-SC-CONACC03/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1103,7 +1247,25 @@
             "Adjusts thermostat based on room temperature and humidity for optimal comfort.",
             "Turns on dehumidifier when humidity exceeds a set threshold to prevent mold.",
             "Activates AC or heater when temperature falls outside a predefined range for efficiency."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC10/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC10/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC10/1.png",
+              "/images/products/HZ-SN-CONACC10/2.png",
+              "/images/products/HZ-SN-CONACC10/3.png",
+              "/images/products/HZ-SN-CONACC10/4.png",
+              "/images/products/HZ-SN-CONACC10/5.png",
+              "/images/products/HZ-SN-CONACC10/6.png",
+              "/images/products/HZ-SN-CONACC10/7.png",
+              "/images/products/HZ-SN-CONACC10/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Pilote Thermostat (Zigbee, Power Meter)",
@@ -1121,7 +1283,25 @@
             "Adjusts thermostat when smart locks detect someone leaving",
             "Syncs with smart plugs to reduce energy usage",
             "Turns on heating when motion sensors detect activity"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-TH-PILTHE01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-TH-PILTHE01/1.png",
+            "gallery": [
+              "/images/products/HZ-TH-PILTHE01/1.png",
+              "/images/products/HZ-TH-PILTHE01/2.png",
+              "/images/products/HZ-TH-PILTHE01/3.png",
+              "/images/products/HZ-TH-PILTHE01/4.png",
+              "/images/products/HZ-TH-PILTHE01/5.png",
+              "/images/products/HZ-TH-PILTHE01/6.png",
+              "/images/products/HZ-TH-PILTHE01/7.png",
+              "/images/products/HZ-TH-PILTHE01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Wall Thermostats - Water heating (hydronic UFH/radiators), relay NC 3A / NO 5A",
@@ -1139,7 +1319,25 @@
             "Adjusts heating when doorbell detects someone outside.",
             "Turns off water heating when HVAC system is active.",
             "Syncs with smart plugs for timed heating cycles."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-TH-WALTHE01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-TH-WALTHE01/1.png",
+            "gallery": [
+              "/images/products/HZ-TH-WALTHE01/1.png",
+              "/images/products/HZ-TH-WALTHE01/2.png",
+              "/images/products/HZ-TH-WALTHE01/3.png",
+              "/images/products/HZ-TH-WALTHE01/4.png",
+              "/images/products/HZ-TH-WALTHE01/5.png",
+              "/images/products/HZ-TH-WALTHE01/6.png",
+              "/images/products/HZ-TH-WALTHE01/7.png",
+              "/images/products/HZ-TH-WALTHE01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Wall Thermostats- Electric heating (UFH/radiators) 16A, internal + floor sensor",
@@ -1157,7 +1355,25 @@
             "Adjusts heating when doorbell detects visitors arriving home.",
             "Turns off heating when away mode is activated.",
             "Syncs with smart lights for energy-efficient home automation."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-WALTHE01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-WALTHE01/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-WALTHE01/1.png",
+              "/images/products/HZ-SN-WALTHE01/2.png",
+              "/images/products/HZ-SN-WALTHE01/3.png",
+              "/images/products/HZ-SN-WALTHE01/4.png",
+              "/images/products/HZ-SN-WALTHE01/5.png",
+              "/images/products/HZ-SN-WALTHE01/6.png",
+              "/images/products/HZ-SN-WALTHE01/7.png",
+              "/images/products/HZ-SN-WALTHE01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Wall Thermostats - Water/Gas boiler (on/off relay), NC 3A / NO 5A",
@@ -1175,7 +1391,25 @@
             "Adjusts boiler based on weather forecasts from smart weather stations",
             "Turns on boiler when motion sensors detect someone is home",
             "Syncs with smart plugs to manage heating schedules remotely"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-TH-WALTHE02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-TH-WALTHE02/1.png",
+            "gallery": [
+              "/images/products/HZ-TH-WALTHE02/1.png",
+              "/images/products/HZ-TH-WALTHE02/2.png",
+              "/images/products/HZ-TH-WALTHE02/3.png",
+              "/images/products/HZ-TH-WALTHE02/4.png",
+              "/images/products/HZ-TH-WALTHE02/5.png",
+              "/images/products/HZ-TH-WALTHE02/6.png",
+              "/images/products/HZ-TH-WALTHE02/7.png",
+              "/images/products/HZ-TH-WALTHE02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "VRF - GS-KT01-ZIG/WIFI, Tuya VRF centralized control gateway",
@@ -1195,11 +1429,18 @@
             "Controls garage door via smart hub integration"
           ],
           "images": {
-            "main": "/images/products/HZ-SC-BATWIF01/main.png",
+            "main": "/images/products/HZ-SC-BATWIF01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SC-BATWIF01/main.png",
+            "thumbnail": "/images/products/HZ-SC-BATWIF01/1.png",
             "gallery": [
-              "/images/products/HZ-SC-BATWIF01/detail-01.png"
+              "/images/products/HZ-SC-BATWIF01/1.png",
+              "/images/products/HZ-SC-BATWIF01/2.png",
+              "/images/products/HZ-SC-BATWIF01/3.png",
+              "/images/products/HZ-SC-BATWIF01/4.png",
+              "/images/products/HZ-SC-BATWIF01/5.png",
+              "/images/products/HZ-SC-BATWIF01/6.png",
+              "/images/products/HZ-SC-BATWIF01/7.png",
+              "/images/products/HZ-SC-BATWIF01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1222,7 +1463,25 @@
             "Adjusts temperature when doorbell detects someone at the door",
             "Turns off AC when security system arms for away mode",
             "Activates fan to ventilate when kitchen smoke alarm triggers"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-TH-AEDLJ01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-TH-AEDLJ01/1.png",
+            "gallery": [
+              "/images/products/HZ-TH-AEDLJ01/1.png",
+              "/images/products/HZ-TH-AEDLJ01/2.png",
+              "/images/products/HZ-TH-AEDLJ01/3.png",
+              "/images/products/HZ-TH-AEDLJ01/4.png",
+              "/images/products/HZ-TH-AEDLJ01/5.png",
+              "/images/products/HZ-TH-AEDLJ01/6.png",
+              "/images/products/HZ-TH-AEDLJ01/7.png",
+              "/images/products/HZ-TH-AEDLJ01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "zigbee Electric Floor Heating/Water Floor Heating/Gas Furnace",
@@ -1240,7 +1499,25 @@
             "Adjusts heating when motion sensors detect occupancy",
             "Syncs with thermostats for smart temperature control",
             "Turns off heating when windows or doors open"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-TUYZIG01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-TUYZIG01/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-TUYZIG01/1.png",
+              "/images/products/HZ-SC-TUYZIG01/2.png",
+              "/images/products/HZ-SC-TUYZIG01/3.png",
+              "/images/products/HZ-SC-TUYZIG01/4.png",
+              "/images/products/HZ-SC-TUYZIG01/5.png",
+              "/images/products/HZ-SC-TUYZIG01/6.png",
+              "/images/products/HZ-SC-TUYZIG01/7.png",
+              "/images/products/HZ-SC-TUYZIG01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Fan Coil Room Thermostat, Two pipe",
@@ -1258,7 +1535,25 @@
             "Adjusts fan coil based on doorbell detected visitor presence.",
             "Syncs with smart lights for temperature-based ambiance changes.",
             "Integrates with security cameras for away-mode temperature settings."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-TH-FANCOI01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-TH-FANCOI01/1.png",
+            "gallery": [
+              "/images/products/HZ-TH-FANCOI01/1.png",
+              "/images/products/HZ-TH-FANCOI01/2.png",
+              "/images/products/HZ-TH-FANCOI01/3.png",
+              "/images/products/HZ-TH-FANCOI01/4.png",
+              "/images/products/HZ-TH-FANCOI01/5.png",
+              "/images/products/HZ-TH-FANCOI01/6.png",
+              "/images/products/HZ-TH-FANCOI01/7.png",
+              "/images/products/HZ-TH-FANCOI01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Fan Coil Room Thermostat, Four pipe",
@@ -1276,7 +1571,25 @@
             "Adjusts fan speed based on room temperature for efficiency",
             "Syncs with smart vents to balance airflow in home",
             "Turns on/off heating/cooling when doors/windows are opened/closed"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-TH-FANCOI02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-TH-FANCOI02/1.png",
+            "gallery": [
+              "/images/products/HZ-TH-FANCOI02/1.png",
+              "/images/products/HZ-TH-FANCOI02/2.png",
+              "/images/products/HZ-TH-FANCOI02/3.png",
+              "/images/products/HZ-TH-FANCOI02/4.png",
+              "/images/products/HZ-TH-FANCOI02/5.png",
+              "/images/products/HZ-TH-FANCOI02/6.png",
+              "/images/products/HZ-TH-FANCOI02/7.png",
+              "/images/products/HZ-TH-FANCOI02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Integrated air conditioning and floor heating 2 in 1",
@@ -1294,7 +1607,25 @@
             "Adjusts heating/cooling based on smart thermostat schedules",
             "Automatically turns off when smart locks detect you leaving",
             "Syncs with smart plugs to power off appliances when away"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-INTAIR01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-INTAIR01/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-INTAIR01/1.png",
+              "/images/products/HZ-SC-INTAIR01/2.png",
+              "/images/products/HZ-SC-INTAIR01/3.png",
+              "/images/products/HZ-SC-INTAIR01/4.png",
+              "/images/products/HZ-SC-INTAIR01/5.png",
+              "/images/products/HZ-SC-INTAIR01/6.png",
+              "/images/products/HZ-SC-INTAIR01/7.png",
+              "/images/products/HZ-SC-INTAIR01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Thermostat Controller switch",
@@ -1314,14 +1645,18 @@
             "Controls thermostat remotely via video doorbell app notifications"
           ],
           "images": {
-            "main": "/images/products/HZ-TH-THECON01/detail-01.jpg",
+            "main": "/images/products/HZ-TH-THECON01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-TH-THECON01/detail-01.jpg",
+            "thumbnail": "/images/products/HZ-TH-THECON01/1.png",
             "gallery": [
-              "/images/products/HZ-TH-THECON01/detail-01.jpg",
-              "/images/products/HZ-TH-THECON01/detail-02.jpg",
-              "/images/products/HZ-TH-THECON01/detail-03.jpg",
-              "/images/products/HZ-TH-THECON01/detail-04.jpg"
+              "/images/products/HZ-TH-THECON01/1.png",
+              "/images/products/HZ-TH-THECON01/2.png",
+              "/images/products/HZ-TH-THECON01/3.png",
+              "/images/products/HZ-TH-THECON01/4.png",
+              "/images/products/HZ-TH-THECON01/5.png",
+              "/images/products/HZ-TH-THECON01/6.png",
+              "/images/products/HZ-TH-THECON01/7.png",
+              "/images/products/HZ-TH-THECON01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1352,11 +1687,18 @@
             "Automates door locks based on presence detection"
           ],
           "images": {
-            "main": "/images/products/HZ-SC-3501/detail-01.png",
+            "main": "/images/products/HZ-SC-3501/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SC-3501/detail-01.png",
+            "thumbnail": "/images/products/HZ-SC-3501/1.png",
             "gallery": [
-              "/images/products/HZ-SC-3501/detail-01.png"
+              "/images/products/HZ-SC-3501/1.png",
+              "/images/products/HZ-SC-3501/2.png",
+              "/images/products/HZ-SC-3501/3.png",
+              "/images/products/HZ-SC-3501/4.png",
+              "/images/products/HZ-SC-3501/5.png",
+              "/images/products/HZ-SC-3501/6.png",
+              "/images/products/HZ-SC-3501/7.png",
+              "/images/products/HZ-SC-3501/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1379,7 +1721,25 @@
             "Controls video doorbell feed with voice commands",
             "Integrates with smart locks for key-free entry",
             "Adjusts thermostat settings via voice or touch"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-PTZCAM01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-PTZCAM01/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-PTZCAM01/1.png",
+              "/images/products/HZ-SC-PTZCAM01/2.png",
+              "/images/products/HZ-SC-PTZCAM01/3.png",
+              "/images/products/HZ-SC-PTZCAM01/4.png",
+              "/images/products/HZ-SC-PTZCAM01/5.png",
+              "/images/products/HZ-SC-PTZCAM01/6.png",
+              "/images/products/HZ-SC-PTZCAM01/7.png",
+              "/images/products/HZ-SC-PTZCAM01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "5\" Touch smart voice with built-in Alexa(Gateway)",
@@ -1397,7 +1757,25 @@
             "Announces doorbell alerts through Alexa when someone rings",
             "Controls smart lights when motion is detected at the door",
             "Shows live doorbell camera feed on the 5\" Touch display"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-CONACC01/1.png",
+              "/images/products/HZ-SC-CONACC01/2.png",
+              "/images/products/HZ-SC-CONACC01/3.png",
+              "/images/products/HZ-SC-CONACC01/4.png",
+              "/images/products/HZ-SC-CONACC01/5.png",
+              "/images/products/HZ-SC-CONACC01/6.png",
+              "/images/products/HZ-SC-CONACC01/7.png",
+              "/images/products/HZ-SC-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "8\" touch control panel with Gateway",
@@ -1415,7 +1793,25 @@
             "Controls smart lights based on doorbell camera motion.",
             "Locks doors automatically when leaving via geofencing.",
             "Displays live camera feed when doorbell ring detected."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-PTZCAM02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-PTZCAM02/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-PTZCAM02/1.png",
+              "/images/products/HZ-SC-PTZCAM02/2.png",
+              "/images/products/HZ-SC-PTZCAM02/3.png",
+              "/images/products/HZ-SC-PTZCAM02/4.png",
+              "/images/products/HZ-SC-PTZCAM02/5.png",
+              "/images/products/HZ-SC-PTZCAM02/6.png",
+              "/images/products/HZ-SC-PTZCAM02/7.png",
+              "/images/products/HZ-SC-PTZCAM02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "10.1\" touch control panel with Gateway",
@@ -1435,14 +1831,18 @@
             "Opens smart garage door with a single touch command"
           ],
           "images": {
-            "main": "/images/products/HZ-SC-PTZCAM03/detail-01.png",
+            "main": "/images/products/HZ-SC-PTZCAM03/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SC-PTZCAM03/detail-01.png",
+            "thumbnail": "/images/products/HZ-SC-PTZCAM03/1.png",
             "gallery": [
-              "/images/products/HZ-SC-PTZCAM03/detail-01.png",
-              "/images/products/HZ-SC-PTZCAM03/detail-02.png",
-              "/images/products/HZ-SC-PTZCAM03/detail-03.png",
-              "/images/products/HZ-SC-PTZCAM03/detail-04.png"
+              "/images/products/HZ-SC-PTZCAM03/1.png",
+              "/images/products/HZ-SC-PTZCAM03/2.png",
+              "/images/products/HZ-SC-PTZCAM03/3.png",
+              "/images/products/HZ-SC-PTZCAM03/4.png",
+              "/images/products/HZ-SC-PTZCAM03/5.png",
+              "/images/products/HZ-SC-PTZCAM03/6.png",
+              "/images/products/HZ-SC-PTZCAM03/7.png",
+              "/images/products/HZ-SC-PTZCAM03/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1465,7 +1865,25 @@
             "Controls garage door via smart home app",
             "Syncs with thermostat for automated climate adjustments",
             "Activates security cameras when motion is detected"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SC-PTZCAM04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SC-PTZCAM04/1.png",
+            "gallery": [
+              "/images/products/HZ-SC-PTZCAM04/1.png",
+              "/images/products/HZ-SC-PTZCAM04/2.png",
+              "/images/products/HZ-SC-PTZCAM04/3.png",
+              "/images/products/HZ-SC-PTZCAM04/4.png",
+              "/images/products/HZ-SC-PTZCAM04/5.png",
+              "/images/products/HZ-SC-PTZCAM04/6.png",
+              "/images/products/HZ-SC-PTZCAM04/7.png",
+              "/images/products/HZ-SC-PTZCAM04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
@@ -1489,7 +1907,25 @@
             "Controls smart door locks when doorbell rings",
             "Turns on security cameras when motion is detected",
             "Activates outdoor lights for better nighttime visibility"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC06/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC06/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC06/1.png",
+              "/images/products/HZ-SN-CONACC06/2.png",
+              "/images/products/HZ-SN-CONACC06/3.png",
+              "/images/products/HZ-SN-CONACC06/4.png",
+              "/images/products/HZ-SN-CONACC06/5.png",
+              "/images/products/HZ-SN-CONACC06/6.png",
+              "/images/products/HZ-SN-CONACC06/7.png",
+              "/images/products/HZ-SN-CONACC06/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart 2 Gang Dry Contact Switch with power monitering (16A)",
@@ -1507,7 +1943,25 @@
             "Automates gate locks when power is detected on the switch",
             "Turns off HVAC when door is left open for safety",
             "Activates outdoor lighting when motion is detected by a camera"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC07/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC07/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC07/1.png",
+              "/images/products/HZ-SN-CONACC07/2.png",
+              "/images/products/HZ-SN-CONACC07/3.png",
+              "/images/products/HZ-SN-CONACC07/4.png",
+              "/images/products/HZ-SN-CONACC07/5.png",
+              "/images/products/HZ-SN-CONACC07/6.png",
+              "/images/products/HZ-SN-CONACC07/7.png",
+              "/images/products/HZ-SN-CONACC07/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart 3 Gang Dry Contact Switch with power monitering (16A)",
@@ -1525,7 +1979,25 @@
             "Activates garage door when camera detects motion at the door",
             "Turns on outdoor lights when doorbell is pressed at night",
             "Monitors power usage for smart doorbells to track battery life"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC08/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC08/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC08/1.png",
+              "/images/products/HZ-SN-CONACC08/2.png",
+              "/images/products/HZ-SN-CONACC08/3.png",
+              "/images/products/HZ-SN-CONACC08/4.png",
+              "/images/products/HZ-SN-CONACC08/5.png",
+              "/images/products/HZ-SN-CONACC08/6.png",
+              "/images/products/HZ-SN-CONACC08/7.png",
+              "/images/products/HZ-SN-CONACC08/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart 4 Gang Dry Contact Switch with power monitering (16A)",
@@ -1543,7 +2015,25 @@
             "Activates smart lights when doorbell rings",
             "Turns on security cameras when motion is detected",
             "Monitors power usage of connected smart devices"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC09/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC09/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC09/1.png",
+              "/images/products/HZ-SN-CONACC09/2.png",
+              "/images/products/HZ-SN-CONACC09/3.png",
+              "/images/products/HZ-SN-CONACC09/4.png",
+              "/images/products/HZ-SN-CONACC09/5.png",
+              "/images/products/HZ-SN-CONACC09/6.png",
+              "/images/products/HZ-SN-CONACC09/7.png",
+              "/images/products/HZ-SN-CONACC09/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Curtain Switch Module Zigbee ( 2 Channel)",
@@ -1563,13 +2053,18 @@
             "Closes curtains at sunset for privacy and energy efficiency."
           ],
           "images": {
-            "main": "/images/products/HZ-SD-CONACC01/main.jpg",
+            "main": "/images/products/HZ-SD-CONACC01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SD-CONACC01/main.jpg",
+            "thumbnail": "/images/products/HZ-SD-CONACC01/1.png",
             "gallery": [
-              "/images/products/HZ-SD-CONACC01/detail-01.jpg",
-              "/images/products/HZ-SD-CONACC01/detail-02.jpg",
-              "/images/products/HZ-SD-CONACC01/detail-03.jpg"
+              "/images/products/HZ-SD-CONACC01/1.png",
+              "/images/products/HZ-SD-CONACC01/2.png",
+              "/images/products/HZ-SD-CONACC01/3.png",
+              "/images/products/HZ-SD-CONACC01/4.png",
+              "/images/products/HZ-SD-CONACC01/5.png",
+              "/images/products/HZ-SD-CONACC01/6.png",
+              "/images/products/HZ-SD-CONACC01/7.png",
+              "/images/products/HZ-SD-CONACC01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1600,16 +2095,18 @@
             "Alerts phone when door remains unlocked for extended time"
           ],
           "images": {
-            "main": "/images/products/HZ-SL-VIDDOR01/main.jpg",
+            "main": "/images/products/HZ-SL-VIDDOR01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SL-VIDDOR01/main.jpg",
+            "thumbnail": "/images/products/HZ-SL-VIDDOR01/1.png",
             "gallery": [
-              "/images/products/HZ-SL-VIDDOR01/detail-01.jpg",
-              "/images/products/HZ-SL-VIDDOR01/detail-02.jpg",
-              "/images/products/HZ-SL-VIDDOR01/detail-03.jpg",
-              "/images/products/HZ-SL-VIDDOR01/detail-04.jpg",
-              "/images/products/HZ-SL-VIDDOR01/detail-05.jpg",
-              "/images/products/HZ-SL-VIDDOR01/detail-06.jpg"
+              "/images/products/HZ-SL-VIDDOR01/1.png",
+              "/images/products/HZ-SL-VIDDOR01/2.png",
+              "/images/products/HZ-SL-VIDDOR01/3.png",
+              "/images/products/HZ-SL-VIDDOR01/4.png",
+              "/images/products/HZ-SL-VIDDOR01/5.png",
+              "/images/products/HZ-SL-VIDDOR01/6.png",
+              "/images/products/HZ-SL-VIDDOR01/7.png",
+              "/images/products/HZ-SL-VIDDOR01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1632,7 +2129,25 @@
             "Unlocks door when paired with video doorbell's visitor detection.",
             "Sends alerts to smart lights when door is unlocked remotely.",
             "Automatically locks when paired with a smart alarm system."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-CONACC01/1.png",
+              "/images/products/HZ-SL-CONACC01/2.png",
+              "/images/products/HZ-SL-CONACC01/3.png",
+              "/images/products/HZ-SL-CONACC01/4.png",
+              "/images/products/HZ-SL-CONACC01/5.png",
+              "/images/products/HZ-SL-CONACC01/6.png",
+              "/images/products/HZ-SL-CONACC01/7.png",
+              "/images/products/HZ-SL-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Double -sided fingerprint integrated lock (bull head lock)",
@@ -1650,7 +2165,25 @@
             "Unlocks door automatically when video doorbell detects authorized fingerprint.",
             "Sends phone alerts when someone uses the fingerprint lock.",
             "Syncs with smart lights to illuminate hallway when door unlocks."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-DOUSID01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-DOUSID01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-DOUSID01/1.png",
+              "/images/products/HZ-SL-DOUSID01/2.png",
+              "/images/products/HZ-SL-DOUSID01/3.png",
+              "/images/products/HZ-SL-DOUSID01/4.png",
+              "/images/products/HZ-SL-DOUSID01/5.png",
+              "/images/products/HZ-SL-DOUSID01/6.png",
+              "/images/products/HZ-SL-DOUSID01/7.png",
+              "/images/products/HZ-SL-DOUSID01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart door lock for wooden door",
@@ -1668,7 +2201,25 @@
             "Unlocks door automatically when video doorbell detects trusted face",
             "Sends smartphone alerts when door lock is triggered",
             "Automatically activates security cameras when door is opened"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-CONACC02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-CONACC02/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-CONACC02/1.png",
+              "/images/products/HZ-SL-CONACC02/2.png",
+              "/images/products/HZ-SL-CONACC02/3.png",
+              "/images/products/HZ-SL-CONACC02/4.png",
+              "/images/products/HZ-SL-CONACC02/5.png",
+              "/images/products/HZ-SL-CONACC02/6.png",
+              "/images/products/HZ-SL-CONACC02/7.png",
+              "/images/products/HZ-SL-CONACC02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "3D recognition smart lock (Face recognition + palm vein recognition + Security camera)",
@@ -1688,16 +2239,18 @@
             "Sends alerts to smartphone when unauthorized access is attempted."
           ],
           "images": {
-            "main": "/images/products/HZ-C-2KCAM03/main.jpg",
+            "main": "/images/products/HZ-C-2KCAM03/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-C-2KCAM03/main.jpg",
+            "thumbnail": "/images/products/HZ-C-2KCAM03/1.png",
             "gallery": [
-              "/images/products/HZ-C-2KCAM03/detail-01.png",
-              "/images/products/HZ-C-2KCAM03/detail-02.png",
-              "/images/products/HZ-C-2KCAM03/detail-03.png",
-              "/images/products/HZ-C-2KCAM03/detail-04.png",
-              "/images/products/HZ-C-2KCAM03/detail-05.png",
-              "/images/products/HZ-C-2KCAM03/detail-06.png"
+              "/images/products/HZ-C-2KCAM03/1.png",
+              "/images/products/HZ-C-2KCAM03/2.png",
+              "/images/products/HZ-C-2KCAM03/3.png",
+              "/images/products/HZ-C-2KCAM03/4.png",
+              "/images/products/HZ-C-2KCAM03/5.png",
+              "/images/products/HZ-C-2KCAM03/6.png",
+              "/images/products/HZ-C-2KCAM03/7.png",
+              "/images/products/HZ-C-2KCAM03/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1720,7 +2273,25 @@
             "Automatically unlocks when video doorbell detects a trusted delivery person",
             "Locks doors when motion is detected far away",
             "Syncs with smart lights to turn them on/off when locking/unlocking doors"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-CONACC03/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-CONACC03/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-CONACC03/1.png",
+              "/images/products/HZ-SL-CONACC03/2.png",
+              "/images/products/HZ-SL-CONACC03/3.png",
+              "/images/products/HZ-SL-CONACC03/4.png",
+              "/images/products/HZ-SL-CONACC03/5.png",
+              "/images/products/HZ-SL-CONACC03/6.png",
+              "/images/products/HZ-SL-CONACC03/7.png",
+              "/images/products/HZ-SL-CONACC03/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "24*240 lock body",
@@ -1738,7 +2309,25 @@
             "Opens door for delivery when package detected",
             "Alerts phone when door remains unlocked for too long",
             "Automatically locks door after sunset for added security"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-2424001/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-2424001/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-2424001/1.png",
+              "/images/products/HZ-SL-2424001/2.png",
+              "/images/products/HZ-SL-2424001/3.png",
+              "/images/products/HZ-SL-2424001/4.png",
+              "/images/products/HZ-SL-2424001/5.png",
+              "/images/products/HZ-SL-2424001/6.png",
+              "/images/products/HZ-SL-2424001/7.png",
+              "/images/products/HZ-SL-2424001/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "3D face+video doorbell Smart Automatic lock",
@@ -1756,7 +2345,25 @@
             "Unlocks smart door lock when you approach the door",
             "Sends alerts to your phone when someone rings the bell",
             "Turns on smart lights when motion is detected at night"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SS-VIDDOR07/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SS-VIDDOR07/1.png",
+            "gallery": [
+              "/images/products/HZ-SS-VIDDOR07/1.png",
+              "/images/products/HZ-SS-VIDDOR07/2.png",
+              "/images/products/HZ-SS-VIDDOR07/3.png",
+              "/images/products/HZ-SS-VIDDOR07/4.png",
+              "/images/products/HZ-SS-VIDDOR07/5.png",
+              "/images/products/HZ-SS-VIDDOR07/6.png",
+              "/images/products/HZ-SS-VIDDOR07/7.png",
+              "/images/products/HZ-SS-VIDDOR07/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "WiFi smart door lock with camera (comes with lockbody)",
@@ -1774,7 +2381,25 @@
             "Unlocks smart garage door when you arrive home.",
             "Syncs with security cameras to record movement.",
             "Turns on smart thermostat when someone enters the house."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-C-BATWIF01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-C-BATWIF01/1.png",
+            "gallery": [
+              "/images/products/HZ-C-BATWIF01/1.png",
+              "/images/products/HZ-C-BATWIF01/2.png",
+              "/images/products/HZ-C-BATWIF01/3.png",
+              "/images/products/HZ-C-BATWIF01/4.png",
+              "/images/products/HZ-C-BATWIF01/5.png",
+              "/images/products/HZ-C-BATWIF01/6.png",
+              "/images/products/HZ-C-BATWIF01/7.png",
+              "/images/products/HZ-C-BATWIF01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Lock (lock box)",
@@ -1792,7 +2417,25 @@
             "Unlocks door when video doorbell detects a delivery",
             "Locks automatically when motion sensor detects movement",
             "Sends notification when door remains unlocked for too long"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-CONACC04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-CONACC04/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-CONACC04/1.png",
+              "/images/products/HZ-SL-CONACC04/2.png",
+              "/images/products/HZ-SL-CONACC04/3.png",
+              "/images/products/HZ-SL-CONACC04/4.png",
+              "/images/products/HZ-SL-CONACC04/5.png",
+              "/images/products/HZ-SL-CONACC04/6.png",
+              "/images/products/HZ-SL-CONACC04/7.png",
+              "/images/products/HZ-SL-CONACC04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
@@ -1816,7 +2459,27 @@
             "Activates a smart camera to record when the door opens",
             "Syncs with smart speakers to announce visitors",
             "Turns on smart lights when the door is locked or unlocked"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SD-SQU50501/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SD-SQU50501/1.png",
+            "gallery": [
+              "/images/products/HZ-SD-SQU50501/1.png",
+              "/images/products/HZ-SD-SQU50501/2.png",
+              "/images/products/HZ-SD-SQU50501/3.png",
+              "/images/products/HZ-SD-SQU50501/4.png",
+              "/images/products/HZ-SD-SQU50501/5.png",
+              "/images/products/HZ-SD-SQU50501/6.png",
+              "/images/products/HZ-SD-SQU50501/7.png",
+              "/images/products/HZ-SD-SQU50501/8.png",
+              "/images/products/HZ-SD-SQU50501/9.png",
+              "/images/products/HZ-SD-SQU50501/10.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Single deadbolt 24*240mm size (Full 304 Stainless Steel)",
@@ -1834,7 +2497,25 @@
             "Unlocks door when video doorbell detects a trusted face.",
             "Sends lock status alerts to your smart home hub.",
             "Opens automatically when you arrive home via geofencing."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-SINDEA01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-SINDEA01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-SINDEA01/1.png",
+              "/images/products/HZ-SL-SINDEA01/2.png",
+              "/images/products/HZ-SL-SINDEA01/3.png",
+              "/images/products/HZ-SL-SINDEA01/4.png",
+              "/images/products/HZ-SL-SINDEA01/5.png",
+              "/images/products/HZ-SL-SINDEA01/6.png",
+              "/images/products/HZ-SL-SINDEA01/7.png",
+              "/images/products/HZ-SL-SINDEA01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Cylindrical 40*388 Mortise (Full 304 Stainless Steel)",
@@ -1852,7 +2533,26 @@
             "Integrates with smart locks for seamless door access control",
             "Syncs with security cameras for real-time door monitoring",
             "Alerts smartphone when doorbell is pressed or motion detected"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SD-CYL4001/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SD-CYL4001/1.png",
+            "gallery": [
+              "/images/products/HZ-SD-CYL4001/1.png",
+              "/images/products/HZ-SD-CYL4001/2.png",
+              "/images/products/HZ-SD-CYL4001/3.png",
+              "/images/products/HZ-SD-CYL4001/4.png",
+              "/images/products/HZ-SD-CYL4001/5.png",
+              "/images/products/HZ-SD-CYL4001/6.png",
+              "/images/products/HZ-SD-CYL4001/7.png",
+              "/images/products/HZ-SD-CYL4001/8.png",
+              "/images/products/HZ-SD-CYL4001/9.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
@@ -1878,15 +2578,18 @@
             "Connects to security cameras for enhanced surveillance alerts"
           ],
           "images": {
-            "main": "/images/products/HZ-SG-WALSOC01/main.jpg",
+            "main": "/images/products/HZ-SG-WALSOC01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SG-WALSOC01/main.jpg",
+            "thumbnail": "/images/products/HZ-SG-WALSOC01/1.png",
             "gallery": [
-              "/images/products/HZ-SG-WALSOC01/detail-01.jpg",
-              "/images/products/HZ-SG-WALSOC01/detail-02.jpg",
-              "/images/products/HZ-SG-WALSOC01/detail-03.jpg",
-              "/images/products/HZ-SG-WALSOC01/detail-04.jpg",
-              "/images/products/HZ-SG-WALSOC01/detail-05.jpg"
+              "/images/products/HZ-SG-WALSOC01/1.png",
+              "/images/products/HZ-SG-WALSOC01/2.png",
+              "/images/products/HZ-SG-WALSOC01/3.png",
+              "/images/products/HZ-SG-WALSOC01/4.png",
+              "/images/products/HZ-SG-WALSOC01/5.png",
+              "/images/products/HZ-SG-WALSOC01/6.png",
+              "/images/products/HZ-SG-WALSOC01/7.png",
+              "/images/products/HZ-SG-WALSOC01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1911,15 +2614,18 @@
             "Coordinates indoor USB-C camera with smart locks to snap images whenever door codes are entered"
           ],
           "images": {
-            "main": "/images/products/HZ-SG-WIRWIF01/main.jpg",
+            "main": "/images/products/HZ-SG-WIRWIF01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SG-WIRWIF01/main.jpg",
+            "thumbnail": "/images/products/HZ-SG-WIRWIF01/1.png",
             "gallery": [
-              "/images/products/HZ-SG-WIRWIF01/detail-01.jpg",
-              "/images/products/HZ-SG-WIRWIF01/detail-02.jpg",
-              "/images/products/HZ-SG-WIRWIF01/detail-03.jpg",
-              "/images/products/HZ-SG-WIRWIF01/detail-04.jpg",
-              "/images/products/HZ-SG-WIRWIF01/detail-05.jpg"
+              "/images/products/HZ-SG-WIRWIF01/1.png",
+              "/images/products/HZ-SG-WIRWIF01/2.png",
+              "/images/products/HZ-SG-WIRWIF01/3.png",
+              "/images/products/HZ-SG-WIRWIF01/4.png",
+              "/images/products/HZ-SG-WIRWIF01/5.png",
+              "/images/products/HZ-SG-WIRWIF01/6.png",
+              "/images/products/HZ-SG-WIRWIF01/7.png",
+              "/images/products/HZ-SG-WIRWIF01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -1942,7 +2648,25 @@
             "Acts as central hub connecting smart lights, locks, thermostats through single unified Matter protocol network",
             "Enables video doorbell to trigger smart lights automatically when motion detected at entrance",
             "Allows smart speakers to control indoor cameras and outdoor cameras through unified Matter commands"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SG-MATGAT01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SG-MATGAT01/1.png",
+            "gallery": [
+              "/images/products/HZ-SG-MATGAT01/1.png",
+              "/images/products/HZ-SG-MATGAT01/2.png",
+              "/images/products/HZ-SG-MATGAT01/3.png",
+              "/images/products/HZ-SG-MATGAT01/4.png",
+              "/images/products/HZ-SG-MATGAT01/5.png",
+              "/images/products/HZ-SG-MATGAT01/6.png",
+              "/images/products/HZ-SG-MATGAT01/7.png",
+              "/images/products/HZ-SG-MATGAT01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Wall socket Gateway",
@@ -1968,7 +2692,25 @@
           "slug": "wired-ceiling-speakers-525-silk-dome-40w",
           "keywords": "ceiling speakers, wired speakers, home audio, 5.25 speakers, 40W speakers, in-wall speakers, surround sound, smart speakers, audio system, room speakers",
           "automations": [],
-          "connected_scenes": []
+          "connected_scenes": [],
+          "images": {
+            "main": "/images/products/HZ-SM-WIRWIF01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SM-WIRWIF01/1.png",
+            "gallery": [
+              "/images/products/HZ-SM-WIRWIF01/1.png",
+              "/images/products/HZ-SM-WIRWIF01/2.png",
+              "/images/products/HZ-SM-WIRWIF01/3.png",
+              "/images/products/HZ-SM-WIRWIF01/4.png",
+              "/images/products/HZ-SM-WIRWIF01/5.png",
+              "/images/products/HZ-SM-WIRWIF01/6.png",
+              "/images/products/HZ-SM-WIRWIF01/7.png",
+              "/images/products/HZ-SM-WIRWIF01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Bluetooth ceiling speakers (master)",
@@ -1988,13 +2730,18 @@
             "Connect to smart doorbell for audio announcements and visitor alerts"
           ],
           "images": {
-            "main": "/images/products/HZ-SM-DOMCAM01/main.png",
+            "main": "/images/products/HZ-SM-DOMCAM01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SM-DOMCAM01/main.png",
+            "thumbnail": "/images/products/HZ-SM-DOMCAM01/1.png",
             "gallery": [
-              "/images/products/HZ-SM-DOMCAM01/detail-01.png",
-              "/images/products/HZ-SM-DOMCAM01/detail-02.png",
-              "/images/products/HZ-SM-DOMCAM01/detail-03.png"
+              "/images/products/HZ-SM-DOMCAM01/1.png",
+              "/images/products/HZ-SM-DOMCAM01/2.png",
+              "/images/products/HZ-SM-DOMCAM01/3.png",
+              "/images/products/HZ-SM-DOMCAM01/4.png",
+              "/images/products/HZ-SM-DOMCAM01/5.png",
+              "/images/products/HZ-SM-DOMCAM01/6.png",
+              "/images/products/HZ-SM-DOMCAM01/7.png",
+              "/images/products/HZ-SM-DOMCAM01/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2019,13 +2766,18 @@
             "Connects to smart thermostats for ambient sound adjustments based on temperature"
           ],
           "images": {
-            "main": "/images/products/HZ-SM-DOMCAM02/main.png",
+            "main": "/images/products/HZ-SM-DOMCAM02/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SM-DOMCAM02/main.png",
+            "thumbnail": "/images/products/HZ-SM-DOMCAM02/1.png",
             "gallery": [
-              "/images/products/HZ-SM-DOMCAM02/detail-01.png",
-              "/images/products/HZ-SM-DOMCAM02/detail-02.png",
-              "/images/products/HZ-SM-DOMCAM02/detail-03.png"
+              "/images/products/HZ-SM-DOMCAM02/1.png",
+              "/images/products/HZ-SM-DOMCAM02/2.png",
+              "/images/products/HZ-SM-DOMCAM02/3.png",
+              "/images/products/HZ-SM-DOMCAM02/4.png",
+              "/images/products/HZ-SM-DOMCAM02/5.png",
+              "/images/products/HZ-SM-DOMCAM02/6.png",
+              "/images/products/HZ-SM-DOMCAM02/7.png",
+              "/images/products/HZ-SM-DOMCAM02/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2054,7 +2806,25 @@
             "Monitors humidity to trigger smart vents for better air circulation",
             "Uses IR to detect temperature changes, adjusting smart thermostats automatically",
             "Alerts smart dehumidifiers when humidity exceeds set thresholds for timely action"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC01/1.png",
+              "/images/products/HZ-SN-CONACC01/2.png",
+              "/images/products/HZ-SN-CONACC01/3.png",
+              "/images/products/HZ-SN-CONACC01/4.png",
+              "/images/products/HZ-SN-CONACC01/5.png",
+              "/images/products/HZ-SN-CONACC01/6.png",
+              "/images/products/HZ-SN-CONACC01/7.png",
+              "/images/products/HZ-SN-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Door Windows Sensor -WiFi",
@@ -2072,7 +2842,25 @@
             "Activates outdoor cameras when door or window opens",
             "Sends smartphone alerts for unauthorized entry attempts",
             "Integrates with smart thermostat for energy-efficient temperature control"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-BATWIF01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-BATWIF01/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-BATWIF01/1.png",
+              "/images/products/HZ-SN-BATWIF01/2.png",
+              "/images/products/HZ-SN-BATWIF01/3.png",
+              "/images/products/HZ-SN-BATWIF01/4.png",
+              "/images/products/HZ-SN-BATWIF01/5.png",
+              "/images/products/HZ-SN-BATWIF01/6.png",
+              "/images/products/HZ-SN-BATWIF01/7.png",
+              "/images/products/HZ-SN-BATWIF01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Door Windows Sensor",
@@ -2092,12 +2880,18 @@
             "Integrates with security cameras for real-time monitoring"
           ],
           "images": {
-            "main": "/images/products/HZ-SN-CONACC02/detail-01.png",
+            "main": "/images/products/HZ-SN-CONACC02/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SN-CONACC02/detail-01.png",
+            "thumbnail": "/images/products/HZ-SN-CONACC02/1.png",
             "gallery": [
-              "/images/products/HZ-SN-CONACC02/detail-01.png",
-              "/images/products/HZ-SN-CONACC02/detail-02.jpg"
+              "/images/products/HZ-SN-CONACC02/1.png",
+              "/images/products/HZ-SN-CONACC02/2.png",
+              "/images/products/HZ-SN-CONACC02/3.png",
+              "/images/products/HZ-SN-CONACC02/4.png",
+              "/images/products/HZ-SN-CONACC02/5.png",
+              "/images/products/HZ-SN-CONACC02/6.png",
+              "/images/products/HZ-SN-CONACC02/7.png",
+              "/images/products/HZ-SN-CONACC02/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2120,7 +2914,25 @@
             "Detects motion and alerts your phone for security alerts",
             "Turns on smart lights when movement is detected",
             "Activates video doorbell recording when someone approaches"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-BATWIF02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-BATWIF02/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-BATWIF02/1.png",
+              "/images/products/HZ-SN-BATWIF02/2.png",
+              "/images/products/HZ-SN-BATWIF02/3.png",
+              "/images/products/HZ-SN-BATWIF02/4.png",
+              "/images/products/HZ-SN-BATWIF02/5.png",
+              "/images/products/HZ-SN-BATWIF02/6.png",
+              "/images/products/HZ-SN-BATWIF02/7.png",
+              "/images/products/HZ-SN-BATWIF02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Motion Sensor - zigbee",
@@ -2140,11 +2952,18 @@
             "Sends push notifications when motion is detected"
           ],
           "images": {
-            "main": "/images/products/HZ-SN-BATWIF03/detail-01.png",
+            "main": "/images/products/HZ-SN-BATWIF03/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SN-BATWIF03/detail-01.png",
+            "thumbnail": "/images/products/HZ-SN-BATWIF03/1.png",
             "gallery": [
-              "/images/products/HZ-SN-BATWIF03/detail-01.png"
+              "/images/products/HZ-SN-BATWIF03/1.png",
+              "/images/products/HZ-SN-BATWIF03/2.png",
+              "/images/products/HZ-SN-BATWIF03/3.png",
+              "/images/products/HZ-SN-BATWIF03/4.png",
+              "/images/products/HZ-SN-BATWIF03/5.png",
+              "/images/products/HZ-SN-BATWIF03/6.png",
+              "/images/products/HZ-SN-BATWIF03/7.png",
+              "/images/products/HZ-SN-BATWIF03/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2169,11 +2988,17 @@
             "Sends mobile notifications when someone approaches the house."
           ],
           "images": {
-            "main": "/images/products/HZ-SN-DOMCAM01/main.png",
+            "main": "/images/products/HZ-SN-DOMCAM01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SN-DOMCAM01/main.png",
+            "thumbnail": "/images/products/HZ-SN-DOMCAM01/1.png",
             "gallery": [
-              "/images/products/HZ-SN-DOMCAM01/detail-01.jpg"
+              "/images/products/HZ-SN-DOMCAM01/1.png",
+              "/images/products/HZ-SN-DOMCAM01/2.png",
+              "/images/products/HZ-SN-DOMCAM01/3.png",
+              "/images/products/HZ-SN-DOMCAM01/4.png",
+              "/images/products/HZ-SN-DOMCAM01/5.png",
+              "/images/products/HZ-SN-DOMCAM01/6.png",
+              "/images/products/HZ-SN-DOMCAM01/7.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2198,15 +3023,22 @@
             "Sends alerts to your phone when motion is detected at night"
           ],
           "images": {
-            "main": "/images/products/HZ-SN-CONACC03/main.png",
+            "main": "/images/products/HZ-SN-CONACC03/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SN-CONACC03/main.png",
-            "gallery": [],
-            "lifestyle": [],
-            "specs": [
-              "/images/products/HZ-SN-CONACC03/spec-01.jpg",
-              "/images/products/HZ-SN-CONACC03/spec-02.jpg"
+            "thumbnail": "/images/products/HZ-SN-CONACC03/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC03/1.png",
+              "/images/products/HZ-SN-CONACC03/2.png",
+              "/images/products/HZ-SN-CONACC03/3.png",
+              "/images/products/HZ-SN-CONACC03/4.png",
+              "/images/products/HZ-SN-CONACC03/5.png",
+              "/images/products/HZ-SN-CONACC03/6.png",
+              "/images/products/HZ-SN-CONACC03/7.png",
+              "/images/products/HZ-SN-CONACC03/8.png",
+              "/images/products/HZ-SN-CONACC03/9.png"
             ],
+            "lifestyle": [],
+            "specs": [],
             "package": []
           }
         },
@@ -2226,7 +3058,25 @@
             "Detects water leaks and shuts off supply to prevent damage",
             "Syncs with smart sprinklers for automated garden watering",
             "Notifies you via phone if water usage exceeds normal levels"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SS-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SS-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-SS-CONACC01/1.png",
+              "/images/products/HZ-SS-CONACC01/2.png",
+              "/images/products/HZ-SS-CONACC01/3.png",
+              "/images/products/HZ-SS-CONACC01/4.png",
+              "/images/products/HZ-SS-CONACC01/5.png",
+              "/images/products/HZ-SS-CONACC01/6.png",
+              "/images/products/HZ-SS-CONACC01/7.png",
+              "/images/products/HZ-SS-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Gas sensor",
@@ -2244,7 +3094,25 @@
             "Smart gas sensor triggers smart lights to flash red when dangerous gas levels are detected",
             "Automatically shuts off smart thermostats when sensor detects natural gas leaks in utility areas",
             "Sends alerts to smart speakers which announce evacuation routes when carbon monoxide is detected"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SN-CONACC04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SN-CONACC04/1.png",
+            "gallery": [
+              "/images/products/HZ-SN-CONACC04/1.png",
+              "/images/products/HZ-SN-CONACC04/2.png",
+              "/images/products/HZ-SN-CONACC04/3.png",
+              "/images/products/HZ-SN-CONACC04/4.png",
+              "/images/products/HZ-SN-CONACC04/5.png",
+              "/images/products/HZ-SN-CONACC04/6.png",
+              "/images/products/HZ-SN-CONACC04/7.png",
+              "/images/products/HZ-SN-CONACC04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart Smoke sensor",
@@ -2264,12 +3132,18 @@
             "Sends notifications to connected smartphones when smoke is detected."
           ],
           "images": {
-            "main": "/images/products/HZ-SN-CONACC05/detail-01.jpg",
+            "main": "/images/products/HZ-SN-CONACC05/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SN-CONACC05/detail-01.jpg",
+            "thumbnail": "/images/products/HZ-SN-CONACC05/1.png",
             "gallery": [
-              "/images/products/HZ-SN-CONACC05/detail-01.jpg",
-              "/images/products/HZ-SN-CONACC05/detail-02.jpg"
+              "/images/products/HZ-SN-CONACC05/1.png",
+              "/images/products/HZ-SN-CONACC05/2.png",
+              "/images/products/HZ-SN-CONACC05/3.png",
+              "/images/products/HZ-SN-CONACC05/4.png",
+              "/images/products/HZ-SN-CONACC05/5.png",
+              "/images/products/HZ-SN-CONACC05/6.png",
+              "/images/products/HZ-SN-CONACC05/7.png",
+              "/images/products/HZ-SN-CONACC05/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2292,7 +3166,25 @@
             "Controls smart plugs to turn on/off appliances via remote",
             "Syncs with smart thermostats for efficient temperature adjustments",
             "Integrates with smart lights for customizable scene lighting control"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SS-BATSOL01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SS-BATSOL01/1.png",
+            "gallery": [
+              "/images/products/HZ-SS-BATSOL01/1.png",
+              "/images/products/HZ-SS-BATSOL01/2.png",
+              "/images/products/HZ-SS-BATSOL01/3.png",
+              "/images/products/HZ-SS-BATSOL01/4.png",
+              "/images/products/HZ-SS-BATSOL01/5.png",
+              "/images/products/HZ-SS-BATSOL01/6.png",
+              "/images/products/HZ-SS-BATSOL01/7.png",
+              "/images/products/HZ-SS-BATSOL01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "IR Universal Remote Control - zigbee gs-zs06-z",
@@ -2312,10 +3204,19 @@
             "Integrates with smart speaker for voice control"
           ],
           "images": {
-            "main": "/images/products/HZ-SS-IRUNI01/main.jpg",
+            "main": "/images/products/HZ-SS-IRUNI01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SS-IRUNI01/main.jpg",
-            "gallery": [],
+            "thumbnail": "/images/products/HZ-SS-IRUNI01/1.png",
+            "gallery": [
+              "/images/products/HZ-SS-IRUNI01/1.png",
+              "/images/products/HZ-SS-IRUNI01/2.png",
+              "/images/products/HZ-SS-IRUNI01/3.png",
+              "/images/products/HZ-SS-IRUNI01/4.png",
+              "/images/products/HZ-SS-IRUNI01/5.png",
+              "/images/products/HZ-SS-IRUNI01/6.png",
+              "/images/products/HZ-SS-IRUNI01/7.png",
+              "/images/products/HZ-SS-IRUNI01/8.png"
+            ],
             "lifestyle": [],
             "specs": [],
             "package": []
@@ -2337,7 +3238,25 @@
             "Controls TV, audio systems, and smart home hubs via IR signals.",
             "Integrates with smart plugs to automate device power cycles.",
             "Syncs with voice assistants for hands-free remote control."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SS-IRUNI02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SS-IRUNI02/1.png",
+            "gallery": [
+              "/images/products/HZ-SS-IRUNI02/1.png",
+              "/images/products/HZ-SS-IRUNI02/2.png",
+              "/images/products/HZ-SS-IRUNI02/3.png",
+              "/images/products/HZ-SS-IRUNI02/4.png",
+              "/images/products/HZ-SS-IRUNI02/5.png",
+              "/images/products/HZ-SS-IRUNI02/6.png",
+              "/images/products/HZ-SS-IRUNI02/7.png",
+              "/images/products/HZ-SS-IRUNI02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     },
@@ -2363,10 +3282,19 @@
             "Shows doorbell camera footage on command via voice assistant"
           ],
           "images": {
-            "main": "/images/products/HZ-LT-SPOTLT01/main.png",
+            "main": "/images/products/HZ-LT-SPOTLT01/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-LT-SPOTLT01/main.png",
-            "gallery": [],
+            "thumbnail": "/images/products/HZ-LT-SPOTLT01/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT01/1.png",
+              "/images/products/HZ-LT-SPOTLT01/2.png",
+              "/images/products/HZ-LT-SPOTLT01/3.png",
+              "/images/products/HZ-LT-SPOTLT01/4.png",
+              "/images/products/HZ-LT-SPOTLT01/5.png",
+              "/images/products/HZ-LT-SPOTLT01/6.png",
+              "/images/products/HZ-LT-SPOTLT01/7.png",
+              "/images/products/HZ-LT-SPOTLT01/8.png"
+            ],
             "lifestyle": [],
             "specs": [],
             "package": []
@@ -2390,11 +3318,17 @@
             "Acts as a dashboard to check device status"
           ],
           "images": {
-            "main": "/images/products/HZ-LT-SPOTLT02/detail-01.png",
+            "main": "/images/products/HZ-LT-SPOTLT02/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-LT-SPOTLT02/detail-01.png",
+            "thumbnail": "/images/products/HZ-LT-SPOTLT02/1.png",
             "gallery": [
-              "/images/products/HZ-LT-SPOTLT02/detail-01.png"
+              "/images/products/HZ-LT-SPOTLT02/1.png",
+              "/images/products/HZ-LT-SPOTLT02/2.png",
+              "/images/products/HZ-LT-SPOTLT02/3.png",
+              "/images/products/HZ-LT-SPOTLT02/4.png",
+              "/images/products/HZ-LT-SPOTLT02/5.png",
+              "/images/products/HZ-LT-SPOTLT02/6.png",
+              "/images/products/HZ-LT-SPOTLT02/7.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2419,11 +3353,18 @@
             "Syncs with smart plugs for automated appliance control"
           ],
           "images": {
-            "main": "/images/products/HZ-LT-SPOTLT03/detail-01.png",
+            "main": "/images/products/HZ-LT-SPOTLT03/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-LT-SPOTLT03/detail-01.png",
+            "thumbnail": "/images/products/HZ-LT-SPOTLT03/1.png",
             "gallery": [
-              "/images/products/HZ-LT-SPOTLT03/detail-01.png"
+              "/images/products/HZ-LT-SPOTLT03/1.png",
+              "/images/products/HZ-LT-SPOTLT03/2.png",
+              "/images/products/HZ-LT-SPOTLT03/3.png",
+              "/images/products/HZ-LT-SPOTLT03/4.png",
+              "/images/products/HZ-LT-SPOTLT03/5.png",
+              "/images/products/HZ-LT-SPOTLT03/6.png",
+              "/images/products/HZ-LT-SPOTLT03/7.png",
+              "/images/products/HZ-LT-SPOTLT03/8.png"
             ],
             "lifestyle": [],
             "specs": [],
@@ -2446,7 +3387,25 @@
             "Lights on when doorbell rings, alerts via phone",
             "Syncs with security cameras when motion triggers lights",
             "Turns off lights when smart door lock engages"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-SPOTLT04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-SPOTLT04/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT04/1.png",
+              "/images/products/HZ-LT-SPOTLT04/2.png",
+              "/images/products/HZ-LT-SPOTLT04/3.png",
+              "/images/products/HZ-LT-SPOTLT04/4.png",
+              "/images/products/HZ-LT-SPOTLT04/5.png",
+              "/images/products/HZ-LT-SPOTLT04/6.png",
+              "/images/products/HZ-LT-SPOTLT04/7.png",
+              "/images/products/HZ-LT-SPOTLT04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart switch PC",
@@ -2466,18 +3425,21 @@
             "Controls smart plugs for automated appliance scheduling"
           ],
           "images": {
-            "main": "/images/products/HZ-SS-CONACC02/detail-01.jpg",
+            "main": "/images/products/HZ-SS-CONACC02/1.png",
             "mainFallback": null,
-            "thumbnail": "/images/products/HZ-SS-CONACC02/detail-01.jpg",
+            "thumbnail": "/images/products/HZ-SS-CONACC02/1.png",
             "gallery": [
-              "/images/products/HZ-SS-CONACC02/detail-01.jpg",
-              "/images/products/HZ-SS-CONACC02/detail-02.jpg"
+              "/images/products/HZ-SS-CONACC02/1.png",
+              "/images/products/HZ-SS-CONACC02/2.png",
+              "/images/products/HZ-SS-CONACC02/3.png",
+              "/images/products/HZ-SS-CONACC02/4.png",
+              "/images/products/HZ-SS-CONACC02/5.png",
+              "/images/products/HZ-SS-CONACC02/6.png",
+              "/images/products/HZ-SS-CONACC02/7.png",
+              "/images/products/HZ-SS-CONACC02/8.png"
             ],
             "lifestyle": [],
-            "specs": [
-              "/images/products/HZ-SS-CONACC02/spec-01.jpg",
-              "/images/products/HZ-SS-CONACC02/spec-02.jpg"
-            ],
+            "specs": [],
             "package": []
           }
         }
@@ -2485,7 +3447,7 @@
     },
     {
       "name": "Smart lighting System and Dimming Controller",
-      "product_count": 18,
+      "product_count": 16,
       "products": [
         {
           "name": "Zigbee Intelligent LED driver",
@@ -2503,7 +3465,25 @@
             "Turns on lights when the doorbell rings",
             "Activates lights if motion is detected by the camera",
             "Syncs with security system for alerts and automation"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-ZIGINT01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-ZIGINT01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-ZIGINT01/1.png",
+              "/images/products/HZ-SL-ZIGINT01/2.png",
+              "/images/products/HZ-SL-ZIGINT01/3.png",
+              "/images/products/HZ-SL-ZIGINT01/4.png",
+              "/images/products/HZ-SL-ZIGINT01/5.png",
+              "/images/products/HZ-SL-ZIGINT01/6.png",
+              "/images/products/HZ-SL-ZIGINT01/7.png",
+              "/images/products/HZ-SL-ZIGINT01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Dimming and color adjustment Constant current dial 0-10V/ 1-10V PWM 10V All-in-one",
@@ -2521,7 +3501,25 @@
             "Automatically adjusts lighting color for different times of day",
             "Syncs with smart doorbells to brighten when visitors arrive",
             "Integrates with home security for custom lighting scenes during alarms"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-COLNIV01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-COLNIV01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-COLNIV01/1.png",
+              "/images/products/HZ-SL-COLNIV01/2.png",
+              "/images/products/HZ-SL-COLNIV01/3.png",
+              "/images/products/HZ-SL-COLNIV01/4.png",
+              "/images/products/HZ-SL-COLNIV01/5.png",
+              "/images/products/HZ-SL-COLNIV01/6.png",
+              "/images/products/HZ-SL-COLNIV01/7.png",
+              "/images/products/HZ-SL-COLNIV01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "zigbee light strip driver RGB+C+W",
@@ -2539,7 +3537,25 @@
             "Syncs with video doorbell to light up when someone approaches.",
             "Automatically adjusts brightness based on doorbell notifications.",
             "Links with smart locks to illuminate entryways upon unlocking."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-SPOTLT05/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-SPOTLT05/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT05/1.png",
+              "/images/products/HZ-LT-SPOTLT05/2.png",
+              "/images/products/HZ-LT-SPOTLT05/3.png",
+              "/images/products/HZ-LT-SPOTLT05/4.png",
+              "/images/products/HZ-LT-SPOTLT05/5.png",
+              "/images/products/HZ-LT-SPOTLT05/6.png",
+              "/images/products/HZ-LT-SPOTLT05/7.png",
+              "/images/products/HZ-LT-SPOTLT05/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "TV background light",
@@ -2557,7 +3573,25 @@
             "Adjusts brightness based on room lighting detected by smart bulbs",
             "Dimmers automatically sync with TV volume levels for ambiance",
             "Turns off when motion sensors detect no activity in the room"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-SPOTLT06/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-SPOTLT06/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT06/1.png",
+              "/images/products/HZ-LT-SPOTLT06/2.png",
+              "/images/products/HZ-LT-SPOTLT06/3.png",
+              "/images/products/HZ-LT-SPOTLT06/4.png",
+              "/images/products/HZ-LT-SPOTLT06/5.png",
+              "/images/products/HZ-LT-SPOTLT06/6.png",
+              "/images/products/HZ-LT-SPOTLT06/7.png",
+              "/images/products/HZ-LT-SPOTLT06/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "RGBCW Smart Zigbee Bulb",
@@ -2575,7 +3609,25 @@
             "Turns on when doorbell detects motion after dark",
             "Changes color when security camera detects movement",
             "Syncs with smart plugs for automated lighting schedules"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-CONACC01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-CONACC01/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-CONACC01/1.png",
+              "/images/products/HZ-LT-CONACC01/2.png",
+              "/images/products/HZ-LT-CONACC01/3.png",
+              "/images/products/HZ-LT-CONACC01/4.png",
+              "/images/products/HZ-LT-CONACC01/5.png",
+              "/images/products/HZ-LT-CONACC01/6.png",
+              "/images/products/HZ-LT-CONACC01/7.png",
+              "/images/products/HZ-LT-CONACC01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "RGB COB low voltage light strip (5 meters per roll)",
@@ -2593,25 +3645,25 @@
             "Enhances security by lighting up when video doorbell detects motion",
             "Syncs with smart door locks for automatic welcome lighting",
             "Links to voice assistants for custom color control via voice commands"
-          ]
-        },
-        {
-          "name": "24V Transformer Power Supply",
-          "sku": "HZ-SL-24VTRA01",
-          "specs": "LED TYPE: COB-576L-10MM | Voltage: DC24V | Color: RGB | Waterproof: IP20 | LED Quantity: 576led/m | Length: 5M/ROLL",
-          "description": "Transform any space with perfectly controlled lighting. Create the perfect ambiance while saving energy effortlessly.\n\n• Delivers stable 24V power for consistent, flicker-free illumination throughout your home.\n• Integrates seamlessly with dimming controllers for smooth brightness adjustments from 0-100%.\n• Powers multiple smart lighting zones simultaneously without voltage drops or performance issues.\n• Built-in protection circuits ensure safe operation and extend your lighting system's lifespan.\n\nConnect with smart speakers or mobile devices to control your lighting system remotely. Voice assistants respond instantly to adjust brightness levels hands-free throughout your day.\n\nExperience professional-grade lighting control that transforms your living spaces into personalized environments.",
-          "slug": "24v-100w-smart-light-transformer",
-          "keywords": "24V transformer, LED power supply, smart lighting, dimmer controller, 100W driver, DC 24V, 110-240V input, color temperature, sunrise simulation, security lighting",
-          "automations": [
-            "Motion-Activated Path Lighting",
-            "Trigger:* Motion sensor detects movement in a hallway, driveway, or outdoor path (if IP20 allows safe outdoor use).",
-            "Use Case:* Improves safety and visibility at night, reducing tripping hazards or intruder risks."
           ],
-          "connected_scenes": [
-            "Powers smart video doorbells for 24/7 surveillance",
-            "Supports smart door locks with reliable voltage supply",
-            "Enables smart garage openers for automated access"
-          ]
+          "images": {
+            "main": "/images/products/HZ-LT-SPOTLT07/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-SPOTLT07/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT07/1.png",
+              "/images/products/HZ-LT-SPOTLT07/2.png",
+              "/images/products/HZ-LT-SPOTLT07/3.png",
+              "/images/products/HZ-LT-SPOTLT07/4.png",
+              "/images/products/HZ-LT-SPOTLT07/5.png",
+              "/images/products/HZ-LT-SPOTLT07/6.png",
+              "/images/products/HZ-LT-SPOTLT07/7.png",
+              "/images/products/HZ-LT-SPOTLT07/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "24V Transformer Power Supply",
@@ -2629,25 +3681,25 @@
             "Powers smart doorbells for reliable 24/7 video monitoring.",
             "Connects to smart locks for secure automatic unlocking/locking.",
             "Supports smart lighting for motion-activated porch illumination."
-          ]
-        },
-        {
-          "name": "24V Transformer Power Supply",
-          "sku": "HZ-SL-24VTRA03",
-          "specs": "Power: 150W | Color Temperature: 3000K-6000K | Voltage: DC24V",
-          "description": "Transform your lighting from ordinary to extraordinary. The 24V Transformer Power Supply delivers seamless dimming control that sets the perfect mood for every moment.\n\n• Whisper-quiet dimming from 0-100% with zero flicker technology.\n• Powers expansive lighting systems up to 240 watts total capacity.\n• Cool-touch operation prevents overheating for ultimate safety.\n• Precision voltage regulation extends LED lifespan significantly.\n\nElevate every space with lighting that thinks as beautifully as it shines.",
-          "slug": "24v-200w-300w-transformer-power-supply",
-          "keywords": "24v transformer, 200w power supply, 300w led driver, DC24V dimmer, smart lighting, RGBW controller, sunrise wake light, cinema scene lighting, security strobe, home automation",
-          "automations": [
-            "Morning routine: Gradually shift color temperature from 3000K to 6000K over 30 minutes to simulate sunrise",
-            "Evening transition: Automatically dim and warm lights from 6000K to 3000K at sunset for relaxation",
-            "Work mode activation: Switch to 6000K cool white during business hours for enhanced focus and productivity"
           ],
-          "connected_scenes": [
-            "Powers smart doorbells for continuous operation.",
-            "Supports battery-powered devices for backup energy.",
-            "Enables USB-powered cameras with stable voltage."
-          ]
+          "images": {
+            "main": "/images/products/HZ-SL-24VTRA02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-24VTRA02/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-24VTRA02/1.png",
+              "/images/products/HZ-SL-24VTRA02/2.png",
+              "/images/products/HZ-SL-24VTRA02/3.png",
+              "/images/products/HZ-SL-24VTRA02/4.png",
+              "/images/products/HZ-SL-24VTRA02/5.png",
+              "/images/products/HZ-SL-24VTRA02/6.png",
+              "/images/products/HZ-SL-24VTRA02/7.png",
+              "/images/products/HZ-SL-24VTRA02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "RGBW/WW-5050-60D (10 meters)",
@@ -2665,7 +3717,25 @@
             "Activates LED strip when doorbell rings for visible alerts",
             "Syncs with motion sensors to light pathways when movement is detected",
             "Integrates with smart speakers to change colors based on voice commands"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-RGBWW01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-RGBWW01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-RGBWW01/1.png",
+              "/images/products/HZ-SL-RGBWW01/2.png",
+              "/images/products/HZ-SL-RGBWW01/3.png",
+              "/images/products/HZ-SL-RGBWW01/4.png",
+              "/images/products/HZ-SL-RGBWW01/5.png",
+              "/images/products/HZ-SL-RGBWW01/6.png",
+              "/images/products/HZ-SL-RGBWW01/7.png",
+              "/images/products/HZ-SL-RGBWW01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "RGB COB low voltage light strip (5 meters per roll)",
@@ -2683,7 +3753,25 @@
             "Lights up when doorbell rings for visual alerts",
             "Syncs with camera to change color when motion detected",
             "Adjusts brightness automatically based on ambient light levels"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-SPOTLT08/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-SPOTLT08/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT08/1.png",
+              "/images/products/HZ-LT-SPOTLT08/2.png",
+              "/images/products/HZ-LT-SPOTLT08/3.png",
+              "/images/products/HZ-LT-SPOTLT08/4.png",
+              "/images/products/HZ-LT-SPOTLT08/5.png",
+              "/images/products/HZ-LT-SPOTLT08/6.png",
+              "/images/products/HZ-LT-SPOTLT08/7.png",
+              "/images/products/HZ-LT-SPOTLT08/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "RGBCW Smart Zigbee Bulb (round)",
@@ -2701,7 +3789,25 @@
             "Automatically lights up when motion detected by a smart doorbell",
             "Turns on at sunrise and off at sunset with smart plugs",
             "Syncs with smart locks for automatic lighting when doors unlock"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-CONACC02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-CONACC02/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-CONACC02/1.png",
+              "/images/products/HZ-LT-CONACC02/2.png",
+              "/images/products/HZ-LT-CONACC02/3.png",
+              "/images/products/HZ-LT-CONACC02/4.png",
+              "/images/products/HZ-LT-CONACC02/5.png",
+              "/images/products/HZ-LT-CONACC02/6.png",
+              "/images/products/HZ-LT-CONACC02/7.png",
+              "/images/products/HZ-LT-CONACC02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "RGBCW Smart Zigbee Bulb (flat)",
@@ -2719,7 +3825,25 @@
             "Turns on when doorbell camera detects motion at night.",
             "Changes color based on doorbell notification type (e.g., red for delivery).",
             "Automatically adjusts brightness for video calls with doorbell camera."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-CONACC03/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-CONACC03/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-CONACC03/1.png",
+              "/images/products/HZ-LT-CONACC03/2.png",
+              "/images/products/HZ-LT-CONACC03/3.png",
+              "/images/products/HZ-LT-CONACC03/4.png",
+              "/images/products/HZ-LT-CONACC03/5.png",
+              "/images/products/HZ-LT-CONACC03/6.png",
+              "/images/products/HZ-LT-CONACC03/7.png",
+              "/images/products/HZ-LT-CONACC03/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "COB 2colors low voltage light strip (10 meters per roll)",
@@ -2737,7 +3861,25 @@
             "Automates lighting when video doorbell detects motion at night",
             "Syncs with smart locks to light up entryways upon unlock",
             "Adjusts colors based on doorbell camera’s detected weather conditions"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-COLNIV01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-COLNIV01/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-COLNIV01/1.png",
+              "/images/products/HZ-LT-COLNIV01/2.png",
+              "/images/products/HZ-LT-COLNIV01/3.png",
+              "/images/products/HZ-LT-COLNIV01/4.png",
+              "/images/products/HZ-LT-COLNIV01/5.png",
+              "/images/products/HZ-LT-COLNIV01/6.png",
+              "/images/products/HZ-LT-COLNIV01/7.png",
+              "/images/products/HZ-LT-COLNIV01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Intelligent Dimmable LED Light Strip Driver & Power Supply 2 in 1",
@@ -2755,7 +3897,26 @@
             "Automatically brightens when a video doorbell detects motion",
             "Dims lights when door lock is secured at night",
             "Turns on lights when a doorbell is pressed remotely"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-SPOTLT09/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-SPOTLT09/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-SPOTLT09/1.png",
+              "/images/products/HZ-LT-SPOTLT09/2.png",
+              "/images/products/HZ-LT-SPOTLT09/3.png",
+              "/images/products/HZ-LT-SPOTLT09/4.png",
+              "/images/products/HZ-LT-SPOTLT09/5.png",
+              "/images/products/HZ-LT-SPOTLT09/6.png",
+              "/images/products/HZ-LT-SPOTLT09/7.png",
+              "/images/products/HZ-LT-SPOTLT09/8.png",
+              "/images/products/HZ-LT-SPOTLT09/9.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "Smart dimmable downlight (RGB)",
@@ -2773,7 +3934,25 @@
             "Turns on/off with doorbell when someone rings",
             "Changes color when motion detected by the doorbell",
             "Dims automatically at sunset using schedules with the doorbell"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-LT-CONACC04/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-LT-CONACC04/1.png",
+            "gallery": [
+              "/images/products/HZ-LT-CONACC04/1.png",
+              "/images/products/HZ-LT-CONACC04/2.png",
+              "/images/products/HZ-LT-CONACC04/3.png",
+              "/images/products/HZ-LT-CONACC04/4.png",
+              "/images/products/HZ-LT-CONACC04/5.png",
+              "/images/products/HZ-LT-CONACC04/6.png",
+              "/images/products/HZ-LT-CONACC04/7.png",
+              "/images/products/HZ-LT-CONACC04/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "ZigBee mini dimmer switch N&L wire 1CH",
@@ -2791,7 +3970,25 @@
             "Adjusts lighting brightness automatically when video doorbell detects motion outside your home's entrance during evening hours.",
             "Dims connected lights gradually when indoor camera senses no movement for extended periods to save energy.",
             "Coordinates with smart speakers to lower lights when doorbell rings, creating welcoming ambiance for arriving guests."
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-ZIGMIN01/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-ZIGMIN01/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-ZIGMIN01/1.png",
+              "/images/products/HZ-SL-ZIGMIN01/2.png",
+              "/images/products/HZ-SL-ZIGMIN01/3.png",
+              "/images/products/HZ-SL-ZIGMIN01/4.png",
+              "/images/products/HZ-SL-ZIGMIN01/5.png",
+              "/images/products/HZ-SL-ZIGMIN01/6.png",
+              "/images/products/HZ-SL-ZIGMIN01/7.png",
+              "/images/products/HZ-SL-ZIGMIN01/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         },
         {
           "name": "ZigBee mini dimmer switch N&L wire 2 CH",
@@ -2809,7 +4006,25 @@
             "Dims lights automatically when battery-powered video doorbell rings to reduce glare on smart displays showing visitor feed",
             "Adjusts both lighting channels independently based on outdoor camera motion detection for enhanced security illumination",
             "Coordinates with indoor camera's night vision mode by gradually dimming lights during evening hours for optimal recording"
-          ]
+          ],
+          "images": {
+            "main": "/images/products/HZ-SL-ZIGMIN02/1.png",
+            "mainFallback": null,
+            "thumbnail": "/images/products/HZ-SL-ZIGMIN02/1.png",
+            "gallery": [
+              "/images/products/HZ-SL-ZIGMIN02/1.png",
+              "/images/products/HZ-SL-ZIGMIN02/2.png",
+              "/images/products/HZ-SL-ZIGMIN02/3.png",
+              "/images/products/HZ-SL-ZIGMIN02/4.png",
+              "/images/products/HZ-SL-ZIGMIN02/5.png",
+              "/images/products/HZ-SL-ZIGMIN02/6.png",
+              "/images/products/HZ-SL-ZIGMIN02/7.png",
+              "/images/products/HZ-SL-ZIGMIN02/8.png"
+            ],
+            "lifestyle": [],
+            "specs": [],
+            "package": []
+          }
         }
       ]
     }
