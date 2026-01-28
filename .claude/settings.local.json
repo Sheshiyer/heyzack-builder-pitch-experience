@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__resolve-library-id",
+      "mcp__perplexity__search",
+      "mcp__context7__query-docs",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}

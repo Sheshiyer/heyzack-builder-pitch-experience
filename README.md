@@ -169,8 +169,6 @@ heyzack-builder-pitch-experience/
 │   ├── OrbitingPartners.tsx       # Animated orbital icons
 │   ├── Pillars.tsx                # Three value pillars showcase
 │   ├── ProductSpotlight.tsx       # Category product viewer
-│   ├── ROICalculator.tsx          # Financial impact calculator
-│   ├── SceneTimeline.tsx          # Automation sequence viewer
 │   ├── interactive/               # Interactive UI elements
 │   │   ├── AnimatedCounter.tsx
 │   │   ├── AudioWaveform.tsx

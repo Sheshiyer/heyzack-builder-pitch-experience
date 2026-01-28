@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Category, Product, Scene, Language } from '../types';
-import { SCENES, ALL_PRODUCTS } from '../constants';
+import { Category, Product, Language } from '../types';
+import { ALL_PRODUCTS } from '../constants';
 import Icon from './Icon';
 import { createGlassEffect } from '../utils/designTokens';
 
@@ -23,15 +23,6 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
   const selectedProduct = useMemo(() => 
     products.find(p => p.id === selectedProductId) || products[0],
   [products, selectedProductId]);
-
-  // Filter scenes that involve this category
-  const relatedScenes = useMemo(() => SCENES.filter(scene => 
-    scene.steps.some(step => 
-       // Loose matching against category name or ID
-       category.name['en'].toLowerCase().includes(step.category.toLowerCase()) || 
-       step.category.toLowerCase().includes(category.name['en'].toLowerCase().split(' ')[0].toLowerCase())
-    )
-  ), [category]);
 
   return (
     <AnimatePresence>

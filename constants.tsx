@@ -1,4 +1,4 @@
-import { Pillar, Category, Product, Scene, Connection, Language } from './types';
+import { Pillar, Category, Product, Connection, Language } from './types';
 import productCatalog from './data/product_catalog.json';
 
 // Helper for bilingual support (duplicating English for now as requested)
@@ -28,23 +28,23 @@ const getImageForProduct = (sku: string, productData?: any) => {
 export const PILLARS: Pillar[] = [
   {
     id: 'savings',
-    icon: 'TrendingDown',
+    icon: 'TrendingUp',
     title: { en: 'Savings', fr: 'Économies' },
-    description: { en: 'Systemic energy reduction and operational ROI.', fr: 'Réduction systémique de l\'énergie et ROI opérationnel.' },
+    description: { en: 'Drive asset value through predictive energy optimization and significant reduction in building operational costs.', fr: 'Valorisez vos actifs grâce à l\'optimisation énergétique prédictive et une réduction des coûts.' },
     color: '#10B981'
   },
   {
     id: 'security',
-    icon: 'ShieldCheck',
+    icon: 'Shield',
     title: { en: 'Security', fr: 'Sécurité' },
-    description: { en: 'Portfolio-wide protection and access control.', fr: 'Protection à l\'échelle du portefeuille et contrôle d\'accès.' },
+    description: { en: 'Provide peace of mind with encrypted access control and proactive monitoring that safeguards every resident and square foot.', fr: 'Garantissez la tranquillité d\'esprit avec un contrôle d\'accès crypté et une surveillance proactive.' },
     color: '#243984'
   },
   {
     id: 'comfort',
     icon: 'Sparkles',
     title: { en: 'Comfort', fr: 'Confort' },
-    description: { en: 'Automated living experiences for high tenant retention.', fr: 'Expériences de vie automatisées pour une forte fidélisation.' },
+    description: { en: 'Differentiate your property with intuitive, invisible technology that creates a premium living experience and maximizes tenant retention.', fr: 'Démarquez votre propriété avec une technologie invisible et intuitive qui crée une expérience de vie premium.' },
     color: '#E82F89'
   }
 ];
@@ -219,9 +219,10 @@ productCatalog.categories.forEach((catInfo: any) => {
 
           // 4. Add if unique and under limit
           // We limit strictly to 4 total connections per category
+          // Ensure partnerId is unique to prevent React key conflicts
           const isDuplicate = combinedConnections.some(c => 
             c.description.en === sceneText || 
-            (c.partnerId === partnerId && c.label.en === labelCandidate)
+            c.partnerId === partnerId
           );
 
           if (!isDuplicate && combinedConnections.length < 4) {
@@ -286,30 +287,3 @@ productCatalog.categories.forEach((catInfo: any) => {
 export const CATEGORIES = processedCategories;
 export const HERO_PRODUCTS = heroProductsMap;
 export const ALL_PRODUCTS = processedProducts; 
-
-export const SCENES: Scene[] = [
-  {
-    id: 'peak-demand',
-    category: 'efficiency',
-    name: { en: 'Peak Demand Response', fr: 'Réponse en Pic de Conso' },
-    description: { en: 'Whole-building energy mitigation based on utility signals.', fr: 'Réduction énergétique du bâtiment selon les signaux réseau.' },
-    b2bMetric: { en: '-28% Operating Costs', fr: '-28% de Frais d\'Exploitation' },
-    steps: [
-      { nodeType: 'trigger', action: { en: 'Utility Signal Received', fr: 'Signal Réseau Reçu' }, category: 'Gateway' },
-      { nodeType: 'logic', action: { en: 'Auto-dim Common Areas', fr: 'Gradation Zones Communes' }, category: 'Lighting' },
-      { nodeType: 'action', action: { en: 'HVAC Setpoint +2°C', fr: 'Point CVC +2°C' }, category: 'Climatisation' }
-    ]
-  },
-  {
-    id: 'leak-mitigation',
-    category: 'maintenance',
-    name: { en: 'Risk Mitigation', fr: 'Atténuation des Risques' },
-    description: { en: 'Preventative damage control for high-density assets.', fr: 'Contrôle préventif des dommages pour les actifs multi-résidentiels.' },
-    b2bMetric: { en: '-90% Water Damage Claims', fr: '-90% de Sinistres Dégâts des Eaux' },
-    steps: [
-      { nodeType: 'trigger', action: { en: 'Moisture Detected', fr: 'Humidité Détectée' }, category: 'Smart Sensors' },
-      { nodeType: 'logic', action: { en: 'Auto-Shutoff Main Valve', fr: 'Arrêt Vanne Principale' }, category: 'DIY Breaker' },
-      { nodeType: 'action', action: { en: 'Maintenance Alert Sent', fr: 'Alerte Maintenance Envoyée' }, category: 'Gateway' }
-    ]
-  }
-];

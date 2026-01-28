@@ -4,8 +4,6 @@ import { Language } from './types';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
 import CategorySpotlight from './components/ProductSpotlight';
-import SceneTimeline from './components/SceneTimeline';
-import ROICalculator from './components/ROICalculator';
 import GeminiAssistant from './components/GeminiAssistant';
 import CategoryDrawer from './components/CategoryDrawer';
 import CategoryNav from './components/CategoryNav';
@@ -107,14 +105,6 @@ const App: React.FC = () => {
           </section>
         ))}
 
-        <section className="snap-start bg-neutral-100" id="scenes">
-          <SceneTimeline lang={lang} />
-        </section>
-
-        <section className="snap-start" id="roi">
-          <ROICalculator lang={lang} />
-        </section>
-
         <section className="snap-start bg-slate-900 text-white" id="assistant">
           <GeminiAssistant lang={lang} />
         </section>
@@ -147,7 +137,6 @@ const App: React.FC = () => {
                 <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Architecture</h4>
                 <a href="#pillars" className="text-sm font-bold text-slate-600 hover:text-[#E82F89]">The 3 Pillars</a>
                 <a href="#home" className="text-sm font-bold text-slate-600 hover:text-[#E82F89]">Category Matrix</a>
-                <a href="#scenes" className="text-sm font-bold text-slate-600 hover:text-[#E82F89]">Dynamic Scenes</a>
               </div>
               <div className="flex flex-col gap-6">
                 <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Resources</h4>

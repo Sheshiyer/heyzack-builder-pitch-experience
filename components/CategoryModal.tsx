@@ -93,7 +93,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
 
               return (
                 <motion.div
-                  key={i}
+                  key={product.id}
                   variants={shouldReduceMotion ? undefined : gridWave(row, col)}
                   initial="hidden"
                   animate="visible"

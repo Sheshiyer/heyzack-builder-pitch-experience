@@ -37,23 +37,18 @@ export interface Category {
   connections: Connection[]; // New: Links to other categories
 }
 
+export interface RecommendedProduct {
+  sku: string;
+  reason: string;
+  savings: number;
+  security: number;
+  comfort: number;
+}
+
 export interface Pillar {
   id: string;
   icon: string;
   title: Record<Language, string>;
   description: Record<Language, string>;
   color: string;
-}
-
-export interface Scene {
-  id: string;
-  category: 'efficiency' | 'security' | 'maintenance';
-  name: Record<Language, string>;
-  description: Record<Language, string>;
-  b2bMetric: Record<Language, string>;
-  steps: {
-    nodeType: 'trigger' | 'logic' | 'action';
-    action: Record<Language, string>;
-    category: string;
-  }[];
 }

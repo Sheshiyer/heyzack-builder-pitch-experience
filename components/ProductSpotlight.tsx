@@ -363,9 +363,9 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
           {/* New Integration Grid */}
           <motion.div className="relative" variants={fadeInUp}>
             <div className="flex items-center gap-3 mb-6">
-               <Icon name="Network" size={16} className="text-[#243984]" />
+               <Icon name="Zap" size={16} className="text-[#E82F89]" />
                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                 {lang === 'en' ? 'Connected Logic Partners' : 'Partenaires de Logique Connectée'}
+                 {lang === 'en' ? 'EcoSystem Features' : 'Fonctionnalités de l\'Écosystème'}
                </span>
             </div>
 
@@ -388,11 +388,11 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
 
                 {category.connections.map((link, index) => {
                   const isActive = activePartnerId === link.partnerId;
-                  const pathId = `path-${link.partnerId}`;
+                  const pathId = `path-${link.partnerId}-${index}`;
                   const path = getConnectionPath(index, category.connections.length);
 
                   return (
-                    <g key={link.partnerId}>
+                    <g key={`${link.partnerId}-${index}`}>
                       {/* Connection line */}
                       <motion.path
                         id={pathId}
@@ -448,59 +448,40 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                  const isActive = activePartnerId === link.partnerId;
                  return (
                    <motion.div
-                     key={link.partnerId}
+                     key={`${link.partnerId}-${index}`}
                      variants={cardReveal}
                      role="button"
                      tabIndex={0}
                      onMouseEnter={() => setHoveredPartner(link.partnerId)}
                      onMouseLeave={() => setHoveredPartner(null)}
-                     className={`p-6 rounded-[2.5rem] transition-all border-2 flex flex-col gap-3 relative overflow-hidden group/card cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 bg-[#243984] border-[#243984] shadow-2xl`}
-                     style={{
-                       boxShadow: depthShadows.brandBlue
-                     }}
+                     className={`group/card relative p-8 rounded-[2rem] transition-all border border-white/10 bg-slate-900/40 backdrop-blur-xl flex flex-col shadow-2xl overflow-hidden cursor-pointer hover:border-white/20`}
                      whileHover={
                        prefersReducedMotion
                          ? {}
-                         : { scale: 1.02, transition: { duration: 0.2 } }
+                         : { y: -5, transition: { duration: 0.3 } }
                      }
                      aria-label={`${partner?.name[lang] || 'System Node'}: ${link.label[lang]}`}
                    >
-                     {/* Always showing the active gradient background */}
-                     {!prefersReducedMotion && (
-                       <motion.div
-                         className="absolute inset-0 bg-gradient-to-br from-[#243984] via-[#243984] to-[#E82F89]/40 rounded-[2.5rem]"
-                       />
-                     )}
-
-                     <div className="flex items-center justify-between relative z-10">
-                        <span className="text-xs font-black uppercase tracking-widest text-white/70">
-                          {partner?.name[lang] || 'System Node'}
-                        </span>
-                        <motion.div
-                          className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors bg-[#E82F89] text-white"
-                          animate={
-                             !prefersReducedMotion
-                              ? { rotate: [0, 360], transition: { duration: 4, repeat: Infinity, ease: 'linear' } }
-                              : { rotate: 0 }
-                          }
-                        >
-                           <Icon name="Zap" size={16} />
-                        </motion.div>
+                     {/* Subtle Internal Glow */}
+                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#E82F89]/5 blur-3xl rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-700" />
+                     
+                     <div className="flex items-start justify-between relative z-10 mb-6">
+                        <div className="flex flex-col gap-1">
+                          <div className="flex items-center gap-2">
+                             <div className="w-1.5 h-1.5 rounded-full bg-[#E82F89]" />
+                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                                {partner?.name[lang] || 'System Feature'}
+                             </span>
+                          </div>
+                          <h4 className="text-2xl font-[800] text-white tracking-tight">
+                            {link.label[lang]}
+                          </h4>
+                        </div>
                      </div>
-                     <p className="text-lg font-bold leading-snug relative z-10 text-white">
-                       {link.label[lang]}
-                     </p>
 
-                     <motion.div
-                       className="text-sm font-medium leading-relaxed mt-2 relative z-10 text-white/90"
-                       style={{ height: 'auto', opacity: 1 }}
-                     >
+                     <p className="text-sm font-medium leading-relaxed text-slate-400 relative z-10 group-hover/card:text-slate-300 transition-colors">
                        {link.description[lang]}
-                       <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
-                          <span className="text-sm text-white font-black">{link.impactMetric[lang]}</span>
-                          <Icon name="ArrowRight" size={12} />
-                       </div>
-                     </motion.div>
+                     </p>
                    </motion.div>
                  );
                }) : (
