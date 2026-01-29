@@ -1,11 +1,81 @@
 import { Pillar, Category, Product, Connection, Language } from './types';
 import productCatalog from './data/product_catalog.json';
 
-// Helper for bilingual support (duplicating English for now as requested)
-const toBilingual = (en: string): Record<Language, string> => ({
-  en: en.trim(),
-  fr: en.trim() + " (FR)" // Visual indicator or just duplicate? User said "support biloginual". I'll just duplicate or basic prefix.
-});
+// Category name translations
+const CATEGORY_TRANSLATIONS: Record<string, { en: string; fr: string }> = {
+  "Camera and Doorbell": { en: "Camera and Doorbell", fr: "Caméra et Sonnette" },
+  "Smart Sensors": { en: "Smart Sensors", fr: "Capteurs Intelligents" },
+  "Smart Climatisation": { en: "Smart Climatisation", fr: "Climatisation Intelligente" },
+  "Smart lighting System and Dimming Controller": { en: "Smart Lighting System and Dimming Controller", fr: "Système d'Éclairage Intelligent et Variateur" },
+  "Curtain, Shutter and Garage Door Controllers": { en: "Curtain, Shutter and Garage Door Controllers", fr: "Contrôleurs de Rideaux, Volets et Portes de Garage" },
+  "Smart Circuit Breaker": { en: "Smart Circuit Breaker", fr: "Disjoncteur Intelligent" },
+  "Smart Door Lock": { en: "Smart Door Lock", fr: "Serrure Intelligente" },
+  "Smart Door Lock Body": { en: "Smart Door Lock Body", fr: "Corps de Serrure Intelligente" },
+  "Smart Control Panel": { en: "Smart Control Panel", fr: "Panneau de Contrôle Intelligent" },
+  "Smart Gateway": { en: "Smart Gateway", fr: "Passerelle Intelligente" },
+  "Smart DIY Breaker": { en: "Smart DIY Breaker", fr: "Disjoncteur DIY Intelligent" },
+  "Smart Music Control System": { en: "Smart Music Control System", fr: "Système de Contrôle Musical Intelligent" },
+  "Smart Switch": { en: "Smart Switch", fr: "Interrupteur Intelligent" },
+  "Smart Accessorries": { en: "Smart Accessories", fr: "Accessoires Intelligents" },
+  "Pet Accesories": { en: "Pet Accessories", fr: "Accessoires pour Animaux" }
+};
+
+// Product name translations (common patterns)
+const translateProductName = (name: string): { en: string; fr: string } => {
+  // Check if it's already translated
+  if (name.includes('(FR)')) {
+    return { en: name.replace(' (FR)', ''), fr: name.replace(' (FR)', '') };
+  }
+
+  // Common translations
+  const translations: Record<string, string> = {
+    'Video Door Bell': 'Sonnette Vidéo',
+    'Video door bell': 'Sonnette vidéo',
+    'Battery powered': 'Alimentée par batterie',
+    'battery': 'batterie',
+    'USB powered': 'Alimentée par USB',
+    'Camera': 'Caméra',
+    'Smart': 'Intelligent',
+    'Sensor': 'Capteur',
+    'Motion': 'Mouvement',
+    'Temperature': 'Température',
+    'Humidity': 'Humidité',
+    'Thermostat': 'Thermostat',
+    'Light': 'Lumière',
+    'Switch': 'Interrupteur',
+    'Lock': 'Serrure',
+    'Gateway': 'Passerelle',
+    'Circuit Breaker': 'Disjoncteur',
+    'Control Panel': 'Panneau de Contrôle'
+  };
+
+  // Try to translate common patterns
+  let frenchName = name;
+  Object.entries(translations).forEach(([en, fr]) => {
+    frenchName = frenchName.replace(new RegExp(en, 'gi'), fr);
+  });
+
+  return { en: name, fr: frenchName };
+};
+
+// Helper for bilingual support
+const toBilingual = (en: string, context?: 'category' | 'product'): Record<Language, string> => {
+  // For categories, use the translation map
+  if (context === 'category' && CATEGORY_TRANSLATIONS[en]) {
+    return CATEGORY_TRANSLATIONS[en];
+  }
+  
+  // For products, use pattern-based translation
+  if (context === 'product') {
+    return translateProductName(en);
+  }
+  
+  // Fallback: just return English for both
+  return {
+    en: en.trim(),
+    fr: en.trim()
+  };
+};
 
 // Get image for product from migrated images in product_catalog.json
 const getImageForProduct = (sku: string, productData?: any) => {
@@ -125,6 +195,144 @@ const EXISTING_CONNECTIONS: Record<string, Connection[]> = {
   ]
 };
 
+// Translate scene descriptions to French
+const translateSceneDescription = (text: string): string => {
+  let translated = text;
+  
+  // Common action verbs (match whole words at start or after punctuation)
+  const actionTranslations: Record<string, string> = {
+    'Displays': 'Affiche',
+    'Turns on': 'Allume',
+    'Turns off': 'Éteint',
+    'Sends alerts': 'Envoie des alertes',
+    'Sends': 'Envoie',
+    'Syncs with': 'Synchronise avec',
+    'Sync with': 'Synchronise avec',
+    'Connects to': 'Connecte à',
+    'Monitors': 'Surveille',
+    'Activates': 'Active',
+    'Controls': 'Contrôle',
+    'Adjusts': 'Ajuste',
+    'Triggers': 'Déclenche',
+    'Streams': 'Diffuse',
+    'Stream': 'Diffuse',
+    'Integrates with': 'Intègre avec',
+    'Works with': 'Fonctionne avec',
+    'Uses': 'Utilise',
+    'Detects': 'Détecte',
+    'Records': 'Enregistre',
+    'Manages': 'Gère',
+    'Automates': 'Automatise'
+  };
+  
+  // Common nouns and objects
+  const nounTranslations: Record<string, string> = {
+    'doorbell footage': 'vidéo de sonnette',
+    'doorbell': 'sonnette',
+    'security cameras': 'caméras de sécurité',
+    'outdoor cameras': 'caméras extérieures',
+    'cameras': 'caméras',
+    'smart lights': 'lumières intelligentes',
+    'smart bulbs': 'ampoules intelligentes',
+    'smart plugs': 'prises intelligentes',
+    'smart speakers': 'enceintes intelligentes',
+    'smart speaker': 'enceinte intelligente',
+    'smart vents': 'ventilations intelligentes',
+    'smart thermostats': 'thermostats intelligents',
+    'smart thermostat': 'thermostat intelligent',
+    'smart home hub': 'hub domotique',
+    'smart weather stations': 'stations météo intelligentes',
+    'smart dehumidifiers': 'déshumidificateurs intelligents',
+    'temperature sensors': 'capteurs de température',
+    'motion sensors': 'capteurs de mouvement',
+    'motion sensor': 'capteur de mouvement',
+    'music systems': 'systèmes audio',
+    'cloud storage services': 'services de stockage cloud',
+    'energy usage': 'consommation d\'énergie',
+    'power usage': 'consommation électrique',
+    'humidity': 'humidité',
+    'temperature': 'température',
+    'footage': 'vidéo',
+    'alerts': 'alertes',
+    'pathways': 'chemins'
+  };
+  
+  // Common phrases and clauses
+  const phraseTranslations: Record<string, string> = {
+    'on screen when triggered': 'à l\'écran lors du déclenchement',
+    'when motion is detected': 'quand un mouvement est détecté',
+    'when someone rings': 'quand quelqu\'un sonne',
+    'when door is unlocked remotely': 'quand la porte est déverrouillée à distance',
+    'when door or window opens': 'quand une porte ou fenêtre s\'ouvre',
+    'when visitors arrive': 'quand des visiteurs arrivent',
+    'when movement is detected': 'quand un mouvement est détecté',
+    'when someone is home': 'quand quelqu\'un est à la maison',
+    'when room is empty': 'quand la pièce est vide',
+    'when unauthorized access is attempted': 'lors d\'une tentative d\'accès non autorisé',
+    'when dangerous gas levels are detected': 'quand des niveaux dangereux de gaz sont détectés',
+    'when natural gas leaks': 'lors de fuites de gaz naturel',
+    'when sensor detects': 'quand le capteur détecte',
+    'when humidity exceeds set thresholds': 'quand l\'humidité dépasse les seuils définis',
+    'to smartphone': 'au smartphone',
+    'to your phone': 'à votre téléphone',
+    'from your phone': 'depuis votre téléphone',
+    'for motion-activated illumination': 'pour éclairage activé par mouvement',
+    'for automated lighting': 'pour éclairage automatisé',
+    'for automated porch lighting': 'pour éclairage de porche automatisé',
+    'for enhanced surveillance alerts': 'pour alertes de surveillance améliorées',
+    'for visible alerts': 'pour alertes visuelles',
+    'for better air circulation': 'pour meilleure circulation d\'air',
+    'for efficiency tracking': 'pour suivi d\'efficacité',
+    'for voice commands': 'pour commandes vocales',
+    'for voice control': 'pour contrôle vocal',
+    'for timely action': 'pour action rapide',
+    'via Bluetooth': 'via Bluetooth',
+    'via IR': 'via infrarouge',
+    'via smart home hub': 'via hub domotique',
+    'from smart home hub': 'depuis le hub domotique',
+    'like Google Home or Alexa': 'comme Google Home ou Alexa',
+    'based on voice commands': 'selon les commandes vocales',
+    'based on real-time room conditions': 'selon les conditions de la pièce en temps réel',
+    'based on weather forecasts': 'selon les prévisions météo',
+    'and music mood settings': 'et réglages d\'ambiance musicale',
+    'and saves footage': 'et enregistre la vidéo',
+    'to change colors': 'pour changer les couleurs',
+    'in utility areas': 'dans les zones techniques',
+    'which announce evacuation routes': 'qui annoncent les voies d\'évacuation',
+    'when carbon monoxide is detected': 'quand du monoxyde de carbone est détecté',
+    'to flash red': 'pour clignoter en rouge',
+    'to light pathways': 'pour éclairer les chemins',
+    'to manage heating schedules remotely': 'pour gérer les horaires de chauffage à distance',
+    'automatically shuts off': 'coupe automatiquement',
+    'pulsing colors rhythmically to match beats': 'couleurs pulsantes en rythme avec la musique',
+    'for immersive entertainment experiences': 'pour expériences de divertissement immersives',
+    'to turn off all entertainment devices': 'pour éteindre tous les appareils de divertissement',
+    'eliminating standby power waste': 'éliminant le gaspillage d\'énergie en veille'
+  };
+  
+  // Apply action translations first (at start of sentence)
+  Object.entries(actionTranslations).forEach(([en, fr]) => {
+    const regex = new RegExp(`^${en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+    if (regex.test(translated)) {
+      translated = translated.replace(regex, fr);
+    }
+  });
+  
+  // Apply noun translations
+  Object.entries(nounTranslations).forEach(([en, fr]) => {
+    const regex = new RegExp(`\\b${en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+    translated = translated.replace(regex, fr);
+  });
+  
+  // Apply phrase translations
+  Object.entries(phraseTranslations).forEach(([en, fr]) => {
+    const regex = new RegExp(en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    translated = translated.replace(regex, fr);
+  });
+  
+  return translated;
+};
+
 // Keyword mapping for auto-categorization of connection strings
 const KEYWORD_TO_CATEGORY: Record<string, string> = {
   'light': 'lighting', 'bulb': 'lighting', 'dim': 'lighting', 'led': 'lighting',
@@ -222,17 +430,38 @@ productCatalog.categories.forEach((catInfo: any) => {
           // Extract first two meaningful words relative to the partner? Or just first 2 words of sentence.
           // Let's try to make it look like "Action-Object"
           const words = sceneText.split(' ').map(w => w.replace(/[^a-zA-Z]/g, ''));
-          const labelCandidate = words.slice(0, 2).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('-');
+          const labelEn = words.slice(0, 2).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('-');
+          
+          // Translate label words to French
+          const labelTranslations: Record<string, string> = {
+            'Monitors': 'Surveille', 'Controls': 'Contrôle', 'Automates': 'Automatise',
+            'Activates': 'Active', 'Adjusts': 'Ajuste', 'Manages': 'Gère',
+            'Triggers': 'Déclenche', 'Syncs': 'Synchronise', 'Connects': 'Connecte',
+            'Energy': 'Énergie', 'Power': 'Puissance', 'Lighting': 'Éclairage',
+            'Temperature': 'Température', 'Climate': 'Climat', 'Door': 'Porte',
+            'Lock': 'Serrure', 'Garage': 'Garage', 'Window': 'Fenêtre',
+            'Sensor': 'Capteur', 'Camera': 'Caméra', 'Alert': 'Alerte'
+          };
+          
+          const labelWords = labelEn.split('-');
+          const labelFr = labelWords.map(word => labelTranslations[word] || word).join('-');
 
           // 3. Generate Impact Metric
-          const metrics = [
+          const metricsEn = [
             'Enhanced Efficiency', 'Improved Safety', 'Better Comfort', 
             'Automated Control', 'Instant Response', 'Seamless Sync',
             'Energy Optimized', 'User Verified'
           ];
+          const metricsFr = [
+            'Efficacité Améliorée', 'Sécurité Améliorée', 'Confort Amélioré',
+            'Contrôle Automatisé', 'Réponse Instantanée', 'Synchronisation Fluide',
+            'Énergie Optimisée', 'Utilisateur Vérifié'
+          ];
           // Use a simple hash of the string to pick a consistent metric for the same string
           const hash = sceneText.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-          const metricEn = metrics[hash % metrics.length];
+          const metricIndex = hash % metricsEn.length;
+          const metricEn = metricsEn[metricIndex];
+          const metricFr = metricsFr[metricIndex];
 
           // 4. Add if unique and under limit
           // We limit strictly to 4 total connections per category
@@ -247,9 +476,9 @@ productCatalog.categories.forEach((catInfo: any) => {
              
              combinedConnections.push({
               partnerId,
-              label: { en: labelCandidate, fr: labelCandidate },
-              description: toBilingual(sceneText),
-              impactMetric: { en: metricEn, fr: metricEn },
+              label: { en: labelEn, fr: labelFr },
+              description: { en: sceneText, fr: translateSceneDescription(sceneText) },
+              impactMetric: { en: metricEn, fr: metricFr },
               scores
             });
           }
@@ -261,11 +490,14 @@ productCatalog.categories.forEach((catInfo: any) => {
   // Create Category
   const category: Category = {
     id: catId,
-    name: toBilingual(catInfo.name),
+    name: toBilingual(catInfo.name, 'category'),
     productCount: catInfo.product_count,
     heroProductId: '', // will set below
     showcaseProductIds: [], // will set below
-    description: toBilingual('Smart automation solutions for ' + catInfo.name), // generic description if missing
+    description: {
+      en: `Smart automation solutions for ${catInfo.name}`,
+      fr: `Solutions d'automatisation intelligente pour ${CATEGORY_TRANSLATIONS[catInfo.name]?.fr || catInfo.name}`
+    },
     connections: combinedConnections
   };
 
@@ -275,11 +507,11 @@ productCatalog.categories.forEach((catInfo: any) => {
       id: p.sku,
       category: catId,
       sku: p.sku,
-      name: toBilingual(p.name),
+      name: toBilingual(p.name, 'product'),
       specs: p.specs ? p.specs.split('|').map((s: string) => s.trim()) : [],
       benefits: [], // Extract from description? Or leave empty for now
       imageUrl: getImageForProduct(p.sku, p), // Pass product data to get migrated images
-      description: toBilingual(p.description || ''),
+      description: { en: p.description || '', fr: p.description || '' }, // Full descriptions need manual translation
       slug: p.slug,
       automations: p.automations || [],
       connectedScenes: p.connected_scenes || []

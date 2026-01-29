@@ -1,0 +1,36 @@
+<analysis>
+  <product_name_analysis>
+    <current_assessment>...</current_assessment>
+    <alternatives>
+      <option reason="...">...</option>
+      <option reason="...">...</option>
+      <option reason="...">...</option>
+    </alternatives>
+    <final_recommendation>...</final_recommendation>
+    <tagline>...</tagline>
+  </product_name_analysis>
+
+  <implied_specs>
+    <spec name="Connectivity" source="visual_inference">...</spec>
+    <spec name="Ecosystem/Compatibility" source="context">...</spec>
+    <spec name="Security/Privacy" source="context">...</spec>
+    <spec name="Power/Backup" source="visual_inference">...</spec>
+    <spec name="Dimensions/Finish" source="visual_inference">...</spec>
+    <assumptions>
+      <assumption>...</assumption>
+    </assumptions>
+  </implied_specs>
+
+  <features_benefits count="5" style="apple-like">
+    <item>
+      <title>...</title>
+      <benefit>...</benefit>
+      <feature>...</feature>
+      <microproof>...</microproof>
+    </item>
+  </features_benefits>
+
+  <rewritten_original_prompt>
+    ...
+  </rewritten_original_prompt>
+</analysis>

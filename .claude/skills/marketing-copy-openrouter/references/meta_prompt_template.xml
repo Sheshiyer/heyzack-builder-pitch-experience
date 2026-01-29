@@ -1,0 +1,108 @@
+<meta_prompt>
+  <instruction_set>
+    <instruction>
+      <action>Assume a specific persona.</action>
+      <details>
+        <persona_role>{{PERSONA_ROLE}}</persona_role>
+        <persona_qualifications>
+          <worked_at>{{WORKED_AT_1}}</worked_at>
+          <worked_at>{{WORKED_AT_2}}</worked_at>
+          <expertise>{{EXPERTISE_1}}</expertise>
+          <expertise>{{EXPERTISE_2}}</expertise>
+          <expertise>{{EXPERTISE_3}}</expertise>
+        </persona_qualifications>
+        <audience>{{AUDIENCE}}</audience>
+        <voice>{{VOICE}}</voice>
+      </details>
+    </instruction>
+
+    <instruction>
+      <action>Perform product analysis.</action>
+      <details>
+        <input_product>{{PRODUCT_NAME}}</input_product>
+        <goals>
+          <goal>{{GOAL_1}}</goal>
+          <goal>{{GOAL_2}}</goal>
+        </goals>
+        <constraints>
+          <constraint>No unverifiable claims; no brand lore beyond prompt/context</constraint>
+          <constraint>Prefer outcomes homeowners feel: safety, time saved, comfort, energy savings, simplicity</constraint>
+          <constraint>Do not show internal reasoning; output final results only</constraint>
+        </constraints>
+      </details>
+    </instruction>
+
+    <instruction>
+      <action>Extract and present key features and benefits.</action>
+      <details>
+        <quantity>5</quantity>
+        <style>Apple-like (concise, benefit-first, everyday language, no buzzwords)</style>
+        <format_each_item>
+          <title max_chars="28">Short, evocative label</title>
+          <benefit max_chars="120">Plain-English homeowner value</benefit>
+          <feature max_chars="160">What enables the benefit</feature>
+          <microproof max_chars="90">Quick proof: metric, standard, or assumption</microproof>
+        </format_each_item>
+      </details>
+    </instruction>
+
+    <instruction>
+      <action>Deliverables and formatting.</action>
+      <details>
+        <output_format>XML only</output_format>
+        <sections>
+          <section>product_name_analysis</section>
+          <section>implied_specs</section>
+          <section>features_benefits</section>
+          <section>rewritten_original_prompt</section>
+        </sections>
+        <schema>
+          <![CDATA[
+          <analysis>
+            <product_name_analysis>
+              <current_assessment>...</current_assessment>
+              <alternatives>
+                <option reason="...">...</option>
+                <option reason="...">...</option>
+                <option reason="...">...</option>
+              </alternatives>
+              <final_recommendation>...</final_recommendation>
+              <tagline>...</tagline>
+            </product_name_analysis>
+
+            <implied_specs>
+              <spec name="Connectivity" source="visual_inference">...</spec>
+              <spec name="Ecosystem/Compatibility" source="context">...</spec>
+              <spec name="Security/Privacy" source="context">...</spec>
+              <spec name="Power/Backup" source="visual_inference">...</spec>
+              <spec name="Dimensions/Finish" source="visual_inference">...</spec>
+              <assumptions>
+                <assumption>...</assumption>
+              </assumptions>
+            </implied_specs>
+
+            <features_benefits count="5" style="apple-like">
+              <item>
+                <title>...</title>
+                <benefit>...</benefit>
+                <feature>...</feature>
+                <microproof>...</microproof>
+              </item>
+            </features_benefits>
+
+            <rewritten_original_prompt>
+              ...
+            </rewritten_original_prompt>
+          </analysis>
+          ]]>
+        </schema>
+        <quality_checklist>
+          <check>All 4 sections present</check>
+          <check>Exactly 5 feature/benefit items</check>
+          <check>Assumptions clearly labeled; no unsupported claims</check>
+          <check>Short lines; plain language; value before tech</check>
+        </quality_checklist>
+      </details>
+    </instruction>
+  </instruction_set>
+</meta_prompt>

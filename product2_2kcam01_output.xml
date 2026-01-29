@@ -1,0 +1,71 @@
+<analysis>
+  <product_name_analysis>
+    <current_assessment>The current name "Camera Indoor (USB-C) - HZ-C-2KCAM01" is overly technical and functional. It reads like a SKU rather than a consumer product. The inclusion of the model number and connector type in the primary title creates friction for non-technical homeowners.</current_assessment>
+    <alternatives>
+      <option reason="Focuses on the expansive field of view and the feeling of total awareness.">OmniView 2K</option>
+      <option reason="Emphasizes the core emotional benefit of seeing everything in the home clearly.">Insight Indoor</option>
+      <option reason="Highlights the 360-degree coverage and the sense of home protection.">Vista 360</option>
+    </alternatives>
+    <final_recommendation>OmniView 2K</final_recommendation>
+    <tagline>See everything. Feel everywhere.</tagline>
+  </product_name_analysis>
+
+  <implied_specs>
+    <spec name="Connectivity" source="visual_inference">Dual-band Wi-Fi support for 2.4GHz and 5GHz networks ensures a stable, high-speed connection in any room.</spec>
+    <spec name="Ecosystem/Compatibility" source="context">Works seamlessly with major smart speakers and displays for instant voice-activated viewing.</spec>
+    <spec name="Security/Privacy" source="context">Physical privacy mode and local storage options keep your most personal moments off the cloud.</spec>
+    <spec name="Power/Backup" source="visual_inference">Universal USB-C power input provides a modern, reliable connection that fits standard home adapters.</spec>
+    <spec name="Dimensions/Finish" source="visual_inference">Compact, matte-white minimalist design intended to blend into bookshelves and nurseries discreetly.</spec>
+    <assumptions>
+      <assumption>The device requires a constant power source via the included USB-C cable.</assumption>
+      <assumption>Local storage refers to a microSD card slot (card typically sold separately).</assumption>
+      <assumption>Remote access requires a persistent home Wi-Fi connection and the companion smartphone app.</assumption>
+    </assumptions>
+  </implied_specs>
+
+  <features_benefits count="5" style="apple-like">
+    <item>
+      <title>Total Room Awareness</title>
+      <benefit>See every corner of the room without ever moving the camera yourself.</benefit>
+      <feature>A smooth pan-and-tilt motor provides a full 355-degree horizontal and 180-degree vertical range of motion.</feature>
+      <microproof>355° rotation covers an entire living space from a single shelf.</microproof>
+    </item>
+    <item>
+      <title>Lifelike Clarity</title>
+      <benefit>Identify faces and small details clearly, so you’re never left guessing what you’re seeing.</benefit>
+      <feature>High-resolution 2K sensors capture double the detail of standard 1080p high-definition cameras.</feature>
+      <microproof>2K resolution delivers 3 million pixels for crisp, zoomable detail.</microproof>
+    </item>
+    <item>
+      <title>Privacy on Your Terms</title>
+      <benefit>Enjoy total peace of mind knowing your camera only watches when you want it to.</benefit>
+      <feature>A dedicated Privacy Protection Mode allows you to instantly disable recording and streaming.</feature>
+      <microproof>One-tap privacy shielding via the app for immediate physical peace of mind.</microproof>
+    </item>
+    <item>
+      <title>Intelligent Alerts</title>
+      <benefit>Stay informed about what matters, like a waking baby or a pet’s antics, without the noise.</benefit>
+      <feature>Advanced sensors distinguish between human movement and background noise to send relevant notifications.</feature>
+      <microproof>Real-time human motion and sound detection filtered by on-device intelligence.</microproof>
+    </item>
+    <item>
+      <title>Natural Conversation</title>
+      <benefit>Check in and chat with family or pets as if you were standing right in the room.</benefit>
+      <feature>Built-in high-fidelity microphone and speaker enable seamless, two-way audio through your phone.</feature>
+      <microproof>Low-latency audio for real-time, fluid communication from anywhere.</microproof>
+    </item>
+  </features_benefits>
+
+  <rewritten_original_prompt>
+    Every corner, covered. Every moment, clear.
+
+    The new OmniView 2K brings your entire home into focus. With a lens that rotates to see everything and a sensor that captures life in stunning detail, you’re always just a tap away from home.
+
+    • See the full picture. Pan and tilt to scan the room in 2K clarity, day or night.
+    • Stay connected. Talk to the kids or quiet the dog with clear two-way audio.
+    • Smart notifications. Get an alert the moment human motion or sound is detected.
+    • Privacy first. Turn off the feed instantly whenever you need a private moment.
+
+    Simple to set up with a single USB-C cable and even easier to use with your favorite smart speaker. It’s not just a camera; it’s the peace of mind that comes from knowing exactly what’s happening at home.
+  </rewritten_original_prompt>
+</analysis>

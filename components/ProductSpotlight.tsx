@@ -463,7 +463,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                           <div className="flex items-center gap-2">
                              <div className="w-1.5 h-1.5 rounded-full bg-[#E82F89]" />
                              <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">
-                                {partner?.name[lang] || 'System Feature'}
+                                {partner?.name[lang] || (lang === 'en' ? 'System Feature' : 'Fonction Système')}
                              </span>
                           </div>
                           <h4 className="text-xl font-[800] text-white tracking-tight">
@@ -472,9 +472,20 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                         </div>
                      </div>
 
-                     <p className="text-sm font-medium leading-relaxed text-slate-400 relative z-10 group-hover/card:text-slate-300 transition-colors">
+                     <p className="text-sm font-medium leading-relaxed text-slate-400 relative z-10 group-hover/card:text-slate-300 transition-colors mb-3">
                        {link.description[lang]}
                      </p>
+
+                     {/* Impact Metric Badge */}
+                     {link.impactMetric && (
+                       <div className="flex items-center gap-2 relative z-10">
+                         <div className="px-3 py-1.5 rounded-lg bg-[#E82F89]/10 border border-[#E82F89]/20">
+                           <span className="text-[10px] font-black text-[#E82F89] uppercase tracking-wider">
+                             {link.impactMetric[lang]}
+                           </span>
+                         </div>
+                       </div>
+                     )}
                    </motion.div>
                  );
                }) : (
@@ -482,7 +493,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                    className="col-span-full py-8 text-center text-slate-300 italic font-medium border-2 border-dashed border-slate-100 rounded-[2.5rem]"
                    variants={cardReveal}
                  >
-                   Standalone capable or Matter-mesh integration.
+                   {lang === 'en' ? 'Standalone capable or Matter-mesh integration.' : 'Autonome ou intégration Matter-mesh.'}
                  </motion.div>
                )}
             </motion.div>

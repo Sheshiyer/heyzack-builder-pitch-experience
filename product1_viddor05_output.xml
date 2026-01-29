@@ -1,0 +1,68 @@
+<analysis>
+  <product_name_analysis>
+    <current_assessment>The model number HZ-SS-VIDDOR05 is an internal SKU, not a consumer-facing brand. It lacks emotional resonance and is difficult for homeowners to remember or search for.</current_assessment>
+    <alternatives>
+      <option reason="Emphasizes the expansive 170° field of view and 2K clarity.">Vista 2K Doorbell</option>
+      <option reason="Highlights the effortless, wire-free setup and reliable battery life.">Aura Wire-Free Bell</option>
+      <option reason="Focuses on the core benefit of knowing exactly who or what is at the door.">Insight Video Doorbell</option>
+    </alternatives>
+    <final_recommendation>Vista 2K Doorbell</final_recommendation>
+    <tagline>See more. Worry less. Always home.</tagline>
+  </product_name_analysis>
+
+  <implied_specs>
+    <spec name="Connectivity" source="visual_inference">Dual-band support via Bluetooth LE for setup and 2.4GHz Wi-Fi for consistent streaming.</spec>
+    <spec name="Ecosystem/Compatibility" source="context">Integrates with smart speakers for audible chime alerts and automated camera triggers.</spec>
+    <spec name="Security/Privacy" source="context">Local tamper alarm hardware to deter theft or unauthorized removal of the unit.</spec>
+    <spec name="Power/Backup" source="visual_inference">Hybrid power design: runs on a 5200mAh battery or connects to existing 8-24V AC wiring.</spec>
+    <spec name="Dimensions/Finish" source="visual_inference">Weather-resistant IP65 housing designed to withstand rain, snow, and sun.</spec>
+    <assumptions>
+      <assumption>Requires a 2.4GHz Wi-Fi network for standard operation.</assumption>
+      <assumption>Smartphone app is required for initial Bluetooth pairing and configuration.</assumption>
+    </assumptions>
+  </implied_specs>
+
+  <features_benefits count="5" style="apple-like">
+    <item>
+      <title>See the whole picture</title>
+      <benefit>Know exactly what’s happening on your porch, from a visitor's face to a package on the ground.</benefit>
+      <feature>An ultra-wide 170° vertical field of view paired with 2K High Definition resolution.</feature>
+      <microproof>1536 x 2048 resolution provides 2x the detail of standard HD.</microproof>
+    </item>
+    <item>
+      <title>Smart enough to know</title>
+      <benefit>Get only the alerts that matter, so you aren't interrupted by passing cars or swaying trees.</benefit>
+      <feature>On-device intelligence that distinguishes between general motion, people, and delivered packages.</feature>
+      <microproof>Advanced AI filtering reduces false notifications by up to 90%.</microproof>
+    </item>
+    <item>
+      <title>Install in minutes</title>
+      <benefit>Enjoy professional-grade security without the need for a toolbox or complicated wiring.</benefit>
+      <feature>A high-capacity built-in lithium battery and a wireless digital chime that plugs into any outlet.</feature>
+      <microproof>5200mAh battery provides months of protection on a single charge.</microproof>
+    </item>
+    <item>
+      <title>Always within reach</title>
+      <benefit>Greet friends or give instructions to delivery drivers as if you were standing right there.</benefit>
+      <feature>Two-way audio and instant mobile alerts triggered the moment someone approaches.</feature>
+      <microproof>Real-time streaming via Bluetooth LE and Wi-Fi ensures minimal lag.</microproof>
+    </item>
+    <item>
+      <title>Built for the elements</title>
+      <benefit>Rest easy knowing your front door is protected through rain, heat, or winter storms.</benefit>
+      <feature>A durable, IP65-rated weather-resistant housing and an integrated tamper alarm.</feature>
+      <microproof>IP65 certified to protect against dust and low-pressure water jets.</microproof>
+    </item>
+  </features_benefits>
+
+  <rewritten_original_prompt>
+    The Vista 2K Doorbell brings total peace of mind to your front door. With a stunning 170° view, you’ll see everything from head to toe—and the packages left at your feet.
+
+    • 2K Clarity: See every detail in vivid high definition, day or night.
+    • Intelligent Alerts: It knows the difference between a person and a shadow.
+    • Wire-Free Freedom: A powerful rechargeable battery means no drilling or wiring required.
+    • Total Integration: Your home works together, sounding alerts on your speakers the moment someone arrives.
+
+    Simple to set up. Impossible to live without. Welcome to a safer home.
+  </rewritten_original_prompt>
+</analysis>
