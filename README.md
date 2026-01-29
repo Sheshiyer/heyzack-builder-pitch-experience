@@ -32,12 +32,13 @@ HeyZack Builder Pitch Experience is a premium web application designed to showca
 
 ### Key Highlights
 
-- **128 Products** across 15 smart categories
+- **109 Products** across 15 smart categories
 - **Real-time ecosystem connections** showing product interoperability
 - **Dynamic Three Pillars Analysis** for every product
 - **AI-powered property assessment** via Gemini integration
 - **Bilingual support** (English/French)
 - **Apple-inspired design language** with glassmorphism and depth
+- **Content quality management** with automated scripts for catalog maintenance
 
 ---
 
@@ -187,7 +188,12 @@ heyzack-builder-pitch-experience/
 │   ├── designTokens.ts           # Glass effects & shadows
 │   └── interactiveElements.tsx   # Element renderer
 ├── data/
-│   └── product_catalog.json      # 128 products with metadata
+│   └── product_catalog.json      # 109 products with metadata
+├── scripts/
+│   ├── 05-analyze-content-quality.js  # Content quality analysis
+│   ├── 06-fix-content-quality.js      # Auto-fix formatting issues
+│   ├── 07-deep-fix-formatting.js      # Pattern-specific fixes
+│   └── CONTENT_QUALITY_README.md      # Scripts documentation
 ├── constants.tsx                  # Categories, connections, scenes
 ├── categoryEnhancements.tsx      # Visual themes per category
 ├── types.ts                       # TypeScript definitions
@@ -343,6 +349,36 @@ const colors = {
 - **First Contentful Paint**: < 1.5s
 - **Time to Interactive**: < 3.0s
 - **Lighthouse Score**: 90+ (Performance)
+
+---
+
+## 🔧 Content Quality Management
+
+The project includes automated scripts to maintain high-quality product content:
+
+### Analysis & Fixes
+
+```bash
+# Analyze content for issues
+node scripts/05-analyze-content-quality.js
+
+# Auto-fix formatting problems
+node scripts/07-deep-fix-formatting.js
+```
+
+**What gets checked:**
+- Formatting issues (capitalization, punctuation, malformed patterns)
+- Content repetition across automations and integrations
+- Generic/low-value phrases
+- Missing or incomplete data
+
+**Recent improvements:**
+- ✅ Fixed 70+ formatting issues automatically
+- ✅ Eliminated all generic content (5 → 0 instances)
+- ✅ Standardized Trigger/Action patterns
+- ✅ Product-specific benefit-focused copy
+
+See [scripts/CONTENT_QUALITY_README.md](scripts/CONTENT_QUALITY_README.md) for detailed documentation.
 
 ---
 

@@ -149,16 +149,20 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
       fixed z-50 transition-all duration-500
       /* Mobile: Bottom center, Horizontal, scaled down, consistent 1em margin */
       bottom-6 left-4 right-4 mx-auto max-w-[400px]
-      /* Desktop: Left side, Vertical, auto width, 1em margin */
-      md:bottom-auto md:right-auto md:left-4 md:top-1/2 md:-translate-y-1/2 md:w-auto md:max-w-none md:mx-0
+      /* Desktop: Left side, Vertical, auto width, 1em margin with overflow handling */
+      md:bottom-4 md:right-auto md:left-4 md:top-4 md:translate-y-0 md:w-auto md:max-w-none md:mx-0
+      md:max-h-[calc(100vh-2rem)]
     `}>
       <div 
         className={`
           backdrop-blur-xl bg-white/10 border border-white/20 shadow-[0_8px_32px_rgba(31,38,135,0.15)] relative
           /* Mobile shape */
           rounded-2xl p-2 flex overflow-x-auto no-scrollbar items-center gap-1
-          /* Desktop shape */
-          md:flex-col md:rounded-3xl md:p-3 md:overflow-visible md:gap-3 md:justify-start
+          /* Desktop shape with scrollable overflow */
+          md:flex-col md:rounded-3xl md:p-3 md:overflow-y-auto md:overflow-x-visible md:gap-3 md:justify-start
+          md:max-h-full
+          /* Custom scrollbar styling */
+          md:scrollbar-thin md:scrollbar-track-transparent md:scrollbar-thumb-white/20 md:hover:scrollbar-thumb-white/30
         `}
         style={{ 
           backdropFilter: 'blur(10px)',

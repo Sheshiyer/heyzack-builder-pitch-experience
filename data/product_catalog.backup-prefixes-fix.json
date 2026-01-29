@@ -130,7 +130,7 @@
           "keywords": "video doorbell, usb doorbell, smart doorbell, security camera, wifi doorbell, 1080p doorbell, night vision, two-way audio, weatherproof camera, wireless doorbell",
           "automations": [
             "Motion-Activated Security Alert",
-            "Trigger: Human detection via motion sensor",
+            "Trigger:* Human detection via motion sensor",
             "Doorbell Press Lights Up the Entrance"
           ],
           "connected_scenes": [
@@ -203,7 +203,7 @@
           "automations": [
             "Here are three practical automations for the Camera Outdoor wired (Dual-Lens):",
             "Motion-Activated Alerts with Pan & Tilt Tracking",
-            "Trigger: Motion detected by the camera (human motion detection)."
+            "Trigger:* Motion detected by the camera (human motion detection)."
           ],
           "connected_scenes": [
             "Syncs with doorbell to show live feed of visitors",
@@ -238,7 +238,7 @@
           "keywords": "outdoor camera, bulb camera, e27 wifi, 3mp security, motion tracking, night vision, smart lamp, alexa camera, google home, 2k surveillance",
           "automations": [
             "Motion-Activated Security Alerts",
-            "Trigger: Motion detected by the camera.",
+            "Trigger:* Motion detected by the camera.",
             "Two-Way Voice Communication When Motion is Detected"
           ],
           "connected_scenes": [
@@ -274,8 +274,8 @@
           "keywords": "solar camera, outdoor security, 1080p wifi, pan tilt, battery camera, night vision, IP65 camera, wireless surveillance, smart home camera, pro kit",
           "automations": [
             "Motion-Activated Security Alert",
-            "Trigger: Human detection by the camera's IR/color night vision.",
-            "Action: Sends a push notification to your phone and activates the siren alarm."
+            "Trigger:* Human detection by the camera's IR/color night vision.",
+            "Action:* Sends a push notification to your phone and activates the siren alarm."
           ],
           "connected_scenes": [
             "Outdoor Camera solar starts Indoor Camera recording when its AI spots a person, giving full-room coverage before break-in.",
@@ -310,8 +310,8 @@
           "keywords": "outdoor camera, solar camera, battery camera, 2K security camera, WiFi camera, PIR motion, night vision, weatherproof camera, wireless security, home surveillance",
           "automations": [
             "Motion-Activated Light and Recording for Security",
-            "Trigger: PIR motion detection at night.",
-            "Action: The camera’s built-in light turns on, and the camera starts recording. A notification is sent to your phone."
+            "Trigger:* PIR motion detection at night.",
+            "Action:* The camera’s built-in light turns on, and the camera starts recording. A notification is sent to your phone."
           ],
           "connected_scenes": [
             "Detects motion and turns on indoor smart lights for security",
@@ -347,7 +347,7 @@
           "automations": [
             "Here are three practical automations you can set up with the Baby Monitor with display:",
             "Automatic Night Vision Activation with Audio Alert",
-            "Trigger: Motion detected in the baby's room after a set time (e.g., 8 PM)."
+            "Trigger:* Motion detected in the baby's room after a set time (e.g., 8 PM)."
           ],
           "connected_scenes": [
             "Displays live feed from doorbell cameras for added security",
@@ -424,8 +424,8 @@
           "keywords": "zigbee shutter motor, tubular motor, 230V shutter, smart shutter, curtain controller, garage door motor, 25mm motor, IP44 motor, zigbee 3.0, roller shutter",
           "automations": [
             "Automation 1: Schedule-Based Shutter Control for Energy Efficiency",
-            "Trigger: Time of day (e.g., 7:00 AM and 5:00 PM)",
-            "Action: The Zigbee motor automatically opens or closes the shutters based on the schedule."
+            "Trigger:* Time of day (e.g., 7:00 AM and 5:00 PM)",
+            "Action:* The Zigbee motor automatically opens or closes the shutters based on the schedule."
           ],
           "connected_scenes": [
             "Automatically opens blinds when security camera detects motion",
@@ -496,8 +496,8 @@
           "keywords": "smart curtain, zigbee motor, retractable rail, quiet curtain opener, home automation, curtain controller, motorized track, 4.5m rail, remote control curtains, smart home",
           "automations": [
             "Automatically open curtains at sunrise for natural light",
-            "Trigger: Time of day (sunrise)",
-            "Action: Curtains open automatically"
+            "Trigger*: Time of day (sunrise)",
+            "Action*: Curtains open automatically"
           ],
           "connected_scenes": [
             "Automatically closes curtains when motion detected at the doorbell",
@@ -604,8 +604,8 @@
           "keywords": "smart curtain, curtain controller, home automation, motorized track, wifi curtain, zigbee motor, smart blinds, remote control",
           "automations": [
             "Automatically Open/Close Curtains at Set Times",
-            "Trigger: Schedule (e.g., sunrise/sunset or fixed times like 7 AM and 7 PM).",
-            "Action: Curtains open in the morning and close at night using the Zigbee/WIFI motor."
+            "Trigger:* Schedule (e.g., sunrise/sunset or fixed times like 7 AM and 7 PM).",
+            "Action:* Curtains open in the morning and close at night using the Zigbee/WIFI motor."
           ],
           "connected_scenes": [
             "Opens curtains at sunrise for natural light",
@@ -747,8 +747,8 @@
           "slug": "zigbee-smart-curtain-switch-module",
           "keywords": "smart curtain switch, zigbee curtain, automated curtains, curtain controller, zigbee 3.0, wifi curtain, electric curtain, curtain automation, smart home curtains, 250W curtain",
           "automations": [
-            "Trigger: Time of day (sunrise/sunset via APP scheduling)",
-            "Action: Curtains automatically open at sunrise and close at sunset",
+            "Trigger:* Time of day (sunrise/sunset via APP scheduling)",
+            "Action:* Curtains automatically open at sunrise and close at sunset",
             "Useful for:* Energy saving (natural light during the day, insulation at night) and convenience (no manual operation)"
           ],
           "connected_scenes": [
@@ -1091,7 +1091,7 @@
           "automations": [
             "Here are three practical automations using the 2P Breaker Zigbee with power monitoring:",
             "Monitor Power Usage for Energy Savings",
-            "Trigger: Power consumption exceeds a set threshold (e.g., 100W for 5 minutes)."
+            "Trigger*: Power consumption exceeds a set threshold (e.g., 100W for 5 minutes)."
           ],
           "connected_scenes": [
             "Automatically turns off appliances when power exceeds set limits",
@@ -1126,8 +1126,8 @@
           "keywords": "smart breaker, Zigbee breaker, 3P breaker, power monitoring, DIN rail breaker, smart circuit breaker, energy monitor, remote breaker, 63A breaker, leakage protection",
           "automations": [
             "Energy Monitoring and Alerts",
-            "Trigger: Power consumption exceeds a set threshold (e.g., 3000W for 5 minutes).",
-            "Action: Sends a notification to your phone or smart assistant (e.g., \"High power consumption detected!\")."
+            "Trigger:* Power consumption exceeds a set threshold (e.g., 3000W for 5 minutes).",
+            "Action:* Sends a notification to your phone or smart assistant (e.g., \"High power consumption detected!\")."
           ],
           "connected_scenes": [
             "Monitors energy usage of smart plugs and lights for efficiency tracking",
@@ -1169,7 +1169,7 @@
           "automations": [
             "Here are three practical automations for the DIN Rail Smart Meter based on its actual capabilities:",
             "Energy Monitoring Alerts",
-            "Trigger: High power consumption (e.g., exceeds 2000W for 5 minutes)"
+            "Trigger:* High power consumption (e.g., exceeds 2000W for 5 minutes)"
           ],
           "connected_scenes": [
             "Monitors energy usage to optimize smart thermostat settings",
@@ -1349,7 +1349,7 @@
           "automations": [
             "Here are three practical automations based on the Wall Thermostat's actual capabilities:",
             "Smart Heating Adjustment Based on Floor Temperature:",
-            "Trigger: The floor sensor detects that the temperature has dropped below a set threshold (e.g., 20°C)."
+            "Trigger:* The floor sensor detects that the temperature has dropped below a set threshold (e.g., 20°C)."
           ],
           "connected_scenes": [
             "Adjusts heating when doorbell detects visitors arriving home.",
@@ -1383,9 +1383,9 @@
           "slug": "wall-thermostat-water-gas-boiler-wifi-alexa-google",
           "keywords": "smart thermostat, wall thermostat, boiler thermostat, wifi thermostat, gas boiler, water boiler, alexa thermostat, google home, floor sensor, 3a 5a relay",
           "automations": [
-            "Trigger: 6:30 AM weekdays. Action: Boiler activates automatically 30 minutes before you wake, ensuring a warm home without wasting energy overnight.",
-            "Trigger: 6:00 PM arrival time. Action: Thermostat preheats your home before you return, optimizing comfort and energy efficiency.",
-            "Trigger: Temperature drops below 18°C at night. Action: Boiler maintains minimum temperature to prevent freezing while you sleep."
+            "Schedule this to activate during specific times (e",
+            ", mornings and evenings) to save energy while maintaining comfort",
+            "Useful for energy efficiency and maintaining a cozy home"
           ],
           "connected_scenes": [
             "Adjusts boiler based on weather forecasts from smart weather stations",
@@ -1421,7 +1421,7 @@
           "automations": [
             "Here are three practical automations for the Tuya VRF centralized control gateway:",
             "Automated VRF Zoning for Energy Efficiency",
-            "Trigger: Time of day (e.g., 9 AM to 5 PM on weekdays when the office is in use)"
+            "Trigger:* Time of day (e.g., 9 AM to 5 PM on weekdays when the office is in use)"
           ],
           "connected_scenes": [
             "Automates lights when doorbell rings for guest alerts",
@@ -1492,8 +1492,8 @@
           "keywords": "tuya thermostat, zigbee heating, floor heating, smart thermostat, electric heating, water heating, gas furnace, 16A relay, voice control, LCD display",
           "automations": [
             "Morning Warmth Automation",
-            "Trigger: Time of day (e.g., 6:30 AM on weekdays)",
-            "Action: The device turns on the electric floor heating or water heating to a preset comfortable temperature."
+            "Trigger*: Time of day (e.g., 6:30 AM on weekdays)",
+            "Action*: The device turns on the electric floor heating or water heating to a preset comfortable temperature."
           ],
           "connected_scenes": [
             "Adjusts heating when motion sensors detect occupancy",
@@ -1528,8 +1528,8 @@
           "keywords": "thermostat, fan coil, two pipe, smart thermostat, Wi-Fi thermostat, HVAC control, heating cooling, Google Home, Alexa enabled, energy saving",
           "automations": [
             "Auto Climate Control Based on Schedule",
-            "Trigger: Time of day (e.g., 7 AM for heating, 6 PM for cooling)",
-            "Action: Adjusts the fan coil unit and motorized valve to maintain set temperature"
+            "Trigger*: Time of day (e.g., 7 AM for heating, 6 PM for cooling)",
+            "Action*: Adjusts the fan coil unit and motorized valve to maintain set temperature"
           ],
           "connected_scenes": [
             "Adjusts fan coil based on doorbell detected visitor presence.",
@@ -1678,7 +1678,7 @@
           "keywords": "smart panel, control switch, 3 gang relay, IR remote, WiFi switch, home automation, smart display, mini panel, relay controller, wireless switch",
           "automations": [
             "Automated Lighting Control with Physical Buttons",
-            "Trigger: Pressing one of the three physical buttons on the panel.",
+            "Trigger*: Pressing one of the three physical buttons on the panel.",
             "Usefulness*: Convenient for quick manual control of frequently used devices without needing a smartphone."
           ],
           "connected_scenes": [
@@ -1750,8 +1750,8 @@
           "keywords": "smart panel, Alexa control, Zigbee gateway, touch screen, in-wall switch, Tuya smart, BLE mesh, home automation, voice control, smart hub",
           "automations": [
             "Automated Lighting with Motion Detection (Zigbee + Local Control)",
-            "Trigger: Motion detected by a Zigbee motion sensor connected to the gateway.",
-            "Action: Lights connected to the gateway turn on at 30% brightness (group dimming)."
+            "Trigger:* Motion detected by a Zigbee motion sensor connected to the gateway.",
+            "Action:* Lights connected to the gateway turn on at 30% brightness (group dimming)."
           ],
           "connected_scenes": [
             "Announces doorbell alerts through Alexa when someone rings",
@@ -1786,7 +1786,7 @@
           "keywords": "smart control panel, 8 inch display, zigbee gateway, ble mesh, android 11, spotify speaker, wall tablet, home automation, touch screen, multi protocol hub",
           "automations": [
             "Morning Music & News Briefing",
-            "Trigger: Time of day (e.g., 7:00 AM)",
+            "Trigger:* Time of day (e.g., 7:00 AM)",
             "Use Case:* A convenient way to start the day with music or news without manually turning on devices."
           ],
           "connected_scenes": [
@@ -1822,8 +1822,8 @@
           "keywords": "smart panel, touch control, tuya gateway, zigbee hub, bluetooth mesh, home automation, wall tablet, scene controller, 10 inch display, edge control",
           "automations": [
             "Motion-Activated Security Lighting",
-            "Trigger: Motion detected by a Zigbee motion sensor",
-            "Action: Lights connected to the panel turn on (via relay or compatible smart bulbs)"
+            "Trigger*: Motion detected by a Zigbee motion sensor",
+            "Action*: Lights connected to the panel turn on (via relay or compatible smart bulbs)"
           ],
           "connected_scenes": [
             "Controls smart thermostat from the touchscreen interface",
@@ -1900,8 +1900,8 @@
           "keywords": "smart switch, dry contact, 16A relay, power monitor, WiFi control, mini relay, pool pump switch, garage automation, energy tracking, wireless switch",
           "automations": [
             "Automated Lighting Control for Security",
-            "Trigger: Motion detected by a smart sensor (e.g., at night).",
-            "Action: The switch turns on a connected light (up to 16A) to deter intruders."
+            "Trigger:* Motion detected by a smart sensor (e.g., at night).",
+            "Action:* The switch turns on a connected light (up to 16A) to deter intruders."
           ],
           "connected_scenes": [
             "Controls smart door locks when doorbell rings",
@@ -1936,8 +1936,8 @@
           "keywords": "smart switch, dry contact switch, 16A switch, power monitoring switch, mini smart relay, app control switch, dual gang switch, Wi-Fi switch, DIY breaker, 240V smart relay",
           "automations": [
             "Automated Outdoor Lighting with Power Monitoring",
-            "Trigger: Motion detected by a connected sensor (e.g., at sunset or when it gets dark).",
-            "Action: The switch turns on the connected outdoor lights, and the power monitoring feature tracks energy usage."
+            "Trigger:* Motion detected by a connected sensor (e.g., at sunset or when it gets dark).",
+            "Action:* The switch turns on the connected outdoor lights, and the power monitoring feature tracks energy usage."
           ],
           "connected_scenes": [
             "Automates gate locks when power is detected on the switch",
@@ -2008,8 +2008,8 @@
           "keywords": "smart switch, dry contact, 16A relay, power monitor, 4 gang, Wi-Fi switch, automation switch, mini controller, AC 240V, smart home",
           "automations": [
             "Security Lighting with Motion Trigger",
-            "Trigger: Motion detected by a compatible sensor (e.g., door or window sensor)",
-            "Action: Switch turns on a connected security light or alarm system"
+            "Trigger:* Motion detected by a compatible sensor (e.g., door or window sensor)",
+            "Action:* Switch turns on a connected security light or alarm system"
           ],
           "connected_scenes": [
             "Activates smart lights when doorbell rings",
@@ -2044,8 +2044,8 @@
           "keywords": "zigbee curtain switch, smart curtain controller, 2 channel switch, DIY breaker, home automation, zigbee 3.0 device, wireless curtain module, AC110-240V switch",
           "automations": [
             "Automatically close curtains at sunset for privacy and energy savings",
-            "Trigger: Time of day (sunset)",
-            "Action: Both channels of the switch turn on to close the curtains"
+            "Trigger:* Time of day (sunset)",
+            "Action:* Both channels of the switch turn on to close the curtains"
           ],
           "connected_scenes": [
             "Automatically opens curtains when a motion is detected by a video doorbell.",
@@ -2122,8 +2122,8 @@
           "keywords": "smart lock, bluetooth lock, fingerprint door lock, keyless entry, smart home security, electronic lock, biometric lock, app controlled lock, IC card lock, password lock",
           "automations": [
             "Automated Temporary Access for Guests",
-            "Trigger: Generate a temporary password in the Smart Life or Tuya app.",
-            "Action: The lock allows access for a set duration (e.g., 24 hours) or a specific number of uses."
+            "Trigger*: Generate a temporary password in the Smart Life or Tuya app.",
+            "Action*: The lock allows access for a set duration (e.g., 24 hours) or a specific number of uses."
           ],
           "connected_scenes": [
             "Unlocks door when paired with video doorbell's visitor detection.",
@@ -2230,7 +2230,7 @@
           "keywords": "smart lock, face recognition, palm vein, security camera, biometric lock, smart door, keyless entry, 3D recognition, home security, access control",
           "automations": [
             "Automated Security Alert for Unrecognized Access Attempts",
-            "Trigger: The smart lock detects an unrecognized face or palm vein during an access attempt.",
+            "Trigger:* The smart lock detects an unrecognized face or palm vein during an access attempt.",
             "Use Case:* Enhances security by alerting the owner to suspicious activity, even if the intruder doesn’t gain entry."
           ],
           "connected_scenes": [
@@ -2410,7 +2410,7 @@
           "keywords": "smart lock box, key lock box, smart door lock, bluetooth lock, IP65 lockbox, aluminum lock, key storage, outdoor lockbox, 100 key capacity, secure key box",
           "automations": [
             "Guest Arrival Alert with Photo and Remote Unlock",
-            "Trigger: When a guest presses the doorbell.",
+            "Trigger:* When a guest presses the doorbell.",
             "Useful for:* Security and convenience—verify guests before letting them in without being physically present."
           ],
           "connected_scenes": [
@@ -2452,8 +2452,8 @@
           "keywords": "mortise lock, 304 stainless steel, smart door lock, square lock, ANSI Grade 1, door hardware, stainless lock, smart home, keyless entry, security lock",
           "automations": [
             "Automated Storage Alert",
-            "Trigger: When the storage capacity (100 pcs) is reached.",
-            "Action: Sends a notification to your phone or smart home hub (via Bluetooth Gateway) to refill the storage."
+            "Trigger:* When the storage capacity (100 pcs) is reached.",
+            "Action:* Sends a notification to your phone or smart home hub (via Bluetooth Gateway) to refill the storage."
           ],
           "connected_scenes": [
             "Activates a smart camera to record when the door opens",
@@ -2757,8 +2757,8 @@
           "keywords": "bluetooth ceiling speaker, ceiling speaker, slave speaker, 20w speaker, in ceiling audio, whole home sound, smart speaker, wireless ceiling speaker, 55hz-20khz, home audio system",
           "automations": [
             "Motion-Activated Audio Alerts",
-            "Trigger: Motion detected by a connected smart motion sensor (e.g., in a hallway or entryway).",
-            "Action: The Bluetooth ceiling speaker (slave) plays a pre-set audio alert (e.g., a chime or voice message)."
+            "Trigger:* Motion detected by a connected smart motion sensor (e.g., in a hallway or entryway).",
+            "Action:* The Bluetooth ceiling speaker (slave) plays a pre-set audio alert (e.g., a chime or voice message)."
           ],
           "connected_scenes": [
             "Syncs with smart lights for mood lighting during music playback",
@@ -2798,9 +2798,9 @@
           "slug": "smart-humidity-temperature-ir-sensor-360-control",
           "keywords": "smart sensor, humidity sensor, temperature sensor, IR remote, wifi sensor, home automation, smart home, 360 control, voice control, app control",
           "automations": [
-            "Trigger: Temperature rises above 26°C. Action: Automatically turns on the connected AC via IR control to maintain comfort.",
-            "Trigger: Humidity drops below 50%. Action: Activates humidifier via IR signal to prevent dryness.",
-            "Trigger: Temperature exceeds 30°C or humidity falls below 40%. Action: Sends instant mobile notification alerting you to extreme conditions."
+            "This is useful for energy saving and maintaining a comfortable indoor environment during hot days",
+            "This is useful for maintaining optimal indoor air quality and preventing dryness-related issues",
+            ", temperature above 30°C or humidity below 40%), it will send you a notification"
           ],
           "connected_scenes": [
             "Monitors humidity to trigger smart vents for better air circulation",
@@ -2835,8 +2835,8 @@
           "keywords": "door sensor, window sensor, wifi alarm, smart sensor, home security, bluetooth sensor, wireless alarm, alexa sensor, google home sensor, intrusion alert",
           "automations": [
             "Nighttime Security Alert",
-            "Trigger: Door or window opens between 10 PM and 6 AM.",
-            "Action: Activates 80dB sound alarm and red light warning to deter intruders."
+            "Trigger*: Door or window opens between 10 PM and 6 AM.",
+            "Action*: Activates 80dB sound alarm and red light warning to deter intruders."
           ],
           "connected_scenes": [
             "Activates outdoor cameras when door or window opens",
@@ -2907,8 +2907,8 @@
           "keywords": "motion sensor, wifi sensor, smart sensor, home security, PIR sensor, wireless sensor, automation device, smart home",
           "automations": [
             "Motion-Activated Lights for Hallways or Stairways",
-            "Trigger: Motion detected within 5 meters (detection distance) and 150-degree angle (detection angle).",
-            "Action: Turns on smart lights in the hallway or stairway when motion is detected."
+            "Trigger:* Motion detected within 5 meters (detection distance) and 150-degree angle (detection angle).",
+            "Action:* Turns on smart lights in the hallway or stairway when motion is detected."
           ],
           "connected_scenes": [
             "Detects motion and alerts your phone for security alerts",
@@ -2942,8 +2942,8 @@
           "slug": "zigbee-motion-sensor-smart-home",
           "keywords": "zigbee sensor, motion detector, smart sensor, home automation, wireless sensor, pir sensor, light sensor, zigbee 3.0, battery sensor, smart home",
           "automations": [
-            "Trigger: Motion detected by the sensor.",
-            "Action: Turns on connected smart lights (if light levels are below 50LUX).",
+            "Trigger:* Motion detected by the sensor.",
+            "Action:* Turns on connected smart lights (if light levels are below 50LUX).",
             "Useful for:* Energy-saving convenience—lights only activate when needed, reducing unnecessary power use."
           ],
           "connected_scenes": [
@@ -3014,8 +3014,8 @@
           "keywords": "motion sensor, presence sensor, mm wave sensor, smart sensor, zigbee sensor, human detection, wireless sensor, home automation",
           "automations": [
             "Automatic Lighting in Low Light Conditions",
-            "Trigger: Motion detected in the room when light levels are below 50LUX (dark or dimly lit).",
-            "Action: Turns on connected Zigbee lights (e.g., lamps or ceiling lights)."
+            "Trigger:* Motion detected in the room when light levels are below 50LUX (dark or dimly lit).",
+            "Action:* Turns on connected Zigbee lights (e.g., lamps or ceiling lights)."
           ],
           "connected_scenes": [
             "Activates video doorbell recording when motion is detected",
@@ -3086,9 +3086,9 @@
           "slug": "smart-gas-sensor-zigbee-3-0",
           "keywords": "gas sensor, smart sensor, natural gas detector, LPG alarm, Zigbee 3.0, kitchen safety, methane detector, leak alert",
           "automations": [
-            "Trigger: Gas concentration reaches 8% LEL methane (dangerous level). Action: Instantly triggers 80dB+ siren alarm and flashing warning lights.",
-            "Trigger: Hazardous gas detected. Action: Sends emergency push notification to your phone immediately, even when you're away from home.",
-            "Trigger: Critical gas leak detected. Action: Automatically alerts predefined emergency contacts and local authorities for rapid response."
+            ", 8% LEL methane), it triggers a loud siren (≥80dB) and flashing lights",
+            "Simultaneously, it sends a mobile phone notification to alert you, even if you're away",
+            "You can set up an automation to forward this alert to a predefined list of emergency contacts (e"
           ],
           "connected_scenes": [
             "Smart gas sensor triggers smart lights to flash red when dangerous gas levels are detected",
@@ -3194,14 +3194,14 @@
           "slug": "zigbee-ir-universal-remote-gs-zs06-z",
           "keywords": "zigbee remote, IR controller, smart remote, wifi remote, AC remote, TV remote, universal remote, smart home, automation hub, infrared control",
           "automations": [
-            "Trigger: Motion detected in living room after 7 PM. Action: Turns on TV to your favorite channel via IR signal—entertainment ready when you are.",
-            "Trigger: Temperature rises above 26°C. Action: Uses IR to set AC to 24°C automatically, maintaining perfect climate without lifting a finger.",
-            "Trigger: You say 'Movie Time' to Alexa. Action: Dims lights, closes curtains, and powers on TV and sound system simultaneously via IR."
+            "Automated TV Control with Motion Detection",
+            "Trigger*: Motion detected by a smart motion sensor in the living room.",
+            "Smart AC Control Based on Temperature"
           ],
           "connected_scenes": [
-            "Syncs with temperature sensors to automatically adjust AC settings based on real-time room conditions via IR.",
-            "Works with motion sensors to turn off all entertainment devices when room is empty, eliminating standby power waste.",
-            "Connects to Alexa/Google Home for voice control of TV, AC, fans—change channels or temperature without moving."
+            "Controls TV or AC via smart home hub",
+            "Syncs with smart bulbs for automated lighting",
+            "Integrates with smart speaker for voice control"
           ],
           "images": {
             "main": "/images/products/HZ-SS-IRUNI01/1.png",
@@ -3231,7 +3231,7 @@
           "keywords": "IR remote, universal remote, smart remote, Zigbee remote, WiFi remote, TV remote, AC remote, smart home, 35KHz IR, 2.4GHz",
           "automations": [
             "Automated TV Control via WiFi:",
-            "Trigger: A voice command or a scheduled time (e.g., 8 PM).",
+            "Trigger:* A voice command or a scheduled time (e.g., 8 PM).",
             "Useful for:* Convenience, especially for hands-free operation or routine TV time."
           ],
           "connected_scenes": [
@@ -3381,7 +3381,7 @@
           "automations": [
             "Here are three practical automations using the actual features of the 4 Gang Display Light switch:",
             "Motion-Activated Lighting for Hallway:",
-            "Trigger: Motion detected in the hallway (using a compatible motion sensor)."
+            "Trigger:* Motion detected in the hallway (using a compatible motion sensor)."
           ],
           "connected_scenes": [
             "Lights on when doorbell rings, alerts via phone",
@@ -3416,8 +3416,8 @@
           "keywords": "zigbee switch, smart switch, PC switch, lamp controller, home automation, voice control, wireless switch, scene control",
           "automations": [
             "Motion-Activated Lighting for Security",
-            "Trigger: Motion detected by the built-in human body sensor.",
-            "Action: Turns on the connected street lamps to full brightness."
+            "Trigger:* Motion detected by the built-in human body sensor.",
+            "Action:* Turns on the connected street lamps to full brightness."
           ],
           "connected_scenes": [
             "Automates lights when motion detected by cameras",
@@ -3494,7 +3494,7 @@
           "keywords": "dimming controller, color adjustment, 0-10V driver, PWM dimmer, smart lighting, LED controller, constant current, 1-10V dimmer, RGB controller, home automation",
           "automations": [
             "Morning Wake-Up Routine:",
-            "Trigger: Time of day (e.g., 7:00 AM on weekdays).",
+            "Trigger*: Time of day (e.g., 7:00 AM on weekdays).",
             "Usefulness*: Helps you wake up gently, reducing eye strain and improving morning energy levels."
           ],
           "connected_scenes": [
@@ -3530,7 +3530,7 @@
           "keywords": "zigbee driver, light strip controller, RGBCW dimmer, smart lighting, LED driver, 24V controller, wireless dimmer, Zigbee 3.0",
           "automations": [
             "Motion-Activated Lighting for Security:",
-            "Trigger: Motion detected by a Zigbee motion sensor in the hallway.",
+            "Trigger:* Motion detected by a Zigbee motion sensor in the hallway.",
             "Use Case:* Enhances security by alerting you to movement in the hallway at night, deterring potential intruders."
           ],
           "connected_scenes": [
@@ -3602,8 +3602,8 @@
           "keywords": "smart bulb, zigbee bulb, RGBCW bulb, color changing bulb, 9W LED, voice control light, home automation lighting, tunable white bulb, security lighting, smart home light",
           "automations": [
             "TV Watching Mode (Convenience)",
-            "Trigger: When you turn on your TV (via smart plug or IR sensor)",
-            "Action: The bulb syncs with your TV content, adjusting colors dynamically for an immersive background light effect"
+            "Trigger:* When you turn on your TV (via smart plug or IR sensor)",
+            "Action:* The bulb syncs with your TV content, adjusting colors dynamically for an immersive background light effect"
           ],
           "connected_scenes": [
             "Turns on when doorbell detects motion after dark",
@@ -3709,14 +3709,14 @@
           "slug": "rgbw-ww-5050-60d-10m-five-in-one-led-strip",
           "keywords": "RGBW LED strip, 5050 LED, 10m LED strip, smart lighting, dimmable LED, DC24V strip, RGB warm white, daylight LED, home automation, cinematic lighting",
           "automations": [
-            "Trigger: Scheduled at 6:30 AM daily. Action: LED strip gradually brightens to 3000K warm white over 15 minutes, gently waking you naturally.",
-            "Trigger: You say 'Movie Time' to Alexa. Action: Dims to deep blue ambient glow at 20% brightness, creating perfect cinema atmosphere.",
-            "Trigger: Motion detected after 10 PM. Action: Activates soft 10% warm white night lighting along pathways for safe midnight navigation."
+            "Morning Warm Wake-Up",
+            "Trigger*: Scheduled at 6:30 AM daily.",
+            "Action*: Lights gradually brighten to 3000K (warm white) over 15 minutes."
           ],
           "connected_scenes": [
-            "Syncs with doorbell to flash red when visitors arrive, providing visual notification throughout your home.",
-            "Connects to music systems, pulsing colors rhythmically to match beats for immersive entertainment experiences.",
-            "Works with temperature sensors to shift from cool blue (hot) to warm orange (cold) based on room climate."
+            "Activates LED strip when doorbell rings for visible alerts",
+            "Syncs with motion sensors to light pathways when movement is detected",
+            "Integrates with smart speakers to change colors based on voice commands"
           ],
           "images": {
             "main": "/images/products/HZ-SL-RGBWW01/1.png",
@@ -3817,8 +3817,8 @@
           "slug": "rgbcw-zigbee-gu10-smart-bulb-flat",
           "keywords": "zigbee bulb, smart bulb, RGBCW bulb, GU10 LED, 5W LED bulb, tunable white bulb, Zigbee 3.0 light, color changing bulb, smart home lighting",
           "automations": [
-            "Trigger: Motion sensor detects movement in the hallway or on the stairs.",
-            "Action: The bulb turns on to a bright white light (6000K-6500K).",
+            "Trigger:* Motion sensor detects movement in the hallway or on the stairs.",
+            "Action:* The bulb turns on to a bright white light (6000K-6500K).",
             "When Useful:* Provides safety and convenience at night without needing to flip a switch."
           ],
           "connected_scenes": [
@@ -3889,7 +3889,7 @@
           "slug": "intelligent-dimmable-led-driver-power-supply-60w",
           "keywords": "led driver, dimmable driver, smart lighting, zigbee controller, 24v power supply, color temperature, constant voltage, 60w led, strip light driver, wireless dimmer",
           "automations": [
-            "Trigger: Time of day (e.g., 6:30 AM on weekdays).",
+            "Trigger*: Time of day (e.g., 6:30 AM on weekdays).",
             "Use Case*: Mimics natural sunlight to gently wake you up, improving morning energy levels.",
             "Evening Relaxation Mode:"
           ],

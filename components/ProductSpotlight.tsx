@@ -217,7 +217,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
 
 
           {/* Card Deck Container */}
-          <div className="relative w-full max-w-xl aspect-square h-[500px] flex flex-col items-center justify-center z-30 mb-16">
+          <div className="relative w-full max-w-2xl aspect-square h-[700px] flex flex-col items-center justify-center z-30 mb-16">
             
             {/* CURRENT PRODUCT NAME - Moved above the deck */}
             <AnimatePresence mode="wait">
@@ -322,50 +322,43 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
 
         {/* Right Col: Narrative & Integration Hub */}
         <motion.div
-          className="lg:col-span-1 flex flex-col gap-10"
+          className="lg:col-span-1 flex flex-col gap-6"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
         >
-          <motion.div variants={fadeInUp}>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-12 h-[2px] bg-[#E82F89]" />
-              <span className="text-[#E82F89] font-black uppercase tracking-[0.3em] text-[10px]">
-                {lang === 'en' ? 'CATEGORY ECOSYSTEM' : 'ÉCOSYSTÈME CATÉGORIE'}
+          <motion.div variants={fadeInUp} className="space-y-3">
+            {/* Compact Category Tag and Title */}
+            <div className="flex items-center gap-3 mb-2">
+              <span className="w-8 h-[2px] bg-[#E82F89]" />
+              <span className="text-[#E82F89] font-black uppercase tracking-[0.25em] text-[9px] whitespace-nowrap">
+                {lang === 'en' ? 'CATEGORY ECOSYSTEM' : 'ÉCOSYSTÈME'}
               </span>
             </div>
 
-            {/* Category Icon with Animation */}
-            {enhancement && category.icon && (
-              <motion.div className="mb-6 flex items-center gap-4">
-                <motion.img
-                  src={category.icon}
-                  alt={category.name[lang]}
-                  className="w-16 h-16 object-contain"
-                  variants={createIconAnimation(category.id as CategoryId)}
-                  animate="animate"
-                  style={{
-                    filter: `drop-shadow(0 0 20px ${enhancement.glowColor}80)`
-                  }}
-                />
-              </motion.div>
-            )}
-
-            <h3 className="text-6xl md:text-7xl font-black text-[#243984] mb-6 tracking-tight leading-[0.95]">
-              {category.name[lang]}
+            {/* Category Title with Dynamic Sizing */}
+            <h3 
+              className="font-black text-[#243984] tracking-tight leading-[0.9]"
+              style={{
+                fontSize: `clamp(2.5rem, ${Math.max(2.5, 4.5 - (category.name[lang].length * 0.05))}rem, 4.5rem)`
+              }}
+            >
+              <span className="inline-block max-w-full break-words hyphens-auto" lang={lang}>
+                {category.name[lang]}
+              </span>
             </h3>
 
-            <p className="text-2xl text-slate-500 leading-relaxed font-medium max-w-2xl">
+            <p className="text-lg text-slate-500 leading-relaxed font-medium max-w-xl">
               {category.description[lang]}
             </p>
           </motion.div>
 
           {/* New Integration Grid */}
           <motion.div className="relative" variants={fadeInUp}>
-            <div className="flex items-center gap-3 mb-6">
-               <Icon name="Zap" size={16} className="text-[#E82F89]" />
-               <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                 {lang === 'en' ? 'EcoSystem Features' : 'Fonctionnalités de l\'Écosystème'}
+            <div className="flex items-center gap-2 mb-4">
+               <Icon name="Zap" size={14} className="text-[#E82F89]" />
+               <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                 {lang === 'en' ? 'ECOSYSTEM FEATURES' : 'FONCTIONNALITÉS'}
                </span>
             </div>
 
@@ -437,7 +430,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             )}
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 relative"
+              className="grid grid-cols-1 md:grid-cols-2 gap-3 relative"
               style={{ zIndex: 1 }}
               variants={cardStagger}
               initial="hidden"
@@ -454,7 +447,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                      tabIndex={0}
                      onMouseEnter={() => setHoveredPartner(link.partnerId)}
                      onMouseLeave={() => setHoveredPartner(null)}
-                     className={`group/card relative p-8 rounded-[2rem] transition-all border border-white/10 bg-slate-900/40 backdrop-blur-xl flex flex-col shadow-2xl overflow-hidden cursor-pointer hover:border-white/20`}
+                     className={`group/card relative p-6 rounded-[1.5rem] transition-all border border-white/10 bg-slate-900/40 backdrop-blur-xl flex flex-col shadow-2xl overflow-hidden cursor-pointer hover:border-white/20`}
                      whileHover={
                        prefersReducedMotion
                          ? {}
@@ -465,15 +458,15 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                      {/* Subtle Internal Glow */}
                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#E82F89]/5 blur-3xl rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-700" />
                      
-                     <div className="flex items-start justify-between relative z-10 mb-6">
+                     <div className="flex items-start justify-between relative z-10 mb-3">
                         <div className="flex flex-col gap-1">
                           <div className="flex items-center gap-2">
                              <div className="w-1.5 h-1.5 rounded-full bg-[#E82F89]" />
-                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                             <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">
                                 {partner?.name[lang] || 'System Feature'}
                              </span>
                           </div>
-                          <h4 className="text-2xl font-[800] text-white tracking-tight">
+                          <h4 className="text-xl font-[800] text-white tracking-tight">
                             {link.label[lang]}
                           </h4>
                         </div>
@@ -496,18 +489,18 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-6 mt-4"
+            className="flex items-center gap-6 mt-2"
             variants={fadeInUp}
           >
             <motion.button
               onClick={onViewAll}
-              className="bg-[#243984] text-white px-10 py-6 rounded-3xl font-black text-xs hover:opacity-90 transition-all flex items-center gap-4 group shadow-xl shadow-blue-900/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="bg-[#243984] text-white px-8 py-5 rounded-3xl font-black text-xs hover:opacity-90 transition-all flex items-center gap-3 group shadow-xl shadow-blue-900/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#243984]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               aria-label={lang === 'en' ? 'View product catalog for this category' : 'Voir le catalogue produits pour cette catégorie'}
               whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
               whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
             >
               <span>{lang === 'en' ? 'PRODUCT CATALOG' : 'CATALOGUE PRODUITS'}</span>
-              <Icon name="ChevronRight" size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              <Icon name="ChevronRight" size={16} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </motion.button>
           </motion.div>
 

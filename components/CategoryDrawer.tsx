@@ -101,27 +101,31 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
               {selectedProduct ? (
                 <div className="p-8 pb-24">
                    {/* Product Header */}
-                   <div className="mb-8">
+                   <div className="mb-6">
                      <div className="inline-block px-3 py-1 bg-slate-100 text-slate-500 rounded-lg text-[10px] font-black uppercase tracking-widest mb-4">
                         {selectedProduct.sku}
                      </div>
                      <h3 className="text-3xl font-bold text-slate-900 mb-4">{selectedProduct.name[lang]}</h3>
-                     <p className="text-slate-500 leading-relaxed whitespace-pre-line">
-                       {selectedProduct.description[lang]}
-                     </p>
                    </div>
 
                    {/* Product Image */}
-                   <div className="mb-10 p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-center">
+                   <div className="mb-6 p-8 bg-slate-900 rounded-3xl border border-slate-800 flex items-center justify-center">
                       <motion.img 
                         key={selectedProduct.id}
                         src={selectedProduct.imageUrl} 
                         alt={selectedProduct.name[lang]}
-                        className="w-full max-h-[300px] object-contain mix-blend-multiply"
+                        className="w-full max-h-[300px] object-contain"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3 }}
                       />
+                   </div>
+
+                   {/* Short Tagline */}
+                   <div className="mb-10">
+                     <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                       {selectedProduct.description[lang].split('\n\n')[0]}
+                     </p>
                    </div>
 
                    {/* Three Pillars Analysis */}
