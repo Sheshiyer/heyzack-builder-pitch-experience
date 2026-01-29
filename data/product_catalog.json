@@ -83,7 +83,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez chaque visiteur avant même qu'il ne frappe. Gardez l'esprit tranquille, votre maison est protégée même quand vous n'y êtes pas.\n\n• Recevez des alertes instantanées dès qu'un mouvement est détecté devant votre porte.\n• Voyez et parlez avec vos visiteurs grâce à un système audio bidirectionnel d'une grande clarté.\n• Installez-la n'importe où sans câbles grâce à sa batterie rechargeable longue durée.\n• Enregistrez chaque détail avec précision grâce à la vision nocturne pour une protection 24h/24.\n\nS'intègre parfaitement à vos enceintes, écrans et appareils mobiles pour une maîtrise totale de votre foyer. Contrôlez tout par simple commande vocale ou vérifiez l'accès à votre porte depuis n'importe quel écran connecté.\n\nVotre entrée n'a jamais été aussi intelligente.",
+          "automations_fr": [
+            "Idéal pour la sécurité nocturne ou lors de vos déplacements.",
+            "Pratique pour la réception de colis ou les invités imprévus.",
+            "La sirène intégrée peut être déclenchée pour renforcer la sécurité."
+          ],
+          "connected_scenes_fr": [
+            "Envoie des alertes sur smartphone quand quelqu'un sonne à la porte.",
+            "S'intègre aux lumières connectées pour éclairer automatiquement l'entrée.",
+            "Enregistre et sauvegarde les séquences sur les services de stockage cloud."
+          ]
         },
         {
           "name": "Video door bell (battery)",
@@ -119,7 +130,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez chaque visiteur. Anticipez chaque arrivée. Votre entrée devient intelligente.\n\n• La vidéo HD offre un rendu cristallin des visages, de jour comme de nuit.\n• Le système audio bidirectionnel vous permet d'accueillir vos proches ou d'avertir les intrus, où que vous soyez.\n• Les alertes de mouvement vous préviennent sur votre téléphone avant même que l'on appuie sur le bouton.\n• Six mois d'autonomie pour une installation sans fils ni perçage, en toute liberté.\n\nInstallez-la en quelques minutes. Protégez votre foyer pour longtemps. Le nouveau gardien de votre maison est prêt.",
+          "automations_fr": [
+            "Notification de sécurité sur détection de mouvement.",
+            "Déclencheur : Détection de mouvement (ou détection humaine pour plus de précision).",
+            "Détection et alerte de dépôt de colis."
+          ],
+          "connected_scenes_fr": [
+            "Envoie des alertes aux enceintes connectées quand quelqu'un sonne.",
+            "Active les caméras intérieures si un mouvement est détecté à l'extérieur.",
+            "Lance automatiquement l'enregistrement vidéo lors d'une pression sur la sonnette."
+          ]
         },
         {
           "name": "Video Door Bell USB powered (USB-C)",
@@ -155,7 +177,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez chaque visiteur avant d'ouvrir. Votre maison est protégée, de jour comme de nuit.\n\n• La vidéo haute définition révèle instantanément visages, colis et animaux devant votre porte.\n• L'alimentation USB-C assure une surveillance continue, sans recharge de batterie ni interruption.\n• Les alertes mobiles instantanées vous permettent d'accueillir vos invités ou de dissuader les intrus à distance.\n• La vision nocturne capture des détails précis jusqu'à 5 mètres, même dans l'obscurité totale.\n\nConnectez-la à vos écrans, enceintes ou appareils mobiles pour une consultation et un contrôle mains libres.\n\nRépondez à la porte sans même vous déplacer.",
+          "automations_fr": [
+            "Alerte de sécurité activée par le mouvement.",
+            "Déclencheur : Détection humaine via capteur de mouvement.",
+            "L'entrée s'éclaire automatiquement lors d'une pression sur la sonnette."
+          ],
+          "connected_scenes_fr": [
+            "Diffuse le flux en direct sur une caméra intérieure pour une surveillance élargie.",
+            "Active les alertes sur enceintes connectées quand quelqu'un sonne.",
+            "Déverrouille automatiquement la porte du garage pour les visiteurs de confiance."
+          ]
         },
         {
           "name": "Camera Indoor (USB-C)",
@@ -191,7 +224,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez chaque recoin. Maîtrisez chaque instant.\n\n• La vidéo 2K d'une clarté cristalline révèle les visages, les animaux et les colis avec un réalisme saisissant.\n• La vision nocturne assure la surveillance après la tombée de la nuit sans allumer la moindre lumière.\n• L'audio bidirectionnel vous permet de calmer votre chien ou de saluer vos enfants depuis la file d'attente du supermarché.\n• Les alertes de mouvement notifient votre téléphone dès qu'une activité est détectée : les surprises deviennent des certitudes.\n\nDemandez à votre enceinte connectée ou jetez un œil à votre écran intelligent pour afficher le flux instantanément. La caméra se glisse discrètement sur une étagère, s'alimente via un câble USB-C élégant et se synchronise avec tous vos appareils mobiles.\n\nGardez une vue d'ensemble sur votre foyer et ne vous demandez plus jamais ce qu'il s'y passe.",
+          "automations_fr": [
+            "Idéal pour la sécurité : permet de revoir toute activité suspecte après coup.",
+            "Pratique et sécurisant : assurez-vous de ne manquer aucune livraison importante.",
+            "Garantit votre intimité pendant votre sommeil, pour plus de confort et de sérénité."
+          ],
+          "connected_scenes_fr": [
+            "Surveille la chambre de bébé et diffuse le flux sur smartphone pour une vision à distance.",
+            "Détecte les mouvements et vous alerte sur smartphone dès que quelqu'un entre dans la pièce.",
+            "Se synchronise avec le thermostat pour ajuster la température quand la pièce est inoccupée."
+          ]
         },
         {
           "name": "Camera Outdoor wired (Dual-Lens)",
@@ -227,7 +271,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez tout ce qui compte. Soyez informé à l'instant même.\n\n• La précision du double objectif capture les visages et les colis avec une netteté absolue.\n• L'alimentation filaire assure une surveillance 24h/24 sans changement de batterie.\n• Le boîtier résistant aux intempéries brave la pluie, la neige et les fortes chaleurs.\n• Les alertes instantanées transforment votre téléphone en un viseur en direct.\n\nSécurisez votre maison avec une caméra qui ne ferme jamais l'œil.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques pour la caméra extérieure filaire (Double objectif) :",
+            "Alertes activées par le mouvement avec suivi panoramique et inclinaison.",
+            "Déclencheur : Mouvement détecté par la caméra (détection humaine)."
+          ],
+          "connected_scenes_fr": [
+            "Se synchronise avec la sonnette pour afficher le flux vidéo des visiteurs en direct.",
+            "Active les caméras intérieures lorsqu'un mouvement est détecté à l'extérieur.",
+            "Alerte l'enceinte connectée en cas de détection d'activité inhabituelle."
+          ]
         },
         {
           "name": "Outdoor Camera bulb holder (E27)",
@@ -263,7 +318,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Vissez votre sécurité. Illuminez votre monde d'une protection fiable.\n\n• S'installe partout sur une douille E27 standard pour une surveillance instantanée.\n• Conception résistante aux intempéries capturant chaque visiteur avec une clarté totale.\n• Les alertes de mouvement arrivent sur votre téléphone avant même que vos invités n'atteignent la porte.\n• La vision nocturne identifie les visages jusqu'à 9 mètres de distance.\n\nTransformez n'importe quel luminaire en un gardien vigilant pour votre maison.",
+          "automations_fr": [
+            "Alertes de sécurité activées par le mouvement.",
+            "Déclencheur : Mouvement détecté par la caméra.",
+            "Communication vocale bidirectionnelle lors d'une détection de mouvement."
+          ],
+          "connected_scenes_fr": [
+            "Active les lumières connectées en cas de mouvement pour dissuader les intrus.",
+            "Se synchronise avec la sonnette pour enregistrer et signaler les visiteurs.",
+            "S'intègre au système de sécurité pour une surveillance complète de l'habitation."
+          ]
         },
         {
           "name": "Outdoor Camera with solar in pro kit",
@@ -299,7 +365,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez tout, partout, tout le temps. La puissance rencontre la liberté dans un gardien d'exception.\n\n• La vidéo 2K d'une clarté cristalline révèle visages, colis et animaux avec une précision éclatante.\n• Le panneau solaire maintient la batterie chargée grâce à une énergie propre et gratuite.\n• Le boîtier en aluminium résistant aux intempéries brave les tempêtes, la chaleur et le gel.\n• Des alertes de mouvement instantanées sur votre téléphone avant même que les visiteurs n'arrivent à votre porte.\n\nProfitez d'une vue qui ne faiblit jamais et ne nécessite aucune recharge.",
+          "automations_fr": [
+            "Alerte de sécurité activée par le mouvement",
+            "Déclencheur : Détection humaine via la vision nocturne IR/couleur de la caméra.",
+            "Action : Envoie une notification push sur votre téléphone et active la sirène d'alarme."
+          ],
+          "connected_scenes_fr": [
+            "La caméra solaire extérieure déclenche l'enregistrement de la caméra intérieure lorsque son IA détecte une personne, assurant une couverture complète avant toute intrusion.",
+            "Lorsque la caméra solaire extérieure détecte un mouvement la nuit, elle signale à la sonnette vidéo sur batterie d'allumer la lumière du porche pour dissuader les intrus.",
+            "La caméra solaire extérieure alerte la sonnette vidéo USB pour lancer une communication bidirectionnelle si un visiteur s'attarde près du portail, évitant ainsi le vol de colis."
+          ]
         },
         {
           "name": "Camera outdoor with Battery, solar and light (not include 6w solar $6) in pro kit",
@@ -335,7 +412,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez tout, ne manquez rien. Votre propriété reste protégée jour et nuit grâce à l'énergie solaire infinie.\n\n• Des images cristallines capturent chaque détail en résolution 1080p éclatante.\n• Le projecteur intégré illumine les intrus et offre une vision nocturne en couleur.\n• L'installation sans fil permet de placer votre sécurité n'importe où en quelques minutes.\n• Conception résistante aux intempéries pour affronter la pluie, la neige et le soleil toute l'année.\n\nProtégez l'essentiel avec une sécurité qui ne ferme jamais l'œil.",
+          "automations_fr": [
+            "Éclairage et enregistrement activés par le mouvement pour la sécurité",
+            "Déclencheur : Détection de mouvement PIR la nuit.",
+            "Action : La lumière intégrée de la caméra s'allume et l'enregistrement commence. Une notification est envoyée sur votre téléphone."
+          ],
+          "connected_scenes_fr": [
+            "Détecte un mouvement et allume les lumières connectées intérieures pour simuler une présence.",
+            "Envoie le flux vidéo en direct sur votre téléphone lorsque quelqu'un sonne à la porte.",
+            "Interagit avec les serrures connectées pour verrouiller automatiquement les portes en cas de mouvement détecté."
+          ]
         },
         {
           "name": "Baby Monitor with display",
@@ -371,7 +459,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Gardez un œil partout. Respirez mieux ce soir.\n\n• Une vidéo cristalline, de jour comme de nuit, pour rester connecté.\n• Des alertes de mouvement instantanées reçues en quelques secondes.\n• Parlez et écoutez comme si vous étiez juste à côté.\n• Un flux privé et sécurisé auquel vous seul pouvez accéder.\n\nDormez sur vos deux oreilles en sachant que chaque instant est sous surveillance.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques pour votre moniteur bébé avec écran :",
+            "Activation automatique de la vision nocturne avec alerte sonore",
+            "Déclencheur : Mouvement détecté dans la chambre de bébé après une heure définie (ex: 20h)."
+          ],
+          "connected_scenes_fr": [
+            "Affiche le flux en direct des caméras de la sonnette pour une sécurité accrue.",
+            "Se synchronise avec les lumières connectées pour un éclairage nocturne doux dans la chambre de bébé.",
+            "Se connecte au thermostat intelligent pour maintenir une température optimale dans la chambre."
+          ]
         }
       ]
     },
@@ -413,7 +512,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque fenêtre en un sanctuaire de lumière et d'intimité. Suivez le rythme de votre journée avec une précision silencieuse.\n\n• Contrôlez la lumière et votre intimité de n'importe où, sans toucher aux cordons.\n• La batterie intégrée élimine les câbles encombrants et les travaux électriques coûteux.\n• Le réseau maillé Zigbee assure la réactivité de chaque store, même en cas de coupure Wi-Fi.\n• La programmation du lever au coucher du soleil vous réveille en douceur et protège vos meubles de la décoloration.\n\nLe moteur de volet intelligent apporte le confort d'un hôtel cinq étoiles chez vous, tout en fluidité.",
+          "automations_fr": [
+            "Le lever du soleil déclenche l'ouverture progressive du volet via la passerelle Zigbee connectée à l'application Tuya.",
+            "La température atteint 28°C : fermeture automatique des volets via l'intégration de la passerelle Matter.",
+            "Programme de soirée à 20h : descente simultanée de tous les volets via le contrôle du réseau Zigbee."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre automatiquement les volets lorsque la sonnette retentit.",
+            "Ferme les volets lorsque le système d'alarme est activé.",
+            "Ajuste la position des volets en fonction des prévisions météorologiques."
+          ]
         },
         {
           "name": "25S-1.1N/17-Zigbee (Zigbee tubular shutter motor, 230V)",
@@ -449,7 +559,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez vos fenêtres en filtres de lumière intelligents. Maîtrisez la clarté du jour avec une précision absolue et silencieuse.\n\n• Le moteur tubulaire silencieux fait glisser vos volets en douceur sur commande.\n• Le réseau maillé Zigbee assure une connexion fiable dans toute la maison.\n• L'alimentation 230V gère les volets lourds sans perte de performance.\n• Programmez des positions automatiques pour plus d'intimité et d'économies d'énergie.\n\nDécouvrez l'équilibre parfait entre intimité, lumière et confort au quotidien.",
+          "automations_fr": [
+            "Automatisation 1 : Contrôle des volets par programmation pour l'efficacité énergétique.",
+            "Déclencheur : Heure de la journée (ex: 07h00 et 17h00).",
+            "Action : Le moteur Zigbee ouvre ou ferme automatiquement les volets selon le programme."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre automatiquement les stores quand la caméra de sécurité détecte un mouvement.",
+            "Se synchronise avec la sonnette connectée pour ajuster les stores lors des livraisons.",
+            "Ferme les volets quand la sonnette vidéo détecte un mouvement la nuit."
+          ]
         },
         {
           "name": "1668-6 (3-in-1 universal smart curtain robot, available in Zigbee)",
@@ -485,7 +606,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque fenêtre et porte en une architecture intelligente qui répond à votre mode de vie. Avec le 1668-6, les rideaux, volets et portes de garage manuels appartiennent au passé.\n\n• Contrôlez rideaux, volets et portes de garage de n'importe où avec un seul appareil élégant.\n• La technologie Zigbee crée un réseau maillé fiable qui ne ralentit pas votre Wi-Fi.\n• Configurez des horaires au lever du soleil pour ouvrir vos rideaux naturellement, sans réveil.\n• Le moteur gère les rideaux lourds et les grandes portes de garage avec une force silencieuse.\n\nPassez à l'élégance automatisée qui vous accueille chaque matin et sécurise chaque nuit, sans lever le petit doigt.",
+          "automations_fr": [
+            "Le programme du matin ouvre les rideaux à 07h00 via signal Zigbee pour laisser entrer la lumière naturelle.",
+            "La routine du soir ferme les rideaux au coucher du soleil via commande Zigbee pour l'intimité et l'isolation.",
+            "Le capteur de température déclenche la fermeture des rideaux via Zigbee quand la pièce dépasse 25°C pour bloquer le soleil."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre automatiquement les rideaux quand le lever du soleil est détecté par un capteur extérieur.",
+            "Ferme les rideaux quand la caméra de sécurité détecte un mouvement la nuit.",
+            "Se synchronise avec le thermostat intelligent pour s'ajuster selon l'exposition au soleil."
+          ]
         },
         {
           "name": "Zigbee-DJ02 (Smart Curtain Kit with Zigbee motor, retractable rail, and remote)",
@@ -521,7 +653,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque fenêtre en un modèle d'élégance et de simplicité. Le Zigbee-DJ02 ouvre, ferme et positionne vos rideaux sur simple commande.\n\n• Éveillez-vous à la lumière du jour avec des rideaux qui s'ouvrent selon votre planning.\n• Le rail rétractable s'adapte aux fenêtres de 1,2 à 3 m sans découpe ni outils.\n• Le moteur silencieux déplace les tissus lourds à 20 cm/s sans troubler votre calme.\n• La télécommande longue portée fonctionne à travers les murs jusqu'à 30 m.\n\nJumelez-le à vos assistants vocaux ou votre smartphone pour créer une ambiance « soirée cinéma » ou « bain de soleil » sans quitter votre canapé.\n\nLaissez chaque lever et coucher de soleil s'accompagner d'un mouvement fluide et automatique.",
+          "automations_fr": [
+            "Ouverture automatique des rideaux au lever du soleil pour profiter de la lumière naturelle.",
+            "Déclencheur : Moment de la journée (lever du soleil)",
+            "Action : Ouverture automatique des rideaux"
+          ],
+          "connected_scenes_fr": [
+            "Ferme automatiquement les rideaux lorsqu'un mouvement est détecté par la sonnette vidéo.",
+            "Ouvre les rideaux à votre arrivée grâce à la géolocalisation.",
+            "Synchronise l'éclairage connecté pour ajuster la luminosité selon la position des rideaux."
+          ]
         },
         {
           "name": "Zigbee-DJ01 (Zigbee curtain motor)",
@@ -557,7 +700,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Actionnez vos rideaux dans un murmure. Laissez la lumière naturelle s'inviter chez vous, selon votre rythme.\n\n• Réveillez-vous en douceur avec une lumière progressive synchronisée sur votre alarme.\n• Fermez tous vos rideaux instantanément pour plus d'intimité et de sécurité.\n• Programmez des scénarios pour simuler une présence pendant vos absences.\n• Économisez de l'énergie en bloquant la chaleur l'été et en la conservant l'hiver.\n\nCompatible avec votre hub Zigbee habituel, il répond à vos enceintes connectées et vos appareils mobiles.\n\nTransformez chaque pièce en un sanctuaire qui s'adapte à votre quotidien.",
+          "automations_fr": [
+            "Activation automatique lors d'une détection de mouvement.",
+            "Envoi de notifications sur votre appareil mobile.",
+            "Intégration complète avec vos systèmes domotiques existants."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre les rideaux quand la sonnette retentit pour une vérification visuelle rapide.",
+            "Ferme les rideaux au coucher du soleil pour préserver votre vie privée.",
+            "Se synchronise avec le thermostat pour optimiser l'apport de lumière naturelle."
+          ]
         },
         {
           "name": "Curtain Kit (C-shape)",
@@ -593,7 +747,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel rail de rideau en forme de C en un système intelligent. Profitez du luxe de rideaux automatisés qui glissent au lever du soleil et se ferment pour une intimité parfaite le soir venu.\n\n• Manipulez les rideaux lourds sans effort, sans avoir à tirer manuellement.\n• Créez des réveils parfaits grâce aux ouvertures programmées à l'aube.\n• Économisez de l'énergie en fermant automatiquement les rideaux lors des après-midis ensoleillés.\n• Renforcez votre sécurité et votre intimité même lorsque vous n'êtes pas chez vous.\n\nUne automatisation élégante qui s'installe discrètement derrière votre rail en C existant, sans matériel visible ni configuration complexe.",
+          "automations_fr": [
+            "Voici 3 automatisations pratiques :",
+            "Programmez la fermeture automatique au coucher du soleil et l'ouverture au lever du jour.",
+            "Déclencheur : Moment de la journée (coucher/lever du soleil)"
+          ],
+          "connected_scenes_fr": [
+            "Ferme automatiquement les rideaux si une caméra de sécurité détecte un mouvement.",
+            "Ouvre les rideaux à l'aube en utilisant les données d'un capteur de luminosité.",
+            "Se synchronise avec le thermostat intelligent pour réguler la température ambiante."
+          ]
         },
         {
           "name": "Curtain Kit (Garris)",
@@ -629,7 +794,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque lever de soleil en un réveil tout en douceur. Vos rideaux glissent sur commande, sans aucun effort.\n\n• Programmez vos rideaux pour qu'ils s'ouvrent automatiquement avec la lumière du matin.\n• Moteur ultra-silencieux capable de déplacer des draperies lourdes jusqu'à 8 kg.\n• Contrôlez chaque fenêtre depuis votre lit d'une simple pression.\n• S'adapte à vos tringles existantes sans outils ni perçage.\n\nAssociez-le à vos enceintes connectées ou assistants vocaux pour un contrôle mains libres. Créez des scénarios pour tamiser les lumières et fermer les rideaux simultanément.\n\nLaissez votre maison s'adapter à votre rythme sans lever le petit doigt.",
+          "automations_fr": [
+            "Ouverture/fermeture automatique des rideaux à des heures définies",
+            "Déclencheur : Programmation (ex: lever/coucher du soleil ou heures fixes comme 7h00 et 19h00).",
+            "Action : Les rideaux s'ouvrent le matin et se ferment le soir via le moteur Zigbee/WIFI."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre les rideaux au lever du soleil pour profiter de la lumière naturelle",
+            "Ferme les rideaux en cas de détection de mouvement pour plus d'intimité",
+            "Se synchronise avec le thermostat intelligent pour optimiser l'énergie"
+          ]
         },
         {
           "name": "Zigbee Mini Garage Door Controller",
@@ -665,7 +841,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Ouvrez votre garage où que vous soyez. Fermez-le d'un simple mot.\n\n• Contrôlez votre porte de garage à distance via le réseau Zigbee.\n• Surveillez l'état de la porte en temps réel sur vos appareils mobiles.\n• Recevez des alertes instantanées à chaque ouverture ou fermeture.\n• Design compact compatible avec tous les systèmes de motorisation de garage.\n\nTransformez votre garage en un accès intelligent et sécurisé, sans plus jamais avoir de doute.",
+          "automations_fr": [
+            "Ouverture automatique du garage via bouton distant lors de l'arrivée du véhicule",
+            "Fermeture automatique à 22h via signal Zigbee si la porte est restée ouverte",
+            "Activation à distance pour permettre l'accès aux livreurs pendant la journée"
+          ],
+          "connected_scenes_fr": [
+            "Allume les lumières du garage lors de l'ouverture ou la fermeture de la porte",
+            "Se synchronise avec les serrures intelligentes pour les routines de sécurité",
+            "S'intègre aux assistants vocaux pour un contrôle mains libres"
+          ]
         },
         {
           "name": "WiFi+BLE Mini Curtain Switch (1CH)",
@@ -701,7 +888,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque fenêtre en un havre d'intimité. Maîtrisez la lumière d'un simple geste ou à la voix.\n\n• Ouvrez, fermez ou mettez vos rideaux en pause de n'importe où dans la maison.\n• Programmez des réveils en douceur au lever du soleil et des fermetures automatiques au crépuscule.\n• Économisez de l'énergie en bloquant la chaleur à midi et en la conservant la nuit.\n• Format miniature s'installant derrière vos interrupteurs, sans refaire le câblage.\n\nPassez au contrôle intelligent de la lumière pour des pièces plus spacieuses, calmes et connectées.",
+          "automations_fr": [
+            "Déclencheur : Heure de la journée (ex: 7h00)",
+            "Action : Ouverture automatique des rideaux",
+            "Utilité : Maximise la lumière naturelle pour économiser l'éclairage et créer une routine matinale agréable."
+          ],
+          "connected_scenes_fr": [
+            "Actionne les rideaux lorsque la sonnette détecte un mouvement",
+            "Liaison avec les lumières connectées pour des routines matinales synchronisées",
+            "Commandes vocales via enceintes connectées pour un pilotage simplifié"
+          ]
         },
         {
           "name": "Smart Rope pull Blinds motor",
@@ -737,7 +935,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque store à chaînette de votre maison en un équipement automatisé qui obéit au doigt et à l'œil. Réveillez-vous avec un lever de soleil naturel, tamisez l'ambiance pour une soirée cinéma ou protégez votre intimité depuis votre lit d'une simple commande vocale.\n\n• Le moteur s'adapte à vos stores existants sans outils ni nouveaux rails.\n• Programmez l'ouverture matinale et la fermeture nocturne pour un rythme quotidien sans effort.\n• Un fonctionnement ultra-silencieux qui fait glisser vos stores en toute discrétion.\n• Partagez le contrôle avec votre famille via smartphone pour le confort de tous.\n\nUtilisez vos enceintes connectées ou vos écrans intelligents pour ajuster vos stores les mains libres pendant que vous cuisinez, lisez ou vous détendez. Le moteur de store connecté transforme vos fenêtres d'hier en un sanctuaire de demain.",
+          "automations_fr": [
+            "• Ouverture au lever du soleil et fermeture au coucher pour réguler la lumière naturelle et économiser l'énergie.",
+            "• Fermeture des stores pendant les pics d'ensoleillement pour réduire la chaleur et protéger vos meubles des UV.",
+            "• Déclenchement par programmation horaire (ex: routine matinale)."
+          ],
+          "connected_scenes_fr": [
+            "Ferme automatiquement les stores lorsque la sonnette vidéo détecte un mouvement la nuit.",
+            "Se synchronise avec le thermostat intelligent pour ajuster la lumière et la température selon la position du store.",
+            "S'intègre aux lumières connectées pour tamiser l'éclairage quand les stores s'ouvrent ou se ferment."
+          ]
         },
         {
           "name": "Smart Curtain Switch Module Zigbee",
@@ -773,7 +982,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez vos rideaux en protections intelligentes qui s'adaptent à votre rythme de vie. Ouvrez-les au lever du jour, fermez-les pour plus d'intimité, le tout sans lever le petit doigt.\n\n• Contrôlez vos rideaux à distance de n'importe où dans la maison.\n• Programmez une ouverture automatique avec votre routine matinale.\n• La connectivité Zigbee garantit un fonctionnement fiable et réactif.\n• Compatible avec les moteurs de rideaux et systèmes de rails existants.\n\nS'intègre parfaitement à votre écosystème maison connectée via les assistants vocaux et les appareils mobiles. Créez des scènes personnalisées qui coordonnent vos rideaux avec l'éclairage et la température.\n\nDécouvrez l'équilibre parfait entre lumière naturelle et intimité, chaque jour, automatiquement.",
+          "automations_fr": [
+            "Déclencheur : Moment de la journée (lever/coucher du soleil via programmation APP).",
+            "Action : Les rideaux s'ouvrent automatiquement au lever du soleil et se ferment au coucher.",
+            "Utilité : Économies d'énergie (lumière naturelle le jour, isolation la nuit) et confort (aucune manipulation manuelle)."
+          ],
+          "connected_scenes_fr": [
+            "Automatise l'ouverture/fermeture des rideaux avec les thermostats intelligents pour l'efficacité énergétique.",
+            "Se synchronise avec les lumières connectées pour les routines automatisées du matin et du soir.",
+            "Fonctionne avec les enceintes connectées pour un réglage des rideaux par commande vocale."
+          ]
         },
         {
           "name": "Blind motor",
@@ -809,7 +1029,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Vos stores bougent avec la lumière, pas contre elle. Réveillez-vous avec les doux rayons du matin et dormez dans une obscurité parfaite.\n\n• Contrôlez chaque store depuis votre lit ou votre canapé d'un seul geste.\n• Programmez la montée au lever du soleil et la descente au coucher de façon automatique.\n• Ajustez les lames avec précision pour préserver votre intimité sans sacrifier la lumière du jour.\n• Économisez de l'énergie en bloquant la chaleur estivale et en conservant la chaleur hivernale.\n\nConnectez-vous aux enceintes intelligentes, assistants vocaux ou appareils mobiles pour un pilotage mains libres dans toute la maison.\n\nTransformez vos fenêtres en gestionnaires de lumière intelligents qui travaillent pendant que vous vivez.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques utilisant les capacités réelles du moteur de store :",
+            "Intimité activée par le mouvement – Déclenchée par un capteur de mouvement près d'une fenêtre.",
+            "Lorsqu'un mouvement est détecté, le moteur abaisse automatiquement les stores."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre automatiquement les stores quand la sonnette retentit pour une meilleure visibilité.",
+            "Ferme les stores au lever du soleil et les ouvre au coucher pour l'intimité (mode inversé).",
+            "Se synchronise avec le thermostat intelligent pour ajuster la lumière et optimiser les économies d'énergie."
+          ]
         },
         {
           "name": "WIFI Smart Garage Controller(dry contact motor controlled garage doors)",
@@ -845,7 +1076,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte de garage devient plus intelligente. Contrôlez-la partout, à tout moment.\n\n• Ouvrez et fermez votre porte de garage à distance grâce à la connectivité Wi-Fi.\n• Surveillez l'état de la porte en temps réel sur votre appareil mobile.\n• Programmez des horaires automatiques pour vos routines d'ouverture et de fermeture.\n• Recevez des notifications instantanées à chaque activation de la porte.\n\nTransformez votre garage en une extension sécurisée et connectée de votre maison.\n\nFonctionne parfaitement avec vos enceintes connectées, assistants vocaux et écrans intelligents. Contrôlez votre installation depuis n'importe où dans le monde.",
+          "automations_fr": [
+            "Ouvrir la porte du garage à 7h via l'application Tuya lorsque le smartphone se connecte au Wi-Fi de la maison.",
+            "Fermer automatiquement la porte du garage à 22h par télécommande si aucun mouvement n'est détecté à proximité.",
+            "Programmer l'ouverture du garage à 18h quotidiennement via l'application Tuya pour le retour de la famille."
+          ],
+          "connected_scenes_fr": [
+            "Ferme automatiquement le garage lorsque la sonnette ne détecte aucun mouvement pendant 5 minutes.",
+            "Ouvre la porte du garage lorsque la serrure connectée détecte que vous quittez la maison.",
+            "Vous avertit si la porte du garage reste ouverte trop longtemps."
+          ]
         }
       ]
     },
@@ -886,7 +1128,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Nourrissez votre animal à l'heure, même quand la vie vous retient ailleurs. Ne vous précipitez plus pour rentrer dîner.\n\n• Définissez des heures de repas précises avec un contrôle des portions pour éviter les excès.\n• Vérifiez les niveaux de nourriture et l'historique des repas où que vous soyez.\n• Enregistrez votre voix pour appeler vos animaux avec un son familier et rassurant.\n• Recevez des alertes en cas de niveau bas ou de repas manqué.\n\nVotre animal profite de repas réguliers et fiables, et vous gagnez en sérénité.",
+          "automations_fr": [
+            "Le niveau de batterie faible déclenche le retour automatique à la base de charge et envoie une alerte Wi-Fi.",
+            "Le bac à poussière plein après 100 minutes déclenche une alerte Wi-Fi pour vider le réservoir de 600 ml.",
+            "La navigation par gyroscope termine l'itinéraire de distribution et revient automatiquement à la base de charge."
+          ],
+          "connected_scenes_fr": [
+            "Envoie des alertes de repas sur les écrans connectés pour surveiller les animaux via les caméras intérieures.",
+            "Allume les lumières connectées lors des repas programmés pour une meilleure visibilité dans l'obscurité.",
+            "Diffuse des rappels de repas et des alertes de niveau bas via les enceintes connectées."
+          ]
         },
         {
           "name": "Smart bird feeder",
@@ -922,7 +1175,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez votre jardin en un véritable documentaire animalier. La mangeoire intelligente offre une vue cristalline sur chaque visiteur à plumes.\n\n• Recevez des notifications instantanées dès qu'un oiseau se pose sur la mangeoire.\n• Capturez automatiquement de superbes photos et vidéos en gros plan.\n• Identifiez les espèces visiteuses grâce à la technologie de reconnaissance intégrée.\n• Surveillez le niveau de graines et recevez des rappels de remplissage sur votre téléphone.\n\nVivez une connexion extraordinaire avec la nature, juste derrière votre fenêtre.\n\nLa mangeoire intelligente s'intègre parfaitement à vos enceintes connectées et appareils mobiles. Observez vos visiteurs depuis n'importe quelle pièce de la maison.",
+          "automations_fr": [
+            "Si la température descend sous 2°C, augmente automatiquement la portion pour aider les oiseaux à maintenir leur chaleur corporelle.",
+            "Connexion au Wi-Fi 5 GHz et envoi d'une alerte smartphone quand le niveau d'eau descend sous 1 litre.",
+            "Surveillance de la consommation : si la mangeoire dépasse 5 W en continu, envoie une notification de maintenance pour un blocage éventuel."
+          ],
+          "connected_scenes_fr": [
+            "Avertit les enceintes connectées de l'arrivée d'oiseaux pour les observer via les caméras intérieures à distance.",
+            "Déclenche l'enregistrement des caméras extérieures lors des repas pour un visionnage ultérieur sur écran intelligent.",
+            "Envoie des alertes sur votre téléphone qui activent les lumières connectées quand la mangeoire doit être remplie."
+          ]
         }
       ]
     },
@@ -964,7 +1228,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "L'énergie qui réfléchit. Une recharge qui anticipe les besoins de vos appareils.\n\n• Six ports intelligents délivrent simultanément la puissance parfaite à chaque appareil.\n• Le port USB-C PD recharge rapidement vos ordinateurs tout en protégeant la batterie.\n• Le contrôle individuel des prises permet de redémarrer vos appareils sans vous lever.\n• La protection contre les surtensions intégrée sécurise vos équipements de valeur.\n\nLa multiprise intelligente PD transforme chaque branchement en une station de charge autonome qui s'adapte à votre rythme.",
+          "automations_fr": [
+            "Le signal Zigbee du capteur de porte active les deux canaux 100W à votre arrivée.",
+            "Programmez l'arrêt des deux canaux à minuit pour économiser l'énergie automatiquement.",
+            "Une commande Zigbee à distance pilote chaque canal pour contrôler deux lampes de 60W séparément."
+          ],
+          "connected_scenes_fr": [
+            "Alimente les caméras et sonnettes intelligentes avec protection contre les surtensions et contrôle individuel via l'app.",
+            "Se coordonne avec l'éclairage connecté pour allumer les lampes lors d'une détection de mouvement.",
+            "S'intègre aux assistants vocaux pour piloter cafetières ou purificateurs d'air selon votre planning."
+          ]
         },
         {
           "name": "WIFI EU standard outlet",
@@ -1001,7 +1276,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez instantanément n'importe quelle prise murale en prise intelligente. Contrôlez lampes, ventilateurs et électroménager où que vous soyez.\n\n• Programmez votre café pour qu'il soit prêt dès votre réveil.\n• Éteignez votre fer à lisser oublié pendant votre trajet.\n• Surveillez votre consommation pour réduire vos factures d'électricité.\n• Créez des ambiances lumineuses automatiques pour votre retour à la maison.\n\nAjoutez l'intelligence à vos appareils actuels sans avoir à les remplacer.",
+          "automations_fr": [
+            "Programmez l'arrêt du téléviseur à minuit pour supprimer la consommation en veille.",
+            "Éteignez un fer à lisser oublié via l'application pour éviter tout risque de surchauffe.",
+            "Activez la cafetière à 7h00 via le minuteur USB-C pour un café frais au réveil."
+          ],
+          "connected_scenes_fr": [
+            "Allume les lumières quand la sonnette vidéo détecte un visiteur après le coucher du soleil.",
+            "Gère les caméras extérieures via des minuteurs pour assurer une surveillance continue pendant vos vacances.",
+            "Pilote l'alimentation des caméas intérieures par commande vocale pour respecter votre vie privée dès votre retour."
+          ]
         },
         {
           "name": "Robot Vaccum cleaner with dustbag",
@@ -1037,7 +1323,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Vos sols restent propres pendant que vous profitez de la vie. Ce robot aspirateur se vide tout seul pour vous libérer des corvées.\n\n• Le sac à poussière auto-vidant stocke des semaines de débris pour un nettoyage sans intervention.\n• La navigation intelligente cartographie votre intérieur pour un passage complet sans aucun oubli.\n• L'aspiration puissante capture les poils d'animaux et la poussière fine sur tapis et sols durs.\n• Le nettoyage programmé maintient vos sols impeccables, même en votre absence.\n\nConnectez-le à vos enceintes ou écrans intelligents pour un contrôle vocal simple. Le robot répond à vos commandes et vous envoie ses rapports de nettoyage sur mobile.\n\nProfitez de sols toujours propres, sans lever le petit doigt.",
+          "automations_fr": [
+            "Le nettoyage démarre à 9h00 si la température dépasse 20°C et que le Wi-Fi est connecté.",
+            "La protection contre les surcharges déclenche l'arrêt automatique et envoie une alerte sur votre smartphone.",
+            "Le robot réduit sa puissance en cas de congestion du réseau 2.4GHz pour préserver sa connexion."
+          ],
+          "connected_scenes_fr": [
+            "Met le nettoyage en pause lorsqu'un visiteur est détecté par la sonnette intelligente.",
+            "Démarre l'aspiration quand la caméra intérieure confirme que la pièce est vide depuis 30 minutes.",
+            "Envoie une notification sur vos écrans intelligents quand le sac atteint 80 % de sa capacité."
+          ]
         },
         {
           "name": "Robot Vaccum cleaner with dustbag",
@@ -1073,7 +1370,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "La propreté s'invite chez vous, sans contrainte. Profitez de sols impeccables sans lever le petit doigt.\n\n• Le nettoyage automatisé balaie chaque recoin pendant que vous travaillez ou vous détendez.\n• Le sac à poussière intégré recueille des semaines de débris pour une élimination sans effort.\n• La navigation intelligente cartographie votre intérieur pour un passage efficace et complet.\n• Programmez vos cycles à distance pour retrouver une maison fraîche à tout moment.",
+          "automations_fr": [
+            "Le robot retourne à sa station dès que la batterie est faible pour lancer son cycle de charge.",
+            "Le capteur de réservoir plein active le vidage automatique avant de reprendre le nettoyage.",
+            "Le gyroscope confirme la fin d'une zone pour mettre à jour la carte et passer à la pièce suivante."
+          ],
+          "connected_scenes_fr": [
+            "L'aspirateur démarre dès que vos serrures connectées détectent votre départ.",
+            "Le cycle s'interrompt automatiquement si la sonnette retentit pour ne pas gêner vos visites.",
+            "Recevez une notification sur vos écrans connectés quand le sac à poussière doit être remplacé."
+          ]
         }
       ]
     },
@@ -1115,7 +1423,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Prenez le contrôle de vos circuits. Surveillez votre consommation d'énergie en temps réel, où que vous soyez.\n\n• Visualisez instantanément la consommation exacte de chaque appareil connecté.\n• Coupez l'alimentation à distance en cas de dysfonctionnement ou de surcharge.\n• Suivez vos coûts d'électricité mensuels avec une précision au watt près.\n• Protégez votre foyer grâce à l'arrêt automatique lors de pics de tension dangereux.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques pour votre disjoncteur Zigbee 2P :",
+            "Suivi de consommation pour optimiser vos économies d'énergie.",
+            "Déclencheur : La consommation dépasse un seuil défini (ex: 100W pendant 5 minutes)."
+          ],
+          "connected_scenes_fr": [
+            "Éteint automatiquement les appareils si la puissance dépasse les limites fixées.",
+            "Se synchronise avec vos prises connectées pour un pilotage global de l'énergie.",
+            "S'intègre à vos thermostats pour optimiser le chauffage selon les données de puissance."
+          ]
         },
         {
           "name": "3P Breaker Zigbee with power monit",
@@ -1151,7 +1470,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Prenez les commandes du cœur électrique de votre maison. Ce disjoncteur triphasé Zigbee transforme chaque circuit en gardien intelligent.\n\n• Surveillez la consommation de votre installation triphasée en temps réel.\n• Recevez des alertes immédiates quand un circuit approche d'une charge critique.\n• Suivez automatiquement vos dépenses énergétiques par équipement.\n• Réduisez jusqu'à 15 % de gaspillage lié à la consommation résiduelle.",
+          "automations_fr": [
+            "Suivi énergétique et alertes de sécurité.",
+            "Déclencheur : La consommation dépasse un seuil défini (ex: 3000W pendant 5 minutes).",
+            "Action : Envoi d'une notification sur votre smartphone ou assistant vocal."
+          ],
+          "connected_scenes_fr": [
+            "Analyse l'efficacité énergétique de vos prises et éclairages connectés.",
+            "Automatise la porte de garage lorsque la consommation électrique tombe à zéro.",
+            "Alerte en cas de dépassement de seuil pour les appareils gourmands comme la climatisation."
+          ]
         }
       ]
     },
@@ -1193,7 +1523,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Visualisez le climat de votre maison avec une clarté totale. Le compteur intelligent pour Rail DIN transforme l'énergie invisible en données exploitables.\n\n• Suivez les coûts de chauffage et de climatisation pièce par pièce avec une précision chirurgicale.\n• Surveillez la consommation électrique en temps réel pour détecter instantanément les gaspillages.\n• Identifiez les inefficacités de votre système climatique avant qu'elles ne fassent grimper vos factures.\n• Optimisez vos programmes CVC en fonction de vos habitudes d'utilisation réelles.\n\nNe devinez plus vos coûts énergétiques. Maîtrisez-les avec le compteur intelligent Rail DIN.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques pour le compteur intelligent Rail DIN :",
+            "Alertes de surveillance énergétique",
+            "Déclencheur : Consommation élevée (ex: dépasse 2000W pendant 5 minutes)"
+          ],
+          "connected_scenes_fr": [
+            "Surveille l'usage énergétique pour optimiser les réglages du thermostat intelligent.",
+            "Alerte lorsque les appareils dépassent les limites de puissance pour plus de sécurité.",
+            "S'intègre à la domotique pour une programmation optimisant les coûts."
+          ]
         },
         {
           "name": "Smart Radiator Valve Zigbee",
@@ -1229,7 +1570,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce en un sanctuaire à la température idéale. Vos radiateurs sont désormais à votre écoute et s'adaptent à vous.\n\n• Programmez des horaires par pièce qui correspondent parfaitement à votre rythme de vie.\n• Économisez jusqu'à 30 % sur vos factures de chauffage grâce au contrôle par zone intelligent.\n• Ajustez la température depuis votre lit à l'aide de votre smartphone.\n• La détection de fenêtre ouverte évite automatiquement le gaspillage d'énergie.\n\nDécouvrez un chauffage qui anticipe vos besoins pour que vous n'ayez plus à y penser.",
+          "automations_fr": [
+            "Contrôle de température éco-énergétique :",
+            "Déclencheur : Heure de la journée (ex: 22h00)",
+            "Utilité : Économiser l'énergie et réduire les coûts de chauffage tout en évitant que la pièce ne devienne trop froide."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la chaleur lorsque les capteurs de mouvement détectent une présence.",
+            "Se synchronise avec les thermostats intelligents pour une gestion efficace du chauffage.",
+            "S'éteint lorsque les fenêtres sont ouvertes via les capteurs de contact."
+          ]
         },
         {
           "name": "Smart Humidity&Temperature sensor with IR(Zigbee)",
@@ -1265,7 +1617,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Ressentez l'équilibre parfait dans chaque pièce. Votre climat intérieur s'ajuste avant même que vous ne le remarquiez.\n\n• Surveillez avec précision la température et l'humidité dans toute la maison.\n• Le contrôle IR ajuste automatiquement vos climatiseurs et chauffages.\n• Le réseau maillé Zigbee assure une connexion fiable dans chaque recoin.\n• Créez des zones de confort personnalisées grâce à des données environnementales précises.\n\nConnectez-le à vos enceintes connectées, écrans ou appareils mobiles pour des mises à jour vocales instantanées et des réglages à distance.\n\nTransformez votre maison en un sanctuaire qui respire avec vous.",
+          "automations_fr": [
+            "S'active automatiquement lors d'une détection de mouvement",
+            "Envoie des notifications sur votre appareil mobile",
+            "S'intègre aux systèmes domotiques existants"
+          ],
+          "connected_scenes_fr": [
+            "Ajuste le thermostat selon la température et l'humidité pour un confort optimal.",
+            "Active le déshumidificateur lorsque l'humidité dépasse un seuil pour prévenir les moisissures.",
+            "Active la clim ou le chauffage quand la température sort d'une plage définie pour plus d'efficacité."
+          ]
         },
         {
           "name": "Pilote Thermostat (Zigbee, Power Meter)",
@@ -1301,7 +1664,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez la gestion climatique de votre intérieur avec une précision intelligente. Le thermostat Pilote apprend vos habitudes tout en suivant chaque watt consommé.\n\n• La connectivité Zigbee crée un réseau maillé robuste dans toute votre maison.\n• Le compteur de puissance intégré affiche les coûts énergétiques exacts pour optimiser votre chauffage.\n• Les programmes adaptatifs s'ajustent automatiquement à votre mode de vie quotidien.\n• Ajustez la température à distance, où que vous soyez, depuis votre smartphone.\n\nConnectez-le facilement à vos enceintes et écrans connectés pour un contrôle vocal simplifié. Gérez plusieurs zones par la voix tout en surveillant vos habitudes de consommation sur mobile.\n\nVivez un confort absolu tout en réduisant vos factures grâce à une intelligence climatique basée sur vos données.",
+          "automations_fr": [
+            "S'active automatiquement lors d'une détection de mouvement",
+            "Envoie des notifications sur votre appareil mobile",
+            "S'intègre à vos systèmes domotiques existants"
+          ],
+          "connected_scenes_fr": [
+            "Ajuste le thermostat lorsque les serrures connectées détectent un départ",
+            "Se synchronise avec les prises intelligentes pour réduire la consommation d'énergie",
+            "Active le chauffage lorsque les capteurs de mouvement détectent une activité"
+          ]
         },
         {
           "name": "Wall Thermostats - Water heating (hydronic UFH/radiators), relay NC 3A / NO 5A",
@@ -1337,7 +1711,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Redéfinissez le confort de votre foyer grâce à un contrôle thermique précis qui apprend votre routine. Profitez d'une chaleur idéale tout en éliminant le gaspillage énergétique grâce à une gestion intelligente du chauffage hydraulique.\n\n• Maintenez automatiquement une température ambiante idéale selon votre emploi du temps.\n• Réduisez vos factures de chauffage grâce à la programmation intelligente et aux ajustements basés sur l'occupation.\n• Contrôlez votre plancher chauffant et vos radiateurs à distance via votre smartphone.\n• Profitez d'un fonctionnement silencieux et fiable pour vos systèmes à eau.\n\nConnectez-vous sans effort aux assistants vocaux pour changer la température à la voix. Créez des zones de chauffage personnalisées qui répondent à votre style de vie.\n\nEntrez dans une maison plus chaleureuse et efficace, où chaque pièce est à la température parfaite.",
+          "automations_fr": [
+            "Préchauffage matinal (hydraulique) : déclenché à une heure précise",
+            "Optimisation énergétique : préchauffe l'espace uniquement quand c'est nécessaire pour réduire les coûts",
+            "Baisse de température nocturne : déclenchée à une heure précise"
+          ],
+          "connected_scenes_fr": [
+            "Ajuste le chauffage lorsque la sonnette détecte une présence extérieure",
+            "Éteint le chauffage hydraulique lorsque le système de climatisation est actif",
+            "Se synchronise avec les prises connectées pour des cycles de chauffe programmés"
+          ]
         },
         {
           "name": "Wall Thermostats- Electric heating (UFH/radiators) 16A, internal + floor sensor",
@@ -1373,7 +1758,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Entrez dans une pièce qui vous accueille avec une chaleur parfaite dès votre arrivée. Ce thermostat pour chauffage électrique apprend votre rythme et efface la fraîcheur hivernale avant même que vous ne la ressentiez.\n\n• Les doubles capteurs surveillent l'air et le sol pour une précision invisible.\n• Le relais de 16 ampères gère sans effort les boucles de plancher chauffant ou les panneaux rayonnants.\n• Apprend vos habitudes pour préchauffer les pièces juste avant votre retour.\n• Réduit vos factures en stoppant la chauffe dès que le confort est atteint.\n\nUne climatisation intelligente et discrète : une chaleur qui vous attend, parfaitement synchronisée.",
+          "automations_fr": [
+            "Ajustement intelligent basé sur la température au sol",
+            "Déclencheur : la sonde de sol détecte une température inférieure au seuil défini (ex: 20°C)",
+            "Activation automatique du mode éco lors du passage en mode absence"
+          ],
+          "connected_scenes_fr": [
+            "Ajuste le chauffage lorsque la sonnette détecte l'arrivée de visiteurs",
+            "Éteint le chauffage lorsque le mode absence est activé",
+            "Se synchronise avec l'éclairage connecté pour une automatisation énergétique globale"
+          ]
         },
         {
           "name": "Wall Thermostats - Water/Gas boiler (on/off relay), NC 3A / NO 5A",
@@ -1409,7 +1805,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce en un véritable havre de confort. Ce thermostat mural intelligent apporte un contrôle de précision à votre système de chaudière gaz ou eau avec une fiabilité professionnelle.\n\n• Contrôle précis de la température avec commutation par relais NC 3A/NO 5A.\n• Gestion fluide de la chaudière par cycles marche/arrêt pour des économies d'énergie automatiques.\n• Design mural élégant qui s'intègre parfaitement aux intérieurs modernes.\n• Composants de qualité professionnelle garantissant des années de service fiable.\n\nVivez l'expérience d'une température idéale à chaque instant, gérée sans effort par une technologie climatique aussi performante qu'esthétique.",
+          "automations_fr": [
+            "Déclencheur : 6h30 en semaine. Action : La chaudière s'active automatiquement 30 minutes avant votre réveil, garantissant une maison chaude sans gaspiller d'énergie la nuit.",
+            "Déclencheur : Heure d'arrivée 18h00. Action : Le thermostat préchauffe votre maison avant votre retour, optimisant le confort et l'efficacité énergétique.",
+            "Déclencheur : La température descend sous 18°C la nuit. Action : La chaudière maintient une température minimale pour éviter le gel pendant votre sommeil."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la chaudière en fonction des prévisions météo des stations intelligentes",
+            "Allume la chaudière lorsque les capteurs de mouvement détectent une présence",
+            "Se synchronise avec les prises connectées pour gérer les plannings de chauffe à distance"
+          ]
         },
         {
           "name": "VRF - GS-KT01-ZIG/WIFI, Tuya VRF centralized control gateway",
@@ -1445,7 +1852,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Pilotez le climat de chaque pièce depuis un seul écran. Votre bâtiment devient instantanément une oasis de bien-être.\n\n• Contrôlez jusqu'à 64 unités VRF intérieures via une passerelle unique et élégante.\n• Les protocoles Zigbee et Wi-Fi éliminent le câblage supplémentaire entre les étages.\n• Programmez des zones pour économiser l'énergie lorsque les espaces sont inoccupés.\n• Alertes en temps réel pour permettre aux techniciens d'anticiper les pannes coûteuses.\n\nInstallez-le une fois, profitez d'un air parfait pour toujours.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques pour la passerelle de contrôle centralisée Tuya VRF :",
+            "Zonage VRF automatisé pour l'efficacité énergétique",
+            "Déclencheur : Moment de la journée (ex: 9h à 17h en semaine lorsque les bureaux sont occupés)"
+          ],
+          "connected_scenes_fr": [
+            "Automatise l'éclairage lors d'un appel à l'interphone pour alerter des visiteurs",
+            "Envoie des alertes sur smartphone lorsque la caméra détecte un mouvement",
+            "Contrôle la porte de garage via l'intégration au hub intelligent"
+          ]
         },
         {
           "name": "AE-DLJ Series VRF Air Conditioner thermostat",
@@ -1481,7 +1899,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre climat, perfectionné. La série AE-DLJ transforme chaque pièce en votre environnement idéal.\n\n• Le contrôle précis de la température offre un confort exactement là où vous en avez besoin.\n• Le fonctionnement écoénergétique réduit les coûts d'électricité tout en maintenant un climat intérieur parfait.\n• La gestion par zones individuelles permet à chaque membre de la famille de personnaliser son espace.\n• Les ajustements en temps réel répondent instantanément aux changements météo tout au long de la journée.\n\nConnectez-vous sans effort aux enceintes connectées, aux assistants vocaux et aux appareils mobiles pour un contrôle total, où que vous soyez.\n\nDécouvrez un confort personnalisé qui s'adapte à votre vie, et non l'inverse.",
+          "automations_fr": [
+            "Voici trois automatisations pratiques pour le thermostat de climatisation VRF série AE-DLJ :",
+            "Ajustement automatique du climat pour le confort (selon l'heure)",
+            "Récupération de mémoire après coupure de courant (perte d'alimentation)"
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la température lorsque la sonnette détecte quelqu'un à la porte",
+            "Éteint la climatisation lorsque le système de sécurité est armé en mode absence",
+            "Active le ventilateur pour aérer lorsque l'alarme fumée de la cuisine se déclenche"
+          ]
         },
         {
           "name": "zigbee Electric Floor Heating/Water Floor Heating/Gas Furnace",
@@ -1517,7 +1946,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Chaque pièce diffuse une chaleur idéale dès que vous franchissez la porte.\n\n• Profitez d'un confort thermique parfait dès votre retour à la maison.\n• Transformez votre chauffage en un compagnon intelligent qui apprend vos habitudes.\n• Gérez vos zones séparément : vos chambres restent douillettes sans surchauffer le salon.\n• Surveillez et ajustez vos réglages à distance pour une tranquillité d'esprit totale.\n\nConnectez-vous facilement à vos enceintes connectées, assistants vocaux et smartphones pour un contrôle mains libres.\n\nOptez pour un confort personnalisé qui vous accueille tout en réduisant vos dépenses énergétiques quotidiennes.",
+          "automations_fr": [
+            "Réveil en douceur",
+            "Déclencheur : Heure définie (ex: 6h30 en semaine)",
+            "Action : Le thermostat active le chauffage (sol ou chaudière) à la température de confort choisie."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste le chauffage lorsque les capteurs de mouvement détectent une présence.",
+            "Se synchronise avec d'autres thermostats pour une régulation uniforme.",
+            "Coupe le chauffage lorsqu'une fenêtre ou une porte est ouverte."
+          ]
         },
         {
           "name": "Fan Coil Room Thermostat, Two pipe",
@@ -1553,7 +1993,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Le confort idéal vous attend dès votre arrivée. Votre intérieur est à la température parfaite, à chaque instant.\n\n• Définissez votre température cible et oubliez les réglages manuels.\n• Le système à deux tubes assure un chauffage et un refroidissement efficaces et automatiques.\n• Un design épuré qui s'intègre discrètement à tout intérieur moderne.\n• Économisez de l'énergie tout en maintenant un confort constant tout au long de la journée.\n\nFaites de chaque pièce un sanctuaire de bien-être grâce à un contrôle climatique qui anticipe vos besoins.",
+          "automations_fr": [
+            "Régulation automatique selon votre emploi du temps",
+            "Déclencheur : Heure de la journée (ex: 7h pour le chauffage, 18h pour la climatisation)",
+            "Action : Ajuste le ventilo-convecteur et la vanne motorisée pour maintenir la température."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la ventilation lorsqu'un visiteur est détecté par la sonnette connectée.",
+            "Se synchronise avec l'éclairage intelligent pour créer une ambiance selon la température.",
+            "Passe en mode \"Absence\" via les caméras de sécurité pour économiser l'énergie."
+          ]
         },
         {
           "name": "Fan Coil Room Thermostat, Four pipe",
@@ -1589,7 +2040,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce en un havre de paix climatique. Maîtrisez votre confort avec une précision intuitive.\n\n• Basculez instantanément entre une fraîcheur vivifiante et une chaleur enveloppante.\n• Le système à quatre tubes permet des changements de température plus rapides dans tout l'espace.\n• Les ventilo-convecteurs ultra-silencieux préservent votre sérénité tout en purifiant l'air ambiant.\n• Les commandes tactiles répondent avec une précision parfaite à chaque réglage.\n\nAssociez-le à vos enceintes connectées ou vos appareils mobiles pour un contrôle vocal et applicatif total. Votre climat suit votre rythme, et non l'inverse.\n\nBienvenue dans un confort personnalisé qui vous devance.",
+          "automations_fr": [
+            "La routine matinale active le chauffage via Alexa et ouvre la vanne motorisée pour chauffer la chambre.",
+            "La commande \"Soirée\" de Google Home bascule en mode froid, ferme la vanne de chauffage et ouvre celle de refroidissement.",
+            "La programmation Wi-Fi maintient 22°C pendant les heures de travail et gère automatiquement les vannes."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la vitesse du ventilateur selon la température ambiante pour plus d'efficacité.",
+            "Se synchronise avec les bouches d'aération intelligentes pour équilibrer le flux d'air.",
+            "Active ou désactive le système lors de l'ouverture ou la fermeture des portes et fenêtres."
+          ]
         },
         {
           "name": "Integrated air conditioning and floor heating 2 in 1",
@@ -1625,7 +2087,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Un seul système. Chaque saison à la perfection.\n\n• Un rafraîchissement ultra-silencieux dans chaque pièce, sans unités encombrantes.\n• Le chauffage par le sol garde vos pieds au chaud tout en réduisant vos coûts énergétiques.\n• Les commandes tactiles ajustent la température pièce par pièce pour un confort optimal.\n• Des bouches d'aération discrètes s'effacent dans les plafonds et les murs pour une esthétique minimaliste.\n\nVivez dès aujourd'hui le futur du confort domestique.",
+          "automations_fr": [
+            "Le capteur détecte une température inférieure à 18°C et active le chauffage au sol à 22°C selon le programme 5+2.",
+            "L'écran couleur affiche le mode 7+0 et augmente la consigne à 25°C pendant votre routine matinale.",
+            "La sécurité enfant s'active si la température dépasse 60°C, évitant toute modification accidentelle."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste le chauffage et la climatisation selon les horaires de votre thermostat connecté.",
+            "S'éteint automatiquement lorsque vos serrures connectées détectent votre départ.",
+            "Se synchronise avec vos prises connectées pour éteindre les appareils en votre absence."
+          ]
         },
         {
           "name": "Thermostat Controller switch",
@@ -1661,7 +2134,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez la gestion climatique de votre intérieur avec une précision intelligente. Ce contrôleur apporte un confort sans effort dans chaque pièce.\n\n• Réglez la température idéale où que vous soyez depuis votre appareil mobile.\n• Économisez jusqu'à 30 % sur vos factures d'énergie grâce à la programmation intelligente.\n• La commande vocale s'intègre parfaitement à vos enceintes connectées actuelles.\n• Surveillez et ajustez vos réglages via les écrans intelligents de la maison.\n\nDécouvrez dès maintenant le futur du contrôle climatique résidentiel.",
+          "automations_fr": [
+            "Une détection de mouvement dans le couloir active le mode air frais et rétroéclaire l'interrupteur.",
+            "L'application mobile active le chauffage au sol à 6h du matin pour un réveil tout en douceur.",
+            "Une commande vocale lance un minuteur pour éteindre la climatisation après 2 heures et économiser l'énergie."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la température en fonction des détections de mouvement de la sonnette vidéo.",
+            "Synchronise l'éclairage et la température pour créer l'ambiance parfaite.",
+            "Permet de contrôler le thermostat à distance via les notifications de votre sonnette connectée."
+          ]
         }
       ]
     },
@@ -1703,7 +2187,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez vos murs en centres de commande. Pilotez trois circuits électriques et vos appareils infrarouges depuis un écran tactile élégant.\n\n• Gérez vos lumières, ventilateurs et appareils grâce aux trois interrupteurs à relais intégrés.\n• Remplacez vos multiples télécommandes par un contrôle infrarouge universel centralisé.\n• Visualisez l'état de vos appareils sur un écran couleur haute définition de 3,5 pouces.\n• Installation sans hub ni passerelle : fonctionne de manière autonome dès l'installation.\n\nLe panneau se connecte facilement à vos assistants vocaux. Contrôlez tout depuis votre mobile, que vous soyez en déplacement ou confortablement installé dans votre canapé.\n\nSimplifiez votre maison connectée avec un contrôle de qualité professionnelle, installé en quelques minutes.",
+          "automations_fr": [
+            "Contrôle de l'éclairage automatisé via les boutons physiques.",
+            "Déclencheur : Appui sur l'un des trois boutons physiques du panneau.",
+            "Utilité : Idéal pour un contrôle manuel rapide des appareils fréquents sans utiliser de smartphone."
+          ],
+          "connected_scenes_fr": [
+            "Pilote les lumières connectées lorsqu'un mouvement est détecté par la caméra.",
+            "Affiche le flux vidéo de la sonnette sur l'écran lors d'un appel.",
+            "Automatise le verrouillage des portes en fonction de la détection de présence."
+          ]
         },
         {
           "name": "4\" touch smart voice control panel with built-in Alexa (gateway)",
@@ -1739,7 +2234,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Contrôlez toute votre maison d'un simple geste. Ou simplement par la voix.\n\n• Pilotez chaque lumière, serrure et scénario depuis un élégant écran de 4 pouces.\n• Parlez naturellement pour tamiser les feux, régler la température ou sécuriser votre foyer.\n• Visualisez l'état de votre maison connectée d'un coup d'œil grâce à un retour tactile dynamique.\n• Remplacez plusieurs interrupteurs par un panneau unique et épuré qui centralise tout.\n\nS'intègre parfaitement à vos enceintes connectées, assistants vocaux et appareils mobiles existants. Créez des scènes personnalisées qui activent tous vos produits connectés simultanément.\n\nTransformez chaque mur en centre de commande pour votre vie connectée.",
+          "automations_fr": [
+            "S'active automatiquement lors d'une détection de mouvement",
+            "Envoie des notifications sur votre appareil mobile",
+            "S'intègre aux systèmes domotiques existants"
+          ],
+          "connected_scenes_fr": [
+            "Contrôle le flux vidéo de la sonnette par commande vocale",
+            "S'intègre aux serrures connectées pour un accès sans clé",
+            "Ajuste le thermostat via le tactile ou la voix"
+          ]
         },
         {
           "name": "5\" Touch smart voice with built-in Alexa(Gateway)",
@@ -1775,7 +2281,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Commandez chaque pièce depuis un écran unique et élégant. Votre maison répond désormais au doigt et à la voix.\n\n• Contrôlez l'éclairage, la température et la sécurité via une interface tactile intuitive de 5 pouces.\n• Consultez la météo, les actualités ou lancez votre musique grâce à l'assistant vocal intégré.\n• Visualisez clairement vos visiteurs avec l'affichage intégré pour sonnette vidéo.\n• Connectez tous vos appareils intelligents grâce à la puissance de la passerelle intégrée.\n\nS'intègre parfaitement à vos enceintes et assistants vocaux actuels. Gérez l'ensemble de votre installation depuis vos écrans ou vos appareils mobiles via un hub centralisé.\n\nTransformez votre espace de vie en une maison intelligente qui anticipe vos besoins.",
+          "automations_fr": [
+            "Éclairage automatisé avec détection de mouvement (Zigbee + Contrôle local)",
+            "Déclencheur : Mouvement détecté par un capteur Zigbee relié à la passerelle.",
+            "Action : Les lumières connectées s'allument à 30 % de luminosité (variation de groupe)."
+          ],
+          "connected_scenes_fr": [
+            "Annonce les alertes de la sonnette via Alexa quand quelqu'un sonne",
+            "Contrôle les lumières connectées lors d'une détection de mouvement à la porte",
+            "Affiche le flux vidéo en direct de la sonnette sur l'écran 5\""
+          ]
         },
         {
           "name": "8\" touch control panel with Gateway",
@@ -1811,7 +2328,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Commandez chaque pièce depuis un écran élégant. Votre maison entière répond à un seul geste.\n\n• Contrôlez l'éclairage, la température et la sécurité sur un écran HD intuitif de 8 pouces.\n• Le hub intégré connecte des centaines d'appareils via une interface centralisée unique.\n• Les scènes personnalisées transforment votre ambiance instantanément d'une simple pression.\n• Un design mural épuré qui remplace vos interrupteurs par un panneau en verre minimaliste.\n\nS'intègre parfaitement aux enceintes connectées, assistants vocaux et appareils mobiles pour un contrôle mains libres dans toute la maison.\n\nDécouvrez la simplicité d'une automatisation complète, aussi naturelle qu'un interrupteur classique.",
+          "automations_fr": [
+            "Musique matinale et résumé d'actualités",
+            "Déclencheur : Heure programmée (ex: 07h00)",
+            "Usage : Un moyen pratique de commencer la journée en musique sans intervention manuelle."
+          ],
+          "connected_scenes_fr": [
+            "Pilote les lumières selon les détections de mouvement de la sonnette vidéo.",
+            "Verrouille automatiquement les portes lors de votre départ via la géolocalisation.",
+            "Affiche le flux vidéo en direct dès que quelqu'un sonne à la porte."
+          ]
         },
         {
           "name": "10.1\" touch control panel with Gateway",
@@ -1847,7 +2375,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Pilotez chaque pièce depuis un écran unique et élégant. Toute votre maison connectée répond à un simple geste.\n\n• Contrôlez l'éclairage, la température et la sécurité depuis un superbe écran de 10,1 pouces.\n• Visualisez vos caméras en direct tout en gérant vos serrures et vos lumières.\n• Créez des scènes personnalisées pour activer plusieurs appareils d'une seule pression.\n• La passerelle intégrée connecte vos objets intelligents sans hub supplémentaire.\n\nTransformez votre intérieur en un sanctuaire réactif où confort et sécurité obéissent à vos commandes.",
+          "automations_fr": [
+            "Éclairage de sécurité activé par le mouvement",
+            "Déclencheur : Mouvement détecté par un capteur Zigbee",
+            "Action : Les lumières reliées au panneau s'allument (via relais ou ampoules compatibles)"
+          ],
+          "connected_scenes_fr": [
+            "Contrôle du thermostat intelligent depuis l'interface tactile",
+            "Surveillance des flux vidéo des caméras de sécurité en direct",
+            "Ouverture de la porte de garage connectée d'un simple geste"
+          ]
         },
         {
           "name": "3 gang rotate control panel (Gateway)",
@@ -1883,7 +2422,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Faites de chaque mur le centre de commande de votre maison. Trois cadrans rotatifs élégants mettent le contrôle total à portée de main.\n\n• Ajustez l'éclairage, la température et vos scènes avec la précision d'un cadran.\n• Le hub intégré unifie tous vos appareils intelligents en un seul écosystème.\n• La façade en verre épurée remplace vos interrupteurs classiques par un design minimaliste.\n• Naviguez sans effort entre vos réglages personnalisés selon le moment de la journée.\n\nS'intègre parfaitement aux enceintes connectées, assistants vocaux et appareils mobiles. Créez des routines automatisées qui suivent votre rythme de vie.\n\nSublimez votre expérience connectée avec un contrôle intuitif, aussi agréable à utiliser qu'à regarder.",
+          "automations_fr": [
+            "Action : Ajustement de la luminosité des éclairages connectés (via Wi-Fi) ou des systèmes de variation.",
+            "Gestion des appareils - Déclencheur : Pression sur les boutons tactiles ou rotation du cadran.",
+            "Activation du système de sécurité - Déclencheur : Programmation horaire (ex: nuit) ou saisie manuelle."
+          ],
+          "connected_scenes_fr": [
+            "Contrôle de la porte de garage via l'application domotique",
+            "Synchronisation avec le thermostat pour un ajustement climatique automatique",
+            "Activation des caméras de sécurité lors d'une détection de mouvement"
+          ]
         }
       ]
     },
@@ -1925,7 +2475,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel circuit en un interrupteur intelligent. Surveillez votre consommation d'énergie où que vous soyez tout en conservant un contrôle manuel total.\n\n• Pilotez vos lumières, pompes ou chauffages à distance avec un suivi de puissance 16A en temps réel.\n• Visualisez la consommation exacte en watts et évitez les surcharges avant qu'elles ne fassent disjoncter votre installation.\n• S'installe directement dans vos circuits existants pour une mise à jour invisible de votre maison.\n• Suivez vos coûts énergétiques et repérez instantanément les appareils inefficaces.\n\nPrenez les commandes de chaque circuit avec une surveillance de qualité professionnelle qui tient dans la paume de votre main.",
+          "automations_fr": [
+            "Contrôle automatisé de l'éclairage pour la sécurité",
+            "Déclencheur : Mouvement détecté par un capteur intelligent (ex: la nuit).",
+            "Action : Le module allume la lumière connectée (jusqu'à 16A) pour dissuader les intrus."
+          ],
+          "connected_scenes_fr": [
+            "Contrôle des serrures intelligentes lorsque la sonnette retentit",
+            "Activation des caméras de sécurité lors d'une détection de mouvement",
+            "Allumage des lumières extérieures pour une meilleure visibilité nocturne"
+          ]
         },
         {
           "name": "Smart 2 Gang Dry Contact Switch with power monitering (16A)",
@@ -1961,7 +2522,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel circuit en gardien intelligent. Surveillez et contrôlez deux appareils à forte charge depuis n'importe où avec une précision chirurgicale.\n\n• Suivez la consommation d'énergie en temps réel pour chaque circuit 16A de manière indépendante.\n• Recevez des alertes instantanées en cas de consommation inhabituelle.\n• Coupez l'alimentation à distance pour éviter les dommages dus aux surcharges ou aux pannes.\n• Installez sans refaire le câblage : remplacez simplement vos modules existants.\n\nSécurisez les circuits critiques de votre maison avec une intelligence de qualité professionnelle qui tient dans la main.",
+          "automations_fr": [
+            "Éclairage extérieur automatisé avec suivi de consommation",
+            "Déclencheur : Mouvement détecté par un capteur connecté (ex: au coucher du soleil ou à la tombée de la nuit).",
+            "Action : L'interrupteur allume les lumières extérieures et suit la consommation d'énergie."
+          ],
+          "connected_scenes_fr": [
+            "Verrouillage automatique du portail lorsqu'une tension est détectée",
+            "Extinction du chauffage/climatisation si une porte reste ouverte",
+            "Activation de l'éclairage extérieur sur détection de mouvement par caméra"
+          ]
         },
         {
           "name": "Smart 3 Gang Dry Contact Switch with power monitering (16A)",
@@ -1997,7 +2569,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Faites évoluer votre installation électrique avec un contrôle intelligent rentabilisé dès les premières utilisations. Gérez trois circuits à distance tout en suivant votre consommation réelle.\n\n• Contrôlez trois circuits 16A indépendamment depuis votre téléphone.\n• Suivez l'utilisation d'énergie et les coûts en temps réel par appareil.\n• Installation simplifiée : s'adapte parfaitement aux boîtes d'encastrement standard.\n• Programmez des horaires pour réduire instantanément vos factures d'électricité.\n\nPrenez dès aujourd'hui les commandes de votre consommation électrique.",
+          "automations_fr": [
+            "Activation automatique sur détection de mouvement",
+            "Envoi de notifications sur votre appareil mobile",
+            "Intégration avec vos systèmes domotiques existants"
+          ],
+          "connected_scenes_fr": [
+            "Ouverture du garage sur détection de mouvement par la caméra",
+            "Allumage des lumières extérieures lors d'un appel à l'interphone de nuit",
+            "Suivi de consommation des sonnettes connectées pour surveiller l'autonomie"
+          ]
         },
         {
           "name": "Smart 4 Gang Dry Contact Switch with power monitering (16A)",
@@ -2033,7 +2616,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Prenez le contrôle de chaque circuit, où que vous soyez. Votre maison répond désormais au doigt et à l'œil.\n\n• Contrôlez quatre circuits indépendamment avec une capacité de 16A par sortie.\n• Surveillez la consommation d'énergie en temps réel pour chaque circuit.\n• Transformez n'importe quel interrupteur en commande intelligente sans recâblage.\n• Définissez des programmes qui réduisent automatiquement vos dépenses énergétiques.\n\nLe micromodule 4 sorties offre une gestion professionnelle de l'énergie en quelques minutes.",
+          "automations_fr": [
+            "Éclairage de sécurité sur détection de mouvement",
+            "Déclencheur : Mouvement détecté par un capteur compatible (ex: capteur de porte ou fenêtre)",
+            "Action : Le module active un éclairage de sécurité ou un système d'alarme"
+          ],
+          "connected_scenes_fr": [
+            "Activation des lumières intelligentes lorsque la sonnette retentit",
+            "Mise en marche des caméras de sécurité sur détection de mouvement",
+            "Surveillance de la consommation des appareils connectés"
+          ]
         },
         {
           "name": "Smart Curtain Switch Module Zigbee ( 2 Channel)",
@@ -2069,7 +2663,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez vos rideaux en habillages intelligents qui suivent votre rythme quotidien. Profitez du confort d'un contrôle automatisé sans changer vos installations actuelles.\n\n• Ouvrez vos rideaux simultanément d'un geste, où que vous soyez.\n• Programmez des scénarios de réveil pour laisser entrer la lumière naturelle en douceur.\n• Créez une ambiance cinéma en fermant instantanément tous les rideaux de la pièce.\n• Économisez de l'énergie en automatisant la fermeture pour bloquer la chaleur estivale.\n\nPilotez vos équipements via vos enceintes connectées, assistants vocaux ou votre smartphone pour une intégration parfaite à votre quotidien.\n\nInstallez-le une fois, et laissez vos rideaux agir pour vous afin de profiter d'une luminosité idéale à chaque instant.",
+          "automations_fr": [
+            "Fermeture automatique des rideaux au coucher du soleil pour l'intimité et l'isolation thermique.",
+            "Déclencheur : Heure de la journée (coucher du soleil).",
+            "Action : Activation des deux canaux du module pour fermer les rideaux."
+          ],
+          "connected_scenes_fr": [
+            "Ouvre automatiquement les rideaux lorsqu'un mouvement est détecté par la sonnette vidéo.",
+            "Se synchronise avec les lumières connectées pour ajuster l'intensité selon la position des rideaux.",
+            "Ferme les rideaux au crépuscule pour plus d'intimité et d'efficacité énergétique."
+          ]
         }
       ]
     },
@@ -2111,7 +2716,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte devient intelligente. Découvrez le confort d'un quotidien sans clés qui fonctionne vraiment.\n\n• Déverrouillez instantanément depuis n'importe où avec votre téléphone.\n• Accordez un accès temporaire à vos invités sans avoir à cacher de double de clé.\n• Identifiez précisément qui entre grâce au journal d'activité détaillé.\n• Ne cherchez plus vos clés grâce au déverrouillage automatique par proximité.\n\nTransformez la sécurité de votre foyer avec un accès intelligent qui s'adapte à votre vie.",
+          "automations_fr": [
+            "La détection de basses fréquences audio sous 63 Hz déclenche une réduction automatique du volume pour protéger les composants du haut-parleur.",
+            "Lorsque le haut-parleur atteint sa puissance nominale de 20W pendant 10 minutes, la sensibilité baisse automatiquement pour éviter la surchauffe.",
+            "Une perte de connexion Bluetooth de 5 minutes active le mode veille automatique pour économiser l'énergie."
+          ],
+          "connected_scenes_fr": [
+            "Se verrouille automatiquement lorsque le système de sécurité est armé pour la nuit.",
+            "Déverrouille la porte lorsque la sonnette vidéo identifie un visiteur connu.",
+            "Alerte le smartphone si la porte reste déverrouillée pendant une période prolongée."
+          ]
         },
         {
           "name": "Smart door lock with bluetooth functio",
@@ -2147,7 +2763,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte devient intelligente. Vos clés sont désormais obsolètes.\n\n• Déverrouillez votre porte de n'importe où grâce à la connectivité Bluetooth.\n• Partagez des accès temporaires avec vos invités via votre appareil mobile.\n• Surveillez les entrées grâce aux notifications envoyées en temps réel.\n• Installation facile en remplacement de votre pêne dormant actuel en quelques minutes.\n\nCompatible avec les enceintes connectées et assistants vocaux pour un contrôle mains libres. Gérez tout depuis votre smartphone, où que vous soyez.\n\nFaites de votre porte d'entrée l'élément le plus intelligent de votre maison.",
+          "automations_fr": [
+            "Accès temporaire automatisé pour les invités.",
+            "Déclencheur : Génération d'un mot de passe temporaire dans l'application Smart Life ou Tuya.",
+            "Action : La serrure autorise l'accès pour une durée définie (ex: 24h) ou un nombre d'utilisations précis."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouille la porte en lien avec la détection de visiteur de la sonnette vidéo.",
+            "Envoie des alertes aux lumières connectées lorsque la porte est déverrouillée à distance.",
+            "Se verrouille automatiquement lorsqu'elle est jumelée à un système d'alarme intelligent."
+          ]
         },
         {
           "name": "Double -sided fingerprint integrated lock (bull head lock)",
@@ -2183,7 +2810,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte vous reconnaît. Vos clés restent au fond du tiroir.\n\n• Déverrouillez d'un simple toucher, des deux côtés de la porte.\n• Enregistrez les empreintes de toute la famille pour un accès instantané et sans clé.\n• Ne jonglez plus avec vos clés quand vous portez les courses ou les enfants.\n• Le double capteur rend l'entrée et la sortie tout aussi fluides.\n\nConnectez-vous à vos enceintes connectées, écrans et appareils mobiles pour un contrôle total.\n\nL'accès biométrique double face transforme votre porte en l'objet le plus simple à ouvrir de votre journée.",
+          "automations_fr": [
+            "Surveillance de l'utilisation d'une clé physique pour renforcer la sécurité.",
+            "Éclairage automatique de l'entrée dès qu'une personne accède au domicile.",
+            "Alerte de sécurité immédiate en cas de tentative d'accès non autorisée."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouille la porte automatiquement quand la sonnette vidéo détecte une empreinte autorisée.",
+            "Envoie une notification sur smartphone dès que la serrure biométrique est utilisée.",
+            "Synchronise les lumières connectées pour éclairer le couloir dès l'ouverture de la porte."
+          ]
         },
         {
           "name": "Smart door lock for wooden door",
@@ -2219,7 +2857,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte se souvient de vous. Vos clés appartiennent au passé.\n\n• Déverrouillez d'un simple toucher : fini de chercher vos clés dans le noir.\n• Accordez des accès temporaires à vos invités sans doubler ni cacher de clés.\n• Suivez chaque entrée et sortie avec un historique horodaté pour une tranquillité totale.\n• Le verrouillage automatique sécurise votre foyer dès que la porte se referme.\n\nEntrez dans une maison qui vous accueille et se sécurise dès que vous partez.",
+          "automations_fr": [
+            "Désactivation du scanner d'empreintes sous 0°C et passage en mode code pour une fiabilité maximale.",
+            "Activation du mode basse consommation si l'humidité dépasse 90% pour protéger les composants.",
+            "Verrouillage du système pendant 30 minutes après 5 codes erronés (clé physique requise)."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouille la porte automatiquement quand la sonnette vidéo reconnaît un visage de confiance.",
+            "Envoie une alerte sur smartphone à chaque activation de la serrure.",
+            "Active automatiquement les caméras de sécurité dès que la porte est ouverte."
+          ]
         },
         {
           "name": "3D recognition smart lock (Face recognition + palm vein recognition + Security camera)",
@@ -2255,7 +2904,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte vous reconnaît. Votre maison vous accueille.\n\n• La reconnaissance faciale 3D ouvre votre porte en moins d'une seconde.\n• Le scan des veines de la paume fonctionne même avec des gants ou un masque.\n• La caméra de sécurité intégrée capture chaque visiteur en haute définition.\n• La double authentification biométrique élimine tout risque d'accès non autorisé.\n\nBienvenue dans le futur de la sécurité domestique.",
+          "automations_fr": [
+            "Alerte de sécurité automatisée pour les tentatives d'accès non reconnues.",
+            "Déclencheur : La serrure détecte un visage ou une paume inconnu lors d'une tentative d'accès.",
+            "Usage : Renforce la sécurité en alertant le propriétaire de toute activité suspecte, même sans intrusion."
+          ],
+          "connected_scenes_fr": [
+            "Active les caméras de sécurité dès qu'une personne s'approche de la porte.",
+            "Allume les lumières connectées lorsqu'une personne autorisée est détectée.",
+            "Envoie des alertes sur smartphone en cas de tentative d'accès non autorisée."
+          ]
         },
         {
           "name": "Smart Door Lock",
@@ -2291,7 +2951,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte se déverrouille d'elle-même à votre arrivée. Votre maison vous accueille avant même que vous ne touchiez la poignée.\n\n• Déverrouillez de n'importe où si vos invités arrivent en avance.\n• Ne cachez plus jamais vos clés sous le paillasson.\n• Vérifiez l'état de la serrure depuis votre lit.\n• Accordez un accès temporaire au personnel d'entretien ou aux dog-sitters.\n\nContrôlez tout via vos enceintes connectées, assistants vocaux, écrans intelligents ou appareils mobiles. Votre porte s'intègre parfaitement à l'écosystème de votre maison connectée.\n\nLaissez votre porte vous reconnaître, vous protéger et vous souhaiter la bienvenue chaque jour.",
+          "automations_fr": [
+            "Sécurisation nocturne automatisée",
+            "Déclencheur : Horaire fixe (ex: 22h) ou détection de mouvement à la porte après une heure définie (ex: 23h).",
+            "Usage : Renforce la sécurité en garantissant que la porte est verrouillée la nuit et alerte le propriétaire en cas de tentative non autorisée."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouillage automatique lorsque la sonnette vidéo détecte un livreur de confiance",
+            "Verrouillage des portes lorsqu'un mouvement est détecté à l'extérieur de la propriété",
+            "Synchronisation avec les lumières connectées pour les allumer ou les éteindre lors du verrouillage/déverrouillage"
+          ]
         },
         {
           "name": "24*240 lock body",
@@ -2327,7 +2998,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte devient plus intelligente. Le coffre de serrure 24240 transforme chaque entrée en une expérience de sécurité fluide.\n\n• Déverrouillage instantané par empreinte digitale en moins d'une seconde.\n• Créez des codes d'accès temporaires pour vos invités, où que vous soyez.\n• Suivez chaque entrée et sortie grâce au journal d'activité détaillé.\n• Le verrouillage automatique sécurise la porte derrière vous systématiquement.\n\nAvec le coffre 24240, les clés perdues et les doubles cachés ne sont plus qu'un souvenir.",
+          "automations_fr": [
+            "Après 3 échecs d'empreinte, l'accès biométrique est désactivé pendant 5 minutes avec envoi d'une alerte au code maître",
+            "Une erreur de mot de passe déclenche un blocage de 30 secondes, puis autorise un nouvel essai avec protection par code factice active",
+            "L'utilisation d'une carte IC de nuit nécessite un mot de passe supplémentaire, tandis que l'accès par carte seule est autorisé de jour"
+          ],
+          "connected_scenes_fr": [
+            "Ouverture de la porte pour la livraison lorsqu'un colis est détecté",
+            "Alerte sur smartphone si la porte reste déverrouillée trop longtemps",
+            "Verrouillage automatique de la porte après le coucher du soleil pour plus de sécurité"
+          ]
         },
         {
           "name": "3D face+video doorbell Smart Automatic lock",
@@ -2363,7 +3045,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte est désormais plus intelligente que votre téléphone. La serrure automatique avec reconnaissance faciale 3D et sonnette vidéo vous identifie instantanément pour vous accueillir.\n\n• Visualisez chaque visiteur en haute définition avant de répondre.\n• La reconnaissance faciale 3D déverrouille l'accès pour la famille en moins d'une seconde.\n• Ne cherchez plus vos clés : votre visage devient votre identifiant.\n• Sachez qui est à votre porte, où que vous soyez dans la maison.\n\nLa porte d'entrée qui vous reconnaît et protège votre foyer des inconnus.",
+          "automations_fr": [
+            "Verrouillage automatique nocturne pour garantir la sécurité de la maison durant la nuit",
+            "Enregistrement vidéo des passages pour vérifier l'identité des visiteurs en votre absence",
+            "Envoi d'une alerte immédiate si un visage inconnu est détecté"
+          ],
+          "connected_scenes_fr": [
+            "Déverrouillage de la serrure intelligente à votre approche",
+            "Notifications instantanées sur smartphone lorsque quelqu'un sonne",
+            "Allumage automatique des lumières connectées en cas de mouvement nocturne"
+          ]
         },
         {
           "name": "WiFi smart door lock with camera (comes with lockbody)",
@@ -2399,7 +3092,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Voyez qui est là avant même qu'on ne frappe. Verrouillez ou déverrouillez votre porte, où que vous soyez.\n\n• La caméra haute définition affiche chaque visiteur en temps réel.\n• Alertes instantanées sur votre téléphone en cas de détection de mouvement.\n• Entrée simplifiée pour la famille et codes temporaires pour vos invités.\n• Corps de serrure complet inclus, s'installe avec des outils standards.\n\nVotre porte d'entrée n'a jamais été aussi intelligente.",
+          "automations_fr": [
+            "Action : La porte se déverrouille automatiquement (via l'application) à votre approche.",
+            "Utilité : Pratique pour entrer les mains libres, surtout avec des courses ou des sacs.",
+            "• Verrouillage automatique la nuit et activation des alertes de sécurité – Déclencheur : À une heure définie."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouille la porte de garage connectée à votre arrivée.",
+            "Se synchronise avec les caméras de surveillance pour enregistrer les mouvements.",
+            "Allume le thermostat connecté dès que quelqu'un entre dans la maison."
+          ]
         },
         {
           "name": "Smart Lock (lock box)",
@@ -2435,7 +3139,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte se déverrouille à votre approche. Votre maison vous accueille avant même que vous ne cherchiez vos clés.\n\n• Déverrouillez de n'importe où avec votre téléphone ou partagez des clés numériques instantanément.\n• Gardez toujours un œil sur les arrivées grâce aux notifications et au journal d'accès détaillé.\n• Ne cachez plus jamais vos clés : créez des codes temporaires sécurisés pour vos invités.\n• Fonctionne sans internet grâce aux clés de secours en cas de coupure de courant.\n\nCréez des programmes pour verrouiller automatiquement la porte le soir et l'ouvrir pour les livraisons. Connectez-la à vos enceintes connectées pour un contrôle vocal ou à votre mobile pour un accès à distance.\n\nLa serrure connectée transforme votre porte en un véritable majordome personnel.",
+          "automations_fr": [
+            "Alerte d'arrivée d'invité avec photo et déverrouillage à distance.",
+            "Déclencheur : Lorsqu'un invité appuie sur la sonnette.",
+            "Utilité : Sécurité et confort — vérifiez l'identité des invités avant de les laisser entrer, sans être présent physiquement."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouille la porte lorsqu'une sonnette vidéo détecte une livraison.",
+            "Se verrouille automatiquement lorsqu'un capteur détecte un mouvement.",
+            "Envoie une notification si la porte reste déverrouillée trop longtemps."
+          ]
         }
       ]
     },
@@ -2479,7 +3194,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre porte devient le gardien de votre foyer.\n\n• L'acier inoxydable 304 résiste à la corrosion pour des décennies de protection fiable.\n• Le design de la mortaise 5050 s'intègre parfaitement à votre porte pour une esthétique épurée.\n• Le mécanisme de précision garantit un fonctionnement fluide sur des millions de cycles.\n• Compatibilité universelle avec les systèmes de serrures connectées existants.\n\nSquare fait de votre porte l'élément le plus intelligent de votre maison.",
+          "automations_fr": [
+            "Alerte de stockage automatisée.",
+            "Déclencheur : Lorsque la capacité de stockage (100 pièces) est atteinte.",
+            "Action : Envoie une notification sur votre téléphone ou hub domestique (via passerelle Bluetooth) pour réapprovisionner."
+          ],
+          "connected_scenes_fr": [
+            "Active une caméra connectée pour enregistrer lors de l'ouverture de la porte.",
+            "Se synchronise avec les enceintes connectées pour annoncer les visiteurs.",
+            "Allume les lumières connectées lors du verrouillage ou déverrouillage de la porte."
+          ]
         },
         {
           "name": "Single deadbolt 24*240mm size (Full 304 Stainless Steel)",
@@ -2515,7 +3241,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez votre porte d'entrée en un véritable rempart de sécurité moderne. Ce pêne dormant offre une protection infaillible alliée à une élégance intemporelle.\n\n• La structure intégrale en acier inoxydable 304 résiste à la corrosion et aux tentatives d'effraction.\n• Les dimensions de précision 24x240 mm garantissent une installation parfaite sur les portes standards.\n• Le mécanisme à pêne unique assure un verrouillage fiable en un point.\n• L'acier de qualité chirurgicale conserve un aspect impeccable malgré les années d'exposition aux intempéries.\n\nS'intègre parfaitement avec le système de serrure intelligente de votre choix. Sa conception universelle s'associe à vos assistants vocaux, écrans connectés et appareils mobiles pour une maison totalement intégrée.\n\nSécurisez votre foyer avec une robustesse faite pour durer.",
+          "automations_fr": [
+            "Action : Le pêne se verrouille automatiquement, sécurisant tous les points d'accès.",
+            "Usage : Renforce la sécurité de la maison quand tout le monde dort.",
+            "• Déverrouillage à l'arrivée – Déclencheur : Proximité de votre smartphone (via géofencing)."
+          ],
+          "connected_scenes_fr": [
+            "Déverrouille la porte lorsque la sonnette vidéo identifie un visage connu.",
+            "Envoie des alertes sur l'état du verrouillage à votre hub domotique.",
+            "S'ouvre automatiquement à votre arrivée grâce à la géolocalisation."
+          ]
         },
         {
           "name": "Cylindrical 40*388 Mortise (Full 304 Stainless Steel)",
@@ -2552,7 +3289,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Faites de votre porte une forteresse impénétrable. La serrure à mortaiser cylindrique 40388 offre une protection sans compromis et une élégance durable.\n\n• L'acier inoxydable 304 haute qualité résiste à la corrosion et au forçage.\n• La conception cylindrique de précision garantit un fonctionnement fluide et fiable à chaque utilisation.\n• Les dimensions 40388 mm s'adaptent parfaitement aux préparations de portes standards.\n• Le mécanisme à mortaiser robuste offre une résistance supérieure aux pênes dormants classiques.\n\nS'intègre nativement à votre écosystème domotique via vos serrures connectées et assistants vocaux compatibles. Gérez les accès où que vous soyez depuis votre smartphone ou vos écrans intelligents.\n\nLa sécurité rencontre le raffinement à chaque tour de poignée.",
+          "automations_fr": [
+            "S'active automatiquement lors d'une détection de mouvement.",
+            "Envoie des notifications en temps réel sur votre appareil mobile.",
+            "S'intègre aux systèmes domotiques existants."
+          ],
+          "connected_scenes_fr": [
+            "S'associe aux serrures intelligentes pour un contrôle d'accès fluide.",
+            "Se synchronise avec les caméras de sécurité pour une surveillance de l'entrée en temps réel.",
+            "Alerte le smartphone en cas d'appui sur la sonnette ou de détection de mouvement."
+          ]
         }
       ]
     },
@@ -2594,7 +3342,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quelle prise murale en centre de commande pour votre foyer. La passerelle murale apporte l'intelligence dans chaque pièce.\n\n• Crée un réseau maillé (mesh) couvrant chaque recoin de votre maison.\n• Connecte vos lumières, serrures et capteurs via un hub central unique.\n• Se branche directement sur vos prises, sans câbles ni encombrement.\n• Gère jusqu'à 128 appareils simultanément avec une réponse instantanée.\n\nLa passerelle murale fait de votre habitation une véritable maison intelligente.",
+          "automations_fr": [
+            "Si le courant dépasse 30A pendant 5 minutes, l'alimentation est coupée automatiquement et l'événement est enregistré.",
+            "En cas de protection thermique lors d'une charge élevée, déconnecte le circuit et envoie une alerte horodatée sur smartphone.",
+            "Mode programmation : coupe les circuits non essentiels à 23h pour réduire la consommation d'énergie en veille."
+          ],
+          "connected_scenes_fr": [
+            "Alimente la sonnette vidéo via USB-C pour un fonctionnement continu.",
+            "Se synchronise avec les lumières intelligentes pour un éclairage activé par le mouvement.",
+            "Se connecte aux caméras de sécurité pour des alertes de surveillance enrichies."
+          ]
         },
         {
           "name": "ZIGBEE Gateway（wired RJ45 port)",
@@ -2630,7 +3389,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre maison connectée parle enfin une seule langue. Centralisez tous vos équipements via un hub unique et fiable.\n\n• Connectez sans fil vos éclairages, serrures, capteurs et interrupteurs Zigbee dans chaque pièce.\n• Le port Ethernet RJ45 assure des commandes instantanées et une connexion ultra-stable.\n• Gérez jusqu'à 128 appareils sans ralentir votre réseau Wi-Fi.\n• Automatisez des scènes et des programmes qui s'activent avant même que vous ne le demandiez.\n\nJumelez-la avec vos enceintes intelligentes, écrans ou appareils mobiles pour contrôler toute votre maison d'un mot ou d'un geste.\n\nUne seule passerelle. Un contrôle total. Bienvenue dans une maison connectée qui fonctionne, tout simplement.",
+          "automations_fr": [
+            "La déconnexion d'un capteur de porte Zigbee déclenche le clignotement de l'indicateur LED et une notification push via l'application.",
+            "En cas de déconnexion simultanée de plus de 5 appareils, la passerelle lance un diagnostic réseau et envoie un rapport d'état.",
+            "Si un capteur dépasse 50°C, le mode urgence s'active : journalisation des données, alerte mobile et déconnexion des appareils à risque."
+          ],
+          "connected_scenes_fr": [
+            "Relie votre sonnette vidéo sur batterie au routeur pour un flux direct stable et des alertes instantanées.",
+            "Associe la caméra extérieure double objectif aux lumières intelligentes pour un éclairage automatique lors d'une détection.",
+            "Coordonne la caméra USB-C intérieure avec les serrures connectées pour capturer une image à chaque saisie de code."
+          ]
         },
         {
           "name": "Matter gateway",
@@ -2666,7 +3436,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre maison devient encore plus intelligente. Un seul hub pour tout connecter.\n\n• Reliez en toute fluidité vos appareils Matter à travers tous vos écosystèmes domotiques.\n• Pérennisez votre installation grâce au nouveau standard universel de la maison connectée.\n• Contrôlez instantanément vos lumières, serrures et capteurs depuis n'importe quel appareil mobile.\n• Configurez des automatisations qui fonctionnent même sans connexion internet.\n\nTransformez dès aujourd'hui votre habitation en une maison véritablement connectée.\n\nCompatible avec vos enceintes, écrans et assistants vocaux actuels. Gérez tout depuis vos smartphones et tablettes préférés.",
+          "automations_fr": [
+            "Ouverture d'un capteur de porte Zigbee après 22h : déclenche une alerte réseau et active le mode sécurité via le firmware OTA.",
+            "Température inférieure à 5 °C : la passerelle transmet une commande Zigbee 3.0 pour allumer le chauffage via le réseau maillé.",
+            "Perte de liaison WAN pendant 5 minutes : redémarrage automatique de la passerelle, activation de la LED réseau et journalisation système."
+          ],
+          "connected_scenes_fr": [
+            "Sert de hub central unifiant lumières, serrures et thermostats via un réseau unique sous protocole Matter.",
+            "Permet à la sonnette vidéo d'allumer automatiquement les lumières intelligentes lors d'une détection à l'entrée.",
+            "Permet aux enceintes connectées de piloter les caméras intérieures et extérieures via des commandes Matter unifiées."
+          ]
         },
         {
           "name": "Wall socket Gateway",
@@ -2676,7 +3457,16 @@
           "slug": "",
           "keywords": "",
           "automations": [],
-          "connected_scenes": []
+          "connected_scenes": [],
+          "description_fr": "Une solution élégante deux-en-un qui combine une prise de courant performante et un centre de contrôle pour tous vos appareils connectés. Elle s'installe à la place de vos prises murales existantes pour un intérieur épuré et intelligent.",
+          "automations_fr": [
+            "Éteindre automatiquement les appareils en veille la nuit.",
+            "Activer les lumières dès qu'un capteur détecte un mouvement via la passerelle."
+          ],
+          "connected_scenes_fr": [
+            "Scène \"Départ\" : Coupe l'alimentation des appareils non essentiels et active l'alarme.",
+            "Scène \"Soirée\" : Tamise l'éclairage et allume vos équipements multimédias."
+          ]
         }
       ]
     },
@@ -2710,7 +3500,16 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Profitez d'une expérience sonore immersive sans encombrer votre espace. Ces enceintes encastrables allient performance acoustique et discrétion absolue pour votre maison connectée.",
+          "automations_fr": [
+            "Lancer votre playlist matinale dès que la lumière de la cuisine s'allume.",
+            "Couper automatiquement le son lorsque l'alarme connectée est activée."
+          ],
+          "connected_scenes_fr": [
+            "Scène Cinéma : Les lumières tamisent et le son surround s'active pour une immersion totale.",
+            "Scène Réception : Une musique d'ambiance douce se diffuse dans toutes les pièces de vie."
+          ]
         },
         {
           "name": "Bluetooth ceiling speakers (master)",
@@ -2746,7 +3545,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "La musique se fond dans votre plafond. Le son emplit toute votre maison.\n\n• Diffusez votre audio sans fil dans n'importe quelle pièce depuis votre téléphone ou tablette.\n• Contrôlez plusieurs paires d'enceintes indépendamment dans toute la maison.\n• Dissimulez totalement vos enceintes pour un design intérieur épuré et minimaliste.\n• Profitez d'un son riche et enveloppant sans encombrer votre espace au sol.\n\nL'unité principale se connecte parfaitement aux enceintes intelligentes, aux assistants vocaux et aux appareils mobiles pour un contrôle audio domestique sans effort.\n\nTransformez chaque pièce en une salle de concert privée.",
+          "automations_fr": [
+            "La routine du soir réduit l'amplificateur à 10W pour des basses légères à 50Hz pendant la préparation du dîner en cuisine.",
+            "Le mode Réception booste l'amplificateur à 80W, offrant une plage complète de 50Hz à 20KHz avec des aigus précis dans les pièces de vie.",
+            "Le mode Nuit réduit la puissance à 20W et limite les basses sous 65Hz pour ne pas déranger les chambres tout en maintenant les alertes audibles."
+          ],
+          "connected_scenes_fr": [
+            "Diffusez de la musique via Bluetooth depuis un hub domestique comme Google Home ou Alexa",
+            "Synchronisez avec vos lumières connectées pour des ambiances lumineuses et musicales automatisées",
+            "Connectez à votre sonnette intelligente pour les annonces audio et les alertes de visiteurs"
+          ]
         },
         {
           "name": "Bluetooth ceiling speakers (slave)",
@@ -2782,7 +3592,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "La musique vous suit dans chaque pièce sans aucune enceinte visible. Votre plafond devient une symphonie invisible qui répond à chacune de vos envies.\n\n• Emplissez chaque recoin d'un son riche et sans fil provenant du plafond.\n• Contrôlez votre musique depuis n'importe quel appareil mobile.\n• Synchronisez plusieurs pièces pour une expérience audio fluide dans toute la maison.\n• Installation affleurante au plafond pour une esthétique moderne et épurée.\n\nConnectez-vous sans effort à vos enceintes intelligentes et assistants vocaux existants. Diffusez directement depuis votre appareil mobile ou toute source audio Bluetooth grâce à un appairage simple.\n\nTransformez votre espace de vie en un sanctuaire sonore sophistiqué où la musique circule aussi naturellement que l'air.",
+          "automations_fr": [
+            "Alertes audio activées par le mouvement",
+            "Déclencheur : Mouvement détecté par un capteur intelligent connecté (ex: dans un couloir ou une entrée).",
+            "Action : L'enceinte de plafond Bluetooth (secondaire) diffuse une alerte sonore prédéfinie (ex: carillon ou message vocal)."
+          ],
+          "connected_scenes_fr": [
+            "Se synchronise avec les lumières intelligentes pour un éclairage d'ambiance pendant la lecture musicale",
+            "S'associe aux sonnettes connectées pour diffuser le carillon sans fil",
+            "Se connecte aux thermostats intelligents pour ajuster l'ambiance sonore selon la température"
+          ]
         }
       ]
     },
@@ -2824,7 +3645,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce en un sanctuaire au climat parfait. Suivez la température et l'humidité d'un coup d'œil, puis maîtrisez votre confort grâce au contrôle infrarouge intégré.\n\n• Suivez l'évolution de la température et de l'humidité en temps réel.\n• Automatisez ventilateurs, chauffages et humidificateurs via des signaux IR invisibles.\n• Recevez des alertes instantanées si les niveaux s'éloignent de votre zone de confort.\n• Créez des scènes personnalisées pour le sommeil, le travail ou la détente.\n\nJumelez-le à vos enceintes ou écrans connectés pour les commandes vocales, et à vos appareils mobiles pour un suivi à distance.\n\nInstallez-le, et profitez d'un air parfait, tout simplement.",
+          "automations_fr": [
+            "Déclencheur : La température dépasse 26°C. Action : Allume automatiquement le climatiseur via le contrôle IR pour maintenir la fraîcheur.",
+            "Déclencheur : L'humidité chute sous 50 %. Action : Active l'humidificateur par signal IR pour éviter l'air sec.",
+            "Déclencheur : La température dépasse 30°C ou l'humidité tombe sous 40 %. Action : Envoie une notification mobile immédiate pour vous alerter des conditions extrêmes."
+          ],
+          "connected_scenes_fr": [
+            "Surveille l'humidité pour activer les bouches d'aération intelligentes et améliorer la circulation de l'air.",
+            "Utilise l'IR pour détecter les variations de température et ajuster automatiquement les thermostats connectés.",
+            "Alerte les déshumidificateurs intelligents lorsque l'humidité dépasse les seuils définis pour une action rapide."
+          ]
         },
         {
           "name": "Smart Door Windows Sensor -WiFi",
@@ -2860,7 +3692,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Soyez informé dès que votre environnement change. Ne vous demandez plus jamais ce qui se passe chez vous.\n\n• Alertes instantanées en cas d'ouverture inattendue d'une porte ou d'une fenêtre.\n• Surveillez chaque point d'entrée de n'importe où via le WiFi.\n• Capteur sur pile s'installant en quelques minutes, sans aucun câble.\n• Consultez l'historique d'activité pour savoir exactement quand un accès a eu lieu.\n\nConnectez-le à vos enceintes connectées pour des mises à jour vocales sur la sécurité de votre foyer. Vérifiez le statut instantanément sur vos écrans intelligents ou mobiles, où que vous soyez.\n\nTransformez chaque porte et fenêtre en un gardien intelligent qui ne dort jamais.",
+          "automations_fr": [
+            "Alerte de sécurité nocturne",
+            "Déclencheur : Une porte ou une fenêtre s'ouvre entre 22h00 et 6h00.",
+            "Action : Active une alarme sonore de 80 dB et un avertissement lumineux rouge pour dissuader les intrus."
+          ],
+          "connected_scenes_fr": [
+            "Active les caméras extérieures lors de l'ouverture d'une porte ou d'une fenêtre.",
+            "Envoie des alertes sur smartphone en cas de tentative d'entrée non autorisée.",
+            "S'intègre au thermostat intelligent pour un contrôle de la température économe en énergie."
+          ]
         },
         {
           "name": "Smart Door Windows Sensor",
@@ -2896,7 +3739,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre maison vous prévient dès qu'une porte ou une fenêtre s'ouvre. La sécurité rencontre la simplicité dans un capteur intelligent unique.\n\n• Alertes instantanées en cas d'ouverture inattendue d'une porte ou d'une fenêtre.\n• Sachez exactement quand les enfants rentrent de l'école.\n• Surveillez vos résidences de vacances sans systèmes de sécurité coûteux.\n• Capteur sur pile s'installant en quelques minutes, sans aucun câble.\n\nTransformez chaque entrée en un accès intelligent dès aujourd'hui.",
+          "automations_fr": [
+            "Alerte de sécurité lors de l'ouverture de la porte d'entrée la nuit :",
+            "Déclencheur : Le capteur détecte l'ouverture de la porte d'entrée entre 22h00 et 6h00.",
+            "Action : Le capteur envoie une notification sur votre téléphone et déclenche une sirène intelligente ou des projecteurs extérieurs."
+          ],
+          "connected_scenes_fr": [
+            "Active les lumières connectées si des portes ou fenêtres restent ouvertes.",
+            "Envoie des alertes si des portes ou fenêtres sont ouvertes de manière inattendue.",
+            "S'intègre aux caméras de sécurité pour une surveillance en temps réel."
+          ]
         },
         {
           "name": "Smart Motion Sensor - WIFI",
@@ -2932,7 +3786,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Le mouvement prend tout son sens. Votre maison s'éveille à chaque présence.\n\n• Détecte instantanément les mouvements avec une portée de 7 mètres et un angle large de 170°.\n• Envoie des alertes immédiates sur votre téléphone, de jour comme de nuit.\n• Suit les habitudes d'activité avec un historique horodaté pour une vigilance totale.\n• Fonctionne en continu jusqu'à 6 mois avec une seule charge de batterie.\n\nTransformez chaque mouvement en une intelligence domestique concrète.",
+          "automations_fr": [
+            "Éclairage automatique pour couloirs ou escaliers",
+            "Déclencheur : Mouvement détecté dans un rayon de 5 mètres et un angle de 150 degrés.",
+            "Action : Allume les lumières connectées du couloir ou de l'escalier lors d'une détection."
+          ],
+          "connected_scenes_fr": [
+            "Détecte les mouvements et envoie des alertes de sécurité sur votre téléphone",
+            "Allume les lumières intelligentes lors d'une détection de mouvement",
+            "Active l'enregistrement de la sonnette vidéo à l'approche d'un visiteur"
+          ]
         },
         {
           "name": "Smart Motion Sensor - zigbee",
@@ -2968,7 +3833,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre maison ouvre l'œil. Suivez chaque mouvement, même à des kilomètres de distance.\n\n• Détecte les mouvements instantanément et vous alerte immédiatement sur votre mobile.\n• La connexion Zigbee reste opérationnelle même en cas de coupure internet.\n• La batterie dure des années sans remplacement ni entretien nécessaire.\n• Déclenche automatiquement lumières, caméras et sirènes en cas de détection.\n\nSoyez informé dès qu'un mouvement survient. Une tranquillité d'esprit qui ne faiblit jamais.",
+          "automations_fr": [
+            "Déclencheur : Mouvement détecté par le capteur.",
+            "Action : Allume les lumières connectées (si la luminosité est inférieure à 50 LUX).",
+            "Utilité : Économies d'énergie — les lumières ne s'activent qu'en cas de besoin, évitant toute consommation inutile."
+          ],
+          "connected_scenes_fr": [
+            "Active les caméras en cas de mouvement détecté à la porte",
+            "Allume les lumières intelligentes à l'approche d'une personne",
+            "Envoie des notifications push lors d'une détection de mouvement"
+          ]
         },
         {
           "name": "Smart motion sensor ceiling mounted mm wave(4)",
@@ -3003,7 +3879,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Votre maison sait que vous êtes là, avant même que vous n'allumiez la lumière.\n\n• Détecte les mouvements à travers les cloisons avec la précision des ondes millimétriques.\n• Installation discrète au plafond pour une couverture totale sans obstacles.\n• Déclenche lumières, ventilateurs et systèmes de sécurité dès qu'une personne entre ou sort.\n• Efficace dans l'obscurité, en plein jour ou dans l'humidité d'une salle de bain.\n\nSe connecte parfaitement aux enceintes connectées, assistants vocaux et mobiles pour une automatisation instantanée.\n\nChaque pièce devient réactive et attentionnée dès que vous y entrez.",
+          "automations_fr": [
+            "Automatisation : Alerte de sécurité nocturne",
+            "Déclencheur : Mouvement détecté entre 22h00 et 06h00 (portée jusqu'à 10 mètres).",
+            "Action : Envoie une notification sur votre téléphone et allume une lumière de sécurité."
+          ],
+          "connected_scenes_fr": [
+            "Active la caméra de la sonnette vidéo lors d'une détection près de l'entrée",
+            "Allume l'éclairage extérieur lorsqu'un mouvement est détecté devant la porte",
+            "Envoie des notifications mobiles lorsque quelqu'un s'approche de la maison"
+          ]
         },
         {
           "name": "Smart motion sensor mm wave(5) human presence sensor",
@@ -3040,7 +3927,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Donnez vie à vos pièces dès que vous y entrez. Ce capteur détecte votre présence avant même que vous ne fassiez un pas.\n\n• Détecte la présence au niveau de la respiration à travers les murs et les meubles.\n• Allume les lumières instantanément dès que vous entrez dans l'obscurité.\n• Économise l'énergie en identifiant quand les pièces sont totalement vides.\n• Réagit au mouvement tout en détectant les occupants immobiles.\n\nTransformez chaque espace en un foyer qui anticipe vos besoins.",
+          "automations_fr": [
+            "Éclairage automatique en cas de faible luminosité",
+            "Déclencheur : Mouvement détecté dans la pièce lorsque la luminosité est inférieure à 50 LUX.",
+            "Action : Allume les lumières Zigbee connectées (lampes ou plafonniers)."
+          ],
+          "connected_scenes_fr": [
+            "Active l'enregistrement de la sonnette vidéo lors d'une détection de mouvement",
+            "Allume les lumières extérieures à l'approche d'une personne",
+            "Envoie des alertes sur votre téléphone en cas de mouvement nocturne"
+          ]
         },
         {
           "name": "Smart Water Valve",
@@ -3076,7 +3974,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Stoppez les dégâts des eaux avant qu'ils ne commencent. Contrôlez chaque goutte, où que vous soyez.\n\n• Coupure d'eau instantanée et automatique dès qu'une fuite est détectée.\n• Surveillez vos habitudes de consommation et repérez les fuites cachées.\n• Évitez des réparations coûteuses grâce à une protection intelligente 24h/24.\n• Réduisez vos factures d'eau grâce à un suivi précis de l'utilisation.\n\nProtégez votre maison et votre budget avec une gestion de l'eau intelligente qui ne dort jamais.",
+          "automations_fr": [
+            "Déclencheur : Heure de la journée (programmation du début et de la fin)",
+            "Usage : Assure un arrosage régulier des plantes sans effort manuel, économisant temps et eau.",
+            "Déclencheur : Détection de fuite d'eau (via un capteur connecté)"
+          ],
+          "connected_scenes_fr": [
+            "Détecte les fuites d'eau et coupe l'alimentation pour prévenir les dommages",
+            "Se synchronise avec les arroseurs intelligents pour un arrosage automatique du jardin",
+            "Vous informe sur votre téléphone si la consommation d'eau dépasse les niveaux normaux"
+          ]
         },
         {
           "name": "Smart Gas sensor",
@@ -3112,7 +4021,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Respirez sereinement : votre foyer est sous protection permanente. Le détecteur de gaz intelligent transforme un danger invisible en une alerte immédiate.\n\n• Détecte les fuites de gaz dangereuses avant qu'elles ne deviennent critiques.\n• Envoie des alertes en temps réel directement sur vos appareils mobiles.\n• Surveille la qualité de l'air en continu grâce à des capteurs de précision.\n• Offre une tranquillité d'esprit totale avec une protection automatique 24h/24.\n\nProtégez l'essentiel avec une détection de gaz intelligente qui veille sur vous en permanence.",
+          "automations_fr": [
+            "Déclencheur : La concentration de gaz atteint 8% LEL méthane (seuil de danger). Action : Déclenche instantanément une sirène de plus de 80dB et des alertes lumineuses.",
+            "Déclencheur : Gaz dangereux détecté. Action : Envoie immédiatement une notification d'urgence sur votre téléphone, même si vous n'êtes pas chez vous.",
+            "Déclencheur : Fuite de gaz critique détectée. Action : Alerte automatiquement les contacts d'urgence prédéfinis pour une intervention rapide."
+          ],
+          "connected_scenes_fr": [
+            "Le détecteur de gaz fait clignoter les lumières connectées en rouge en cas de danger",
+            "Coupe automatiquement les thermostats intelligents en cas de détection de fuite de gaz naturel",
+            "Envoie des alertes aux enceintes connectées pour annoncer les itinéraires d'évacuation en cas de présence de monoxyde de carbone"
+          ]
         },
         {
           "name": "Smart Smoke sensor",
@@ -3148,7 +4068,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Respirez, votre maison veille sur vous. Le détecteur de fumée connecté transforme un danger silencieux en une protection immédiate.\n\n• Détecte la fumée plus rapidement que les alarmes traditionnelles grâce à ses capteurs de précision.\n• Envoie des alertes instantanées sur votre téléphone dès qu'un danger survient.\n• Dix ans d'autonomie pour éliminer définitivement les bips de batterie faible en pleine nuit.\n• Autotests automatiques pour garantir une protection d'une fiabilité totale.\n\nProtégez l'essentiel avec une intelligence qui ne dort jamais.",
+          "automations_fr": [
+            "Automatisation 1 : Notification d'alarme d'urgence",
+            "Déclencheur : Fumée ou feu détecté par le capteur.",
+            "Utilité : Vous alerte même en votre absence, permettant une intervention rapide des secours."
+          ],
+          "connected_scenes_fr": [
+            "Ordonne au thermostat connecté de couper la ventilation lors d'une détection de fumée.",
+            "Déclenche le clignotement des ampoules connectées comme alarme visuelle.",
+            "Envoie des notifications aux smartphones enregistrés dès que de la fumée est détectée."
+          ]
         },
         {
           "name": "IR Universal Remote Control - zigbee (battery)",
@@ -3184,7 +4115,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Contrôlez tous vos appareils infrarouges, où que vous soyez. Tout votre système de divertissement tient désormais dans votre poche.\n\n• Remplacez toutes vos télécommandes par un seul contrôleur Zigbee élégant.\n• L'alimentation par pile libère votre espace de vie des câbles encombrants.\n• Fonctionne à travers les parois et les meubles pour un contrôle discret.\n• Programmez des séquences complexes pour vos soirées cinéma en un seul geste.\n\nSe connecte parfaitement à votre hub domotique et répond aux commandes vocales via vos enceintes connectées. Pilotez tout depuis vos écrans intelligents ou vos appareils mobiles d'un simple geste.\n\nTransformez votre salon en un centre de commande sans fil dès aujourd'hui.",
+          "automations_fr": [
+            "Déclencheur : Mouvement détecté dans un rayon de 8 mètres.",
+            "Action : La télécommande universelle IR envoie un signal pour allumer les lumières à proximité.",
+            "Utilité : Sécurité et confort, comme l'éclairage d'un couloir ou d'une entrée à votre approche."
+          ],
+          "connected_scenes_fr": [
+            "Pilote les prises connectées pour allumer ou éteindre les appareils à distance.",
+            "Se synchronise avec les thermostats connectés pour un réglage efficace de la température.",
+            "S'intègre aux éclairages connectés pour un contrôle personnalisé des ambiances lumineuses."
+          ]
         },
         {
           "name": "IR Universal Remote Control - zigbee gs-zs06-z",
@@ -3220,7 +4162,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Contrôlez chaque appareil infrarouge de votre maison, où que vous soyez. Un petit capteur remplace toutes vos télécommandes.\n\n• Pilotez téléviseurs, climatiseurs et ventilateurs à travers les murs et les meubles.\n• Créez des scènes personnalisées qui ajustent plusieurs appareils simultanément.\n• Programmez vos appareils pour qu'ils s'allument avant votre arrivée.\n• S'installe n'importe où grâce à son alimentation par pile, sans aucun câblage.\n\nTransformez votre système multimédia et votre climatisation en un réseau unique, élégant et invisible.",
+          "automations_fr": [
+            "Déclencheur : Mouvement détecté dans le salon après 19h. Action : Allume la TV sur votre chaîne favorite via signal IR — votre divertissement est prêt quand vous l'êtes.",
+            "Déclencheur : La température dépasse 26°C. Action : Règle automatiquement la clim sur 24°C via IR, maintenant un climat idéal sans lever le petit doigt.",
+            "Déclencheur : Vous dites « Alexa, soirée ciné ». Action : Tamise les lumières, ferme les rideaux et allume la TV et le système audio simultanément via IR."
+          ],
+          "connected_scenes_fr": [
+            "Se synchronise avec les capteurs de température pour ajuster la clim en temps réel via IR selon les conditions de la pièce.",
+            "Fonctionne avec les détecteurs de mouvement pour éteindre les appareils multimédias quand la pièce est vide, éliminant le gaspillage d'énergie en veille.",
+            "Se connecte à Alexa/Google Home pour le contrôle vocal de la TV, de la clim et des ventilateurs — changez de chaîne ou de température sans bouger."
+          ]
         },
         {
           "name": "IR Universal Remote Control",
@@ -3256,7 +4209,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Dites adieu au désordre sur votre table basse avec une télécommande élégante qui contrôle tout.\n\n• Pilotez chaque appareil infrarouge depuis une interface unique et intuitive.\n• Programmez des scènes personnalisées pour tamiser les lumières et ajuster la température simultanément.\n• Automatisez vos routines quotidiennes pour allumer ou éteindre vos appareils sans lever le petit doigt.\n• Suivez vos habitudes de consommation d'énergie pour identifier et éliminer le gaspillage.\n\nLa télécommande se jumelle parfaitement avec vos enceintes connectées, assistants vocaux et appareils mobiles pour un contrôle total de la maison.\n\nUne seule télécommande. Tous vos appareils. Un contrôle absolu.",
+          "automations_fr": [
+            "Contrôle TV automatisé via Wi-Fi :",
+            "Déclencheur : Une commande vocale ou une heure programmée (ex: 20h).",
+            "Utilité : Confort optimal, idéal pour une utilisation mains libres ou vos routines TV."
+          ],
+          "connected_scenes_fr": [
+            "Contrôle la TV, les systèmes audio et les hubs domotiques via signaux IR.",
+            "S'intègre aux prises connectées pour automatiser les cycles d'alimentation.",
+            "Se synchronise avec les assistants vocaux pour un contrôle à distance mains libres."
+          ]
         }
       ]
     },
@@ -3298,7 +4262,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "L'éclairage devient une évidence. Un simple geste transforme chaque instant chez vous.\n\n• Contrôlez n'importe quelle lumière depuis votre téléphone ou l'élégant écran mural.\n• Programmez des horaires pour vous accueillir et tamiser les feux au moment du coucher.\n• Visualisez l'état en temps réel pour savoir instantanément quelles lumières sont allumées.\n• Remplacez n'importe quel interrupteur standard en quelques minutes avec votre câblage existant.\n\nL'interrupteur avec écran intégré apporte un éclairage intelligent à chaque pièce, en toute simplicité.",
+          "automations_fr": [
+            "L'application allume la lumière du porche au coucher du soleil et l'éteint à 23h via Wi-Fi.",
+            "Une pression manuelle la nuit active la lumière du couloir tout en allumant l'éclairage extérieur via l'application.",
+            "La commande vocale \"soirée ciné\" tamise le plafonnier de 600W pendant que l'interrupteur manuel gère les lampes d'appoint."
+          ],
+          "connected_scenes_fr": [
+            "Affiche le flux vidéo de la sonnette en direct quand quelqu'un sonne.",
+            "Allume ou éteint les lumières automatiquement lors d'un appui sur la sonnette.",
+            "Affiche la vidéo de la sonnette sur commande via l'assistant vocal."
+          ]
         },
         {
           "name": "2 Gang Display Light switch",
@@ -3333,7 +4308,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce en un sanctuaire parfaitement éclairé grâce à un contrôle intelligent au bout des doigts.\n\n• Programmez des automatisations pour un accueil chaleureux dès votre arrivée.\n• Variez l'intensité des deux circuits indépendamment pour créer l'ambiance idéale.\n• Contrôlez deux zones d'éclairage distinctes depuis un seul interrupteur mural élégant.\n• Économisez de l'énergie en vous assurant qu'aucune lumière ne reste allumée inutilement.\n\nSublimez votre quotidien avec un éclairage intelligent qui s'adapte à votre vie.",
+          "automations_fr": [
+            "Déclencheur : Le capteur de mouvement détecte une présence dans le couloir.",
+            "Action : L'interrupteur allume les lumières du couloir via les appareils connectés (Wi-Fi ou ZigBee).",
+            "Éclairage programmé pour l'efficacité énergétique."
+          ],
+          "connected_scenes_fr": [
+            "Allume les lumières du couloir quand on sonne à la porte.",
+            "Pilote les prises connectées pour la programmation automatique des appareils.",
+            "Sert de tableau de bord pour vérifier l'état de vos appareils."
+          ]
         },
         {
           "name": "3 Gang Display Light switch",
@@ -3369,7 +4355,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Pilotez trois éclairages depuis un centre de commande mural élégant.\n\n• Contrôlez trois zones lumineuses de manière indépendante via un panneau épuré.\n• Créez l'ambiance idéale grâce aux réglages de l'intensité lumineuse.\n• Programmez des éclairages automatiques adaptés à votre rythme quotidien.\n• Économisez de l'énergie en éteignant les lumières oubliées à distance.\n\nL'interrupteur intelligent à 3 zones apporte un contrôle d'éclairage sophistiqué à chaque pièce de votre maison.",
+          "automations_fr": [
+            "Réveil lumineux :",
+            "Déclencheur : Horaire (ex: 7h00 tous les jours).",
+            "Action : Augmentation graduelle de la luminosité pour simuler un lever de soleil."
+          ],
+          "connected_scenes_fr": [
+            "Allume les lumières intérieures quand on sonne à la porte pour plus de visibilité.",
+            "Éclaire le couloir dès qu'un mouvement est détecté à l'entrée.",
+            "Se synchronise avec les prises intelligentes pour automatiser vos appareils."
+          ]
         },
         {
           "name": "4 Gang Display Light switch",
@@ -3405,7 +4402,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Métamorphosez chaque pièce avec un contrôle d'éclairage parfait. Un seul interrupteur élégant commande toute votre ambiance.\n\n• Gérez quatre zones d'éclairage indépendantes depuis un superbe écran en verre.\n• Créez des scènes personnalisées pour changer d'ambiance d'une simple pression.\n• Ajustez la luminosité avec précision selon chaque moment de la journée.\n• Remplacez quatre interrupteurs traditionnels par un design moderne et unique.\n\nSublimez votre intérieur avec un éclairage qui répond à votre mode de vie.",
+          "automations_fr": [
+            "Voici des automatisations pratiques utilisant les fonctions de l'interrupteur à 4 zones :",
+            "Éclairage de couloir activé par le mouvement :",
+            "Déclencheur : Mouvement détecté dans le couloir (via un capteur compatible)."
+          ],
+          "connected_scenes_fr": [
+            "Allumage des feux et alerte mobile lorsque quelqu'un sonne à la porte.",
+            "Synchronisation avec les caméras de sécurité pour éclairer lors d'une détection.",
+            "Extinction des feux automatique lors du verrouillage de la porte intelligente."
+          ]
         },
         {
           "name": "Smart switch PC",
@@ -3441,7 +4449,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel espace en une pièce connectée d'une simple pression. L'interrupteur intelligent PC met le contrôle des lumières, ventilateurs et prises au bout de vos doigts.\n\n• Programmez un éclairage du lever au coucher du soleil selon votre rythme.\n• Réduisez la consommation en veille et voyez vos factures d'énergie diminuer.\n• Créez des scènes Cinéma, Dîner ou Sommeil en un seul geste.\n• Contrôlez tout depuis votre canapé ou à l'autre bout du monde via mobile.\n\nJumelez-le avec vos enceintes connectées pour une commande vocale mains libres. Configurez vos automatisations et gérez votre foyer en toute simplicité.\n\nPassez à l'interrupteur intelligent PC et synchronisez parfaitement votre maison.",
+          "automations_fr": [
+            "Éclairage de sécurité activé par le mouvement",
+            "Déclencheur : Mouvement détecté par le capteur corporel intégré.",
+            "Action : Allume les lampadaires extérieurs à pleine puissance."
+          ],
+          "connected_scenes_fr": [
+            "Automatise les lumières lors d'une détection par les caméras.",
+            "Active la climatisation lorsqu'un seuil de température est atteint.",
+            "Pilote les prises intelligentes pour la programmation de vos appareils."
+          ]
         }
       ]
     },
@@ -3483,7 +4502,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque espace avec un éclairage intelligent qui répond à tous vos besoins. Le contrôleur LED intelligent Zigbee apporte un contrôle de qualité professionnelle au bout de vos doigts.\n\n• Créez l'ambiance parfaite grâce à une variation précise et fluide de 0 à 100 %.\n• Connectez jusqu'à 64 contrôleurs pour orchestrer l'éclairage de toute la maison.\n• Profitez d'une performance sans scintillement qui protège vos yeux et améliore votre confort.\n• Économisez de l'énergie automatiquement grâce à l'optimisation intelligente de la luminosité.\n\nDécouvrez un éclairage qui anticipe vos envies et s'adapte à vous.",
+          "automations_fr": [
+            "Envoie une notification sur votre téléphone ou écran connecté pour confirmer l'état (ouvert/fermé) de la porte de garage.",
+            "• Éclairage programmé du garage : activé au coucher du soleil ou à une heure précise.",
+            "Allume les lumières LED connectées du garage pour une durée prédéfinie."
+          ],
+          "connected_scenes_fr": [
+            "Allume les lumières lorsque la sonnette retentit.",
+            "Active l'éclairage si un mouvement est détecté par la caméra.",
+            "Se synchronise avec le système de sécurité pour les alertes et l'automatisation."
+          ]
         },
         {
           "name": "Dimming and color adjustment Constant current dial 0-10V/ 1-10V PWM 10V All-in-one",
@@ -3519,7 +4549,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Sublimez chaque pièce avec une lumière parfaite. Ajustez la luminosité et la couleur selon l'instant.\n\n• La variation fluide 0-10V crée instantanément une ambiance digne d'une salle de cinéma.\n• Le contrôle de précision PWM garantit une performance LED sans aucun scintillement.\n• Un cadran unique ajuste simultanément l'intensité et la température de couleur.\n• Le courant constant de qualité professionnelle pilote n'importe quelle charge LED avec fiabilité.\n\nMaîtrisez la lumière. Commandez chaque nuance.",
+          "automations_fr": [
+            "Routine de réveil matinal :",
+            "Déclencheur : Heure de la journée (ex: 7h00 en semaine).",
+            "Utilité : Vous aide à vous réveiller en douceur, réduisant la fatigue oculaire et boostant votre énergie matinale."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste automatiquement la couleur de l'éclairage selon les moments de la journée.",
+            "Se synchronise avec les sonnettes intelligentes pour éclairer l'entrée à l'arrivée des visiteurs.",
+            "S'intègre à la sécurité de la maison pour des scénarios lumineux personnalisés en cas d'alarme."
+          ]
         },
         {
           "name": "zigbee light strip driver RGB+C+W",
@@ -3555,7 +4596,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel espace avec des couleurs cinématographiques. Votre pièce devient une toile de lumière vivante.\n\n• Habillez vos murs avec 16 millions de couleurs et des blancs purs.\n• Passez de scènes de fête vibrantes à une lueur apaisante en soirée.\n• Synchronisez l'éclairage avec vos films pour une immersion totale.\n• Réveillez-vous en douceur avec les couleurs de l'aube qui envahissent votre chambre.\n\nDonnez vie à vos murs avec une lumière qui bouge et respire avec vous.",
+          "automations_fr": [
+            "Éclairage de sécurité activé par le mouvement :",
+            "Déclencheur : Mouvement détecté par un capteur Zigbee dans le couloir.",
+            "Cas d'usage : Renforce la sécurité en vous alertant d'un mouvement nocturne dans le couloir, dissuadant les intrus potentiels."
+          ],
+          "connected_scenes_fr": [
+            "Se synchronise avec la sonnette vidéo pour s'éclairer à l'approche de quelqu'un.",
+            "Ajuste automatiquement la luminosité en fonction des notifications de la sonnette.",
+            "Se lie aux serrures intelligentes pour illuminer les entrées dès le déverrouillage."
+          ]
         },
         {
           "name": "TV background light",
@@ -3591,7 +4643,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez votre expérience visuelle avec un éclairage d'ambiance intelligent qui suit vos divertissements. Vos films prennent vie alors que les couleurs s'étendent au-delà de l'écran.\n\n• Le rétroéclairage dynamique se synchronise automatiquement avec l'action à l'écran pour une immersion totale.\n• Le contrôleur d'intensité vous permet de régler la luminosité idéale pour chaque moment.\n• Réduit la fatigue oculaire lors des sessions prolongées grâce à un halo lumineux équilibré.\n• Des zones de couleurs personnalisées créent des ambiances adaptées à chaque genre cinématographique.\n\nContrôlez l'ensemble de votre installation via vos commandes vocales ou vos appareils mobiles. Le système s'intègre parfaitement à vos enceintes et écrans connectés.\n\nSublimez vos soirées cinéma avec un éclairage professionnel qui réagit à vos contenus.",
+          "automations_fr": [
+            "Déclencheur : Mouvement détecté par un capteur intelligent dans le salon.",
+            "Action : Le rétroéclairage TV s'allume avec une lumière bleue apaisante pour créer une ambiance relaxante.",
+            "Déclencheur : Horaire programmé en soirée (ex: 19h00)."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste la luminosité selon l'éclairage ambiant détecté par les ampoules connectées.",
+            "Synchronisation automatique de l'intensité avec le volume de la TV.",
+            "S'éteint automatiquement lorsque les capteurs ne détectent plus de présence."
+          ]
         },
         {
           "name": "RGBCW Smart Zigbee Bulb",
@@ -3627,7 +4690,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Métamorphosez chaque pièce avec la lumière idéale. Créez instantanément l'ambiance qui correspond à votre humeur.\n\n• Habillez vos murs de millions de couleurs, de l'ambre chaleureux à la lumière du jour éclatante.\n• Passez d'un éclairage de travail précis à une lueur tamisée avec un contrôle haute précision.\n• Programmez des horaires pour un réveil en douceur et des soirées relaxantes.\n• Contrôlez chaque ampoule individuellement ou créez des groupes par pièce pour une synchronisation parfaite.\n\nSynchronisez vos éclairages avec vos assistants vocaux pour un contrôle mains libres. Ajustez la luminosité ou changez de couleur où que vous soyez depuis votre smartphone.\n\nDécouvrez un éclairage qui anticipe vos besoins. Votre intérieur devient plus beau, plus efficace et parfaitement éclairé.",
+          "automations_fr": [
+            "Mode Cinéma (Confort)",
+            "Déclencheur : Allumage du téléviseur (via prise connectée ou capteur IR).",
+            "Action : L'ampoule se synchronise avec le contenu TV, ajustant les couleurs dynamiquement pour un effet d'ambiance immersif."
+          ],
+          "connected_scenes_fr": [
+            "S'allume lorsque la sonnette vidéo détecte un mouvement après la tombée de la nuit.",
+            "Change de couleur en cas de détection de mouvement par les caméras de sécurité.",
+            "Se synchronise avec les prises connectées pour des programmes d'éclairage automatisés."
+          ]
         },
         {
           "name": "RGB COB low voltage light strip (5 meters per roll)",
@@ -3663,7 +4737,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quelle pièce en une toile lumineuse. Vos murs, meubles et plafonds deviennent des sculptures de lumière dynamiques qui évoluent selon vos envies.\n\n• Cinq mètres de lumière continue COB pour un éclairage sans zones d'ombre, même dans les angles.\n• Ajustez l'intensité d'une lueur de bougie à une ambiance festive en quelques secondes.\n• Conception basse tension pour une sécurité totale et des surfaces qui restent froides au toucher.\n• Découpe possible tous les quelques centimètres pour un ajustement sur mesure sous vos meubles ou derrière vos écrans.\n\nInstallez-le en un clin d'œil et peignez votre espace avec la lumière dès que l'inspiration vous vient.",
+          "automations_fr": [
+            "Le programme du soir active une lumière blanc chaud à 50% via la passerelle Zigbee.",
+            "La commande vocale Google Assistant active le mode \"Fête\" instantanément via la passerelle.",
+            "Protection thermique : le système s'éteint automatiquement si la température descend sous -20°C pour préserver les LED."
+          ],
+          "connected_scenes_fr": [
+            "Renforce la sécurité en s'éclairant lors d'une détection de mouvement par la sonnette vidéo.",
+            "Se synchronise avec les serrures connectées pour un éclairage d'accueil automatique.",
+            "Liaison avec les assistants vocaux pour un contrôle chromatique personnalisé à la voix."
+          ]
         },
         {
           "name": "24V Transformer Power Supply",
@@ -3699,7 +4784,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez votre intérieur avec un éclairage parfaitement équilibré qui s'adapte à chaque instant. L'alimentation 24V offre une lumière silencieuse et sans scintillement pour créer l'ambiance idéale.\n\n• Alimente les systèmes de variation sophistiqués avec une tension stable pour un contrôle réactif.\n• Élimine les sauts de lumière brusques grâce à des transitions de luminosité fluides dans toute la maison.\n• Fonctionne sans chauffer et en silence tout en alimentant plusieurs zones d'éclairage simultanément.\n• S'intègre sans effort à vos installations intelligentes existantes pour sublimer votre intérieur instantanément.\n\nDécouvrez un éclairage aussi intuitif que la lumière du jour, parfaitement adapté à votre style de vie.",
+          "automations_fr": [
+            "• Éclairage de sécurité avec détection de mouvement : connectez le transformateur 24V à un capteur de mouvement.",
+            "Ajustez la température de couleur pour s'accorder à la lumière naturelle pour un effet plus harmonieux.",
+            "Idéal pour réaliser des économies d'énergie et simuler une présence pour renforcer la sécurité."
+          ],
+          "connected_scenes_fr": [
+            "Alimente les sonnettes connectées pour une surveillance vidéo fiable 24h/24 et 7j/7.",
+            "Se connecte aux serrures intelligentes pour un verrouillage/déverrouillage automatique sécurisé.",
+            "Prend en charge l'éclairage intelligent pour illuminer le porche dès qu'un mouvement est détecté."
+          ]
         },
         {
           "name": "RGBW/WW-5050-60D (10 meters)",
@@ -3735,7 +4831,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce avec des couleurs cinématographiques et une ambiance blanc chaud. Dix mètres d'éclairage intelligent vous offrent un contrôle total de l'atmosphère du bout des doigts.\n\n• Créez des millions de couleurs et profitez d'un blanc chaud ajustable pour une ambiance parfaite.\n• Variation fluide, d'un éclairage de travail vif à une lueur nocturne apaisante.\n• 60 LED par mètre pour une illumination homogène de qualité professionnelle.\n• Une longueur de dix mètres pour couvrir des pièces entières avec un seul ruban continu.\n\nLe modèle RGBW/WW-5050-60D transforme les espaces ordinaires en expériences extraordinaires avec une lumière qui suit votre rythme de vie.",
+          "automations_fr": [
+            "Déclencheur : Programmé à 6h30 tous les jours. Action : Le ruban LED s'éclaire progressivement en blanc chaud (3000K) sur 15 minutes pour un réveil naturel.",
+            "Déclencheur : Vous dites « Alexa, mode cinéma ». Action : Intensité réduite à 20 % avec une lueur bleu profond pour une ambiance cinéma parfaite.",
+            "Déclencheur : Mouvement détecté après 22h. Action : Activation d'un éclairage nocturne doux (blanc chaud 10 %) le long des passages pour circuler en toute sécurité."
+          ],
+          "connected_scenes_fr": [
+            "Se synchronise avec la sonnette pour clignoter en rouge lors d'une visite, offrant une alerte visuelle dans toute la maison.",
+            "Se connecte aux systèmes audio pour faire pulser les couleurs au rythme de la musique pour une immersion totale.",
+            "Fonctionne avec des capteurs de température pour passer du bleu froid (chaud) à l'orange chaud (froid) selon le climat de la pièce."
+          ]
         },
         {
           "name": "RGB COB low voltage light strip (5 meters per roll)",
@@ -3771,7 +4878,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Faites de chaque pièce un tableau vivant. Cinq mètres de lumière fluide s'adaptent à toutes vos envies.\n\n• La technologie COB continue crée une illumination fluide et sans ombre sur toutes les surfaces.\n• Ajustez la luminosité avec précision, d'un murmure nocturne à un éclat de fête.\n• Ruban basse tension qui reste froid au toucher, sûr pour les chambres, les étagères et les niches étroites.\n• Découpable tous les quelques centimètres pour un ajustement parfait sur les bords de vos meubles.\n\nAssociez-le à vos enceintes intelligentes pour un contrôle vocal, créez des scènes depuis votre mobile ou programmez des changements via vos écrans connectés.\n\nDéroulez, collez, branchez — et regardez vos murs s'animer au gré de votre imagination.",
+          "automations_fr": [
+            "Éclairage blanc chaud activé par le mouvement pour les entrées.",
+            "Déclencheur : Mouvement détecté par un capteur intelligent (ex: porte ou couloir).",
+            "Action : Le ruban LED passe en blanc chaud 3000K pendant 30 secondes."
+          ],
+          "connected_scenes_fr": [
+            "S'allume lorsque la sonnette retentit pour une alerte visuelle.",
+            "Se synchronise avec la caméra pour changer de couleur en cas de détection de mouvement.",
+            "Ajuste automatiquement la luminosité en fonction de la lumière ambiante."
+          ]
         },
         {
           "name": "RGBCW Smart Zigbee Bulb (round)",
@@ -3807,7 +4925,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce avec une lumière parfaite. Votre intérieur devient un espace de couleur et de confort.\n\n• Créez l'ambiance de votre choix avec des millions de couleurs et des blancs chauds ou froids.\n• Passez instantanément d'un éclairage de travail vif à une ambiance de soirée tamisée.\n• Programmez des horaires pour un réveil en douceur et un accueil chaleureux.\n• Contrôlez chaque ampoule individuellement ou créez des groupes par pièce.\n\nDécouvrez un éclairage qui s'adapte à votre vie, et non l'inverse.",
+          "automations_fr": [
+            "Aide à dissuader les intrus et assure une visibilité parfaite.",
+            "Utile pour la sécurité et la protection du domicile.",
+            "Idéal pour le confort et les économies d'énergie."
+          ],
+          "connected_scenes_fr": [
+            "S'allume automatiquement lorsqu'un mouvement est détecté par la sonnette connectée.",
+            "S'allume au lever du soleil et s'éteint au coucher du soleil avec les prises connectées.",
+            "Se synchronise avec les serrures connectées pour éclairer dès l'ouverture de la porte."
+          ]
         },
         {
           "name": "RGBCW Smart Zigbee Bulb (flat)",
@@ -3843,7 +4972,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce avec une lumière parfaite. Votre intérieur devient un espace de couleur et de confort.\n\n• Définissez l'ambiance idéale avec des millions de couleurs et des blancs chauds ou froids.\n• Variez l'intensité d'un éclairage précis à une lueur douce sans changer d'interrupteur.\n• Créez des programmes d'éclairage automatiques pour vous accueillir chaque jour.\n• Contrôlez chaque ampoule individuellement ou groupez des pièces entières instantanément.\n\nDécouvrez un éclairage qui s'adapte à votre vie, et non l'inverse.",
+          "automations_fr": [
+            "Déclencheur : Le capteur de mouvement détecte une présence dans le couloir ou l'escalier.",
+            "Action : L'ampoule s'allume sur un blanc froid et vif (6000K-6500K).",
+            "Usage : Offre sécurité et confort la nuit sans avoir à chercher l'interrupteur."
+          ],
+          "connected_scenes_fr": [
+            "S'allume quand la caméra de la sonnette détecte un mouvement la nuit.",
+            "Change de couleur selon le type de notification (ex: rouge pour une livraison).",
+            "Ajuste automatiquement la luminosité pour les appels vidéo via la sonnette."
+          ]
         },
         {
           "name": "COB 2colors low voltage light strip (10 meters per roll)",
@@ -3879,7 +5019,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel espace avec une couleur fluide. Votre éclairage s'adapte désormais à chaque instant.\n\n• Basculez instantanément entre deux couleurs élégantes.\n• Dix mètres d'illumination continue, sans points lumineux visibles.\n• Conception basse tension pour une installation sécurisée partout.\n• Créez l'ambiance parfaite sans changer vos luminaires.\n\nUn seul ruban pour des possibilités d'éclairage infinies.",
+          "automations_fr": [
+            "Veilleuse activée par le mouvement",
+            "Déclencheur : Mouvement détecté par un capteur compatible (ex: Xiaodu ou Amazon Alexa).",
+            "Action : Le ruban LED COB s'allume dans un blanc doux ou une couleur chaude."
+          ],
+          "connected_scenes_fr": [
+            "Automatise l'éclairage quand la sonnette vidéo détecte un mouvement la nuit.",
+            "Se synchronise avec les serrures connectées pour éclairer l'entrée dès l'ouverture.",
+            "Ajuste les couleurs selon la météo détectée par la caméra de la sonnette."
+          ]
         },
         {
           "name": "Intelligent Dimmable LED Light Strip Driver & Power Supply 2 in 1",
@@ -3916,7 +5067,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quel espace avec un contrôle parfait de la lumière. Un seul appareil élégant pour des possibilités d'ambiance infinies.\n\n• Créez une atmosphère instantanée, d'un éclairage de travail vif à une lueur chaleureuse en soirée.\n• La variation précise vous offre une maîtrise totale de chaque instant.\n• Installation propre grâce au driver et à l'alimentation intégrés.\n• Des transitions fluides subliment vos films, vos dîners et votre quotidien.\n\nDécouvrez un éclairage qui s'adapte à votre vie, et non l'inverse.",
+          "automations_fr": [
+            "Déclencheur : Moment de la journée (ex. : 6h30 en semaine).",
+            "Usage : Imite la lumière naturelle du soleil pour un réveil en douceur, améliorant votre énergie matinale.",
+            "Mode relaxation du soir :"
+          ],
+          "connected_scenes_fr": [
+            "S'éclaire automatiquement lorsqu'une sonnette vidéo détecte un mouvement",
+            "Tamise les lumières lorsque la serrure de la porte est verrouillée pour la nuit",
+            "Allume les lumières lorsqu'une pression sur la sonnette est détectée à distance"
+          ]
         },
         {
           "name": "Smart dimmable downlight (RGB)",
@@ -3952,7 +5114,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez n'importe quelle pièce d'un simple geste. La couleur et la luminosité s'adaptent à vos envies.\n\n• Habillez vos murs instantanément avec des millions de couleurs RGB.\n• Ajustez l'intensité de 1 % à 100 % pour une ambiance parfaite.\n• Programmez vos lumières pour un réveil en douceur ou un accueil chaleureux.\n• Groupez plusieurs spots et contrôlez-les comme une seule scène harmonieuse.\n\nConfigurez votre ambiance une fois ; profitez-en chaque jour.",
+          "automations_fr": [
+            "Aide à démarrer la journée en douceur, améliorant la vigilance et l'humeur dès le matin.",
+            "Idéal pour un réveil naturel sans lumière agressive.",
+            "Crée une atmosphère apaisante en soirée, favorisant la préparation au sommeil."
+          ],
+          "connected_scenes_fr": [
+            "S'allume ou s'éteint via la sonnette quand quelqu'un sonne.",
+            "Change de couleur lorsqu'un mouvement est détecté par la sonnette.",
+            "Réduit l'intensité automatiquement au coucher du soleil selon les horaires de la sonnette."
+          ]
         },
         {
           "name": "ZigBee mini dimmer switch N&L wire 1CH",
@@ -3988,7 +5161,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce avec un contrôle total de la lumière. Ce variateur miniature apporte une ambiance cinéma au bout de vos doigts.\n\n• Ajustez la luminosité de 0 à 100 % avec une précision chirurgicale.\n• Créez instantanément des soirées cinéma chaleureuses ou des sessions de travail lumineuses.\n• Remplacez vos modules encombrants par ce contrôleur monocanal invisible.\n• Économisez de l'énergie tout en prolongeant la vie de vos ampoules grâce à la variation intelligente.\n\nConnectez vos assistants vocaux pour un contrôle mains libres. Fonctionne parfaitement avec vos écrans connectés et appareils mobiles pour une maîtrise totale.\n\nVotre lumière, votre ambiance, vos règles — sans effort.",
+          "automations_fr": [
+            "Le programme du soir tamise les lumières du salon à 30 % à 20h00 via la passerelle ZigBee.",
+            "L'automatisation de minuit règle les lumières de la chambre à 5 % de luminosité via le réseau ZigBee.",
+            "La routine du matin augmente progressivement l'éclairage de la cuisine de 10 % à 100 % en 30 minutes."
+          ],
+          "connected_scenes_fr": [
+            "Ajuste automatiquement la luminosité lorsque la sonnette vidéo détecte un mouvement à l'entrée le soir.",
+            "Tamise progressivement les lumières si la caméra intérieure ne détecte aucun mouvement prolongé pour économiser l'énergie.",
+            "Se coordonne avec les enceintes connectées pour baisser la lumière quand on sonne à la porte, créant un accueil chaleureux."
+          ]
         },
         {
           "name": "ZigBee mini dimmer switch N&L wire 2 CH",
@@ -4024,7 +5208,18 @@
             "lifestyle": [],
             "specs": [],
             "package": []
-          }
+          },
+          "description_fr": "Transformez chaque pièce avec un contrôle parfait de la lumière. Ce micromodule variateur apporte une ambiance professionnelle au bout de vos doigts.\n\n• Créez l'atmosphère idéale, d'un éclairage de travail vif à une ambiance tamisée.\n• Contrôlez deux zones d'éclairage distinctes de manière indépendante.\n• Profitez d'une variation fluide pour des effets visuels superbes, sans scintillement.\n• Design compact adapté aux boîtiers standards, sans fil de neutre requis.\n\nConnectez-le à vos enceintes connectées et assistants vocaux pour un contrôle mains libres. Ajustez la luminosité depuis vos appareils mobiles, où que vous soyez dans la maison.\n\nDécouvrez un éclairage qui s'adapte à chaque moment de votre vie.",
+          "automations_fr": [
+            "Le scénario \"Soirée\" réduit l'éclairage du salon à 30 % au coucher du soleil via la programmation Zigbee pour une ambiance feutrée.",
+            "L'automatisation \"Minuit\" fait passer progressivement l'éclairage de la chambre de 80 % à 10 % en 30 minutes pour une transition douce vers le sommeil.",
+            "La routine matinale augmente graduellement l'éclairage de la cuisine de 0 % à 100 % entre 6h et 7h via la minuterie Zigbee."
+          ],
+          "connected_scenes_fr": [
+            "Réduit automatiquement l'intensité lumineuse lorsque la sonnette vidéo sur batterie retentit pour limiter les reflets sur les écrans affichant le visiteur.",
+            "Ajuste les deux canaux d'éclairage indépendamment en fonction de la détection de mouvement des caméras extérieures pour un éclairage de sécurité renforcé.",
+            "Se coordonne avec le mode vision nocturne de la caméra intérieure en tamisant progressivement les lumières en soirée pour un enregistrement optimal."
+          ]
         }
       ]
     }

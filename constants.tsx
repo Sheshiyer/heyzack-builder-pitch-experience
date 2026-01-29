@@ -511,10 +511,19 @@ productCatalog.categories.forEach((catInfo: any) => {
       specs: p.specs ? p.specs.split('|').map((s: string) => s.trim()) : [],
       benefits: [], // Extract from description? Or leave empty for now
       imageUrl: getImageForProduct(p.sku, p), // Pass product data to get migrated images
-      description: { en: p.description || '', fr: p.description || '' }, // Full descriptions need manual translation
+      description: {
+        en: p.description || '',
+        fr: p.description_fr || p.description || ''
+      },
       slug: p.slug,
-      automations: p.automations || [],
-      connectedScenes: p.connected_scenes || []
+      automations: {
+        en: p.automations || [],
+        fr: p.automations_fr || p.automations || []
+      },
+      connectedScenes: {
+        en: p.connected_scenes || [],
+        fr: p.connected_scenes_fr || p.connected_scenes || []
+      }
     };
     return product;
   });
@@ -547,10 +556,19 @@ if (accessoryProducts.length > 0) {
         specs: p.specs ? p.specs.split('|').map((s: string) => s.trim()) : [],
         benefits: [],
         imageUrl: getImageForProduct(p.sku, p),
-        description: toBilingual(p.description || ''),
+        description: {
+          en: p.description || '',
+          fr: p.description_fr || p.description || ''
+        },
         slug: p.slug,
-        automations: p.automations || [],
-        connectedScenes: p.connected_scenes || []
+        automations: {
+          en: p.automations || [],
+          fr: p.automations_fr || p.automations || []
+        },
+        connectedScenes: {
+          en: p.connected_scenes || [],
+          fr: p.connected_scenes_fr || p.connected_scenes || []
+        }
       };
       return product;
     });

@@ -23,6 +23,8 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
   const selectedProduct = useMemo(() => 
     products.find(p => p.id === selectedProductId) || products[0],
   [products, selectedProductId]);
+  const productAutomations = selectedProduct?.automations?.[lang] ?? [];
+  const productScenes = selectedProduct?.connectedScenes?.[lang] ?? [];
 
   return (
     <AnimatePresence>
@@ -53,14 +55,14 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                      <Icon name="ArrowLeft" size={20} className="text-slate-600" />
                    </button>
                    <span className="text-[10px] font-black text-[#E82F89] uppercase tracking-widest">
-                      {lang === 'en' ? 'CATEGORY CATALOG' : 'CATALOGUE'}
+                      {lang === 'en' ? 'CATEGORY CATALOG' : 'CATALOGUE DE CATÉGORIE'}
                    </span>
                 </div>
                 <h2 className="text-xl font-black text-[#243984] leading-tight">
                   {category.name[lang]}
                 </h2>
                 <div className="mt-2 text-xs font-bold text-slate-400">
-                  {category.productCount} {lang === 'en' ? 'Products Available' : 'Produits Disponibles'}
+                  {category.productCount} {lang === 'en' ? 'Products Available' : 'Produits disponibles'}
                 </div>
               </div>
 
@@ -137,7 +139,7 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                            {lang === 'en' ? 'Security' : 'Sécurité'}
                         </h4>
                         <p className="text-slate-700 font-medium">
-                           {(selectedProduct.automations.find(a => /secur|detect|safe|alert|camera|lock|alarm|siren/i.test(a)) || (lang === 'en' ? "Continuous monitoring and protection for your property throughout the day and night." : "Surveillance et protection continues de votre propriété jour et nuit."))}
+                           {(productAutomations.find(a => /secur|detect|safe|alert|camera|lock|alarm|siren|sécur|détect|alerte|caméra|serrure|alarme|sirène/i.test(a)) || (lang === 'en' ? "Continuous monitoring and protection for your property throughout the day and night." : "Surveillance et protection continues de votre propriété jour et nuit."))}
                         </p>
                       </div>
 
@@ -148,7 +150,7 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                            {lang === 'en' ? 'Savings' : 'Économies'}
                         </h4>
                          <p className="text-slate-700 font-medium">
-                           {(selectedProduct.automations.find(a => /sav|energy|cost|cut|efficien|consumption|bill/i.test(a)) || (lang === 'en' ? "Optimizes operational efficiency to reduce waste and lower utility costs." : "Optimise l'efficacité opérationnelle pour réduire le gaspillage et les coûts."))}
+                           {(productAutomations.find(a => /sav|energy|cost|cut|efficien|consumption|bill|économ|énergie|coût|rédu|consommation|facture/i.test(a)) || (lang === 'en' ? "Optimizes operational efficiency to reduce waste and lower utility costs." : "Optimise l'efficacité opérationnelle pour réduire le gaspillage et les coûts."))}
                         </p>
                       </div>
 
@@ -159,22 +161,22 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                            {lang === 'en' ? 'Comfort' : 'Confort'}
                         </h4>
                         <p className="text-slate-700 font-medium">
-                           {(selectedProduct.automations.find(a => /comfort|auto|ease|scene|voice|remot|schedul/i.test(a)) || (lang === 'en' ? "Simplifies daily interactions through intuitive automation and controls." : "Simplifie les interactions grâce à une automatisation et des commandes intuitives."))}
+                           {(productAutomations.find(a => /comfort|auto|ease|scene|voice|remot|schedul|confort|auto|scène|voix|distance|programm/i.test(a)) || (lang === 'en' ? "Simplifies daily interactions through intuitive automation and controls." : "Simplifie les interactions grâce à une automatisation et des commandes intuitives."))}
                         </p>
                       </div>
                    </div>
 
                    {/* Product Specific Automations */}
-                   {selectedProduct.automations && selectedProduct.automations.length > 0 && (
+                   {productAutomations.length > 0 && (
                      <div className="border-t border-slate-100 pt-10 mb-8">
                         <div className="flex items-center gap-3 mb-6">
                           <Icon name="Zap" size={20} className="text-[#E82F89]" />
                           <h4 className="font-black text-[#E82F89] uppercase tracking-widest text-sm">
-                            {lang === 'en' ? 'Smart Automations' : 'Automatisations'}
+                            {lang === 'en' ? 'Smart Automations' : 'Automatisations intelligentes'}
                           </h4>
                         </div>
                         <div className="grid grid-cols-1 gap-3">
-                           {selectedProduct.automations.map((auto, i) => (
+                           {productAutomations.map((auto, i) => (
                              <div key={i} className="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
                                 <span className="w-6 h-6 rounded-full bg-[#E82F89]/10 text-[#E82F89] flex items-center justify-center font-bold text-xs shrink-0">{i+1}</span>
                                 <p className="text-sm text-slate-600 font-medium">{auto}</p>
@@ -185,16 +187,16 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                    )}
 
                    {/* Product Specific Connected Scenes */}
-                   {selectedProduct.connectedScenes && selectedProduct.connectedScenes.length > 0 && (
+                   {productScenes.length > 0 && (
                      <div className="border-t border-slate-100 pt-10">
                         <div className="flex items-center gap-3 mb-6">
                           <Icon name="Network" size={20} className="text-[#243984]" />
                           <h4 className="font-black text-[#243984] uppercase tracking-widest text-sm">
-                            {lang === 'en' ? 'Ecosystem Integration' : 'Intégration Écosystème'}
+                            {lang === 'en' ? 'Ecosystem Integration' : "Intégration à l'écosystème"}
                           </h4>
                         </div>
                         <div className="grid grid-cols-1 gap-3">
-                           {selectedProduct.connectedScenes.map((scene, i) => (
+                           {productScenes.map((scene, i) => (
                              <div key={i} className="group p-4 bg-white rounded-xl border-l-4 border-l-[#243984] border border-slate-200 shadow-sm">
                                 <p className="text-sm text-slate-700 font-medium">{scene}</p>
                              </div>
@@ -206,7 +208,7 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ lang, category, isOpen,
                 </div>
               ) : (
                 <div className="h-full flex items-center justify-center text-slate-400">
-                   Select a product to view details
+                   {lang === 'en' ? 'Select a product to view details' : 'Sélectionnez un produit pour voir les détails'}
                 </div>
               )}
             </div>

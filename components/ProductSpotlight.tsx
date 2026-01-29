@@ -258,7 +258,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                   return (
                     <motion.div
                       key={product.id}
-                      className="absolute inset-0 bg-slate-900/50 backdrop-blur-xl rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
+                      className="absolute inset-0 bg-slate-900/50 backdrop-blur-xl rounded-[3rem] p-8 shadow-2xl border border-white/10 overflow-hidden flex flex-col items-center justify-center transition-all duration-700 ease-out"
                       style={{
                          ...style,
                          boxShadow: depthShadows.deep,
@@ -332,7 +332,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             <div className="flex items-center gap-3 mb-2">
               <span className="w-8 h-[2px] bg-[#E82F89]" />
               <span className="text-[#E82F89] font-black uppercase tracking-[0.25em] text-[9px] whitespace-nowrap">
-                {lang === 'en' ? 'CATEGORY ECOSYSTEM' : 'ÉCOSYSTÈME'}
+                {lang === 'en' ? 'CATEGORY ECOSYSTEM' : 'ÉCOSYSTÈME DE CATÉGORIE'}
               </span>
             </div>
 
@@ -358,7 +358,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
             <div className="flex items-center gap-2 mb-4">
                <Icon name="Zap" size={14} className="text-[#E82F89]" />
                <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                 {lang === 'en' ? 'ECOSYSTEM FEATURES' : 'FONCTIONNALITÉS'}
+                 {lang === 'en' ? 'ECOSYSTEM FEATURES' : "FONCTIONNALITÉS DE L'ÉCOSYSTÈME"}
                </span>
             </div>
 
@@ -453,7 +453,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                          ? {}
                          : { y: -5, transition: { duration: 0.3 } }
                      }
-                     aria-label={`${partner?.name[lang] || 'System Node'}: ${link.label[lang]}`}
+                     aria-label={`${partner?.name[lang] || (lang === 'en' ? 'System Node' : 'Nœud système')}: ${link.label[lang]}`}
                    >
                      {/* Subtle Internal Glow */}
                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#E82F89]/5 blur-3xl rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-700" />
@@ -463,7 +463,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ lang, category, o
                           <div className="flex items-center gap-2">
                              <div className="w-1.5 h-1.5 rounded-full bg-[#E82F89]" />
                              <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">
-                                {partner?.name[lang] || (lang === 'en' ? 'System Feature' : 'Fonction Système')}
+                                {partner?.name[lang] || (lang === 'en' ? 'System Feature' : 'Fonction système')}
                              </span>
                           </div>
                           <h4 className="text-xl font-[800] text-white tracking-tight">

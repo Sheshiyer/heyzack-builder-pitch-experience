@@ -15,10 +15,10 @@ interface CategoryModalProps {
 
 // Ecosystem compatibility badges data
 const ecosystemBadges = [
-  { id: 'iot', label: 'IoT Ready', icon: 'Cpu' },
-  { id: 'cloud', label: 'Cloud Native', icon: 'Cloud' },
-  { id: 'ai', label: 'AI Compatible', icon: 'Zap' },
-  { id: 'mobile', label: 'Mobile Sync', icon: 'Smartphone' }
+  { id: 'iot', label: { en: 'IoT Ready', fr: 'Compatible IoT' }, icon: 'Cpu' },
+  { id: 'cloud', label: { en: 'Cloud Native', fr: 'Natif cloud' }, icon: 'Cloud' },
+  { id: 'ai', label: { en: 'AI Compatible', fr: 'Compatible IA' }, icon: 'Zap' },
+  { id: 'mobile', label: { en: 'Mobile Sync', fr: 'Synchronisation mobile' }, icon: 'Smartphone' }
 ];
 
 const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }) => {
@@ -64,7 +64,9 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                 {lang === 'en' ? 'ENTERPRISE CATALOG' : 'CATALOGUE ENTREPRISE'}
               </span>
               <span className="text-slate-600">/</span>
-              <span className="text-slate-400 font-bold text-sm uppercase tracking-widest">{category.productCount} SKUs</span>
+              <span className="text-slate-400 font-bold text-sm uppercase tracking-widest">
+                {category.productCount} {lang === 'en' ? 'SKUs' : 'RÉFÉRENCES'}
+              </span>
             </div>
             <h2 id="modal-title" className="text-6xl font-black text-white tracking-tight leading-none text-shadow-xl">
               {category.name[lang]}
@@ -74,7 +76,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
              <button className="flex items-center gap-3 px-8 py-4 bg-white/5 rounded-2xl border border-white/10 font-black text-[10px] uppercase tracking-widest text-slate-300 hover:bg-white/10 transition-all hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                aria-label={lang === 'en' ? 'Open product filters' : 'Ouvrir les filtres de produits'}>
                 <Icon name="Settings2" size={16} aria-hidden="true" />
-                FILTERS
+                {lang === 'en' ? 'FILTERS' : 'FILTRES'}
              </button>
           </div>
         </div>
@@ -169,7 +171,9 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                     />
                   </div>
 
-                  <div className="text-[10px] font-black text-[#243984] uppercase tracking-widest mb-3 opacity-70">HEYZACK SERIES 2026</div>
+                  <div className="text-[10px] font-black text-[#243984] uppercase tracking-widest mb-3 opacity-70">
+                    {lang === 'en' ? 'HEYZACK SERIES 2026' : 'SÉRIE HEYZACK 2026'}
+                  </div>
                   <h4 className="text-xl font-black text-slate-200 mb-2 tracking-tight group-hover:text-white transition-colors relative z-10 line-clamp-2 min-h-[3.5rem]" title={product.name[lang]}>
                     {product.name[lang]}
                   </h4>
@@ -222,7 +226,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                             }}
                           >
                             <Icon name={badge.icon as any} size={10} className="text-[#243984]" />
-                            <span className="text-slate-300">{badge.label}</span>
+                            <span className="text-slate-300">{badge.label[lang]}</span>
                           </motion.div>
                         ))}
                       </motion.div>
@@ -234,7 +238,7 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ lang, category, onClose }
                        className="text-[#E82F89] font-black text-[10px] uppercase tracking-[0.2em] flex items-center gap-2 hover:text-[#ff4fa7] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E82F89]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded px-2 py-1"
                        aria-label={lang === 'en' ? `View specifications for ${product.name[lang]}` : `Voir les spécifications pour ${product.name[lang]}`}
                      >
-                        SPECS
+                        {lang === 'en' ? 'SPECS' : 'SPÉCIFICATIONS'}
                         <Icon name="ArrowUpRight" size={12} aria-hidden="true" />
                      </button>
                      <motion.button
