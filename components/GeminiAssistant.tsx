@@ -6,7 +6,12 @@ import { Language, RecommendedProduct, Product } from '../types';
 import { ALL_PRODUCTS } from '../constants';
 import Icon from './Icon';
 
-interface GeminiAssistantProps { lang: Language; }
+interface GeminiAssistantProps {
+  lang: Language;
+  onProductClick?: (categoryId: string, productId: string) => void;
+  onNotificationClick?: () => void;
+}
+
 
 interface FloorPlan {
   base64: string;
@@ -43,7 +48,8 @@ function buildCatalogSummary(): string {
   return lines.join('\n');
 }
 
-const GeminiAssistant: React.FC<GeminiAssistantProps> = ({ lang }) => {
+const GeminiAssistant: React.FC<GeminiAssistantProps> = ({ lang, onProductClick, onNotificationClick }) => {
+
   const [input, setInput] = useState('');
   const [floorPlan, setFloorPlan] = useState<FloorPlan | null>(null);
   const [recommendations, setRecommendations] = useState<(RecommendedProduct & { product: Product })[]>([]);
@@ -189,11 +195,13 @@ For each recommended product, provide:
             initial={{ opacity: 0, y: -50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
-            className="fixed top-8 right-8 z-[100] bg-white/10 backdrop-blur-2xl border border-[#10B981]/50 rounded-2xl p-6 shadow-2xl flex items-center gap-4"
+            onClick={onNotificationClick}
+            className="fixed top-8 right-8 z-[100] bg-white/10 backdrop-blur-2xl border border-[#10B981]/50 rounded-2xl p-6 shadow-2xl flex items-center gap-4 cursor-pointer hover:bg-white/15 transition-all group"
           >
-            <div className="w-10 h-10 rounded-full bg-[#10B981]/20 flex items-center justify-center text-[#10B981]">
+            <div className="w-10 h-10 rounded-full bg-[#10B981]/20 flex items-center justify-center text-[#10B981] group-hover:scale-110 transition-transform">
               <Icon name="CheckCircle2" size={24} />
             </div>
+
             <div>
               <p className="text-white font-bold">
                 {lang === 'en' ? 'Report Ready' : 'Rapport Prêt'}
@@ -346,8 +354,10 @@ For each recommended product, provide:
                   <motion.div
                     key={rec.sku}
                     variants={cardVariants}
-                    className="group bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden hover:border-white/20 transition-all hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)]"
+                    onClick={() => onProductClick?.(rec.product.category, rec.product.id)}
+                    className="group bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden hover:border-white/20 transition-all hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] cursor-pointer"
                   >
+
                     {/* Product image */}
                     <div className="relative h-48 bg-white/5 overflow-hidden">
                       <img
