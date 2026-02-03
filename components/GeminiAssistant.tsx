@@ -14,6 +14,9 @@ interface FloorPlan {
   preview: string;
 }
 
+type AssistantStatus = 'idle' | 'processing' | 'completed' | 'error';
+
+
 const PILLAR_COLORS: Record<string, string> = {
   savings: '#10B981',
   security: '#243984',
@@ -45,7 +48,9 @@ const GeminiAssistant: React.FC<GeminiAssistantProps> = ({ lang }) => {
   const [floorPlan, setFloorPlan] = useState<FloorPlan | null>(null);
   const [recommendations, setRecommendations] = useState<(RecommendedProduct & { product: Product })[]>([]);
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<AssistantStatus>('idle');
   const [error, setError] = useState('');
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const catalogSummary = useMemo(() => buildCatalogSummary(), []);
@@ -66,19 +71,23 @@ const GeminiAssistant: React.FC<GeminiAssistantProps> = ({ lang }) => {
   const handleAsk = async () => {
     if (!input.trim() && !floorPlan) return;
     setLoading(true);
+    setStatus('processing');
     setError('');
     setRecommendations([]);
+
 
     try {
       const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
       if (!apiKey || apiKey === 'your_gemini_api_key_here') {
-        setError(lang === 'en' 
-          ? 'Please set your Gemini API key in the .env file. Get one at https://ai.google.dev/' 
+        setError(lang === 'en'
+          ? 'Please set your Gemini API key in the .env file. Get one at https://ai.google.dev/'
           : 'Veuillez configurer votre clé API Gemini dans le fichier .env. Obtenez-en une sur https://ai.google.dev/');
         setLoading(false);
+        setStatus('error');
         return;
       }
-      
+
+
       const ai = new GoogleGenAI({ apiKey });
 
       const systemPrompt = `You are HeyZack's AI Smart Building Consultant. You help property developers select the best smart building products for their projects.
@@ -141,14 +150,20 @@ For each recommended product, provide:
 
       setRecommendations(matched);
       if (matched.length === 0) {
+        setStatus('error');
         setError(lang === 'en' ? 'No matching products found. Try a different description.' : 'Aucun produit correspondant. Essayez une autre description.');
+      } else {
+        setStatus('completed');
       }
+
     } catch (err) {
       console.error(err);
+      setStatus('error');
       setError(lang === 'en' ? 'Error generating recommendations. Please check your configuration.' : 'Erreur. Veuillez vérifier votre configuration.');
     } finally {
       setLoading(false);
     }
+
   };
 
   const containerVariants = {
@@ -167,7 +182,38 @@ For each recommended product, provide:
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#243984] opacity-[0.1] blur-[120px] rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#E82F89] opacity-[0.1] blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
 
+      {/* Success Notification */}
+      <AnimatePresence>
+        {status === 'completed' && (
+          <motion.div
+            initial={{ opacity: 0, y: -50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.9 }}
+            className="fixed top-8 right-8 z-[100] bg-white/10 backdrop-blur-2xl border border-[#10B981]/50 rounded-2xl p-6 shadow-2xl flex items-center gap-4"
+          >
+            <div className="w-10 h-10 rounded-full bg-[#10B981]/20 flex items-center justify-center text-[#10B981]">
+              <Icon name="CheckCircle2" size={24} />
+            </div>
+            <div>
+              <p className="text-white font-bold">
+                {lang === 'en' ? 'Report Ready' : 'Rapport Prêt'}
+              </p>
+              <p className="text-white/60 text-sm">
+                {lang === 'en' ? 'Your report is ready to view.' : 'Votre rapport est prêt à être consulté.'}
+              </p>
+            </div>
+            <button
+              onClick={() => setStatus('idle')}
+              className="ml-4 text-white/30 hover:text-white transition-colors"
+            >
+              <Icon name="X" size={18} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="max-w-6xl w-full relative z-10">
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-2xl">
@@ -240,17 +286,32 @@ For each recommended product, provide:
             <button
               onClick={handleAsk}
               disabled={loading}
-              className="group bg-gradient-to-r from-[#243984] to-[#E82F89] text-white py-6 rounded-3xl font-black text-sm tracking-[0.2em] disabled:opacity-50 flex items-center justify-center gap-4 shadow-[0_20px_40px_rgba(232,47,137,0.2)] hover:scale-[1.02] transition-all"
+              className="group bg-gradient-to-r from-[#243984] to-[#E82F89] text-white py-6 rounded-3xl font-black text-sm tracking-[0.2em] disabled:opacity-50 flex flex-col items-center justify-center gap-2 shadow-[0_20px_40px_rgba(232,47,137,0.2)] hover:scale-[1.02] transition-all"
             >
-              {loading ? (
-                <Icon name="Loader2" size={24} className="animate-spin" />
-              ) : (
-                <>
-                  <Icon name="Sparkles" size={20} />
-                  {lang === 'en' ? 'GENERATE PACKAGE' : 'GÉNÉRER LE PACKAGE'}
-                </>
-              )}
+              <div className="flex items-center gap-4">
+                {loading ? (
+                  <Icon name="Loader2" size={24} className="animate-spin" />
+                ) : (
+                  <>
+                    <Icon name="Sparkles" size={20} />
+                    {lang === 'en' ? 'GENERATE PACKAGE' : 'GÉNÉRER LE PACKAGE'}
+                  </>
+                )}
+              </div>
+              <AnimatePresence>
+                {loading && (
+                  <motion.span
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="text-[10px] font-medium text-white/60 tracking-normal"
+                  >
+                    {lang === 'en' ? 'We will send you a report shortly...' : 'Nous vous enverrons un rapport sous peu...'}
+                  </motion.span>
+                )}
+              </AnimatePresence>
             </button>
+
           </div>
 
           {/* Error */}
