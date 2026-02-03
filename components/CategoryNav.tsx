@@ -56,9 +56,8 @@ const NavItem: React.FC<NavItemProps> = ({ item, isActive, shouldReduceMotion, o
 
       {/* Icon with micro-interactions */}
       <motion.div
-        className={`relative z-10 ${
-          isActive ? 'text-white' : 'text-slate-400 group-hover:text-white'
-        }`}
+        className={`relative z-10 ${isActive ? 'text-white' : 'text-slate-400 group-hover:text-white'
+          }`}
         variants={shouldReduceMotion ? undefined : rotate360}
         animate={isActive && !shouldReduceMotion ? "animate" : "initial"}
       >
@@ -149,11 +148,11 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
       fixed z-50 transition-all duration-500
       /* Mobile: Bottom center, Horizontal, scaled down, consistent 1em margin */
       bottom-6 left-4 right-4 mx-auto max-w-[400px]
-      /* Desktop: Left side, Vertical, auto width, 1em margin with overflow handling */
-      md:bottom-4 md:right-auto md:left-4 md:top-4 md:translate-y-0 md:w-auto md:max-w-none md:mx-0
-      md:max-h-[calc(100vh-2rem)]
+      /* Desktop: Left side, Vertically Centered, auto width, 1em margin with overflow handling */
+      md:top-1/2 md:-translate-y-1/2 md:right-auto md:left-4 md:bottom-auto md:w-auto md:max-w-none md:mx-0
+      md:max-h-[calc(100vh-4rem)]
     `}>
-      <div 
+      <div
         className={`
           backdrop-blur-xl bg-white/10 border border-white/20 shadow-[0_8px_32px_rgba(31,38,135,0.15)] relative
           /* Mobile shape */
@@ -164,7 +163,7 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ activeCategoryId, onNavigate 
           /* Custom scrollbar styling */
           md:scrollbar-thin md:scrollbar-track-transparent md:scrollbar-thumb-white/20 md:hover:scrollbar-thumb-white/30
         `}
-        style={{ 
+        style={{
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)'
         }}
@@ -278,7 +277,7 @@ const getCategoryIconName = (categoryId: string) => {
     'curtain-shutter': 'Blinds', // Verify if Blinds exists in standard sets, usually Blinds or VenetianMask? Assuming Blinds or similar if used before.
     'circuit-breaker': 'Zap',
     'door-lock': 'Lock',
-    'control-panel': 'Monitor', 
+    'control-panel': 'Monitor',
     'gateway': 'Wifi',
     'diy-breaker': 'Settings',
     'music-control': 'Music',

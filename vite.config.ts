@@ -20,11 +20,15 @@ export default defineConfig(({ mode }) => {
       }
     },
     build: {
+      chunkSizeWarningLimit: 800,
       rollupOptions: {
         output: {
           manualChunks: {
-            'vendor': ['react', 'react-dom', 'framer-motion'],
-            'ui': ['lucide-react', 'clsx', 'tailwind-merge']
+            'vendor-core': ['react', 'react-dom'],
+            'vendor-motion': ['framer-motion'],
+            'vendor-ui': ['lucide-react', 'clsx', 'tailwind-merge'],
+            'vendor-ai': ['@google/genai'],
+            'vendor-graphics': ['ogl']
           }
         }
       }

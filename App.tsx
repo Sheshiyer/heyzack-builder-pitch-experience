@@ -4,9 +4,11 @@ import { Language } from './types';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
 import CategorySpotlight from './components/ProductSpotlight';
-import GeminiAssistant from './components/GeminiAssistant';
 import CategoryDrawer from './components/CategoryDrawer';
 import CategoryNav from './components/CategoryNav';
+
+const GeminiAssistant = React.lazy(() => import('./components/GeminiAssistant'));
+
 import { CATEGORIES } from './constants';
 import Icon from './components/Icon';
 
@@ -108,19 +110,28 @@ const App: React.FC = () => {
         ))}
 
         <section className="snap-start bg-slate-900 text-white" id="assistant">
-          <GeminiAssistant
-            lang={lang}
-            onProductClick={(catId, prodId) => {
-              setInitialProductId(prodId);
-              setActiveCategoryId(catId);
-            }}
-            onNotificationClick={() => {
-              const assistantSection = document.getElementById('assistant');
-              if (assistantSection) {
-                assistantSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          />
+          <React.Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center bg-slate-950">
+              <div className="flex flex-col items-center gap-4">
+                <Icon name="Loader2" size={48} className="animate-spin text-[#E82F89]" />
+                <p className="text-white/40 font-black text-[10px] uppercase tracking-[0.4em]">LOADING INTELLIGENCE</p>
+              </div>
+            </div>
+          }>
+            <GeminiAssistant
+              lang={lang}
+              onProductClick={(catId, prodId) => {
+                setInitialProductId(prodId);
+                setActiveCategoryId(catId);
+              }}
+              onNotificationClick={() => {
+                const assistantSection = document.getElementById('assistant');
+                if (assistantSection) {
+                  assistantSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            />
+          </React.Suspense>
         </section>
 
 
